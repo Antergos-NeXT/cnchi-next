@@ -3,7 +3,7 @@
 #
 # install.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -219,7 +219,7 @@ class Installation():
         if not os.path.exists(DEST_DIR):
             os.makedirs(DEST_DIR, mode=0o755, exist_ok=True)
 
-        # Make sure the antergos-repo-priority package's alpm hook doesn't run.
+        # Make sure the antergos-next-repo-priority package's alpm hook doesn't run.
         if not os.environ.get('CNCHI_RUNNING', False):
             os.environ['CNCHI_RUNNING'] = 'True'
 
@@ -263,15 +263,15 @@ class Installation():
             if os.path.exists(img):
                 os.remove(img)
 
-        # If intel-ucode or grub2-theme-antergos files exist in /boot they are
+        # If intel-ucode or grub2-theme-antergos-next-next files exist in /boot they are
         # most likely either from another linux installation or from a failed
         # install attempt and need to be removed otherwise pyalpm will refuse
         # to install those packages (like above)
         if os.path.exists('/install/boot/intel-ucode.img'):
             logging.debug("Removing previous intel-ucode.img file found in /boot")
             os.remove('/install/boot/intel-ucode.img')
-        if os.path.exists('/install/boot/grub/themes/Antergos-Default'):
-            logging.debug("Removing previous Antergos-Default grub2 theme found in /boot")
+        if os.path.exists('/install/boot/grub/themes/Antergos-NeXT-Default'):
+            logging.debug("Removing previous Antergos-NeXT-Default grub2 theme found in /boot")
             shutil.rmtree('/install/boot/grub/themes/Antergos-Default')
 
         logging.debug("Preparing pacman...")
@@ -464,8 +464,8 @@ class Installation():
             contents = pacman_conf.readlines()
         with open('/etc/pacman.conf', 'w') as new_pacman_conf:
             for line in contents:
-                if 'antergos-mirrorlist' in line:
-                    line = 'Server = http://repo.antergos.info/$repo/$arch'
+                if 'antergos-next-mirrorlist' in line:
+                    line = 'Server = https://github.com/Antergos-NeXT/$repo/$arch'
                 new_pacman_conf.write(line)
 
     def install_packages(self):

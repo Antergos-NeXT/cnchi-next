@@ -3,7 +3,7 @@
 #
 # process.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -150,7 +150,7 @@ class Process(multiprocessing.Process):
             self.overwrite_variables_lembrame()
 
             self.events.add(
-                'info', _("Getting your disk(s) ready for Antergos..."))
+                'info', _("Getting your disk(s) ready for Antergos NeXT..."))
             with misc.raised_privileges():
                 self.install_screen.run_format()
 

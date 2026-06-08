@@ -511,7 +511,7 @@ msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
 "including security fixes and some feature backports. Additionally, this\n"
-"package includes ext4 support. For Antergos users seeking a long-term\n"
+"package includes ext4 support. For Antergos NeXT users seeking a long-term\n"
 "support kernel, or who want a fallback kernel in case the latest kernel\n"
 "version causes problems, this option is the answer."
 msgstr ""
@@ -610,19 +610,19 @@ msgid "Time"
 msgstr ""
 
 #: cnchi/src/show_message.py:73
-msgid "Antergos Installer - Error"
+msgid "Antergos NeXT Installer - Error"
 msgstr "Programma di installazione di Antergos - Errore"
 
 #: cnchi/src/show_message.py:91
-msgid "Antergos Installer - Warning"
+msgid "Antergos NeXT Installer - Warning"
 msgstr "Programma di installazione di Antergos - Attenzione"
 
 #: cnchi/src/show_message.py:109
-msgid "Antergos Installer - Information"
+msgid "Antergos NeXT Installer - Information"
 msgstr "Programma di installazione di Antergos - Informazione"
 
 #: cnchi/src/show_message.py:127
-msgid "Antergos Installer - Confirmation"
+msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Programma per l'installazione di Antergos - Conferma"
 
 #: cnchi/src/download/download.py:100
@@ -1643,7 +1643,7 @@ msgid "Please wait..."
 msgstr "Attendere prego..."
 
 #: cnchi/src/pages/slides.py:93
-msgid "Installing Antergos..."
+msgid "Installing Antergos NeXT..."
 msgstr "Sto installando Antergos..."
 
 #: cnchi/src/pages/slides.py:238
@@ -1858,11 +1858,11 @@ msgid "Unknown error"
 msgstr "sconosciuto"
 
 #: cnchi/src/pages/welcome.py:103
-msgid "Use Antergos without making any changes to your system."
+msgid "Use Antergos NeXT without making any changes to your system."
 msgstr "Utilizza Antergos senza apportare alcuna modifica al tuo sistema."
 
 #: cnchi/src/pages/welcome.py:109
-msgid "Create a permanent place for Antergos on your system."
+msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr "Crea un luogo permanente per Antergos sul tuo sistema."
 
 #: cnchi/src/pages/welcome.py:113
@@ -1874,7 +1874,7 @@ msgid "Install It"
 msgstr "Installarlo"
 
 #: cnchi/src/pages/welcome.py:122
-msgid "Welcome to Antergos!"
+msgid "Welcome to Antergos NeXT!"
 msgstr "Benvenuto in Antergos!"
 
 #: cnchi/src/pages/welcome.py:153

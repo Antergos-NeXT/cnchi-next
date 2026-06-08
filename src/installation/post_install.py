@@ -3,7 +3,7 @@
 #
 # post_install.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -24,7 +24,11 @@
 
 """ Post-Installation process module. """
 
-import crypt
+try:
+    import crypt
+except ImportError:
+    crypt = None
+    from passlib.hash import sha512_crypt
 import logging
 import os
 import shutil
@@ -109,7 +113,7 @@ class PostInstallation():
             except FileExistsError:
                 pass
 
-        # Store install id for later use by antergos-pkgstats
+        # Store install id for later use by antergos-next-pkgstats
         with open(os.path.join(log_dest_dir, 'install_id'), 'w') as install_record:
             install_id = self.settings.get('install_id')
             if not install_id:
@@ -166,7 +170,10 @@ class PostInstallation():
     @staticmethod
     def change_user_password(user, new_password):
         """ Changes the user's password """
-        shadow_password = crypt.crypt(new_password, crypt.mksalt())
+        if crypt:
+            shadow_password = crypt.crypt(new_password, crypt.mksalt())
+        else:
+            shadow_password = sha512_crypt.using(rounds=5000).hash(new_password)
         chroot_call(['usermod', '-p', shadow_password, user])
 
     @staticmethod
@@ -201,12 +208,12 @@ class PostInstallation():
                         pacline = pacline[1:]
                         multilib_open = False
                     elif pacline == '#[testing]\n':
-                        antlines = '\n#[antergos-staging]\n'
+                        antlines = '\n#[antergos-next-staging]\n'
                         antlines += '#SigLevel = PackageRequired\n'
-                        antlines += '#Server = http://mirrors.antergos.com/$repo/$arch/\n\n'
+                        antlines += '#Server = https://github.com/Antergos-NeXT/$repo/$arch/\n\n'
                         antlines += '[antergos]\n'
                         antlines += 'SigLevel = PackageRequired\n'
-                        antlines += 'Include = /etc/pacman.d/antergos-mirrorlist\n\n'
+                        antlines += 'Include = /etc/pacman.d/antergos-next-mirrorlist\n\n'
                         pacman_file.write(antlines)
 
                     pacman_file.write(pacline)
@@ -639,7 +646,7 @@ class PostInstallation():
             # Setup systemd-networkd for systems that won't use the
             # networkmanager or connman daemons (atm it's just base install)
             # Enable systemd_networkd services
-            # https://github.com/Antergos/Cnchi/issues/332#issuecomment-108745026
+            # https://github.com/Antergos-NeXT/Cnchi/issues/332#issuecomment-108745026
             srv.enable_services(["systemd-networkd", "systemd-resolved"])
             # Setup systemd_networkd
             # TODO: Ask user for SSID and passphrase if a wireless link is

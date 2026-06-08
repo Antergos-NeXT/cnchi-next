@@ -4,7 +4,7 @@
 
 - Big code cleanup (PEP8, remove duplicated code, reduce complexity, remove unused code...)
 - Rankmirrors modifications.
-- Fix https://github.com/Antergos/Cnchi/issues/907
+- Fix https://github.com/Antergos-NeXT/Cnchi/issues/907
 - Fixed download_requests (now uses the same mirror)
 - Added cache page
 - Set LTS Kernel as default in GRUB (if selected)

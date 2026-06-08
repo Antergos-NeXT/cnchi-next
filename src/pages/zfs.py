@@ -2,7 +2,7 @@
 #
 #  zfs.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -78,7 +78,7 @@ class InstallationZFS(GtkBaseBox):
 
         self.installation = None
 
-        pool_name = "antergos_{0}".format(random_generator())
+        pool_name = "antergos_next_{0}".format(random_generator())
 
         # Set zfs default options
         self.zfs_options = {
@@ -434,30 +434,30 @@ class InstallationZFS(GtkBaseBox):
             if not self.uefi:
                 self.append_change("create", device_path, "BIOS boot (2MB)")
                 self.append_change("create", device_path,
-                                   "Antergos Boot (512MB)")
+                                   "Antergos NeXT Boot (512MB)")
             else:
                 # UEFI
                 if self.bootloader == "grub2":
                     self.append_change("create", device_path, "UEFI System (200MB)")
-                    self.append_change("create", device_path, "Antergos Boot (512MB)")
+                    self.append_change("create", device_path, "Antergos NeXT Boot (512MB)")
                 else:
-                    self.append_change("create", device_path, "Antergos Boot (512MB)")
+                    self.append_change("create", device_path, "Antergos NeXT Boot (512MB)")
         else:
             # MBR
             self.append_change("delete", device_path)
-            self.append_change("create", device_path, "Antergos Boot (512MB)")
+            self.append_change("create", device_path, "Antergos NeXT Boot (512MB)")
 
-        msg = "Antergos ZFS pool ({0})".format(pool_name)
+        msg = "Antergos NeXT ZFS pool ({0})".format(pool_name)
         self.append_change("create", device_path, msg)
-        self.append_change("create", device_path, "Antergos ZFS vol (swap)")
+        self.append_change("create", device_path, "Antergos NeXT ZFS vol (swap)")
 
         if self.settings.get("use_home"):
-            self.append_change("create", device_path, "Antergos ZFS vol (/home)")
+            self.append_change("create", device_path, "Antergos NeXT ZFS vol (/home)")
 
         # Now init all other devices that will form part of the pool
         for device_path in device_paths[1:]:
             self.append_change("delete", device_path)
-            msg = "Antergos ZFS pool ({0})".format(pool_name)
+            msg = "Antergos NeXT ZFS pool ({0})".format(pool_name)
             self.append_change("add", device_path, msg)
 
         return self.change_list
@@ -495,11 +495,11 @@ class InstallationZFS(GtkBaseBox):
 
     def create_boot_partition(self, device_path, part_num):
         """ Create and format BOOT or EFI partitions (512MB) in /boot or in /boot/efi """
-        wrapper.sgdisk_new(device_path, part_num, 'ANTERGOS_BOOT', 512, '8300')
+        wrapper.sgdisk_new(device_path, part_num, 'ANTERGOS_NEXT_BOOT', 512, '8300')
         self.devices['boot'] = zfs.get_partition_path(device_path, part_num)
         self.fs_devices[self.devices['boot']] = 'ext4'
         self.mount_devices['/boot'] = self.devices['boot']
-        fs.create_fs(self.devices['boot'], 'ext4', 'ANTERGOS_BOOT')
+        fs.create_fs(self.devices['boot'], 'ext4', 'ANTERGOS_NEXT_BOOT')
 
     def run_format_gpt(self, device_path):
         """ GPT harddisk schemes """
@@ -548,7 +548,7 @@ class InstallationZFS(GtkBaseBox):
             solaris_part_num = self.run_format_gpt(device_path)
             # The rest of the disk will be of solaris type
             # (2 or 3) Solaris (bf00)
-            wrapper.sgdisk_new(device_path, solaris_part_num, 'ANTERGOS_ZFS', 0, 'BF00')
+            wrapper.sgdisk_new(device_path, solaris_part_num, 'ANTERGOS_NEXT_ZFS', 0, 'BF00')
         else:
             # BIOS/MBR (Grub)
             # 1 Solaris (bf00)

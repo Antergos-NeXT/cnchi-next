@@ -3,7 +3,7 @@
 #
 # main_window.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -255,7 +255,7 @@ class MainWindow(Gtk.ApplicationWindow):
         title_string = "{0} {1}.{2}.{3}".format(name, nil, major, minor)
         self.set_title(title_string)
         self.header.set_title(title_string)
-        self.header.set_subtitle(_("Antergos Installer"))
+        self.header.set_subtitle(_("Antergos NeXT Installer"))
         self.header.set_show_close_button(True)
         self.tooltip_string = "{0} {1}.{2}.{3}".format(name, nil, major, minor)
         self.header.forall(self.header_for_all_callback, self.tooltip_string)

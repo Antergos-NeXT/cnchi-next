@@ -3,7 +3,7 @@
 #
 # alongside.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -199,7 +199,7 @@ class InstallationAlongside(GtkBaseBox):
         if "antergos" in os_name:
             icons_path = os.path.join(self.settings.get('data'), "icons/48x48")
             icon_file = os.path.join(
-                icons_path, "distributor-logo-antergos.png")
+                icons_path, "distributor-logo-antergos-next.png")
             return icon_file
 
         icon_names = [

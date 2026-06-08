@@ -5,9 +5,9 @@
             <packages>
                 <pkgname>acpid</pkgname>
                 <pkgname>alsa-utils</pkgname>
-                <pkgname>antergos-keyring</pkgname>
-                <pkgname>antergos-mirrorlist</pkgname>
-                <pkgname>antergos-midnight-timers</pkgname>
+                <pkgname>antergos-next-keyring</pkgname>
+                <pkgname>antergos-next-mirrorlist</pkgname>
+                <pkgname>antergos-next-midnight-timers</pkgname>
                 <pkgname>b43-fwcutter</pkgname>
                 <!-- Group -->
                 <pkgname>base</pkgname>
@@ -47,10 +47,10 @@
 
         <edition name="graphic" description="Common to all graphic desktops">
             <packages>
-                <pkgname>antergos-alpm-hooks</pkgname>
+                <pkgname>antergos-next-alpm-hooks</pkgname>
                 <pkgname>accountsservice</pkgname>
                 <pkgname>antergos-wallpapers</pkgname>
-                <pkgname>antergos-desktop-settings</pkgname>
+                <pkgname>antergos-next-desktop-settings</pkgname>
                 <pkgname>cdrtools</pkgname>
                 <pkgname>dconf-editor</pkgname> 
                 <pkgname>ffmpegthumbnailer</pkgname>
@@ -140,7 +140,7 @@
 
         <edition name="Gnome" description="Gnome Desktop">
             <packages>
-                <pkgname>antergos-gnome-defaults-list</pkgname>
+                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>evince</pkgname>
@@ -195,7 +195,7 @@
 
         <edition name="Cinnamon" description="Cinnamon desktop">
             <packages>
-                <pkgname>antergos-gnome-defaults-list</pkgname>
+                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>cinnamon</pkgname>
@@ -472,7 +472,7 @@
 
         <edition name="Deepin" description="Deepin Desktop">
             <packages>
-                <pkgname>antergos-wallpapers-deepin</pkgname>
+                <pkgname>antergos-next-wallpapers-deepin</pkgname>
                 <pkgname>adwaita-icon-theme</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>deepin-account-faces</pkgname>
@@ -570,7 +570,7 @@
 
         <edition name="Budgie" description="Solus desktop">
             <packages>
-                <pkgname>antergos-gnome-defaults-list</pkgname>
+                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>budgie-desktop</pkgname>
@@ -819,7 +819,7 @@
             <pkgname>efibootmgr</pkgname>
             <pkgname>grub</pkgname>
             <pkgname>os-prober</pkgname>
-            <pkgname>grub2-theme-antergos</pkgname>
+            <pkgname>grub2-theme-antergos-next-next</pkgname>
         </bootloader>
         <bootloader name="systemd-boot">
             <!-- previously called gummiboot, now comes with systemd -->

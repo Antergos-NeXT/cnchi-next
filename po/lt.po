@@ -493,7 +493,7 @@ msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
 "including security fixes and some feature backports. Additionally, this\n"
-"package includes ext4 support. For Antergos users seeking a long-term\n"
+"package includes ext4 support. For Antergos NeXT users seeking a long-term\n"
 "support kernel, or who want a fallback kernel in case the latest kernel\n"
 "version causes problems, this option is the answer."
 msgstr ""
@@ -587,19 +587,19 @@ msgid "Time"
 msgstr ""
 
 #: cnchi/src/show_message.py:73
-msgid "Antergos Installer - Error"
+msgid "Antergos NeXT Installer - Error"
 msgstr "Antergos Diegimo Programa - Klaida"
 
 #: cnchi/src/show_message.py:91
-msgid "Antergos Installer - Warning"
+msgid "Antergos NeXT Installer - Warning"
 msgstr "Antergos Diegimo Programa - Įspėjimas"
 
 #: cnchi/src/show_message.py:109
-msgid "Antergos Installer - Information"
+msgid "Antergos NeXT Installer - Information"
 msgstr "Antergos Diegimo Programa - Informacija"
 
 #: cnchi/src/show_message.py:127
-msgid "Antergos Installer - Confirmation"
+msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Antergos Diegimo Programa - Patvirtinimas"
 
 #: cnchi/src/download/download.py:100
@@ -1600,7 +1600,7 @@ msgid "Please wait..."
 msgstr "Prašome palaukti..."
 
 #: cnchi/src/pages/slides.py:93
-msgid "Installing Antergos..."
+msgid "Installing Antergos NeXT..."
 msgstr "Diegiama Antergos..."
 
 #: cnchi/src/pages/slides.py:238
@@ -1814,11 +1814,11 @@ msgid "Unknown error"
 msgstr "nežinoma"
 
 #: cnchi/src/pages/welcome.py:103
-msgid "Use Antergos without making any changes to your system."
+msgid "Use Antergos NeXT without making any changes to your system."
 msgstr "Naudoti Antergos, nedarant jokių pakeitimų jūsų sistemai."
 
 #: cnchi/src/pages/welcome.py:109
-msgid "Create a permanent place for Antergos on your system."
+msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr "Sukurti Antergos pastovią vietą jūsų sistemoje."
 
 #: cnchi/src/pages/welcome.py:113
@@ -1830,7 +1830,7 @@ msgid "Install It"
 msgstr "Įdiegti"
 
 #: cnchi/src/pages/welcome.py:122
-msgid "Welcome to Antergos!"
+msgid "Welcome to Antergos NeXT!"
 msgstr "Sveiki atvykę į Antergos!"
 
 #: cnchi/src/pages/welcome.py:153
@@ -3104,8 +3104,8 @@ msgstr ""
 #~ "Išimtis: {0}.\n"
 #~ "Išsamesnei informacijai, žiūrėkite failą /tmp/cnchi.log"
 
-#~ msgid "Update of antergos-mirrorlist package failed with error: %s"
-#~ msgstr "Paketo antergos-mirrorlist atnaujinimas nepavyko su klaida: %s"
+#~ msgid "Update of antergos-next-mirrorlist package failed with error: %s"
+#~ msgstr "Paketo antergos-next-mirrorlist atnaujinimas nepavyko su klaida: %s"
 
 #~ msgid "Error copying new mirrorlist files: %s"
 #~ msgstr "Klaida, kopijuojant tinklaviečių sąrašo failus: %s"

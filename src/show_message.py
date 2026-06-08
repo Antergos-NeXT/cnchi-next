@@ -3,7 +3,7 @@
 #
 # show_message.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -72,7 +72,7 @@ def error(parent, my_message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.ERROR,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos Installer - Error"))
+                                   text=_("Antergos NeXT Installer - Error"))
     msg_dialog.format_secondary_text(my_message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -90,7 +90,7 @@ def warning(parent, my_message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.WARNING,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos Installer - Warning"))
+                                   text=_("Antergos NeXT Installer - Warning"))
     msg_dialog.format_secondary_text(my_message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -108,7 +108,7 @@ def message(parent, my_message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.INFO,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos Installer - Information"))
+                                   text=_("Antergos NeXT Installer - Information"))
     msg_dialog.format_secondary_text(my_message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -126,7 +126,7 @@ def question(parent, my_message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.QUESTION,
                                    buttons=Gtk.ButtonsType.YES_NO,
-                                   text=_("Antergos Installer - Confirmation"))
+                                   text=_("Antergos NeXT Installer - Confirmation"))
     msg_dialog.format_secondary_text(my_message)
     response = msg_dialog.run()
     msg_dialog.destroy()

@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 #
 #  Copyright (c) 2012 Canonical Ltd.
-#  Copyright (c) 2013-2018 Antergos
+#  Copyright (c) 2026 Antergos NeXT NeXT NeXT
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -514,7 +514,7 @@ def get_network():
     # Open a connection to our server
     mysocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        mysocket.connect(("antergos.com", 1234))
+        mysocket.connect(("archlinux.org", 80))
     except OSError as err:
         logging.error(err)
         return ""
@@ -612,8 +612,8 @@ def is_partition_extended(partition):
     if "/dev/mapper" in partition:
         return False
 
-    # In automatic LVM volume is called AntergosVG
-    if "/dev/AntergosVG" in partition:
+    # In automatic LVM volume is called AntergosNeXTVG
+    if "/dev/AntergosNeXTVG" in partition:
         return False
 
     if "/dev/" in partition:

@@ -3,7 +3,7 @@
 #
 # ask.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -153,12 +153,12 @@ class InstallationAsk(GtkBaseBox):
     def alongside_wiki_button_clicked(self, _widget, _data=None):
         """ Shows dual installation wiki page in a browser window  """
         try:
-            self.browser = BrowserWindow("Antergos Wiki - Dual Boot")
-            url = ("https://antergos.com/wiki/install/how-to-dual-boot"
+            self.browser = BrowserWindow("Antergos NeXT Wiki - Dual Boot")
+            url = ("https://github.com/Antergos-NeXT/wiki/install/how-to-dual-boot"
                    "-antergos-windows-uefi-expanded-by-linuxhat/")
             self.browser.load_url(url)
         except Exception as err:
-            logging.warning("Could not show Antergos wiki: %s", err)
+            logging.warning("Could not show Antergos NeXT wiki: %s", err)
 
     def check_alongside(self):
         """ Check if alongside installation type must be enabled.

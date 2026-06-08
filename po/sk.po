@@ -498,7 +498,7 @@ msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
 "including security fixes and some feature backports. Additionally, this\n"
-"package includes ext4 support. For Antergos users seeking a long-term\n"
+"package includes ext4 support. For Antergos NeXT users seeking a long-term\n"
 "support kernel, or who want a fallback kernel in case the latest kernel\n"
 "version causes problems, this option is the answer."
 msgstr ""
@@ -604,19 +604,19 @@ msgid "Time"
 msgstr ""
 
 #: cnchi/src/show_message.py:73
-msgid "Antergos Installer - Error"
+msgid "Antergos NeXT Installer - Error"
 msgstr "Inštalátor distribúcie Antergos - Chyba"
 
 #: cnchi/src/show_message.py:91
-msgid "Antergos Installer - Warning"
+msgid "Antergos NeXT Installer - Warning"
 msgstr "Inštalátor distribúcie Antergos - Upozornenie"
 
 #: cnchi/src/show_message.py:109
-msgid "Antergos Installer - Information"
+msgid "Antergos NeXT Installer - Information"
 msgstr "Inštalátor distribúcie Antergos - Informácia"
 
 #: cnchi/src/show_message.py:127
-msgid "Antergos Installer - Confirmation"
+msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Inštalátor distribúcie Antergos - Potvrdenie"
 
 #: cnchi/src/download/download.py:100
@@ -1636,7 +1636,7 @@ msgid "Please wait..."
 msgstr "Prosím, čakajte..."
 
 #: cnchi/src/pages/slides.py:93
-msgid "Installing Antergos..."
+msgid "Installing Antergos NeXT..."
 msgstr "Inštalovanie distribúcie Antergos..."
 
 #: cnchi/src/pages/slides.py:238
@@ -1853,13 +1853,13 @@ msgid "Unknown error"
 msgstr "neznáme"
 
 #: cnchi/src/pages/welcome.py:103
-msgid "Use Antergos without making any changes to your system."
+msgid "Use Antergos NeXT without making any changes to your system."
 msgstr ""
 "Použitie distribúcie Antergos bez vytvorenia akýchkoľvek zmien vo vašom "
 "počítači."
 
 #: cnchi/src/pages/welcome.py:109
-msgid "Create a permanent place for Antergos on your system."
+msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr "Vytvorenie trvalého miesta pre distribúciu Antergos vo vašom počítači."
 
 #: cnchi/src/pages/welcome.py:113
@@ -1871,7 +1871,7 @@ msgid "Install It"
 msgstr "Nainštalovať"
 
 #: cnchi/src/pages/welcome.py:122
-msgid "Welcome to Antergos!"
+msgid "Welcome to Antergos NeXT!"
 msgstr "Vitajte v distribúcii Antergos!"
 
 #: cnchi/src/pages/welcome.py:153
@@ -3480,8 +3480,8 @@ msgstr ""
 #~ "Nedajú sa synchronizovať zápisy vo vyrovnávacej pamäti s trvalým "
 #~ "úložiskom: %s"
 
-#~ msgid "Update of antergos-mirrorlist package failed with error: %s"
-#~ msgstr "Aktualizácia balíku antergos-mirrorlist zlyhala s chybou: %s"
+#~ msgid "Update of antergos-next-mirrorlist package failed with error: %s"
+#~ msgstr "Aktualizácia balíku antergos-next-mirrorlist zlyhala s chybou: %s"
 
 #~ msgid "Error copying new mirrorlist files: %s"
 #~ msgstr "Chyba počas kopírovania nových súborov zoznamu zrkadiel: %s"

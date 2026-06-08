@@ -3,7 +3,7 @@
 #
 # download.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -58,7 +58,7 @@ except NameError as err:
 
 class DownloadPackages():
     """ Class to download packages. This class tries to previously download
-        all necessary packages for  Antergos installation using requests. """
+        all necessary packages for Antergos NeXT installation using requests. """
 
     def __init__(self, package_names, pacman_conf, settings=None, callback_queue=None):
         """ Initialize DownloadPackages class. Gets default configuration """

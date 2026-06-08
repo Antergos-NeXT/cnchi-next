@@ -3,7 +3,7 @@
 #
 # luks.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -35,7 +35,7 @@ from installation import wrapper
 from misc.run_cmd import call, popen
 
 
-def close_antergos_devices():
+def close_antergos_next_devices():
     """ Close LUKS devices (they may have been left open because of a previous
     failed installation) """
 

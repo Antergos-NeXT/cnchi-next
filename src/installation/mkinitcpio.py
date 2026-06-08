@@ -3,7 +3,7 @@
 #
 # mkinitcpio.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -47,7 +47,7 @@ def run(dest_dir, settings, mount_devices, blvm):
     set_hooks_modules_and_files(dest_dir, hooks, modules, files)
 
     # Run mkinitcpio on the target system
-    # Fix for bsdcpio error. See: http://forum.antergos.com/viewtopic.php?f=5&t=1378&start=20#p5450
+    # Fix for bsdcpio error. See: https://github.com/Antergos-NeXT/discussions/viewtopic.php?f=5&t=1378&start=20#p5450
     locale = settings.get('locale')
     cmd = ['sh', '-c', 'LANG={0} /usr/bin/mkinitcpio -p linux'.format(locale)]
     chroot_call(cmd, dest_dir)

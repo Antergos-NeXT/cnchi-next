@@ -3,7 +3,7 @@
 #
 #  check.py
 #
-#  Copyright © 2013-2018 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -297,8 +297,8 @@ class CheckProcess(multiprocessing.Process):
     def get_cnchi_version_in_repo():
         """ Checks cnchi version in the Antergos repository """
         mirrors = [
-            ("info.antergos.repo", "/antergos/x86_64/antergos.db"),
-            ("net.leaseweb.de.mirror", "/antergos/antergos/x86_64/antergos.db")]
+            ("info.antergos.repo", "/antergos-next/x86_64/antergos-next.db"),
+            ("net.leaseweb.de.mirror", "/antergos/antergos-next/x86_64/antergos-next.db")]
 
         for fdqn, path in mirrors:
             fdqn = '.'.join(fdqn.split('.')[::-1])

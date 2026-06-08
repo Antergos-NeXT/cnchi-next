@@ -3,7 +3,7 @@
 #
 #  lembrame.py
 #
-#  Copyright © 2013-2017 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -307,7 +307,7 @@ class Lembrame:
 
     def get_synced_display_manager(self):
         """ Get display manager selected by the user """
-        # Current default Antergos Display Manager
+        # Current default Antergos NeXT Display Manager
         display_manager = 'lightdm'
 
         dm_file = Path(self.config.folder_file_path + '/' + self.config.display_manager_file)

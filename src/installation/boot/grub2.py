@@ -3,7 +3,7 @@
 #
 # grub2.py
 #
-# Copyright © 2013-2017 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -240,7 +240,7 @@ class Grub2():
         """ Copies 10_antergos script into /etc/grub.d/ """
         grub_d_dir = os.path.join(self.dest_dir, "etc/grub.d")
         script_dir = os.path.join(self.settings.get("cnchi"), "scripts")
-        script = "10_antergos"
+        script = "10_antergos_next"
 
         os.makedirs(grub_d_dir, mode=0o755, exist_ok=True)
 
@@ -359,7 +359,7 @@ class Grub2():
 
         grub_path = os.path.join(
             self.dest_dir,
-            "boot/efi/EFI/antergos_grub",
+            "boot/efi/EFI/antergos_next_grub",
             "grub{0}.efi".format(Grub2.SPEC_UEFI_ARCH))
 
         for grub_default in grub_defaults:
@@ -399,10 +399,10 @@ class Grub2():
     def install_efi(self):
         """ Install Grub2 bootloader in a UEFI system """
 
-        if os.path.exists('/install/boot/efi/EFI/antergos_grub'):
-            bootloader_id = 'antergos_grub_{0}'.format(random_generator())
+        if os.path.exists('/install/boot/efi/EFI/antergos_next_grub'):
+            bootloader_id = 'antergos_next_grub_{0}'.format(random_generator())
         else:
-            bootloader_id = 'antergos_grub'
+            bootloader_id = 'antergos_next_grub'
 
         # grub2 in efi needs efibootmgr
         if not os.path.exists("/usr/bin/efibootmgr"):

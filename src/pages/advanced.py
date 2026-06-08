@@ -3,7 +3,7 @@
 #
 # advanced.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -1185,7 +1185,7 @@ class InstallationAdvanced(GtkBaseBox):
                 self.update_view()
 
                 if ptype == 'gpt' and not self.is_uefi:
-                    # Show warning (https://github.com/Antergos/Cnchi/issues/63)
+                    # Show warning (https://github.com/Antergos-NeXT/Cnchi/issues/63)
                     msg = _(
                         "GRUB requires a BIOS Boot Partition in BIOS systems "
                         "to embed its core.img file due to lack of post-MBR "
@@ -1467,7 +1467,7 @@ class InstallationAdvanced(GtkBaseBox):
         is_new, lbl, mnt, fsystem, fmt = self.stage_opts[uid]
 
         # Advanced method formats root by default
-        # https://github.com/Antergos/Cnchi/issues/8
+        # https://github.com/Antergos-NeXT/Cnchi/issues/8
         if mnt == '/':
             fmt = True
 

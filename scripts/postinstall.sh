@@ -3,7 +3,7 @@
 #
 #  postinstall.sh
 #
-#  Copyright © 2013-2016 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -84,10 +84,10 @@ set_dmrc() {
 }
 
 common_settings() {
-    # Set skel directory (not needed, antergos-desktop-settings does this)
+    # Set skel directory (not needed, antergos-next-desktop-settings does this)
     #cp -R ${CN_DESTDIR}/home/${CN_USER_NAME}/.config ${CN_DESTDIR}/etc/skel
 
-    # Set .bashrc (antergos-desktop-settings can't set it because it's already in bash package)
+    # Set .bashrc (antergos-next-desktop-settings can't set it because it's already in bash package)
     if [[ -f "${CN_DESTDIR}/etc/skel/bashrc" ]]; then
         cp ${CN_DESTDIR}/etc/skel/bashrc ${CN_DESTDIR}/etc/skel/.bashrc
         cp ${CN_DESTDIR}/etc/skel/bashrc ${CN_DESTDIR}/home/${CN_USER_NAME}/.bashrc
@@ -97,7 +97,7 @@ common_settings() {
     cp -R ${CN_DESTDIR}/etc/skel/. ${CN_DESTDIR}/root
 
     # Set antergos shell logo (used by gdm)
-    cp /usr/share/antergos/logo.png ${CN_DESTDIR}/usr/share/antergos/
+    cp /usr/share/antergos-next/logo.png ${CN_DESTDIR}/usr/share/antergos-next/
 }
 
 gnome_settings() {
@@ -129,7 +129,7 @@ cinnamon_settings() {
     set_dmrc cinnamon
 
     # Populate our wallpapers in Cinnamon Settings
-    chroot ${CN_DESTDIR} "ln -s /usr/share/antergos/wallpapers/ /home/${CN_USER_NAME}/.cinnamon/backgrounds/antergos" ${CN_USER_NAME}
+    chroot ${CN_DESTDIR} "ln -s /usr/share/antergos-next/wallpapers/ /home/${CN_USER_NAME}/.cinnamon/backgrounds/antergos" ${CN_USER_NAME}
 }
 
 xfce_settings() {
@@ -315,15 +315,15 @@ postinstall() {
         cp "${FONTCONFIG_FILE}" "${FONTCONFIG_DIR}"
     fi
 
-    # Set Antergos name in filesystem files
+    # Set Antergos NeXT name in filesystem files
     cp /etc/arch-release "${CN_DESTDIR}/etc"
     cp /etc/os-release "${CN_DESTDIR}/etc"
     sed -i 's|Arch|Antergos|g' "${CN_DESTDIR}/etc/issue"
 
     # copy antergos menu icon
-    mkdir -p ${CN_DESTDIR}/usr/share/antergos/
+    mkdir -p ${CN_DESTDIR}/usr/share/antergos-next/
     cp -t ${CN_DESTDIR}/usr/share/antergos \
-    /usr/share/antergos/antergos-menu.png \
+    /usr/share/antergos-next/antergos-menu.png \
     /usr/share/cnchi/data/images/antergos/antergos-menu-logo-dark-bg.png
 
     # Set common desktop settigns
@@ -345,7 +345,7 @@ postinstall() {
             echo "BROWSER=/usr/bin/${CN_BROWSER}" >> "${file}"
         fi
         echo "EDITOR=/usr/bin/nano" >> "${file}"
-        # This is inside .bashrc.aliases from the antergos-desktop-settings package
+        # This is inside .bashrc.aliases from the antergos-next-desktop-settings package
         #echo "export QT_STYLE_OVERRIDE=gtk" >> "${file}"
         #echo "export QT_SELECT=qt5" >> "${file}"
     done

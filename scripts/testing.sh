@@ -25,7 +25,7 @@ do_update () {
 		#if [ "$1" = "-d" ] || [ "$1" = "--dev-repo" ]; then
 		#	git clone https://github.com/"$2"/Cnchi.git cnchi;
 		#else
-		#	git clone https://github.com/Antergos/Cnchi.git cnchi;
+		#	git clone https://github.com/Antergos-NeXT/Cnchi.git cnchi;
 		#fi
 		cd /tmp
 		{ wget http://antergos.org/cnchi.tar && tar -xf cnchi.tar && cp -R cnchi /usr/share && rm cnchi.tar \
@@ -74,14 +74,14 @@ if ! [ -f "${previous}" ]; then
 #	echo "Testing Arch mirrors..."
 #	reflector -p http -l 30 -f 5 --save /etc/pacman.d/mirrorlist;
 #	echo "Done."
-#	sudo -u antergos wget http://antergos.info/antergos-mirrorlist
+#	sudo -u antergos wget http://antergos.info/antergos-next-mirrorlist
 #	echo "Testing Antergos mirrors..."
-#	rankmirrors -n 0 -r antergos antergos-mirrorlist > /tmp/antergos-mirrorlist
-#	cp /tmp/antergos-mirrorlist /etc/pacman.d/
+#	rankmirrors -n 0 -r antergos antergos-next-mirrorlist > /tmp/antergos-next-mirrorlist
+#	cp /tmp/antergos-next-mirrorlist /etc/pacman.d/
 #	echo "Done."
 	if [[ ${check_keys} = '' ]]; then
 	pacman-key --init
-	pacman-key --populate archlinux antergos
+	pacman-key --populate archlinux antergos-next-next
 	fi
 
 	# Install any packages that haven't been added to the iso yet but are needed.

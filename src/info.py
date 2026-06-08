@@ -3,7 +3,7 @@
 #
 #  info.py
 #
-#  Copyright © 2013-2018 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -32,7 +32,7 @@
 CNCHI_VERSION = "0.16.51"
 """ Cnchi version """
 
-CNCHI_WEBSITE = "http://www.antergos.com"
+CNCHI_WEBSITE = "https://github.com/Antergos-NeXT"
 """ Cnchi website """
 
 CNCHI_RELEASE_STAGE = "production"

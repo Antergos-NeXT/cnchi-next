@@ -470,7 +470,7 @@ msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
 "including security fixes and some feature backports. Additionally, this\n"
-"package includes ext4 support. For Antergos users seeking a long-term\n"
+"package includes ext4 support. For Antergos NeXT users seeking a long-term\n"
 "support kernel, or who want a fallback kernel in case the latest kernel\n"
 "version causes problems, this option is the answer."
 msgstr ""
@@ -567,20 +567,20 @@ msgid "Time"
 msgstr ""
 
 #: cnchi/src/show_message.py:73
-msgid "Antergos Installer - Error"
-msgstr "Antergos Installer - Error"
+msgid "Antergos NeXT Installer - Error"
+msgstr "Antergos NeXT Installer - Error"
 
 #: cnchi/src/show_message.py:91
-msgid "Antergos Installer - Warning"
-msgstr "Antergos Installer - Warning"
+msgid "Antergos NeXT Installer - Warning"
+msgstr "Antergos NeXT Installer - Warning"
 
 #: cnchi/src/show_message.py:109
-msgid "Antergos Installer - Information"
-msgstr "Antergos Installer - Information"
+msgid "Antergos NeXT Installer - Information"
+msgstr "Antergos NeXT Installer - Information"
 
 #: cnchi/src/show_message.py:127
-msgid "Antergos Installer - Confirmation"
-msgstr "Antergos Installer - Confirmation"
+msgid "Antergos NeXT Installer - Confirmation"
+msgstr "Antergos NeXT Installer - Confirmation"
 
 #: cnchi/src/download/download.py:100
 #, fuzzy
@@ -1213,7 +1213,7 @@ msgstr "Installation Type"
 #: cnchi/src/pages/ask.py:289
 #, fuzzy, python-format
 msgid "Replace {0} with Antergos"
-msgstr "Welcome to Antergos!"
+msgstr "Welcome to Antergos NeXT!"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
@@ -1526,7 +1526,7 @@ msgstr ""
 "setups. Please proceed with caution as data loss is possible!\n"
 "\n"
 "If you find any bugs, please report them at <a href='http://bugs.antergos."
-"com'>http://bugs.antergos.com</a>"
+"com'>https://github.com/Antergos-NeXT/issues</a>"
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
@@ -1593,8 +1593,8 @@ msgid "Please wait..."
 msgstr "Please wait..."
 
 #: cnchi/src/pages/slides.py:93
-msgid "Installing Antergos..."
-msgstr "Installing Antergos..."
+msgid "Installing Antergos NeXT..."
+msgstr "Installing Antergos NeXT..."
 
 #: cnchi/src/pages/slides.py:238
 #, fuzzy
@@ -1809,11 +1809,11 @@ msgid "Unknown error"
 msgstr "unknown"
 
 #: cnchi/src/pages/welcome.py:103
-msgid "Use Antergos without making any changes to your system."
+msgid "Use Antergos NeXT without making any changes to your system."
 msgstr ""
 
 #: cnchi/src/pages/welcome.py:109
-msgid "Create a permanent place for Antergos on your system."
+msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr ""
 
 #: cnchi/src/pages/welcome.py:113
@@ -1826,8 +1826,8 @@ msgid "Install It"
 msgstr "Install Now!"
 
 #: cnchi/src/pages/welcome.py:122
-msgid "Welcome to Antergos!"
-msgstr "Welcome to Antergos!"
+msgid "Welcome to Antergos NeXT!"
+msgstr "Welcome to Antergos NeXT!"
 
 #: cnchi/src/pages/welcome.py:153
 #, fuzzy

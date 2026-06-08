@@ -3,7 +3,7 @@
 ##
 
 # Autodetect your closest mirror
-Server = http://mirrors.antergos.com/$repo/$arch
+Server = https://github.com/Antergos-NeXT/$repo/$arch
 
 
 # China

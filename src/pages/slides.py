@@ -3,7 +3,7 @@
 #
 # slides.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -92,7 +92,7 @@ class Slides(GtkBaseBox):
         if not self.info_label.get_label():
             self.info_label.set_markup(_("Please wait..."))
 
-        self.header.set_subtitle(_("Installing Antergos..."))
+        self.header.set_subtitle(_("Installing Antergos NeXT..."))
 
     def prepare(self, direction):
         """ Prepare slides screen """

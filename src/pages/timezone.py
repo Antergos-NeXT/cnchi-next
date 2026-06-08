@@ -3,7 +3,7 @@
 #
 # timezone.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -344,7 +344,7 @@ class AutoTimezoneProcess(multiprocessing.Process):
     def use_geo_antergos(self):
         """ Determine our location using geo.antergos.com """
         # Calculate logo hash
-        logo = "data/images/antergos/antergos-logo-mini2.png"
+        logo = "data/images/antergos-next/antergos-logo-mini2.png"
         logo_path = os.path.join(self.settings.get("cnchi"), logo)
         with open(logo_path, "rb") as logo_file:
             logo_bytes = logo_file.read()
@@ -360,7 +360,7 @@ class AutoTimezoneProcess(multiprocessing.Process):
 
         try:
             url = urllib.request.Request(
-                url="http://geo.antergos.com",
+                url="https://github.com/Antergos-NeXT",
                 data=logo_digest,
                 headers={"User-Agent": "Antergos Installer", "Connection": "close"})
             with urllib.request.urlopen(url) as conn:

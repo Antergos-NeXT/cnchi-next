@@ -3,7 +3,7 @@
 #
 # post_fstab.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -175,7 +175,7 @@ class PostFstab():
 
             # Add all LUKS partitions from Advanced Install (except root).
             if (self.method == 'advanced' and
-                    mount_point is not '/' and
+                    mount_point != '/' and
                     self.use_luks and '/dev/mapper' in partition_path):
 
                 # As the mapper with the filesystem will have a different UUID

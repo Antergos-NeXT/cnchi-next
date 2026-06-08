@@ -30,7 +30,7 @@ sudo -E cnchi.py
 |```-e``` , ```--environment```|*Sets the Desktop Environment that will be installed, see [desktop_info.py](cnchi/desktop_info.py) for options*|
 |```-f``` , ```--force```|*Runs cnchi even if it detects that another instance is running*|
 |```-n``` , ```--no-check```|*Makes checks optional in check screen*|
-|```-p``` , ```--packagelist```|*Install the packages referenced by a local xml instead of the defaults, see [#617](https://github.com/Antergos/Cnchi/issues/617) for proper usage*|
+|```-p``` , ```--packagelist```|*Install the packages referenced by a local xml instead of the defaults, see [#617](https://github.com/Antergos-NeXT/Cnchi/issues/617) for proper usage*|
 |```-t``` , ```--no-tryit```|*Disables first screen's 'try it' option*|
 |```-v``` , ```--verbose```|*Show logging messages to stdout*|
 |```-V``` , ```--version```|*Show Cnchi version and quit*|
@@ -130,4 +130,4 @@ When creating a Pull Request (PR), please check that you follow the [PEP8](https
 
 ### Documented classes
 
-To start tinkering, we would recommend to check all open [#issues](https://github.com/Antergos/Cnchi/issues) and find one you find you will be able to start with (choose something that seems easy to do), so you feel familiar with cnchi's structure. You can find info about it at [readthedocs](https://cnchi.readthedocs.io/en/latest/)
+To start tinkering, we would recommend to check all open [#issues](https://github.com/Antergos-NeXT/Cnchi/issues) and find one you find you will be able to start with (choose something that seems easy to do), so you feel familiar with cnchi's structure. You can find info about it at [readthedocs](https://cnchi.readthedocs.io/en/latest/)

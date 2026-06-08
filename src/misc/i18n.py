@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 #
 # Copyright (C) 2012 Canonical Ltd.
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

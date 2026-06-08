@@ -485,7 +485,7 @@ msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
 "including security fixes and some feature backports. Additionally, this\n"
-"package includes ext4 support. For Antergos users seeking a long-term\n"
+"package includes ext4 support. For Antergos NeXT users seeking a long-term\n"
 "support kernel, or who want a fallback kernel in case the latest kernel\n"
 "version causes problems, this option is the answer."
 msgstr ""
@@ -591,19 +591,19 @@ msgid "Time"
 msgstr ""
 
 #: cnchi/src/show_message.py:73
-msgid "Antergos Installer - Error"
+msgid "Antergos NeXT Installer - Error"
 msgstr "Antergos安裝程式-錯誤"
 
 #: cnchi/src/show_message.py:91
-msgid "Antergos Installer - Warning"
+msgid "Antergos NeXT Installer - Warning"
 msgstr "Antergos安裝程式-警告"
 
 #: cnchi/src/show_message.py:109
-msgid "Antergos Installer - Information"
+msgid "Antergos NeXT Installer - Information"
 msgstr "Antergos安裝程式-訊息"
 
 #: cnchi/src/show_message.py:127
-msgid "Antergos Installer - Confirmation"
+msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Antergos 安裝程式 - 確認"
 
 #: cnchi/src/download/download.py:100
@@ -1603,7 +1603,7 @@ msgid "Please wait..."
 msgstr "請燒等......"
 
 #: cnchi/src/pages/slides.py:93
-msgid "Installing Antergos..."
+msgid "Installing Antergos NeXT..."
 msgstr "正在安裝 Antergos..."
 
 #: cnchi/src/pages/slides.py:238
@@ -1816,11 +1816,11 @@ msgid "Unknown error"
 msgstr "未知"
 
 #: cnchi/src/pages/welcome.py:103
-msgid "Use Antergos without making any changes to your system."
+msgid "Use Antergos NeXT without making any changes to your system."
 msgstr "試用 Antergos 而不對您的系統做出任何變更。"
 
 #: cnchi/src/pages/welcome.py:109
-msgid "Create a permanent place for Antergos on your system."
+msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr "在您的系統上建立一塊為 Antergos 準備的永久區塊。"
 
 #: cnchi/src/pages/welcome.py:113
@@ -1832,7 +1832,7 @@ msgid "Install It"
 msgstr "安裝它"
 
 #: cnchi/src/pages/welcome.py:122
-msgid "Welcome to Antergos!"
+msgid "Welcome to Antergos NeXT!"
 msgstr "歡迎來到Antergos!"
 
 #: cnchi/src/pages/welcome.py:153
@@ -3399,8 +3399,8 @@ msgstr ""
 #~ msgid "Can't synchronize cached writes to persistent storage: %s"
 #~ msgstr "無法同步已快取的寫入到持久儲存：%s"
 
-#~ msgid "Update of antergos-mirrorlist package failed with error: %s"
-#~ msgstr "更新 antergos-mirrorlist 軟體包時遇到錯誤：%s"
+#~ msgid "Update of antergos-next-mirrorlist package failed with error: %s"
+#~ msgstr "更新 antergos-next-mirrorlist 軟體包時遇到錯誤：%s"
 
 #~ msgid "Error copying new mirrorlist files: %s"
 #~ msgstr "複製新的鏡像列表檔案時遇到錯誤：%s"

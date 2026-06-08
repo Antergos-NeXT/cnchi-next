@@ -3,7 +3,7 @@
 #
 #  poodle.py
 #
-#  Copyright © 2015 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Antergos Package Assistant, (Poodle).
 #

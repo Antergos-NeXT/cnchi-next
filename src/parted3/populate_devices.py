@@ -3,7 +3,7 @@
 #
 #  populate_devices.py
 #
-#  Copyright © 2013-2017 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #

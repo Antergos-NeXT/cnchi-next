@@ -95,7 +95,7 @@ linux_entry ()
   type="$3"
   args="$4"
 
-  if [ "$os" == "Antergos Linux" ] || [ "$os" == "Arch Linux" ] || [ "$os" == "Manjaro Linux" ]; then
+  if [ "$os" == "Antergos NeXT Linux" ] || [ "$os" == "Arch Linux" ] || [ "$os" == "Manjaro Linux" ]; then
       is_arch=True
   fi
 
@@ -279,7 +279,7 @@ while [ "x$list" != "x" ] ; do
     linux_root_device_thisversion=${GRUB_DEVICE}
   fi
 
-  # GRUB_DISABLE_SUBMENU=y is the documented value to disable the submenu, testing for true is for backwards compatibility with Antergos
+  # GRUB_DISABLE_SUBMENU=y is the documented value to disable the submenu, testing for true is for backwards compatibility with Antergos NeXT NeXT
   # see https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Disable_submenu
   if [ "x$is_top_level" = xtrue ] && [ "x${GRUB_DISABLE_SUBMENU}" != xy ] && [ "x${GRUB_DISABLE_SUBMENU}" != xtrue ]; then
     linux_entry "${OS}" "${version}" simple \

@@ -3,7 +3,7 @@
 #
 # firewall.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 # Based on parts of ufw code © 2012 Canonical
 #
 # This file is part of Cnchi.

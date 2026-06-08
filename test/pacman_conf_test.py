@@ -24,7 +24,7 @@
 import os
 import sys
 import logging
-from mock import Mock
+from unittest.mock import Mock
 from installation.install import Installation
 
 def test():

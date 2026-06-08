@@ -3,7 +3,7 @@
 #
 #  pacman_conf.py
 #
-#  Copyright © 2013-2017 Antergos
+#  Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -83,7 +83,7 @@ class Settings():
             'feature_lembrame': False,
             'fullname': '',
             'GRUB_CMDLINE_LINUX': '',
-            'hostname': 'antergos',
+            'hostname': 'antergos-next',
             'install_id': '',
             'is_vbox': False,
             'keyboard_layout': '',
@@ -132,7 +132,7 @@ class Settings():
             'xz_cache': [],
             'hidden': False,
             'zfs': False,
-            'zfs_pool_name': 'antergos',
+            'zfs_pool_name': 'antergos_next',
             'zfs_pool_id': 0})
 
     def _get_settings(self):

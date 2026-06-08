@@ -3,7 +3,7 @@
 #
 # systemd_boot.py
 #
-# Copyright © 2013-2017 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -54,7 +54,7 @@ class SystemdBoot():
         os.makedirs(menu_dir, mode=0o755, exist_ok=True)
         menu_path = os.path.join(menu_dir, "loader.conf")
         with open(menu_path, 'w') as menu_file:
-            menu_file.write("default antergos\n")
+            menu_file.write("default antergos-next-next\n")
             menu_file.write("timeout 3\n")
 
         # Setup boot entries
@@ -134,24 +134,24 @@ class SystemdBoot():
         entries_dir = os.path.join(self.dest_dir, "boot/loader/entries")
         os.makedirs(entries_dir, mode=0o755, exist_ok=True)
 
-        entry_path = os.path.join(entries_dir, "antergos.conf")
+        entry_path = os.path.join(entries_dir, "antergos-next.conf")
         with open(entry_path, 'w') as entry_file:
             for line in conf['default']:
                 entry_file.write(line)
 
-        entry_path = os.path.join(entries_dir, "antergos-fallback.conf")
+        entry_path = os.path.join(entries_dir, "antergos-next-fallback.conf")
         with open(entry_path, 'w') as entry_file:
             for line in conf['fallback']:
                 entry_file.write(line)
 
         if self.settings.get('feature_lts'):
-            entry_path = os.path.join(entries_dir, "antergos-lts.conf")
+            entry_path = os.path.join(entries_dir, "antergos-next-lts.conf")
             with open(entry_path, 'w') as entry_file:
                 for line in conf['lts']:
                     entry_file.write(line)
 
             entry_path = os.path.join(
-                entries_dir, "antergos-lts-fallback.conf")
+                entries_dir, "antergos-next-lts-fallback.conf")
             with open(entry_path, 'w') as entry_file:
                 for line in conf['lts_fallback']:
                     entry_file.write(line)

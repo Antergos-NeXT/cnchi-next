@@ -3,7 +3,7 @@
 #
 # auto_partition.py
 #
-# Copyright © 2013-2018 Antergos
+# Copyright © 2026 Antergos NeXT NeXT NeXT
 #
 # This file is part of Cnchi.
 #
@@ -250,10 +250,10 @@ class AutoPartition():
             devices['lvm'] = devices['root']
 
         if self.lvm:
-            devices['root'] = "/dev/AntergosVG/AntergosRoot"
-            devices['swap'] = "/dev/AntergosVG/AntergosSwap"
+            devices['root'] = "/dev/AntergosNeXTVG/AntergosRoot"
+            devices['swap'] = "/dev/AntergosNeXTVG/AntergosSwap"
             if self.home:
-                devices['home'] = "/dev/AntergosVG/AntergosHome"
+                devices['home'] = "/dev/AntergosNeXTVG/AntergosHome"
 
         return devices
 
@@ -479,10 +479,10 @@ class AutoPartition():
         # Create Boot partition
         if self.bootloader in ["systemd-boot", "refind"]:
             wrapper.sgdisk_new(
-                device, part_num, "ANTERGOS_BOOT", part_sizes['boot'], "EF00")
+                device, part_num, "ANTERGOS_NEXT_BOOT", part_sizes['boot'], "EF00")
         else:
             wrapper.sgdisk_new(
-                device, part_num, "ANTERGOS_BOOT", part_sizes['boot'], "8300")
+                device, part_num, "ANTERGOS_NEXT_BOOT", part_sizes['boot'], "8300")
         part_num += 1
 
         if self.lvm:
@@ -575,18 +575,18 @@ class AutoPartition():
 
         err_msg = "Error creating LVM volume group in device {0}"
         err_msg = err_msg.format(devices['lvm'])
-        cmd = ["vgcreate", "-f", "-y", "AntergosVG", devices['lvm']]
+        cmd = ["vgcreate", "-f", "-y", "AntergosNeXTVG", devices['lvm']]
         call(cmd, msg=err_msg, fatal=True)
 
         # Fix issue 180
         # Check space we have now for creating logical volumes
-        cmd = ["vgdisplay", "-c", "AntergosVG"]
+        cmd = ["vgdisplay", "-c", "AntergosNeXTVG"]
         vg_info = call(cmd, fatal=True)
         # Get column number 12: Size of volume group in kilobytes
         vg_size = int(vg_info.split(":")[11]) / 1024
         if part_sizes['lvm_pv'] > vg_size:
             logging.debug(
-                "Real AntergosVG volume group size: %d MiB", vg_size)
+                "Real AntergosNeXTVG volume group size: %d MiB", vg_size)
             logging.debug("Reajusting logical volume sizes")
             diff_size = part_sizes['lvm_pv'] - vg_size
             part_sizes = self.get_part_sizes(
@@ -597,19 +597,19 @@ class AutoPartition():
         err_msg = "Error creating LVM logical volume"
 
         size = str(int(part_sizes['root']))
-        cmd = ["lvcreate", "--name", "AntergosRoot", "--size", size, "AntergosVG"]
+        cmd = ["lvcreate", "--name", "AntergosRoot", "--size", size, "AntergosNeXTVG"]
         call(cmd, msg=err_msg, fatal=True)
 
         if not self.home:
             # Use the remainig space for our swap volume
-            cmd = ["lvcreate", "--name", "AntergosSwap", "--extents", "100%FREE", "AntergosVG"]
+            cmd = ["lvcreate", "--name", "AntergosSwap", "--extents", "100%FREE", "AntergosNeXTVG"]
             call(cmd, msg=err_msg, fatal=True)
         else:
             size = str(int(part_sizes['swap']))
-            cmd = ["lvcreate", "--name", "AntergosSwap", "--size", size, "AntergosVG"]
+            cmd = ["lvcreate", "--name", "AntergosSwap", "--size", size, "AntergosNeXTVG"]
             call(cmd, msg=err_msg, fatal=True)
             # Use the remaining space for our home volume
-            cmd = ["lvcreate", "--name", "AntergosHome", "--extents", "100%FREE", "AntergosVG"]
+            cmd = ["lvcreate", "--name", "AntergosHome", "--extents", "100%FREE", "AntergosNeXTVG"]
             call(cmd, msg=err_msg, fatal=True)
 
     def create_filesystems(self, devices):
@@ -738,7 +738,7 @@ class AutoPartition():
         # Remove lvm in destination device
         self.remove_lvm(device)
         # Close luks devices in destination device
-        luks.close_antergos_devices()
+        luks.close_antergos_next_devices()
 
         self.printk(False)
         if self.gpt:
