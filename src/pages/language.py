@@ -69,7 +69,13 @@ class Language(GtkBaseBox):
 
         data_dir = self.settings.get('data')
 
-        self.current_locale = os.environ.get('LANG', 'en_US').split('.')[0]
+        try:
+            locale.setlocale(locale.LC_ALL, "")
+        except locale.Error:
+            pass
+        self.current_locale = locale.getlocale()[0]
+        if self.current_locale is None:
+            self.current_locale = 'en_US'
         self.language_list = os.path.join(
             data_dir,
             "locale",
@@ -92,7 +98,14 @@ class Language(GtkBaseBox):
     @staticmethod
     def get_locale():
         """ Returns default locale """
-        return os.environ.get('LANG', 'en_US.UTF-8')
+        try:
+            locale.setlocale(locale.LC_ALL, "")
+        except locale.Error:
+            pass
+        loc = locale.getlocale()
+        if loc[0]:
+            return '.'.join(loc) if loc[1] else loc[0]
+        return 'en_US.UTF-8'
 
     def on_listbox_row_selected(self, _listbox, listbox_row):
         """ Someone selected a different row of the listbox """
@@ -166,7 +179,13 @@ class Language(GtkBaseBox):
     def set_language(self, locale_code):
         """ Sets language (using environmental variables and gettext) """
         if locale_code is None:
-            locale_code = os.environ.get('LANG', 'en_US').split('.')[0]
+            try:
+                locale.setlocale(locale.LC_ALL, "")
+            except locale.Error:
+                pass
+            locale_code = locale.getlocale()[0]
+            if locale_code is None:
+                locale_code = 'en_US'
 
         if locale_code == 'en':
             # Perl expects LANG to be in this format, otherwise it complains which
