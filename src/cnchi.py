@@ -519,7 +519,7 @@ class CnchiInit():
         gettext.textdomain(CnchiInit.APP_NAME)
         gettext.bindtextdomain(CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR)
 
-        locale_code, _encoding = locale.getdefaultlocale()
+        locale_code = os.environ.get('LANG', 'en_US').split('.')[0]
         lang = gettext.translation(
             CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, [locale_code], None, True)
         lang.install()
