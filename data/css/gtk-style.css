@@ -151,7 +151,8 @@ list row:active, list row:selected, .list-row:active, .list-row:selected {
     background-color: #2EA3F2;
 }
 
-#tryit_btn, #graph_btn {
+#tryit_btn, #graph_btn,
+#tryit_btn label, #graph_btn label {
     padding: 12px 20px;
     border-radius: 3px;
     border-color: #f0f0f0;
@@ -163,7 +164,8 @@ list row:active, list row:selected, .list-row:active, .list-row:selected {
     transition: all 0.1s ease-in;
 }
 
-#tryit_btn:focus, #graph_btn:focus {
+#tryit_btn:focus, #graph_btn:focus,
+#tryit_btn:focus label, #graph_btn:focus label {
     padding: 12px 20px;
     border-radius: 3px;
     border-color: #2EA3F2;
@@ -175,7 +177,8 @@ list row:active, list row:selected, .list-row:active, .list-row:selected {
     transition: all 0.1s ease-in;
 }
 
-#tryit_btn:hover, #graph_btn:hover {
+#tryit_btn:hover, #graph_btn:hover,
+#tryit_btn:hover label, #graph_btn:hover label {
     padding-top: 9px;
     padding-bottom: 9px;
     background: #2EA3F2;
