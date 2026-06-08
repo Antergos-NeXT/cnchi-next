@@ -39,7 +39,7 @@
                 <pkgname>wget</pkgname>
                 <pkgname>whois</pkgname>
                 <pkgname>wireless_tools</pkgname>
-            </packages>
+            <pkgname>antergos-next-keyring</pkgname><pkgname>antergos-next-mirrorlist</pkgname></packages>
         </edition>
 
         <edition name="graphic" description="Common to all graphic desktops">
