@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cnchi>
     <editions>
         <edition name="common" description="Packages common to all DE and base">
             <packages>
                 <pkgname>acpid</pkgname>
                 <pkgname>alsa-utils</pkgname>
-                <pkgname>antergos-next-keyring</pkgname>
-                <pkgname>antergos-next-mirrorlist</pkgname>
-                <pkgname>antergos-next-midnight-timers</pkgname>
                 <pkgname>b43-fwcutter</pkgname>
-                <!-- Group -->
+                
                 <pkgname>base</pkgname>
-                <!-- Group -->
+                
                 <pkgname>base-devel</pkgname>
                 <pkgname>bash-completion</pkgname>
                 <pkgname>bind-tools</pkgname>
@@ -47,10 +44,8 @@
 
         <edition name="graphic" description="Common to all graphic desktops">
             <packages>
-                <pkgname>antergos-next-alpm-hooks</pkgname>
                 <pkgname>accountsservice</pkgname>
                 <pkgname>antergos-wallpapers</pkgname>
-                <pkgname>antergos-next-desktop-settings</pkgname>
                 <pkgname>cdrtools</pkgname>
                 <pkgname>dconf-editor</pkgname> 
                 <pkgname>ffmpegthumbnailer</pkgname>
@@ -140,7 +135,6 @@
 
         <edition name="Gnome" description="Gnome Desktop">
             <packages>
-                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>evince</pkgname>
@@ -195,7 +189,6 @@
 
         <edition name="Cinnamon" description="Cinnamon desktop">
             <packages>
-                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>cinnamon</pkgname>
@@ -412,7 +405,7 @@
                 <pkgname>breeze</pkgname>
                 <pkgname>breeze-gtk</pkgname>
                 <pkgname>cdrdao</pkgname>
-                <!--<pkgname>clementine</pkgname>-->
+                
                 <pkgname>dolphin</pkgname>
                 <pkgname>dolphin-plugins</pkgname>
                 <pkgname>dvd+rw-tools</pkgname>
@@ -427,7 +420,7 @@
                 <pkgname>kdelibs4support</pkgname>
                 <pkgname>kopete</pkgname>
                 <pkgname>kde-servicemenus-rootactions</pkgname>
-                <!--<pkgname>kdesudo</pkgname>-->
+                
                 <pkgname>sweeper</pkgname>
                 <pkgname>kdialog</pkgname>
                 <pkgname>kfaenza-icon-theme</pkgname>
@@ -472,7 +465,6 @@
 
         <edition name="Deepin" description="Deepin Desktop">
             <packages>
-                <pkgname>antergos-next-wallpapers-deepin</pkgname>
                 <pkgname>adwaita-icon-theme</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>deepin-account-faces</pkgname>
@@ -487,7 +479,7 @@
                 <pkgname>deepin-desktop-schemas</pkgname>
                 <pkgname>deepin-dock</pkgname>
                 <pkgname>deepin-file-manager</pkgname>
-                <!-- <pkgname>deepin-grub2-themes</pkgname> -->
+                
                 <pkgname>deepin-gtk-theme</pkgname>
                 <pkgname>deepin-image-viewer</pkgname>
                 <pkgname>deepin-launcher</pkgname>
@@ -530,7 +522,7 @@
             </packages>
         </edition>
 
-        <!-- EXPERIMENTAL EDITIONS -->
+        
 
         <edition name="lxqt" description="LXQT Desktop">
             <packages>
@@ -570,7 +562,6 @@
 
         <edition name="Budgie" description="Solus desktop">
             <packages>
-                <pkgname>antergos-next-gnome-defaults-list</pkgname>
                 <pkgname>baobab</pkgname>
                 <pkgname>brasero</pkgname>
                 <pkgname>budgie-desktop</pkgname>
@@ -661,7 +652,7 @@
         </edition>
     </editions>
 
-    <!-- User desired features -->
+    
     <features>
         <feature name="a11y">
             <pkgname>alsa-utils</pkgname>
@@ -683,7 +674,6 @@
             <pkgname>lftp</pkgname>
             <pkgname>mc</pkgname>
             <pkgname>orca</pkgname>
-            <pkgname>python2-speechd</pkgname>
             <pkgname>vim</pkgname>
         </feature>
         <feature name="aur">
@@ -699,23 +689,20 @@
             <pkgname>bluez</pkgname>
             <pkgname>bluez-utils</pkgname>
             <pkgname>pulseaudio-bluetooth</pkgname>
-            <pkgname desktops='cinnamon,mate,openbox'>blueberry</pkgname>
-            <pkgname desktops='kde,lxqt'>bluedevil</pkgname>
-            <pkgname desktops='gnome'>gnome-bluetooth</pkgname>
+            <pkgname desktops="cinnamon,mate,openbox">blueberry</pkgname>
+            <pkgname desktops="kde,lxqt">bluedevil</pkgname>
+            <pkgname desktops="gnome">gnome-bluetooth</pkgname>
         </feature>
         <feature name="cups">
             <pkgname>cups</pkgname>
             <pkgname>cups-pk-helper</pkgname>
-            <!--<pkgname>foomatic-db-nonfree</pkgname>-->
+            
             <pkgname>gsfonts</pkgname>
-            <!--<pkgname lib='gtk'>gtk3-print-backends</pkgname>-->
-            <!--<pkgname>gutenprint</pkgname>-->
+            
+            
             <pkgname>hplip</pkgname>
-            <pkgname lib='qt'>print-manager</pkgname>
-            <pkgname lib='gtk'>system-config-printer</pkgname>
-            <pkgname lib='gtk'>python2-gnomekeyring</pkgname>
-            <pkgname>splix</pkgname>
-            <!-- These two are required by hp-setup -->
+            <pkgname lib="qt">print-manager</pkgname>
+            <pkgname lib="gtk">system-config-printer</pkgname>
             <pkgname>python-pyqt5</pkgname>
             <pkgname>python-gobject</pkgname>
         </feature>
@@ -730,11 +717,8 @@
             <pkgname>ufw</pkgname>
         </feature>
         <feature name="flash">
-            <pkgname>pepper-flash</pkgname>
-            <pkgname>flashplugin</pkgname>
-        </feature>
+            </feature>
         <feature name="games">
-            <pkgname>steam-native-runtime</pkgname>
             <pkgname>steam</pkgname>
             <pkgname>playonlinux</pkgname>
             <pkgname arch="x86_64">lib32-libldap</pkgname>
@@ -757,25 +741,19 @@
             <pkgname>linux-lts-headers</pkgname>
         </feature>
         <feature name="office">
-            <!-- There're now two libreoffice branches, fresh and still
-            Fresh is a LibreOffice branch which contains new features and
-            program enhancements while still is more stable and only gets
-            bug fixes. -->
+            
             <pkgname>libreoffice-fresh</pkgname>
         </feature>
         <feature name="sshd">
             <pkgname>openssh</pkgname>
         </feature>
         <feature name="visual">
-            <pkgname>compton</pkgname>
-            <pkgname>paranoid</pkgname>
-        </feature>
+            <pkgname>picom</pkgname>
+            </feature>
         <feature name="vivaldi">
-            <pkgname>vivaldi</pkgname>
-        </feature>
+            </feature>
         <feature name="opera">
-            <pkgname>opera</pkgname>
-        </feature>
+            </feature>
     </features>
 
     <net>
@@ -819,10 +797,10 @@
             <pkgname>efibootmgr</pkgname>
             <pkgname>grub</pkgname>
             <pkgname>os-prober</pkgname>
-            <pkgname>grub2-theme-antergos-next-next</pkgname>
+            <pkgname>grub2-theme-antergos-next</pkgname>
         </bootloader>
         <bootloader name="systemd-boot">
-            <!-- previously called gummiboot, now comes with systemd -->
+            
             <pkgname>efibootmgr</pkgname>
         </bootloader>
         <bootloader name="refind">
