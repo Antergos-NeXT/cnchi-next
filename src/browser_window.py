@@ -30,7 +30,7 @@
 
 import gi
 gi.require_version('Gtk', '3.0')
-gi.require_version('WebKit2', '4.0')
+gi.require_version('WebKit2', '4.1')
 from gi.repository import Gtk, GLib, WebKit2
 
 
@@ -47,7 +47,7 @@ class BrowserWindow(Gtk.Window):
 
         self.connect('delete-event', self.on_destroy)
 
-        # https://lazka.github.io/pgi-docs/WebKit2-4.0/classes/Settings.html
+        # https://lazka.github.io/pgi-docs/WebKit2-4.1/classes/Settings.html
         settings = WebKit2.Settings().new()
         self.webview = WebKit2.WebView().new_with_settings(settings)
 

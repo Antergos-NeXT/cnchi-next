@@ -37,7 +37,7 @@ from installation import wrapper
 import parted3.fs_module as fs
 
 from widgets.zfs_treeview import ZFSTreeview
-import zfs_manager as zfs
+from pages import zfs_manager as zfs
 
 # When testing, no _() is available
 try:
