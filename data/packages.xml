@@ -46,7 +46,7 @@
             <packages>
                 <pkgname>accountsservice</pkgname>
                 <pkgname>antergos-wallpapers</pkgname>
-                <pkgname>cdrtools</pkgname>
+                <pkgname>antergos-next-desktop-settings</pkgname><pkgname>cdrtools</pkgname>
                 <pkgname>dconf-editor</pkgname> 
                 <pkgname>ffmpegthumbnailer</pkgname>
                 <pkgname>gst-libav</pkgname>
