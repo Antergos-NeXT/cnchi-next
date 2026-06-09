@@ -46,6 +46,15 @@ NM_STATE_CONNECTED_GLOBAL = 70
 
 _DROPPED_PRIVILEGES = 0
 
+_CNCHI_SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "data", "locale")
+
+
+def get_locale_dir():
+    """ Return the locale directory (dev path first, then system path) """
+    if os.path.isdir(_CNCHI_SRC):
+        return _CNCHI_SRC
+    return "/usr/share/locale"
+
 
 def copytree(src_dir, dst_dir, symlinks=False, ignore=None):
     """ Copy an entire tree with files and folders """
@@ -144,6 +153,8 @@ def regain_privileges():
         raise AssertionError()
     _DROPPED_PRIVILEGES -= 1
     if _DROPPED_PRIVILEGES == 0:
+        if os.geteuid() != 0:
+            return
         os.seteuid(0)
         os.setegid(0)
         os.setgroups([])
@@ -443,18 +454,18 @@ def has_connection():
         conn.request("GET", "/")
         conn.close()
 
-    # The ips are reversed (to avoid spam)
+    # A few reliable endpoints to check for internet connectivity
     urls = [
-        ('http', '20.13.206.130'),
-        ('https', '167.140.27.104'),
-        ('https', '167.141.27.104')]
+        ('http', 'http://httpbin.org/ip', ''),
+        ('https', '', 'www.archlinux.org'),
+        ('https', '', 'github.com')]
 
-    for prot, ip_addr in urls:
+    for prot, url, host in urls:
         try:
-            ip_addr = '.'.join(ip_addr.split('.')[::-1])
-            url = "{0}://{1}".format(prot, ip_addr)
             if prot == 'http':
                 check_http_connection(url)
+            elif prot == 'https':
+                check_https_connection(host)
             elif prot == 'https':
                 check_https_connection(ip_addr)
         except ssl.SSLError as err:

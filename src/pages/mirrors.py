@@ -411,7 +411,9 @@ class Mirrors(GtkBaseBox):
             parent_conn, child_conn = multiprocessing.Pipe(duplex=False)
             # Store parent_conn for later use in summary.py (rankmirrors wait dialog)
             #proc = RankMirrors(fraction_pipe=child_conn)
-            proc = RankMirrors(child_conn, self.settings)
+            results = multiprocessing.Manager().dict()
+            self.settings.set('rankmirrors_results', results)
+            proc = RankMirrors(child_conn, results)
             proc.daemon = True
             proc.name = "rankmirrors"
             proc.start()

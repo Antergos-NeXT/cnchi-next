@@ -131,6 +131,7 @@ class MainWindow(Gtk.ApplicationWindow):
 
         # For things we are not ready for users to test
         self.settings.set('hidden', cmd_line.hidden)
+        self.settings.set('re_up', cmd_line.re_up)
 
         # a11y
         self.settings.set('a11y', cmd_line.a11y)

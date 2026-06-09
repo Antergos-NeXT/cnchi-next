@@ -291,6 +291,12 @@ class Summary(GtkBaseBox):
                 Gtk.main_iteration()
 
         logging.debug("Rankmirrors process is finished. Installation can go on")
+
+        # Propagate rankmirrors result to settings for downstream consumers
+        results = self.settings.get('rankmirrors_results')
+        if results and 'rankmirrors_result' in results:
+            self.settings.set('rankmirrors_result', results['rankmirrors_result'])
+
         wait_window.hide()
         wait_window.destroy()
 

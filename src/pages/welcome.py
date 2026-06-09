@@ -37,8 +37,11 @@ import gi
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GdkPixbuf
 
+from gi.repository import Gdk
+
 import misc.extra as misc
 from pages.gtkbasebox import GtkBaseBox
+import quotes
 
 # When testing, no _() is available
 try:
@@ -46,6 +49,13 @@ try:
 except NameError as err:
     def _(message):
         return message
+
+
+_KONAMI = [
+    Gdk.KEY_Up, Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Down,
+    Gdk.KEY_Left, Gdk.KEY_Right, Gdk.KEY_Left, Gdk.KEY_Right,
+    Gdk.KEY_b, Gdk.KEY_a,
+]
 
 
 class Welcome(GtkBaseBox):
@@ -57,12 +67,16 @@ class Welcome(GtkBaseBox):
         data_dir = self.settings.get('data')
         welcome_dir = os.path.join(data_dir, "images", "welcome")
 
+        self._konami_idx = 0
+        self._konami_timer = None
+
         self.main_window = params['main_window']
 
         self.labels = {'welcome': self.gui.get_object("welcome_label"),
                        'tryit': self.gui.get_object("tryit_welcome_label"),
                        'installit': self.gui.get_object("installit_welcome_label"),
-                       'loading': self.gui.get_object("loading_label")}
+                       'loading': self.gui.get_object("loading_label"),
+                       'quote': self.gui.get_object("quote_label")}
 
         self.buttons = {'tryit': self.gui.get_object("tryit_button"),
                         # 'cli': self.gui.get_object("cli_button"),
@@ -159,11 +173,50 @@ class Welcome(GtkBaseBox):
         self.forward_button.show()
         return True
 
+    def _on_key_press(self, _widget, event):
+        """ Track Konami code sequence """
+        if not self.settings.get('re_up'):
+            return False
+        if event.keyval == _KONAMI[self._konami_idx]:
+            self._konami_idx += 1
+            if self._konami_idx >= len(_KONAMI):
+                self._konami_idx = 0
+                self._trigger_konami()
+                return True
+        else:
+            self._konami_idx = 0
+        return False
+
+    def _trigger_konami(self):
+        """ Konami code entered: cycle through all quotes """
+        import gi
+        gi.require_version('GLib', '2.0')
+        from gi.repository import GLib
+
+        def cycle_quotes():
+            self.labels['quote'].set_markup(
+                '<span size="small" style="italic">"{}"</span>'.format(
+                    quotes.get_random_quote()))
+            return True
+
+        self._konami_timer = GLib.timeout_add(800, cycle_quotes)
+
     def prepare(self, direction):
         """ Prepare page before showing it """
         self.translate_ui()
         self.show_all()
         self.forward_button.hide()
+
+        if self.settings.get('re_up'):
+            self.labels['quote'].set_markup(
+                '<span size="small" style="italic">"{}"</span>'.format(
+                    quotes.get_random_quote()))
+            self.labels['quote'].show()
+        else:
+            self.labels['quote'].hide()
+
+        self._konami_idx = 0
+        self.main_window.connect('key-press-event', self._on_key_press)
 
         # a11y Set install option as default if ENTER is pressed
         self.buttons['graph'].set_can_default(True)

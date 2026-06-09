@@ -73,12 +73,12 @@ class RankMirrors(multiprocessing.Process):
     DB_SUBPATHS = {
         'arch': 'core/os/x86_64/{0}-{1}-x86_64.pkg.tar.xz'}
 
-    def __init__(self, fraction_pipe, settings):
+    def __init__(self, fraction_pipe, results):
         """ Initialize process class
             fraction_pipe is a pipe used to send progress for a gtk.progress widget update
             in another process (see start_rank_mirrors() in mirrors.py) """
         super(RankMirrors, self).__init__()
-        self.settings = settings
+        self.results = results
         self.fraction_pipe = fraction_pipe
         # Antergos mirrors info is returned as RSS, arch's as JSON
         self.data = {'arch': {}, 'antergos': {}}
@@ -370,10 +370,10 @@ class RankMirrors(multiprocessing.Process):
         logging.debug("Filtering and sorting mirrors...")
         self.filter_and_sort_mirrorlists()
 
-        if self.settings:
+        if self.results:
             self.mirrorlist_ranked['arch'] = [
                 x for x in self.mirrorlist_ranked['arch'] if x]
-            self.settings.set('rankmirrors_result', self.mirrorlist_ranked['arch'])
+            self.results['rankmirrors_result'] = self.mirrorlist_ranked['arch']
 
         if self.fraction_pipe:
             self.fraction_pipe.send(1)

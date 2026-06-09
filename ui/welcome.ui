@@ -146,5 +146,21 @@
         <property name="position">1</property>
       </packing>
     </child>
+    <child>
+      <object class="GtkLabel" id="quote_label">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="justify">center</property>
+        <property name="wrap">True</property>
+        <property name="margin_top">10</property>
+        <property name="opacity">0.6</property>
+        <property name="selectable">True</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
   </object>
 </interface>

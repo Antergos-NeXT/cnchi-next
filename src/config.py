@@ -30,6 +30,11 @@
 """ Configuration module for Cnchi """
 
 import multiprocessing
+import os
+
+_ctx = multiprocessing.get_context('fork')
+
+_SRC_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 
 class Settings():
@@ -37,7 +42,7 @@ class Settings():
 
     def __init__(self):
         """ Initialize default configuration """
-        self._manager = multiprocessing.Manager()
+        self._manager = _ctx.Manager()
 
         # Creates a one element size queue
         self._settings = self._manager.Queue(1)
@@ -46,6 +51,12 @@ class Settings():
 
     def _set_defaults(self):
         """ Set default values """
+        if os.environ.get('CNCHI_DEV'):
+            cnchi = _SRC_DIR + '/'
+            data = _SRC_DIR + '/data/'
+        else:
+            cnchi = '/usr/share/cnchi/'
+            data = '/usr/share/cnchi/data/'
         self._settings.put({
             'alternate_package_list': '',
             'auto_device': '/dev/sda',
@@ -55,10 +66,10 @@ class Settings():
             'bootloader_installation_successful': False,
             'btrfs': False,
             'cache_pkgs_md5_check_failed': [],
-            'cnchi': '/usr/share/cnchi/',
+            'cnchi': cnchi,
             'country_name': '',
             'country_code': '',
-            'data': '/usr/share/cnchi/data/',
+            'data': data,
             'desktop': 'gnome',
             'desktop_ask': True,
             'desktop_manager': 'lightdm',

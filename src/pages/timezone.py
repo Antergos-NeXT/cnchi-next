@@ -28,7 +28,6 @@
 
 """ Timezone screen """
 
-import hashlib
 import http.client
 import logging
 import multiprocessing
@@ -42,8 +41,6 @@ import misc.tz as tz
 import misc.extra as misc
 import widgets.timezonemap as timezonemap
 from pages.gtkbasebox import GtkBaseBox
-
-import geoip
 
 # When testing, no _() is available
 try:
@@ -222,7 +219,9 @@ class Timezone(GtkBaseBox):
 
     def start_auto_timezone_process(self):
         """ Starts timezone thread """
-        proc = AutoTimezoneProcess(self.auto_timezone_coords, self.settings)
+        proc = AutoTimezoneProcess(
+            self.auto_timezone_coords,
+            self.settings.get('cnchi'))
         proc.daemon = True
         proc.name = "timezone"
         proc.start()
@@ -289,91 +288,38 @@ class Timezone(GtkBaseBox):
 
 
 class AutoTimezoneProcess(multiprocessing.Process):
-    """ Thread that asks our server for user's location """
+    """ Thread that asks a geolocation API for user's location """
 
-    def __init__(self, coords_queue, settings):
+    def __init__(self, coords_queue, cnchi_path):
         super(AutoTimezoneProcess, self).__init__()
         self.coords_queue = coords_queue
-        self.settings = settings
+        self.cnchi_path = cnchi_path
 
     def run(self):
         """ main thread method """
-        # Do not start looking for our timezone until we've reached the
-        # language screen (welcome.py sets timezone_start to true when
-        # next is clicked)
-        while not self.settings.get('timezone_start'):
-            time.sleep(2)
-
-        coords = self.use_geoip()
+        time.sleep(2)
+        coords = self.use_ip_api()
         if not coords:
-            msg = "Could not detect your timezone using GeoIP database. Let's use another method."
-            logging.warning(msg)
-            coords = self.use_geo_antergos()
-
-        # If latitude and longitude are zero it means something bad has happened
-        if not coords or (float(coords[0]) == 0 and float(coords[1]) == 0):
-            logging.warning(
-                "Could not detect your timezone. Are you behind a firewall?")
+            logging.warning("Could not detect your timezone via IP geolocation.")
             return
-
         logging.debug(
             _("Timezone (latitude %s, longitude %s) detected."),
             coords[0], coords[1])
         self.coords_queue.put(coords)
 
     @staticmethod
-    def use_geoip():
-        """ Determine our location using GeoIP database """
-        logging.debug("Getting your location using GeoIP database")
-        location = geoip.GeoIP().get_location()
-        if location:
-            return [location.latitude, location.longitude]
-        return None
-
-    @staticmethod
-    def maybe_wait_for_network():
-        """ Waits until there is an Internet connection available """
-        if not misc.has_connection():
-            logging.warning(
-                "Can't get network status. Cnchi will try again in a moment")
-            while not misc.has_connection():
-                time.sleep(4)  # Wait 4 seconds and try again
-        logging.debug("A working network connection has been detected.")
-
-
-    def use_geo_antergos(self):
-        """ Determine our location using geo.antergos.com """
-        # Calculate logo hash
-        logo = "data/images/antergos-next/antergos-logo-mini2.png"
-        logo_path = os.path.join(self.settings.get("cnchi"), logo)
-        with open(logo_path, "rb") as logo_file:
-            logo_bytes = logo_file.read()
-        logo_hasher = hashlib.sha1()
-        logo_hasher.update(logo_bytes)
-        logo_digest = logo_hasher.digest()
-
-        # Wait until there is an Internet connection available
-        self.maybe_wait_for_network()
-
-        # OK, now get our timezone
-        logging.debug("We have connection. Let's get our timezone")
-
+    def use_ip_api():
+        """ Determine our location using ip-api.com (free, no API key needed) """
+        import json
         try:
-            url = urllib.request.Request(
-                url="https://github.com/Antergos-NeXT",
-                data=logo_digest,
-                headers={"User-Agent": "Antergos Installer", "Connection": "close"})
-            with urllib.request.urlopen(url) as conn:
-                coords = conn.read().decode('utf-8').strip()
-            if coords == "0 0":
-                # Sometimes server returns 0 0, we treat it as an error
-                coords = None
-            else:
-                coords = coords.split()
-        except (OSError, urllib.error.HTTPError, http.client.HTTPException) as err:
-            template = "Error getting timezone coordinates. " \
-                "An exception of type {0} occured. Arguments:\n{1!r}"
-            message = template.format(type(err).__name__, err.args)
-            logging.error(message)
-            coords = None
-        return coords
+            req = urllib.request.Request(
+                url="http://ip-api.com/json/?fields=lat,lon",
+                headers={"User-Agent": "Cnchi Installer"})
+            with urllib.request.urlopen(req, timeout=5) as conn:
+                data = json.loads(conn.read().decode('utf-8'))
+                if data.get('lat') and data.get('lon'):
+                    return [data['lat'], data['lon']]
+        except (OSError, urllib.error.HTTPError, http.client.HTTPException,
+                json.JSONDecodeError, KeyError) as err:
+            logging.warning("IP geolocation failed: %s", err)
+        return None

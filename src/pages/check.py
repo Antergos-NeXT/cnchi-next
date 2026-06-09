@@ -36,6 +36,8 @@ import tarfile
 import tempfile
 import dbus
 import multiprocessing
+
+_ctx = multiprocessing.get_context('fork')
 import requests
 import time
 from packaging import version
@@ -69,7 +71,7 @@ class Check(GtkBaseBox):
         """ Init class ui """
         super().__init__(self, params, "check", prev_page, next_page)
 
-        self.results = multiprocessing.Manager().dict()
+        self.results = _ctx.Manager().dict()
         self.results['internet'] = False
         self.results['power'] = False
         self.results['space'] = False
@@ -186,7 +188,7 @@ class Check(GtkBaseBox):
         self.on_timer()
         self.timeout_id = GLib.timeout_add(1000, self.on_timer)
 
-        self.proc = CheckProcess(self.results, self.settings)
+        self.proc = CheckProcess(self.results, self.settings.get('temp'))
         self.proc.daemon = True
         self.proc.name = "check_proc"
         self.proc.start()
@@ -195,10 +197,10 @@ class Check(GtkBaseBox):
 class CheckProcess(multiprocessing.Process):
     """ Thread that asks our server for user's location """
 
-    def __init__(self, results, settings):
+    def __init__(self, results, temp_path):
         super(CheckProcess, self).__init__()
         self.results = results
-        self.settings = settings
+        self.temp_path = temp_path
         self.remote_version = None
 
     def run(self):
@@ -214,8 +216,7 @@ class CheckProcess(multiprocessing.Process):
         space = self.has_enough_space()
         self.results['space'] = space
 
-        temp = self.settings.get('temp')
-        path = os.path.join(temp, ".cnchi_partitioning_completed")
+        path = os.path.join(self.temp_path, ".cnchi_partitioning_completed")
         packaging_issues = os.path.exists(path)
         self.results['packing'] = not packaging_issues
 
@@ -256,7 +257,6 @@ class CheckProcess(multiprocessing.Process):
                 if os.path.exists(type_path):
                     with open(type_path) as power_file:
                         if power_file.read().startswith('Battery'):
-                            self.settings.set('laptop', 'True')
                             return True
         return False
 
@@ -306,7 +306,7 @@ class CheckProcess(multiprocessing.Process):
             pkg = None
             try:
                 ant_db = tempfile.NamedTemporaryFile(delete=False)
-                response = requests.get(url)
+                response = requests.get(url, timeout=5)
                 ant_db.write(response.content)
                 ant_db.close()
 
@@ -322,7 +322,7 @@ class CheckProcess(multiprocessing.Process):
                     version = pkg.split('-')[1]
                     logging.debug('Cnchi version in the Antergos repository is: %s', version)
                     return version
-            except (requests.exceptions.ConnectionError, tarfile.ReadError) as err:
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout, tarfile.ReadError) as err:
                 logging.warning(err)
 
         logging.error("Cannot get Cnchi's version from Antergos repository!")

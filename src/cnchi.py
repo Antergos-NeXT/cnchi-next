@@ -103,7 +103,7 @@ class CnchiApp(Gtk.Application):
             sys.exit(1)
 
         # Check if we have administrative privileges
-        if os.getuid() != 0:
+        if os.getuid() != 0 and not os.environ.get('CNCHI_DEV'):
             msg = _('This installer must be run with administrative privileges, '
                     'and cannot continue without them.')
             show.error(None, msg)
@@ -177,7 +177,7 @@ class CnchiInit():
 
     # Useful vars for gettext (translations)
     APP_NAME = "cnchi"
-    LOCALE_DIR = "/usr/share/locale"
+    LOCALE_DIR = misc.get_locale_dir()
 
     # At least this GTK version is needed
     GTK_VERSION_NEEDED = "3.18.0"
@@ -483,6 +483,9 @@ class CnchiInit():
         parser.add_argument(
             "-z", "--hidden", help=_("Show options in development (use at your own risk!)"),
             action="store_true")
+        parser.add_argument(
+            "--re-up", help=_("Enable Class of '09 quotes on welcome screen"),
+            action="store_true")
 
         return parser.parse_args()
 
@@ -526,14 +529,20 @@ class CnchiInit():
         locale_code = locale.getlocale()[0]
         if locale_code is None:
             locale_code = 'en_US'
-        lang = gettext.translation(
-            CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, [locale_code], None, True)
+        try:
+            lang = gettext.translation(
+                CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, [locale_code], None, True)
+        except OSError:
+            lang = gettext.translation(
+                CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, ['en'], None, True)
         lang.install()
 
 
     @staticmethod
     def check_for_files():
         """ Check for some necessary files. Cnchi can't run without them """
+        if os.environ.get('CNCHI_DEV'):
+            return True
         paths = [
             "/usr/share/cnchi",
             "/usr/share/cnchi/ui",
