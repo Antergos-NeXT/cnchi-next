@@ -7,6 +7,7 @@ Forked from the original Antergos Cnchi, patched for modern Python (3.14+), with
 | Branch | Status |
 |--------|--------|
 | `0.16.x` | Active — stable release |
+| `cnchi-dev` | Development — UI redesign, experimental features |
 | `master` | Legacy upstream |
 
 ## What's different in this fork
@@ -38,6 +39,7 @@ sudo -E cnchi.py
 | `-v`, `--verbose` | Show log messages to stdout  |
 | `-V`, `--version` | Show version and quit |
 | `-z`, `--hidden` | Show development options |
+| `--re-up` | Enable Class of '09 quotes on welcome screen |
 
 ## Reporting bugs
 
