@@ -2379,6 +2379,10 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "Error calling hexdump command: %s"
 #~ msgstr "Error llamando al comando de volcado hexadecimal: %s"
 

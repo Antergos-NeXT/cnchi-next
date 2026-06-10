@@ -2420,6 +2420,10 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "Unknown partition id %s"
 #~ msgstr "Nežinomas skaidinio id %s"
 

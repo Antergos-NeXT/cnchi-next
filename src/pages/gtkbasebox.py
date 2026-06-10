@@ -60,6 +60,7 @@ class GtkBaseBox(Gtk.Box):
         logging.debug("Loading '%s' screen", name)
 
         self.gui = Gtk.Builder()
+        self.gui.set_translation_domain('cnchi')
         self.gui_file = os.path.join(self.gui_dir, "{}.ui".format(name))
         self.gui.add_from_file(self.gui_file)
 

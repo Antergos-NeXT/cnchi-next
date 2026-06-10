@@ -197,6 +197,9 @@ class CnchiInit():
 
         # Configures gettext to be able to translate messages, using _()
         self.setup_gettext()
+        # Override module-level fallback _ (from lines 74-77) with real translation
+        import builtins
+        globals()['_'] = builtins._
 
         # Command line options
         self.cmd_line = self.parse_options()
@@ -515,23 +518,63 @@ class CnchiInit():
             GObject.threads_init()
             # Gdk.threads_init()
 
+    _locale_fallback = False
+
     @staticmethod
     def setup_gettext():
         """ This allows to translate all py texts (not the glade ones) """
 
-        gettext.textdomain(CnchiInit.APP_NAME)
-        gettext.bindtextdomain(CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR)
-
+        # Must set locale BEFORE binding textdomains.
+        # If the requested locale isn't available, fall back to en_US.utf8
+        # so C-level gettext can find translations via LANGUAGE env var.
         try:
             locale.setlocale(locale.LC_ALL, "")
         except locale.Error:
+            CnchiInit._locale_fallback = True
+            try:
+                locale.setlocale(locale.LC_ALL, "en_US.utf8")
+            except locale.Error:
+                try:
+                    locale.setlocale(locale.LC_ALL, "C")
+                except locale.Error:
+                    pass
+            # Set LANGUAGE so C-level gettext looks in the right directory
+            lang_env = os.environ.get('LANG', '')
+            lang_short = lang_env.split('.')[0].split('_')[0]
+            if lang_short:
+                os.environ['LANGUAGE'] = lang_short
+
+        gettext.textdomain(CnchiInit.APP_NAME)
+        gettext.bindtextdomain(CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR)
+
+        # Also bind at the C level so GtkBuilder/Glade can find translations
+        import ctypes
+        try:
+            libc = ctypes.CDLL(None)
+            libc.bindtextdomain(
+                CnchiInit.APP_NAME.encode(),
+                CnchiInit.LOCALE_DIR.encode())
+            libc.textdomain(CnchiInit.APP_NAME.encode())
+        except Exception:
             pass
+
+        # Derive locale codes for Python-level gettext.
+        # Prefer LANG env var (what user set) over locale.getlocale()
+        # which may fall back to C/en_US if the target locale isn't installed.
         locale_code = locale.getlocale()[0]
-        if locale_code is None:
+        lang_env = os.environ.get('LANG', '')
+        if lang_env:
+            from_lang = lang_env.split('.')[0].replace('-', '_')
+            if from_lang:
+                locale_code = from_lang
+        if not locale_code:
             locale_code = 'en_US'
+        codes = [locale_code]
+        if '_' in locale_code:
+            codes.append(locale_code.split('_')[0])
         try:
             lang = gettext.translation(
-                CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, [locale_code], None, True)
+                CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, codes, None, True)
         except OSError:
             lang = gettext.translation(
                 CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, ['en'], None, True)

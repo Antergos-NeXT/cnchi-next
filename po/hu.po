@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Cnchi telepítő verziója %s"
 
@@ -64,7 +64,7 @@ msgstr "Cnchi v{0} - Antergos telepitő"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "A kisegítő lehetőségek beállítása alapértelmezés szerint"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
@@ -76,13 +76,13 @@ msgstr "Állítsd a Cnchi naplózást debug-ra"
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "Beállítja a telepítendő asztali környezetet"
 
 #: cnchi/src/cnchi.py:393
-#, fuzzy
 msgid "Runs cnchi even when another instance is running"
 msgstr ""
-"Cnhci-t futtatja még akkor is ha úgy érzékeli, hogy egy másik példány már fut"
+"Akkor is futtatja a cnchi-t, ha egy másik példány futCnhci-t futtatja még "
+"akkor is ha úgy érzékeli, hogy egy másik példány már fut"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
@@ -90,13 +90,13 @@ msgstr "Kikapcsolja az első képernyő 'Próbáld ki' gombját"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "Opcionálissá teszi az ellenőrzéseket az ellenőrző képernyőn"
 
 #: cnchi/src/cnchi.py:402
-#, fuzzy
 msgid "Install packages referenced by a local xml file"
 msgstr ""
-"Telepítse a csomagokat egy helyi xml fájl szerint az alapértelmezett helyett"
+"Telepítse a helyi xml fájl által hivatkozott csomagokatTelepítse a "
+"csomagokat egy helyi xml fájl szerint az alapértelmezett helyett"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
@@ -104,17 +104,18 @@ msgstr "stdout naplózási üzenetek megjelenítése"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Cnchi verzió megjelenítése és kilépés"
 
 #: cnchi/src/cnchi.py:411
-#, fuzzy
 msgid "Show options in development (use at your own risk!)"
 msgstr "Fejlesztői opciók megjelenítése (csak fejlesztőknek, ne használd ezt!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
 msgstr ""
-"Nem találhatóak a Cnchi fájlok. Kérlek, telepítsd Pacman-ből a Cnchi-t."
+"Cnchi fájlok nem találhatók. Kérjük, telepítse a Cnchi-t a pacman "
+"segítségévelNem találhatóak a Cnchi fájlok. Kérlek, telepítsd Pacman-ből a "
+"Cnchi-t."
 
 #: cnchi/src/desktop_info.py:116
 msgid ""
@@ -142,7 +143,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:131
-#, fuzzy
 msgid ""
 "GNOME 3 is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
@@ -179,7 +179,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:150
-#, fuzzy
 msgid ""
 "Xfce is a lightweight desktop environment. It aims to be fast and low on "
 "system resources, while remaining visually appealing and user friendly. It "
@@ -224,7 +223,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:68
-#, fuzzy
 msgid "Adds accessibility packages"
 msgstr "Fájlrendszer csomagok hozzáadása"
 
@@ -242,19 +240,19 @@ msgstr "Nyomtatás támogatása"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "Chromium webböngésző"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "Fejlett energiagazdálkodás"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "Firefox webböngésző"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "Vivaldi webböngésző"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
@@ -262,23 +260,23 @@ msgstr "Egyszerű tűzfal"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash bővítmények"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "Grafikus illesztőprogramok (tulajdonos)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "Apache (vagy Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "Kernel (LTS verzió)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
@@ -286,7 +284,7 @@ msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "SSH szolgáltatás"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
@@ -294,7 +292,7 @@ msgstr "Vizuális effektek"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "Hasznos csomagok vakok vagy gyengénlátók számára."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
@@ -303,40 +301,43 @@ msgstr "Az AUR egy közösség-alapú tároló a Arch felhasználók számára."
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr ""
-"Engedélyezi a rendszered számára, hogy vezeték nélküli Bluetooth kapcsolatot "
-"hozzon létre."
+"Lehetővé teszi a rendszer számára, hogy vezeték nélküli kapcsolatot "
+"létesítsen Bluetooth-on keresztül.Engedélyezi a rendszered számára, hogy "
+"vezeték nélküli Bluetooth kapcsolatot hozzon létre."
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "Nyílt forráskódú webböngésző a Google-tól."
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "Elhozza a Linux fejlett energiagazdálkodásának előnyeit."
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "Népszerű nyílt forráskódú grafikus webböngésző a Mozillától."
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
+"A Vivaldi egy ingyenes, gyors webböngésző, amelyet nagy teljesítményű "
+"felhasználók számára terveztek."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "Multimédiához általában használt ingyenes szoftver."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "Telepíti az AMD vagy az Nvidia saját grafikus illesztőprogramját."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "Telepíti a Steamet és a Playonlinuxot a játékrajongóknak."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Apache (vagy Nginx) + Mariadb + PHP telepítése és beállítása."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
@@ -345,8 +346,9 @@ msgstr "Nyomtató-illesztőprogramok és vezérlő eszközök telepítése."
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
 msgstr ""
-"Nyílt forráskódú irodai programcsomag. Támogatja a MS Office fájlok "
-"szerkesztését."
+"Nyílt forráskódú irodai programcsomag. Támogatja az MS Office fájlok "
+"szerkesztését.Nyílt forráskódú irodai programcsomag. Támogatja a MS Office "
+"fájlok szerkesztését."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
@@ -358,11 +360,11 @@ msgstr "Bejövő és kimenő háloztai forgalom figyelése."
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Engedélyezi a Secure SHell szolgáltatást."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "Hosszú távú támogatás (LTS) Linux kernel és modulok."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -378,7 +380,6 @@ msgstr ""
 "ez magában foglalja a [community] tárolót is."
 
 #: cnchi/src/features_info.py:113
-#, fuzzy
 msgid ""
 "Bluetooth is a standard for the short-range wireless\n"
 "interconnection of cellular phones, computers, and\n"
@@ -391,7 +392,6 @@ msgstr ""
 "Bluetooth protokoll végrehajtását a BlueZ köteg biztosítja. "
 
 #: cnchi/src/features_info.py:117
-#, fuzzy
 msgid ""
 "CUPS is the standards-based, open source printing\n"
 "system developed by Apple Inc. for OS® X and other\n"
@@ -518,11 +518,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "Következő"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -530,48 +530,47 @@ msgstr "Antergos Telepítő"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "Valóban ki akar lépni a telepítőből?"
 
 #: cnchi/src/proxy.py:114
-#, fuzzy
 msgid "Cnchi - Internet Connection Proxy Setup"
 msgstr "Cnchi Internet verzió: %s"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP proxy szerver:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS proxy szerver:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "FTP proxy szerver:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "SOCKS gazdaszerver:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Használja ezt a proxyszervert minden protokollhoz"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "Kikötő:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "Szerver"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "Arány"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "Idő"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
@@ -590,15 +589,14 @@ msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Antergos telepítő - Megerősítés"
 
 #: cnchi/src/download/download.py:100
-#, fuzzy
 msgid "Can't create download package list."
 msgstr "Nem lehet létrehozni a letöltés készletet: %s"
 
 #: cnchi/src/download/download.py:113
-#, fuzzy
 msgid "Can't download needed packages. Cnchi can't continue."
 msgstr ""
-"Nem lehet telepíteni a szükséges csomagokat. A Cnchi nem tudja folytatni a "
+"Nem lehet letölteni a szükséges csomagokat. Cnchi nem tudja folytatni.Nem "
+"lehet telepíteni a szükséges csomagokat. A Cnchi nem tudja folytatni a "
 "telepítést."
 
 #: cnchi/src/download/download.py:152
@@ -606,78 +604,74 @@ msgid "Creating the list of packages to download..."
 msgstr "Letölteni kívánt csomagok listájának létrehozása"
 
 #: cnchi/src/download/download.py:179
-#, fuzzy, python-format
+#, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
 msgstr ""
-"Hiba a metalink készítésében ennél a csomagnál: '%s'. A telepítés le fog "
-"állni"
+"Hiba a metallink létrehozásakor a(z) {} csomaghoz. A telepítés leállHiba a "
+"metalink készítésében ennél a csomagnál: '%s'. A telepítés le fog állni"
 
 #: cnchi/src/download/download_requests.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
 msgstr "Letöltés: {0} {1} ({2}/{3})"
 
 #: cnchi/src/installation/action.py:53
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be deleted!"
 msgstr "%s eszköz lesz %s fájlrendszerrel"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "A(z) {0} eszköz létrejön"
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "A(z) {0} eszköz módosul"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "A(z) {0} eszköz lesz"
 
 #: cnchi/src/installation/action.py:67
-#, fuzzy
 msgid "relabeled"
 msgstr "Újracímkézés"
 
 #: cnchi/src/installation/action.py:69
-#, fuzzy
 msgid "not relabeled"
 msgstr "Újracímkézés"
 
 #: cnchi/src/installation/action.py:71
-#, fuzzy
 msgid "formatted"
 msgstr "Formatálás"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "nincs formázva"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "felszerelve: {0}"
 
 #: cnchi/src/installation/action.py:78
-#, fuzzy
 msgid "not mounted"
 msgstr "%s leválasztva"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "és titkosítva."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "és nincs titkosítva."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "Ismeretlen fájlrendszer-típus: {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -687,27 +681,27 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "Megszakítva"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "A(z) {0} rendszerindító partíció beszerelése a(z) {1} könyvtárba"
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "A(z) {0} EFI-partíció beillesztése a(z) {1} könyvtárba"
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "A(z) {0} partíció beillesztése a(z) {1} könyvtárba"
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "Telepítés a '{0}' módszerrel"
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
@@ -716,34 +710,35 @@ msgstr "Telepítés befejeződött."
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "Ideiglenes pacman.conf fájl létrehozása a {0} architektúrához"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "A csomagkezelő biztonságának frissítése. Kérem, várjon..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "Nem lehet frissíteni a pacman adatbázisokat."
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
 msgstr ""
-"Nem lehet telepíteni a szükséges csomagokat. A Cnchi nem tudja folytatni a "
+"Nem lehet telepíteni a szükséges csomagokat. Cnchi nem tudja folytatni.Nem "
+"lehet telepíteni a szükséges csomagokat. A Cnchi nem tudja folytatni a "
 "telepítést."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "A LightDM asztali kezelő konfigurálása..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "A LightDM kijelzőkezelő konfigurálása befejeződött."
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "Hiba a LightDM kijelzőkezelő konfigurálása közben"
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
@@ -751,7 +746,7 @@ msgstr "Felhasználói mappa titkosítása..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "zfs modulok építése..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
@@ -767,11 +762,11 @@ msgstr "Hardveróra pontosítása..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "Billentyűkiosztás konfigurálása..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "Hardver konfigurálása..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
@@ -782,28 +777,25 @@ msgid "Installing bootloader..."
 msgstr "Rendszerbetöltő telepítése..."
 
 #: cnchi/src/installation/process.py:73
-#, fuzzy
 msgid "Cannot create package list."
 msgstr "Csomag lista lekérdezése..."
 
 #: cnchi/src/installation/process.py:90
-#, fuzzy
 msgid "Cannot create download package list (metalinks)."
 msgstr ""
-"Nem lehetséges a letöltő lista létrehozása. Kérlek ellenőrizd a kimeneti "
-"adatokat részletekért"
+"Nem lehet letöltő csomaglistát (metalinkeket) létrehozni.Nem lehetséges a "
+"letöltő lista létrehozása. Kérlek ellenőrizd a kimeneti adatokat részletekért"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "A lemez(ek) előkészítése az Antergoshoz..."
 
 #: cnchi/src/installation/process.py:114
-#, fuzzy
 msgid "Installation will start now!"
 msgstr "Telepítés befejeződött."
 
 #: cnchi/src/installation/process.py:128
-#, fuzzy, python-format
+#, python-format
 msgid "Error running command {0}: {1}"
 msgstr "Program futtatási hiba: %s"
 
@@ -814,23 +806,23 @@ msgstr "Csomag lista lekérdezése..."
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "'%s' rendszerbetöltő csomagok hozzáadása"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "Nem található %s rendszerbetöltő csomag!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "A speciális dirs már fel van szerelve. Ugró."
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
 msgstr "Speciális könyvtárak nem lettek csatolva. Kihagyás."
 
 #: cnchi/src/installation/wrapper.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Command {0} failed: {1}"
 msgstr "%s parancs meghiúsult."
 
@@ -852,16 +844,16 @@ msgstr "Használja a készüléket az alábbi rendszerindító telepítéséhez:
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "Bootloader:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "Eszköz:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "A GRUB(2) BIOS rendszertöltő telepítése itt: {0}"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
@@ -878,12 +870,12 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "A GRUB(2) NEM lesz telepítve"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "A GRUB(2) UEFI {0} rendszertöltő telepítése"
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
@@ -893,40 +885,39 @@ msgstr "Nem található OEM loader ezen belül: %s. Grub(2) másolása könyvtá
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "A Grub(2) másolása az OEM könyvtárba nem sikerült: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "A fájl nem található."
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "A fájl már létezik."
 
 #: cnchi/src/misc/avatars.py:57
-#, fuzzy
 msgid "Choose your avatar"
 msgstr "Válaszd ki az asztalodat"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "A jelszó túl rövid"
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "Gyenge jelszó"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "Tisztességes jelszó"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "Jó jelszó"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "Erős jelszó"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
@@ -935,12 +926,12 @@ msgstr "A jelszavak nem egyeznek"
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f MiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
@@ -963,68 +954,65 @@ msgid "Checking integrity..."
 msgstr "Integritás ellenőrzése..."
 
 #: cnchi/src/pacman/pac.py:528
-#, fuzzy
 msgid "Loading packages files..."
 msgstr "Csomagok letöltése..."
 
 #: cnchi/src/pacman/pac.py:530
-#, fuzzy
 msgid "Checking target delta integrity..."
 msgstr "Integritás ellenőrzése..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "Delták alkalmazása a csomagokra..."
 
 #: cnchi/src/pacman/pac.py:534
-#, fuzzy, python-format
+#, python-format
 msgid "Generating {} with {}..."
 msgstr "Helyek legenerálása..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "Fájlok letöltése a tárolókból..."
 
 #: cnchi/src/pacman/pac.py:539
-#, fuzzy
 msgid "Checking available disk space..."
 msgstr "Fájlütközések ellenőrzése..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "Kulcsok ellenőrzése a kulcstartóban..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "Hiányzó kulcsok letöltése a kulcstartóba..."
 
 #: cnchi/src/pacman/pac.py:545
-#, fuzzy, python-format
+#, python-format
 msgid "Configuring {}"
 msgstr "Rendszer beállítása..."
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "{0} telepítése ({1}/{2})"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "{0} adatbázis frissítése"
 
 #: cnchi/src/pacman/pac.py:600
-#, fuzzy, python-format
+#, python-format
 msgid "Downloading {}..."
 msgstr "Csomagok letöltése..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "Kifejezetten telepítve"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "Egy másik csomag függőségeként telepítve"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
@@ -1036,44 +1024,44 @@ msgid "none"
 msgstr "nincs"
 
 #: cnchi/src/pages/advanced.py:517
-#, fuzzy
 msgid "Unknown"
 msgstr "ismeretlen"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "Ugyanaz a rögzítési pont nem használható kétszer."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
 msgstr "Root partíciót muszáj formázni."
 
 #: cnchi/src/pages/advanced.py:559
-#, fuzzy
 msgid "Root partition cannot be NTFS or FAT32"
 msgstr "Root partíciót muszáj formázni."
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Az otthoni partíció nem lehet NTFS vagy FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
 msgstr ""
+"Mivel a /boot/efi még nincs meghatározva, a /bootnak fat32-nek kell lennie."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "A /boot/efi-nek fat32-nek kell lennie."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "Sajnáljuk, már {0} elsődleges partíciót hozott létre."
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
 msgstr ""
+"Sajnáljuk, már létrehozott {0} elsődleges és 1 kiterjesztett partíciót."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
@@ -1085,15 +1073,15 @@ msgstr "Csatolási lista:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "Gyökér"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "Csomagtartó"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "EFI"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
@@ -1101,7 +1089,7 @@ msgstr "Swap"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "Visszavonás"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
@@ -1109,15 +1097,15 @@ msgstr "Új"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "Töröl"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "Szerkesztés..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "Új partíciós tábla"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1130,32 +1118,37 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "Nem sikerült létrehozni a BIOS GPT rendszerindító partíciót: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
+"A(z) {0} már fel van csatolva csereként, a folytatáshoz le kell szerelni."
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
+"A(z) {0} már fel van szerelve a(z) {1} mappába, a folytatáshoz le kell "
+"szerelni."
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"A(z) „{1}” címkével ellátott „{2}” LUKS-eszköz „{0}” formázása nem sikerült: "
+"{3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
-msgstr ""
+msgstr "Nem sikerült a(z) „{0}” partíciót „{2}” címkével formázni: {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "A módosításokat nem lehet rögzíteni a lemezen: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1173,11 +1166,11 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "Válassza ki a telepítés új méretét"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "Válassza ki a zsugorítani kívánt partíciót:"
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
@@ -1192,10 +1185,12 @@ msgstr ""
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
 msgstr ""
+"Segítségre van szükségem egy Antergos / Windows(tm) kettős rendszerindítási "
+"beállításhoz!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "és"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
@@ -1204,7 +1199,7 @@ msgstr "Telepítés típusa"
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "Cserélje ki a(z) {0} elemet Antergosra"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
@@ -1224,7 +1219,7 @@ msgstr "A titkosítási jelszó a következő lépésben lesz bekérve."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "Ehhez a telepítéshez használja az LVM-et."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1236,10 +1231,9 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "Használja a ZFS-t ezzel a telepítéssel."
 
 #: cnchi/src/pages/ask.py:349
-#, fuzzy
 msgid "This will setup ZFS on your drive(s)."
 msgstr "Cnchi beállítja a LUKS-ot ezen az eszközön %s"
 
@@ -1248,18 +1242,17 @@ msgid "Set your Home in a different partition/volume"
 msgstr "Állítsd a Home könyvtárat egy külön partícióra/kötetre,"
 
 #: cnchi/src/pages/ask.py:366
-#, fuzzy
 msgid ""
 "This will setup your /home directory in a different partition or volume."
 msgstr "Ez beállítja a /home könyvtáradat egy külön partícióra vagy kötetre."
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "Hogyan szeretne továbblépni?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "Válassza ki, hogy pontosan hol kell az Antergost telepíteni."
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
@@ -1290,32 +1283,32 @@ msgstr "Erősítsd meg a jelszavadat:"
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr ""
+"LUKS Jelszó. Nem javasoljuk speciális karakterek vagy ékezetek használatát!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "Jelszó megjelenítése"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
 msgstr "Automatikus telepítési mód"
 
 #: cnchi/src/pages/automatic.py:234
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
 msgstr "%s eszköz lesz %s fájlrendszerrel"
 
 #: cnchi/src/pages/automatic.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem)"
 msgstr "%s eszköz lesz %s fájlrendszerrel"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "A Cnchi telepíti az Antergost a %s eszközre"
 
 #: cnchi/src/pages/cache.py:66
-#, fuzzy
 msgid "Select cache partition:"
 msgstr "Tartózkodási hely kiválasztása"
 
@@ -1359,16 +1352,17 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"Kérjük, most válassza ki a gyorsítótárként használni kívánt eszközt (vagy "
+"partíciót)."
 
 #: cnchi/src/pages/cache.py:92
-#, fuzzy
 msgid "Cache selection (optional)"
 msgstr "Címke (opcionális):"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "A(z) {} eszköz teljesen törlődik! TÉNYLEG biztos vagy benne?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1376,7 +1370,7 @@ msgstr "Rendszer ellenőrzése"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "A Cnchi naprakész"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
@@ -1408,11 +1402,12 @@ msgstr ""
 #: cnchi/src/pages/check.py:117
 msgid "For best results, please ensure that this computer:"
 msgstr ""
-"A legjobb eredmény érdekében bizonyosodj meg róla, hogy a számítógéped:"
+"A legjobb eredmény érdekében ellenőrizze, hogy ez a számítógép:A legjobb "
+"eredmény érdekében bizonyosodj meg róla, hogy a számítógéped:"
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "Újraindítás előtt újra kell indítania."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
@@ -1420,7 +1415,7 @@ msgstr "Válaszd ki az asztalodat"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "Speciális funkciók megjelenítése"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
@@ -1456,7 +1451,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "Az Nginx szervert szeretné telepíteni az Apache szerver helyett?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
@@ -1475,17 +1470,18 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "Nem egyezik a „%s” országkód billentyűleképe"
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
 msgstr ""
+"A billentyűzet beállítása a következőre: „{0}” ({1}), változat: „{2}” ({3})"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "A billentyűzet beállítása „{0}” ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
@@ -1505,7 +1501,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "Válassza ki a telepítő nyelvét"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1531,7 +1527,7 @@ msgstr "Ország, terület vagy övezet:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "Az összes hely megjelenítése"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
@@ -1540,24 +1536,23 @@ msgstr "Tartózkodási hely kiválasztása"
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "Nem sikerült lekérni az országkódot %s helyről"
 
 #: cnchi/src/pages/mirrors.py:400
-#, fuzzy
 msgid "Mirrors Selection"
 msgstr "Szolgáltatások kiválasztása"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Hagyja, hogy a Cnchi rendezze a tükrök listáját (ajánlott)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "Hagyja a tükrök listáját úgy, ahogy vannak (alapértelmezés szerint)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "Hadd kezeljem a tükrök listáit (speciális)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
@@ -1590,69 +1585,65 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "Kérjük, hivatkozzon a következő számra a hiba bejelentésekor:"
 
 #: cnchi/src/pages/summary.py:86
-#, fuzzy
 msgid "Installation Summary"
 msgstr "Telepítés típusa"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "Elhelyezkedés"
 
 #: cnchi/src/pages/summary.py:91
-#, fuzzy
 msgid "Timezone"
 msgstr "Időzóna beállítva."
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "Billentyűzet"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "Asztali környezet"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "Jellemzők"
 
 #: cnchi/src/pages/summary.py:95
-#, fuzzy
 msgid "Partitions"
 msgstr "Partíció"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "Elrendezés: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "Változat: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "Hiba történt a módosítások letöltése a telepítési képernyőről"
 
 #: cnchi/src/pages/summary.py:193
-#, fuzzy
 msgid "Are you REALLY sure you want to continue?"
 msgstr "Biztosan titkosítsuk a home könyvárat?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "Rangsoroló tükrök"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "A Cnchi még mindig frissíti és optimalizálja a tükörlistákat."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "Légy türelmes..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
@@ -1665,6 +1656,7 @@ msgstr "Régió:"
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
 msgstr ""
+"Használja a Network Time Protocol (NTP) protokollt az óra szinkronizálásához"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
@@ -1673,7 +1665,7 @@ msgstr "Időzóna kiválasztása"
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "Időzóna (szélesség %s, hosszúság %s) észlelve."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
@@ -1701,7 +1693,7 @@ msgstr "Neved"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "Gazdanév"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
@@ -1764,17 +1756,19 @@ msgid "Too many characters"
 msgstr "Túl sok karakter"
 
 #: cnchi/src/pages/user_info.py:336
-#, fuzzy
 msgid "Unknown error"
 msgstr "ismeretlen"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
 msgstr ""
+"Használja az Antergos NeXT-et anélkül, hogy bármilyen változtatást végezne a "
+"rendszeren."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
 msgstr ""
+"Hozzon létre egy állandó helyet az Antergos NeXT NeXT számára a rendszerén."
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
@@ -1782,7 +1776,7 @@ msgstr "Próbáld ki!"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "Telepítse"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
@@ -1790,39 +1784,37 @@ msgstr "Üdvözlünk a Antergos-ban!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "Betöltés, kérem várjon..."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "A számítógép csatlakoztatása Wi-Fi hálózathoz"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "Jelenleg nem akarok wi-fi hálózathoz csatlakozni"
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
-msgstr ""
+msgstr "Csatlakozzon ehhez a hálózathoz"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "Jelszó:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
-msgstr ""
+msgstr "Jelszó megjelenítése"
 
 #: cnchi/src/pages/zfs.py:195
-#, fuzzy
 msgid "Use"
 msgstr "Használva"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "Korong"
 
 #: cnchi/src/pages/zfs.py:210
-#, fuzzy
 msgid "Size (GB)"
 msgstr "Méret"
 
@@ -1832,51 +1824,45 @@ msgstr "Eszköz"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "Lemezazonosító"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "ZFS beállítás"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "Medence típusa"
 
 #: cnchi/src/pages/zfs.py:309
-#, fuzzy
 msgid "Partition scheme"
 msgstr "Partíció"
 
 #: cnchi/src/pages/zfs.py:323
-#, fuzzy
 msgid "Validate password"
 msgstr "Jelszó megerősítése"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "Csereméret (MB)"
 
 #: cnchi/src/pages/zfs.py:333
-#, fuzzy
 msgid "Encrypt swap"
 msgstr "Titkosító jelszó:"
 
 #: cnchi/src/pages/zfs.py:336
-#, fuzzy
 msgid "Encrypt disk"
 msgstr "Titkosítási opciók:"
 
 #: cnchi/src/pages/zfs.py:339
-#, fuzzy
 msgid "Pool name"
 msgstr "Neved"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "ZFS 4k blokkméret kényszerítése"
 
 #: cnchi/src/pages/zfs.py:364
-#, fuzzy
 msgid "You must select one drive"
 msgstr "Meg kell adnod egy nevet"
 
@@ -1884,11 +1870,12 @@ msgstr "Meg kell adnod egy nevet"
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
 msgstr ""
+"A(z) {0} pool_type beállításhoz legalább két meghajtót kell kiválasztania"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "Legalább {0} meghajtót kell kiválasztania"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1901,10 +1888,11 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
 msgstr ""
+"Ismeretlen hiba történt a kiválasztott ZFS-beállítások feldolgozása közben."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "A „Nincs” pool a ZFS-t fogja használni egyetlen kiválasztott lemezen."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1944,16 +1932,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "{0} létrehozása a(z) {1} eszközön"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "{0} eszköz hozzáadása a következőhöz: {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "Nincsenek eszközök kiválasztva a ZFS-készlethez"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1967,16 +1955,15 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_Mégse"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_Jelentkezz"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
-#, fuzzy
 msgid "Create partition"
 msgstr "Partíciós tábla létrehozása"
 
@@ -1985,42 +1972,41 @@ msgid "Create Partition Table"
 msgstr "Partíciós tábla létrehozása"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
-#, fuzzy
 msgid "Edit partition"
 msgstr "Partíció"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "A LUKS titkosítás használata TÖRLÉS az összes partíció tartalmát!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
-#, fuzzy
 msgid "Encryption properties"
 msgstr "Titkosítási opciók:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "LUKS titkosítás használata:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "LUKS kötet neve:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "Jelszó megerősítése:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "A LUKS jelszavak nem egyeznek! A titkosítás NINCS engedélyezve."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
 msgstr ""
+"A kötetnév és jelszó megadása kötelező! A titkosítás NINCS engedélyezve."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "Elhelyezkedés:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
@@ -2101,39 +2087,39 @@ msgstr "SSD"
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "Nem lehet címkézni egy {0} partíciót"
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "Nem lehet None típusú fájlrendszert létrehozni a(z) {0} partícióban"
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "Ismeretlen fájlrendszer {0} a(z) {1} partícióhoz"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "A(z) {0} logikai kötet nem távolítható el"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "A(z) {0} kötetcsoport nem távolítható el"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "A(z) {0} fizikai kötet nem távolítható el"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
 msgstr "A partíció túl nagy!"
 
 #: cnchi/src/parted3/partition_module.py:329
-#, fuzzy, python-format
+#, python-format
 msgid "Can't detect used space from {0}: {1}"
 msgstr "Nem lehet felmérni a használt FAT partíciót %s"
 
@@ -2148,7 +2134,7 @@ msgid "Can't detect used space of EXTFS partition %s"
 msgstr "Nem lehet felmérni a használt EXTFS partíciót %s"
 
 #: cnchi/src/parted3/used_space.py:110
-#, fuzzy, c-format
+#, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
 msgstr "Nem lehet felmérni a használt FAT partíciót %s"
 
@@ -2326,52 +2312,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: Váratlan „%(token)s” tokent láttam"
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# Fájl: %(filename)s, sor: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(fájlnév)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "Érvénytelen a --style értéke: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext Pythonhoz) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "A --width argumentumnak egész számnak kell lennie: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "Nem olvasható a --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "Szabványos bemenet olvasása"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "Munka a következőn: %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** Váratlan „%(token)s” tokent láttam"
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "tbb, mint egy sztring"
+
+msgid "Graphical Installer"
+msgstr "Grafikus telepítő"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "Az élő környezet nyelvein nem szerepel az Ön nyelve. A tartalék jelenleg angol nyelvű. Ha nem tud navigálni és nem tud angolul, a Google Lens-t javaslom."
 
 #~ msgid "Error calling hexdump command: %s"
 #~ msgstr "Hiba történt a hexdump parancs hívás során: %s"

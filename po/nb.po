@@ -24,7 +24,7 @@ msgstr ""
 #: cnchi/src/bootinfo.py:268 cnchi/src/bootinfo.py:271
 #: cnchi/src/bootinfo.py:274 cnchi/src/bootinfo.py:297
 msgid "unknown"
-msgstr ""
+msgstr "ukjent"
 
 #: cnchi/src/cnchi.py:101
 msgid ""
@@ -47,22 +47,22 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Cnchi installasjonsprogram versjon %s"
 
 #: cnchi/src/cnchi.py:377
 #, python-format
 msgid "Cnchi v{0} - Antergos Installer"
-msgstr ""
+msgstr "Cnchi v{0} – Antergos Installer"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "Slå på tilgjengelighetsfunksjonen som standard"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
-msgstr ""
+msgstr "Bruk forhåndsnedlastede xz-pakker når det er mulig"
 
 #: cnchi/src/cnchi.py:387
 msgid "Sets Cnchi log level to 'debug'"
@@ -70,39 +70,39 @@ msgstr "Setter loggnivået for Cnchi til 'debug'"
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "Angir skrivebordsmiljøet som skal installeres"
 
 #: cnchi/src/cnchi.py:393
 msgid "Runs cnchi even when another instance is running"
-msgstr ""
+msgstr "Kjører cnchi selv når en annen forekomst kjører"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
-msgstr ""
+msgstr "Deaktiverer første skjerms \"prøv det\"-alternativet"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "Gjør sjekker valgfrie i kontrollskjermen"
 
 #: cnchi/src/cnchi.py:402
 msgid "Install packages referenced by a local xml file"
-msgstr ""
+msgstr "Installer pakker referert av en lokal xml-fil"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
-msgstr ""
+msgstr "Vis loggmeldinger til stdout"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Vis Cnchi-versjonen og avslutt"
 
 #: cnchi/src/cnchi.py:411
 msgid "Show options in development (use at your own risk!)"
-msgstr ""
+msgstr "Vis alternativer under utvikling (bruk på eget ansvar!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
-msgstr ""
+msgstr "Cnchi-filer ble ikke funnet. Installer Cnchi med pacman"
 
 #: cnchi/src/desktop_info.py:116
 msgid ""
@@ -194,139 +194,140 @@ msgstr ""
 
 #: cnchi/src/features_info.py:68
 msgid "Adds accessibility packages"
-msgstr ""
+msgstr "Legger til tilgjengelighetspakker"
 
 #: cnchi/src/features_info.py:69
 msgid "Arch User Repository (AUR) Support"
-msgstr ""
+msgstr "Støtte for Arch User Repository (AUR)."
 
 #: cnchi/src/features_info.py:70
 msgid "Bluetooth Support"
-msgstr ""
+msgstr "Bluetooth-støtte"
 
 #: cnchi/src/features_info.py:71
 msgid "Printing Support"
-msgstr ""
+msgstr "Utskriftsstøtte"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "Chromium nettleser"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "Avansert strømstyring"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "Firefox nettleser"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "Vivaldi nettleser"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
-msgstr ""
+msgstr "Ukomplisert brannmur"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash-plugins"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "Grafiske drivere (Eiendomsbeskyttet)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "Apache (eller Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "Kjerne (LTS-versjon)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
-msgstr ""
+msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "SSH tjeneste"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
-msgstr ""
+msgstr "Visuelle effekter"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "Nyttige pakker for personer som er blinde eller synshemmede."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
-msgstr ""
+msgstr "AUR er et fellesskapsdrevet depot for Arch-brukere."
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr ""
+"Gjør det mulig for systemet å opprette trådløse tilkoblinger via Bluetooth."
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "Åpen kildekode nettleser fra Google."
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "Gir deg fordelene med avansert strømstyring for Linux."
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "En populær grafisk nettleser med åpen kildekode fra Mozilla."
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
-msgstr ""
+msgstr "Vivaldi er en gratis, rask nettleser designet for superbrukere."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "Gratisprogramvare som vanligvis brukes til multimedia."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "Installerer AMD eller Nvidia proprietær grafikkdriver."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "Installerer Steam og Playonlinux for spillentusiaster."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Apache (eller Nginx) + Mariadb + PHP installasjon og oppsett."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
-msgstr ""
+msgstr "Installasjon av skriverdrivere og administrasjonsverktøy."
 
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
-msgstr ""
+msgstr "Kontorpakke med åpen kildekode. Støtter redigering av MS Office-filer."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
-msgstr ""
+msgstr "Aktiver gjennomsiktighet, skygger og andre skrivebordseffekter."
 
 #: cnchi/src/features_info.py:102
 msgid "Control the incoming and outgoing network traffic."
-msgstr ""
+msgstr "Kontroller innkommende og utgående nettverkstrafikk."
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Aktiverer Secure SHell-tjenesten."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "Langsiktig støtte (LTS) Linux-kjerne og moduler."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -460,11 +461,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "Tilbake"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -472,143 +473,144 @@ msgstr "Installsjonsprogram for Antergos"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "Vil du virkelig avslutte installasjonsprogrammet?"
 
 #: cnchi/src/proxy.py:114
 msgid "Cnchi - Internet Connection Proxy Setup"
-msgstr ""
+msgstr "Cnchi - Internet Connection Proxy Setup"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP proxy-server:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS proxy-server:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "FTP proxy-server:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "SOCKS vertsserver:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Bruk denne proxy-serveren for alle protokoller"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "Havn:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "Sats"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "Tid"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
-msgstr ""
+msgstr "Antergos NeXT Installer - Feil"
 
 #: cnchi/src/show_message.py:91
 msgid "Antergos NeXT Installer - Warning"
-msgstr ""
+msgstr "Antergos NeXT Installer - Advarsel"
 
 #: cnchi/src/show_message.py:109
 msgid "Antergos NeXT Installer - Information"
-msgstr ""
+msgstr "Antergos NeXT Installer - Informasjon"
 
 #: cnchi/src/show_message.py:127
 msgid "Antergos NeXT Installer - Confirmation"
-msgstr ""
+msgstr "Antergos NeXT Installer - Bekreftelse"
 
 #: cnchi/src/download/download.py:100
 msgid "Can't create download package list."
-msgstr ""
+msgstr "Kan ikke opprette nedlastingspakkeliste."
 
 #: cnchi/src/download/download.py:113
 msgid "Can't download needed packages. Cnchi can't continue."
-msgstr ""
+msgstr "Kan ikke laste ned nødvendige pakker. Cnchi kan ikke fortsette."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
-msgstr ""
+msgstr "Oppretter listen over pakker som skal lastes ned..."
 
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
 msgstr ""
+"Feil ved opprettelse av metallink for pakken {}. Installasjonen vil stoppe"
 
 #: cnchi/src/download/download_requests.py:125
 #, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
-msgstr ""
+msgstr "Henter {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
 #, python-format
 msgid "Device {0} will be deleted!"
-msgstr ""
+msgstr "Enhet {0} vil bli slettet!"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "Enhet {0} vil bli opprettet"
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "Enhet {0} vil bli endret"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "Enhet {0} vil være"
 
 #: cnchi/src/installation/action.py:67
 msgid "relabeled"
-msgstr ""
+msgstr "ommerket"
 
 #: cnchi/src/installation/action.py:69
 msgid "not relabeled"
-msgstr ""
+msgstr "ikke ommerket"
 
 #: cnchi/src/installation/action.py:71
 msgid "formatted"
-msgstr ""
+msgstr "formatert"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "ikke formatert"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "montert som {0}"
 
 #: cnchi/src/installation/action.py:78
 msgid "not mounted"
-msgstr ""
+msgstr "ikke montert"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "og kryptert."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "og ikke kryptert."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "Ukjent filsystemtype {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -618,145 +620,145 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "Avbrutt"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "Montering av oppstartspartisjon {0} i katalogen {1}"
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "Montering av EFI-partisjon {0} i katalogen {1}"
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "Montering av partisjon {0} i katalogen {1}"
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "Installerer ved å bruke '{0}'-metoden"
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
-msgstr ""
+msgstr "Installasjonen er ferdig"
 
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "Opprette en midlertidig pacman.conf for {0}-arkitektur"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "Oppdatering av pakkebehandlersikkerhet. Vennligst vent..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "Kan ikke oppdatere pacman-databaser."
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
-msgstr ""
+msgstr "Kan ikke installere nødvendige pakker. Cnchi kan ikke fortsette."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "Konfigurerer LightDM desktop manager..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "Konfigurasjonen av LightDM display manager fullført."
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "Feil under forsøk på å konfigurere LightDM display manager"
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
-msgstr ""
+msgstr "Krypterer brukerhjemmekatalog..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "Bygger zfs-moduler..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
-msgstr ""
+msgstr "Konfigurerer ditt nye system"
 
 #: cnchi/src/installation/post_install.py:729
 msgid "Generating locales..."
-msgstr ""
+msgstr "Genererer lokaliteter ..."
 
 #: cnchi/src/installation/post_install.py:741
 msgid "Adjusting hardware clock..."
-msgstr ""
+msgstr "Justerer maskinvareklokke..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "Konfigurerer tastaturet …"
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "Konfigurerer maskinvare ..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
-msgstr ""
+msgstr "Konfigurerer systemoppstart..."
 
 #: cnchi/src/installation/post_install.py:804
 msgid "Installing bootloader..."
-msgstr ""
+msgstr "Installerer bootloader..."
 
 #: cnchi/src/installation/process.py:73
 msgid "Cannot create package list."
-msgstr ""
+msgstr "Kan ikke opprette pakkeliste."
 
 #: cnchi/src/installation/process.py:90
 msgid "Cannot create download package list (metalinks)."
-msgstr ""
+msgstr "Kan ikke opprette nedlastingspakkeliste (metalinks)."
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "Klargjør disken(e) for Antergos..."
 
 #: cnchi/src/installation/process.py:114
 msgid "Installation will start now!"
-msgstr ""
+msgstr "Installasjonen starter nå!"
 
 #: cnchi/src/installation/process.py:128
 #, python-format
 msgid "Error running command {0}: {1}"
-msgstr ""
+msgstr "Feil ved kjøring av kommando {0}: {1}"
 
 #: cnchi/src/installation/select_packages.py:197
 msgid "Getting package list..."
-msgstr ""
+msgstr "Henter pakkeliste..."
 
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "Legger til '%s' bootloader-pakker"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "Kunne ikke finne %s bootloader-pakker!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "Spesielle dirs er allerede montert. Hopp over."
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
-msgstr ""
+msgstr "Spesielle dirs er ikke montert. Hopp over."
 
 #: cnchi/src/installation/wrapper.py:76
 #, python-format
 msgid "Command {0} failed: {1}"
-msgstr ""
+msgstr "Kommando {0} mislyktes: {1}"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
 #, python-format
@@ -772,28 +774,28 @@ msgstr ""
 
 #: cnchi/src/installation/boot/boot_ui.py:58
 msgid "Use the device below for boot loader installation:"
-msgstr ""
+msgstr "Bruk enheten nedenfor for installasjon av oppstartslaster:"
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "Bootloader:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "Enhet:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "Installerer GRUB(2) BIOS-oppstartslaster i {0}"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) BIOS har blitt installert."
 
 #: cnchi/src/installation/boot/grub2.py:327
 msgid "ERROR installing GRUB(2) BIOS."
-msgstr ""
+msgstr "FEIL ved installasjon av GRUB(2) BIOS."
 
 #: cnchi/src/installation/boot/grub2.py:342
 msgid ""
@@ -802,240 +804,240 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2) vil IKKE bli installert"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "Installerer GRUB(2) UEFI {0} oppstartslaster"
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
-msgstr ""
+msgstr "Ingen OEM-laster funnet i %s. Kopierer Grub(2) til dir."
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "Kopiering av Grub(2) til OEM-katalog mislyktes: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "Filen ble ikke funnet."
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "Filen eksisterer allerede."
 
 #: cnchi/src/misc/avatars.py:57
 msgid "Choose your avatar"
-msgstr ""
+msgstr "Velg din avatar"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "Passordet er for kort"
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "Svakt passord"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "Greit passord"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "Godt passord"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "Sterkt passord"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Passord stemmer ikke"
 
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%,2f MiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
-msgstr ""
+msgstr "Sjekker avhengigheter..."
 
 #: cnchi/src/pacman/pac.py:516
 msgid "Checking file conflicts..."
-msgstr ""
+msgstr "Sjekker filkonflikter..."
 
 #: cnchi/src/pacman/pac.py:518
 msgid "Resolving dependencies..."
-msgstr ""
+msgstr "Løser avhengigheter..."
 
 #: cnchi/src/pacman/pac.py:520
 msgid "Checking inter conflicts..."
-msgstr ""
+msgstr "Sjekker interkonflikter..."
 
 #: cnchi/src/pacman/pac.py:525
 msgid "Checking integrity..."
-msgstr ""
+msgstr "Sjekker integritet ..."
 
 #: cnchi/src/pacman/pac.py:528
 msgid "Loading packages files..."
-msgstr ""
+msgstr "Laster pakkefiler ..."
 
 #: cnchi/src/pacman/pac.py:530
 msgid "Checking target delta integrity..."
-msgstr ""
+msgstr "Sjekker måldelta integritet ..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "Bruker deltaer på pakker ..."
 
 #: cnchi/src/pacman/pac.py:534
 #, python-format
 msgid "Generating {} with {}..."
-msgstr ""
+msgstr "Genererer {} med {}..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "Laster ned filer fra depotene..."
 
 #: cnchi/src/pacman/pac.py:539
 msgid "Checking available disk space..."
-msgstr ""
+msgstr "Sjekker tilgjengelig diskplass..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "Sjekker nøkler i nøkkelring..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "Laster ned manglende nøkler til nøkkelringen..."
 
 #: cnchi/src/pacman/pac.py:545
 #, python-format
 msgid "Configuring {}"
-msgstr ""
+msgstr "Konfigurerer {}"
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "Installerer {0} ({1}/{2})"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "Oppdaterer {0}-databasen"
 
 #: cnchi/src/pacman/pac.py:600
 #, python-format
 msgid "Downloading {}..."
-msgstr ""
+msgstr "Laster ned {}..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "Eksplisitt installert"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "Installert som en avhengighet for en annen pakke"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
 msgid "free space"
-msgstr ""
+msgstr "ledig plass"
 
 #: cnchi/src/pages/advanced.py:456
 msgid "none"
-msgstr ""
+msgstr "ingen"
 
 #: cnchi/src/pages/advanced.py:517
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "Kan ikke bruke samme monteringspunkt to ganger."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
-msgstr ""
+msgstr "Rotpartisjonen må formateres."
 
 #: cnchi/src/pages/advanced.py:559
 msgid "Root partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Rotpartisjonen kan ikke være NTFS eller FAT32"
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Hjemmepartisjonen kan ikke være NTFS eller FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "Siden ingen /boot/efi er definert (ennå), må /boot være fat32."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi må være fat32."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "Beklager, du har allerede opprettet {0} primære partisjoner."
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
-msgstr ""
+msgstr "Beklager, du har allerede opprettet {0} primær og 1 utvidet partisjon."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
-msgstr ""
+msgstr "Avansert installasjonsmodus"
 
 #: cnchi/src/pages/advanced.py:1065
 msgid "Mount Checklist:"
-msgstr ""
+msgstr "Monteringssjekkliste:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "Rot"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "Støvel"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "EFI"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
-msgstr ""
+msgstr "Bytt"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "Angre"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "Redigere..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "Ny partisjonstabell"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1048,32 +1050,34 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "Kunne ikke opprette BIOS GPT Boot-partisjon: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
-msgstr ""
+msgstr "{0} er allerede montert som swap, for å fortsette vil den demonteres."
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
-msgstr ""
+msgstr "{0} er allerede montert i {1}, for å fortsette vil den demonteres."
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"Kunne ikke formatere LUKS-enheten '{0}' med etiketten '{1}' som '{2}': {3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"Kunne ikke formatere partisjonen '{0}' med etiketten '{1}' som '{2}': {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "Kan ikke overføre endringene til disk: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1091,15 +1095,15 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "Velg den nye størrelsen på installasjonen"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "Velg partisjonen du vil krympe:"
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
-msgstr ""
+msgstr "Antergos ved siden av installasjon"
 
 #: cnchi/src/pages/alongside.py:266
 msgid ""
@@ -1109,40 +1113,40 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
-msgstr ""
+msgstr "Jeg trenger hjelp med et Antergos / Windows(tm) dual boot-oppsett!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "og"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
-msgstr ""
+msgstr "Installasjonstype"
 
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "Erstatt {0} med Antergos"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
-msgstr ""
+msgstr "Slett disk og installer Antergos"
 
 #: cnchi/src/pages/ask.py:296
 msgid "Warning: This will erase ALL data on your disk."
-msgstr ""
+msgstr "Advarsel: Dette vil slette ALLE data på disken din."
 
 #: cnchi/src/pages/ask.py:305
 msgid "Encrypt this installation for increased security."
-msgstr ""
+msgstr "Krypter denne installasjonen for økt sikkerhet."
 
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
-msgstr ""
+msgstr "Du vil bli bedt om å opprette et krypteringspassord i neste trinn."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "Bruk LVM med denne installasjonen."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1152,15 +1156,15 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "Bruk ZFS med denne installasjonen."
 
 #: cnchi/src/pages/ask.py:349
 msgid "This will setup ZFS on your drive(s)."
-msgstr ""
+msgstr "Dette vil sette opp ZFS på stasjonen(e)."
 
 #: cnchi/src/pages/ask.py:358
 msgid "Set your Home in a different partition/volume"
-msgstr ""
+msgstr "Sett Home i en annen partisjon/volum"
 
 #: cnchi/src/pages/ask.py:366
 msgid ""
@@ -1169,23 +1173,23 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "Hvordan vil du gå frem?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "Velg nøyaktig hvor Antergos skal installeres."
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
-msgstr ""
+msgstr "Rediger partisjonstabell og velg monteringspunkter."
 
 #: cnchi/src/pages/automatic.py:89
 msgid "Select drive:"
-msgstr ""
+msgstr "Velg stasjon:"
 
 #: cnchi/src/pages/automatic.py:93
 msgid "WARNING! This will overwrite everything currently on your drive!"
-msgstr ""
+msgstr "ADVARSEL! Dette vil overskrive alt som er på harddisken din!"
 
 #: cnchi/src/pages/automatic.py:98
 msgid ""
@@ -1195,42 +1199,42 @@ msgstr ""
 
 #: cnchi/src/pages/automatic.py:103
 msgid "Encryption Password:"
-msgstr ""
+msgstr "Krypteringspassord:"
 
 #: cnchi/src/pages/automatic.py:107 cnchi/src/pages/user_info.py:188
 msgid "Confirm your password:"
-msgstr ""
+msgstr "Bekreft passordet ditt:"
 
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
-msgstr ""
+msgstr "LUKS Passord. Vi anbefaler ikke å bruke spesialtegn eller aksenter!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "Vis passord"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
-msgstr ""
+msgstr "Automatisk installasjonsmodus"
 
 #: cnchi/src/pages/automatic.py:234
 #, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
-msgstr ""
+msgstr "Enhet {0} vil bli opprettet ({1} filsystem) som {2}"
 
 #: cnchi/src/pages/automatic.py:238
 #, python-format
 msgid "Device {0} will be created ({1} filesystem)"
-msgstr ""
+msgstr "Enhet {0} vil bli opprettet ({1} filsystem)"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "Cnchi vil installere Antergos på enheten %s"
 
 #: cnchi/src/pages/cache.py:66
 msgid "Select cache partition:"
-msgstr ""
+msgstr "Velg cache-partisjon:"
 
 #: cnchi/src/pages/cache.py:70
 msgid ""
@@ -1272,28 +1276,29 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"Vennligst velg nå enheten (eller partisjonen) som skal brukes som cache."
 
 #: cnchi/src/pages/cache.py:92
 msgid "Cache selection (optional)"
-msgstr ""
+msgstr "Buffervalg (valgfritt)"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "Enheten {} vil bli fullstendig slettet! Er du VIRKELIG sikker?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
-msgstr ""
+msgstr "Systemsjekk"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi er oppdatert"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
 msgid "has at least {0}GB available storage space. (*)"
-msgstr ""
+msgstr "har minst {0} GB tilgjengelig lagringsplass. (*)"
 
 #: cnchi/src/pages/check.py:94
 msgid ""
@@ -1303,11 +1308,11 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:103
 msgid "is plugged in to a power source"
-msgstr ""
+msgstr "er koblet til en strømkilde"
 
 #: cnchi/src/pages/check.py:108
 msgid "is connected to the Internet"
-msgstr ""
+msgstr "er koblet til Internett"
 
 #: cnchi/src/pages/check.py:112
 msgid ""
@@ -1317,27 +1322,27 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:117
 msgid "For best results, please ensure that this computer:"
-msgstr ""
+msgstr "For best resultat, sørg for at denne datamaskinen:"
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "Du må starte på nytt før du prøver igjen."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
-msgstr ""
+msgstr "Velg skrivebordet ditt"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "Vis avanserte funksjoner"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
-msgstr ""
+msgstr "Funksjonsvalg"
 
 #: cnchi/src/pages/features.py:345
 msgid "Arch User Repository - Disclaimer"
-msgstr ""
+msgstr "Arch User Repository - Ansvarsfraskrivelse"
 
 #: cnchi/src/pages/features.py:346
 msgid ""
@@ -1349,7 +1354,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:351
 msgid "Uncomplicated Firewall will be installed with these rules:"
-msgstr ""
+msgstr "Ukomplisert brannmur vil bli installert med disse reglene:"
 
 #: cnchi/src/pages/features.py:353
 #, python-format
@@ -1362,11 +1367,11 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "Vil du installere Nginx-serveren i stedet for Apache-serveren?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
-msgstr ""
+msgstr "Velg ditt tastaturoppsett"
 
 #: cnchi/src/pages/keymap.py:92
 msgid ""
@@ -1381,21 +1386,21 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "Kan ikke samsvare med et tastatur for landskoden «%s»"
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "Sett tastaturet til '{0}' ({1}), variant '{2}' ({3})"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "Sett tastaturet til '{0}' ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
-msgstr ""
+msgstr "Merk: Cnchi Installer er betaprogramvare."
 
 #: cnchi/src/pages/language.py:118
 #, python-format
@@ -1411,7 +1416,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "Velg installasjonsspråket"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1433,44 +1438,44 @@ msgstr ""
 
 #: cnchi/src/pages/location.py:102
 msgid "Country, territory or area:"
-msgstr ""
+msgstr "Land, territorium eller område:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "Vis alle lokasjoner"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
-msgstr ""
+msgstr "Velg din plassering"
 
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "Kan ikke hente landskode fra %s plassering"
 
 #: cnchi/src/pages/mirrors.py:400
 msgid "Mirrors Selection"
-msgstr ""
+msgstr "Speilvalg"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "La Cnchi sortere speillistene (anbefalt)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "La speillistene være som de er (som standard)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "La meg administrere speillistene (avansert)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
-msgstr ""
+msgstr "Vennligst vent..."
 
 #: cnchi/src/pages/slides.py:93
 msgid "Installing Antergos NeXT..."
-msgstr ""
+msgstr "Installerer Antergos NeXT..."
 
 #: cnchi/src/pages/slides.py:238
 msgid ""
@@ -1493,292 +1498,292 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "Vennligst referer til følgende nummer når du rapporterer denne feilen:"
 
 #: cnchi/src/pages/summary.py:86
 msgid "Installation Summary"
-msgstr ""
+msgstr "Installasjonssammendrag"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "Sted"
 
 #: cnchi/src/pages/summary.py:91
 msgid "Timezone"
-msgstr ""
+msgstr "Tidssone"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "Tastatur"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "Skrivebordsmiljø"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "Funksjoner"
 
 #: cnchi/src/pages/summary.py:95
 msgid "Partitions"
-msgstr ""
+msgstr "Skillevegger"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "Oppsett: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "Variant: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "Feil ved henting av endringer fra installasjonsskjermen"
 
 #: cnchi/src/pages/summary.py:193
 msgid "Are you REALLY sure you want to continue?"
-msgstr ""
+msgstr "Er du VIRKELIG sikker på at du vil fortsette?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "Rangeringsspeil"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "Cnchi oppdaterer og optimaliserer fortsatt speillistene dine."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "Vær tålmodig..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
-msgstr ""
+msgstr "Sone:"
 
 #: cnchi/src/pages/timezone.py:99
 msgid "Region:"
-msgstr ""
+msgstr "Region:"
 
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
-msgstr ""
+msgstr "Bruk Network Time Protocol (NTP) for klokkesynkronisering"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
-msgstr ""
+msgstr "Velg din tidssone"
 
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "Tidssone (breddegrad %s, lengdegrad %s) oppdaget."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
-msgstr ""
+msgstr "Ditt navn:"
 
 #: cnchi/src/pages/user_info.py:185
 msgid "Your computer's name:"
-msgstr ""
+msgstr "Datamaskinens navn:"
 
 #: cnchi/src/pages/user_info.py:186
 msgid "Pick a username:"
-msgstr ""
+msgstr "Velg et brukernavn:"
 
 #: cnchi/src/pages/user_info.py:187
 msgid "Choose a password:"
-msgstr ""
+msgstr "Velg et passord:"
 
 #: cnchi/src/pages/user_info.py:195
 msgid "Identifies your system to other computers and devices."
-msgstr ""
+msgstr "Identifiserer systemet til andre datamaskiner og enheter."
 
 #: cnchi/src/pages/user_info.py:200
 msgid "Your name"
-msgstr ""
+msgstr "Navnet ditt"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "Vertsnavn"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
-msgstr ""
+msgstr "Brukernavn"
 
 #: cnchi/src/pages/user_info.py:203 cnchi/src/pages/zfs.py:326
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: cnchi/src/pages/user_info.py:204
 msgid "Confirm password"
-msgstr ""
+msgstr "Bekreft passord"
 
 #: cnchi/src/pages/user_info.py:211
 msgid "You must enter a name"
-msgstr ""
+msgstr "Du må skrive inn et navn"
 
 #: cnchi/src/pages/user_info.py:212
 msgid "You must enter a username"
-msgstr ""
+msgstr "Du må skrive inn et brukernavn"
 
 #: cnchi/src/pages/user_info.py:213
 msgid "You must enter a password"
-msgstr ""
+msgstr "Du må angi et passord"
 
 #: cnchi/src/pages/user_info.py:221
 msgid "Log in automatically"
-msgstr ""
+msgstr "Logg inn automatisk"
 
 #: cnchi/src/pages/user_info.py:222
 msgid "Require my password to log in"
-msgstr ""
+msgstr "Krev passordet mitt for å logge inn"
 
 #: cnchi/src/pages/user_info.py:223
 msgid "Encrypt my home folder"
-msgstr ""
+msgstr "Krypter hjemmemappen min"
 
 #: cnchi/src/pages/user_info.py:226
 msgid "show password"
-msgstr ""
+msgstr "vis passord"
 
 #: cnchi/src/pages/user_info.py:228
 msgid "Create Your User Account"
-msgstr ""
+msgstr "Opprett din brukerkonto"
 
 #: cnchi/src/pages/user_info.py:263
 msgid "Are you sure you want to encrypt your home directory?"
-msgstr ""
+msgstr "Er du sikker på at du vil kryptere hjemmekatalogen din?"
 
 #: cnchi/src/pages/user_info.py:330
 msgid "Invalid characters entered"
-msgstr ""
+msgstr "Ugyldige tegn er angitt"
 
 #: cnchi/src/pages/user_info.py:332
 msgid "Username can't contain dots"
-msgstr ""
+msgstr "Brukernavn kan ikke inneholde prikker"
 
 #: cnchi/src/pages/user_info.py:334
 msgid "Too many characters"
-msgstr ""
+msgstr "For mange karakterer"
 
 #: cnchi/src/pages/user_info.py:336
 msgid "Unknown error"
-msgstr ""
+msgstr "Ukjent feil"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "Bruk Antergos NeXT uten å gjøre noen endringer i systemet."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
-msgstr ""
+msgstr "Opprett et permanent sted for Antergos NeXT NeXT på systemet ditt."
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
-msgstr ""
+msgstr "Prøv det"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "Installer det"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
-msgstr ""
+msgstr "Velkommen til Antergos NeXT!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "Laster inn, vennligst vent..."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "Kobler denne datamaskinen til et wi-fi-nettverk"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "Jeg vil ikke koble til et wi-fi-nettverk akkurat nå"
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
-msgstr ""
+msgstr "Koble til dette nettverket"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "Passord:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
-msgstr ""
+msgstr "Vis passord"
 
 #: cnchi/src/pages/zfs.py:195
 msgid "Use"
-msgstr ""
+msgstr "Bruk"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "Disk"
 
 #: cnchi/src/pages/zfs.py:210
 msgid "Size (GB)"
-msgstr ""
+msgstr "Størrelse (GB)"
 
 #: cnchi/src/pages/zfs.py:216 cnchi/src/widgets/partition_treeview.py:78
 msgid "Device"
-msgstr ""
+msgstr "Enhet"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "Disk-ID"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "ZFS-oppsett"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "Bassengtype"
 
 #: cnchi/src/pages/zfs.py:309
 msgid "Partition scheme"
-msgstr ""
+msgstr "Skilleskjema"
 
 #: cnchi/src/pages/zfs.py:323
 msgid "Validate password"
-msgstr ""
+msgstr "Bekreft passord"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "Bytt størrelse (MB)"
 
 #: cnchi/src/pages/zfs.py:333
 msgid "Encrypt swap"
-msgstr ""
+msgstr "Krypter bytte"
 
 #: cnchi/src/pages/zfs.py:336
 msgid "Encrypt disk"
-msgstr ""
+msgstr "Krypter disk"
 
 #: cnchi/src/pages/zfs.py:339
 msgid "Pool name"
-msgstr ""
+msgstr "Bassengnavn"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "Force ZFS 4k blokkstørrelse"
 
 #: cnchi/src/pages/zfs.py:364
 msgid "You must select one drive"
-msgstr ""
+msgstr "Du må velge én stasjon"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "For {0} pool_type må du velge minst to stasjoner"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "Du må velge minst {0} stasjoner"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1791,10 +1796,11 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
 msgstr ""
+"Det oppstod en ukjent feil under behandling av valgte ZFS-alternativer."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "'Ingen'-pool vil bruke ZFS på en enkelt valgt disk."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1834,16 +1840,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "Opprett {0} på enheten {1}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "Legg til enhet {0} til {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "Ingen enheter ble valgt for ZFS-poolen"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1857,202 +1863,202 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_Kansellere"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_Søke"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
 msgid "Create partition"
-msgstr ""
+msgstr "Opprett partisjon"
 
 #: cnchi/src/pages/dialogs/create_table.py:73
 msgid "Create Partition Table"
-msgstr ""
+msgstr "Lag partisjonstabell"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
 msgid "Edit partition"
-msgstr ""
+msgstr "Rediger partisjon"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "Bruk av LUKS-kryptering vil SLETTE alt partisjonsinnhold!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
 msgid "Encryption properties"
-msgstr ""
+msgstr "Krypteringsegenskaper"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "Bruk LUKS-kryptering:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "LUKS volumnavn:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "Bekreft passord:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "LUKS passord stemmer ikke! Kryptering IKKE aktivert."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "Volumnavn og passord er obligatoriske! Kryptering IKKE aktivert."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "Sted:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
-msgstr ""
+msgstr "Størrelse:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:228
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:229
 msgid "Primary"
-msgstr ""
+msgstr "Primær"
 
 #: cnchi/src/pages/dialogs/partition_base.py:230
 msgid "Logical"
-msgstr ""
+msgstr "Logisk"
 
 #: cnchi/src/pages/dialogs/partition_base.py:231
 msgid "Extended"
-msgstr ""
+msgstr "Utvidet"
 
 #: cnchi/src/pages/dialogs/partition_base.py:232
 msgid "Beginning of this space"
-msgstr ""
+msgstr "Begynnelsen av denne plassen"
 
 #: cnchi/src/pages/dialogs/partition_base.py:233
 msgid "End of this space"
-msgstr ""
+msgstr "Slutt på denne plassen"
 
 #: cnchi/src/pages/dialogs/partition_base.py:234
 msgid "Use As:"
-msgstr ""
+msgstr "Bruk som:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:235
 msgid "Mount Point:"
-msgstr ""
+msgstr "Mount Point:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:236
 msgid "Label (optional):"
-msgstr ""
+msgstr "Etikett (valgfritt):"
 
 #: cnchi/src/pages/dialogs/partition_base.py:237
 msgid "Format:"
-msgstr ""
+msgstr "Format:"
 
 #: cnchi/src/widgets/partition_treeview.py:82
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: cnchi/src/widgets/partition_treeview.py:86
 msgid "Mount point"
-msgstr ""
+msgstr "Monteringspunkt"
 
 #: cnchi/src/widgets/partition_treeview.py:90
 msgid "Label"
-msgstr ""
+msgstr "Merkelapp"
 
 #: cnchi/src/widgets/partition_treeview.py:97
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: cnchi/src/widgets/partition_treeview.py:105
 msgid "Size"
-msgstr ""
+msgstr "Størrelse"
 
 #: cnchi/src/widgets/partition_treeview.py:109
 msgid "Used"
-msgstr ""
+msgstr "Brukt"
 
 #: cnchi/src/widgets/partition_treeview.py:113
 msgid "Flags"
-msgstr ""
+msgstr "Flagg"
 
 #: cnchi/src/widgets/partition_treeview.py:120
 msgid "SSD"
-msgstr ""
+msgstr "SSD"
 
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "Kan ikke merke en {0}-partisjon"
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "Kan ikke lage et filsystem av typen Ingen i partisjonen {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "Ukjent filsystem {0} for partisjon {1}"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "Kan ikke fjerne logisk volum {0}"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "Kan ikke fjerne volumgruppen {0}"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "Kan ikke fjerne fysisk volum {0}"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
-msgstr ""
+msgstr "Partisjonen er for stor!"
 
 #: cnchi/src/parted3/partition_module.py:329
 #, python-format
 msgid "Can't detect used space from {0}: {1}"
-msgstr ""
+msgstr "Kan ikke oppdage brukt plass fra {0}: {1}"
 
 #: cnchi/src/parted3/used_space.py:55
 #, c-format
 msgid "Can't detect used space of NTFS partition %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på NTFS-partisjonen %s"
 
 #: cnchi/src/parted3/used_space.py:81
 #, c-format
 msgid "Can't detect used space of EXTFS partition %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på EXTFS-partisjonen %s"
 
 #: cnchi/src/parted3/used_space.py:110
 #, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på FAT-partisjonen %s: %s"
 
 #: cnchi/src/parted3/used_space.py:143
 #, c-format
 msgid "Can't detect used space of JFS partition %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på JFS-partisjonen %s"
 
 #: cnchi/src/parted3/used_space.py:170
 #, c-format
 msgid "Can't detect used space of REISERFS partition %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på REISERFS-partisjonen %s"
 
 #: cnchi/src/parted3/used_space.py:243
 #, c-format
 msgid "Can't detect used space of XFS partition %s"
-msgstr ""
+msgstr "Kan ikke finne brukt plass på XFS-partisjonen %s"
 
 #: cnchi/utils/pygettext.py:24
 msgid ""
@@ -2213,52 +2219,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: Sett uventet token \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# Fil: %(filnavn)s, linje: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(filnavn)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "Ugyldig verdi for --style: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext for Python) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--width-argumentet må være et heltall: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "Kan ikke lese --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "Leser standardinngang"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "Jobber på %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** Sett uventet token \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "mer enn en streng"
+
+msgid "Graphical Installer"
+msgstr "Grafisk installasjonsprogram"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "Livemiljøets lokaliteter har ikke ditt språk. Tilbakeslaget er for øyeblikket på engelsk. Hvis du ikke kan navigere og ikke kan engelsk, foreslår jeg Google Lens."
 
 #~ msgid "Using '%s' file as package list"
 #~ msgstr "Ved å bruke filen '%s' som pakkeliste"

@@ -2305,6 +2305,10 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "We have Internet connection."
 #~ msgstr "Có kết nối mạng."
 

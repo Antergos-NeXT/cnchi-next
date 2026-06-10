@@ -38,6 +38,7 @@ gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GdkPixbuf
 
 from gi.repository import Gdk
+from gi.repository import Gtk
 
 import misc.extra as misc
 from pages.gtkbasebox import GtkBaseBox
@@ -112,6 +113,21 @@ class Welcome(GtkBaseBox):
                 image['height'])
             self.images[key].set_from_pixbuf(pixbuf)
 
+        # Locale fallback warning
+        self._locale_warning = None
+        from cnchi import CnchiInit
+        if CnchiInit._locale_fallback:
+            self._locale_warning = Gtk.Label()
+            self._locale_warning.set_property('wrap', True)
+            self._locale_warning.set_property('justify', 'center')
+            self._locale_warning.set_property('margin_top', 10)
+            self._locale_warning.set_property('margin_bottom', 10)
+            self._locale_warning.set_name('locale-warning-label')
+            self.gui.get_object('welcome').pack_start(
+                self._locale_warning, False, False, 0)
+            self.gui.get_object('welcome').reorder_child(
+                self._locale_warning, 1)
+
     def translate_ui(self):
         """ Translates all ui elements """
         if not self.no_tryit:
@@ -121,7 +137,7 @@ class Welcome(GtkBaseBox):
         self.labels['tryit'].set_markup(txt)
         self.labels['tryit'].set_name('tryit_label')
 
-        txt = _("Create a permanent place for Antergos NeXT NeXT on your system.")
+        txt = _("Create a permanent place for Antergos NeXT on your system.")
         self.labels['installit'].set_markup(txt)
         self.labels['installit'].set_name('installit_label')
 
@@ -204,6 +220,17 @@ class Welcome(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare page before showing it """
         self.translate_ui()
+
+        if self._locale_warning:
+            txt = _(
+                "The live environment's locales does not have your language. "
+                "The fallback is currently in English. "
+                "If you cannot navigate and do not know English, "
+                "I suggest Google Lens.")
+            self._locale_warning.set_markup(
+                '<span foreground="#FFA500">⚠ {}</span>'.format(txt))
+            self._locale_warning.show()
+
         self.show_all()
         self.forward_button.hide()
 

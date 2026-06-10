@@ -56,7 +56,7 @@ msgstr ""
 "问题文件：'{0}'"
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Cnchi 安装器版本 %s"
 
@@ -67,7 +67,7 @@ msgstr "Cnchi v{0} - Antergos 安装器"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "默认设置辅助功能"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
@@ -82,7 +82,6 @@ msgid "Sets the Desktop Environment that will be installed"
 msgstr "设置将要安装的桌面环境"
 
 #: cnchi/src/cnchi.py:393
-#, fuzzy
 msgid "Runs cnchi even when another instance is running"
 msgstr "运行 Cnchi 不管是否检测到已有实例运行中"
 
@@ -95,7 +94,6 @@ msgid "Makes checks optional in check screen"
 msgstr "在检查屏幕上进行检查"
 
 #: cnchi/src/cnchi.py:402
-#, fuzzy
 msgid "Install packages referenced by a local xml file"
 msgstr "参考本地的 xml 而不是默认的来安装包"
 
@@ -105,10 +103,9 @@ msgstr "显示日志信息到标准输出"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "显示 Cnchi 版本并退出"
 
 #: cnchi/src/cnchi.py:411
-#, fuzzy
 msgid "Show options in development (use at your own risk!)"
 msgstr "显示开发选项(开发人员使用，其他人不要使用!)"
 
@@ -141,7 +138,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:131
-#, fuzzy
 msgid ""
 "GNOME 3 is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
@@ -175,7 +171,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:150
-#, fuzzy
 msgid ""
 "Xfce is a lightweight desktop environment. It aims to be fast and low on "
 "system resources, while remaining visually appealing and user friendly. It "
@@ -217,7 +212,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:68
-#, fuzzy
 msgid "Adds accessibility packages"
 msgstr "添加文件系统包"
 
@@ -234,20 +228,18 @@ msgid "Printing Support"
 msgstr "打印支持"
 
 #: cnchi/src/features_info.py:72
-#, fuzzy
 msgid "Chromium Web Browser"
 msgstr "Firefox 网页浏览器"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "先进的电源管理"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
 msgstr "Firefox 网页浏览器"
 
 #: cnchi/src/features_info.py:75
-#, fuzzy
 msgid "Vivaldi Web Browser"
 msgstr "Firefox 网页浏览器"
 
@@ -257,11 +249,11 @@ msgstr "简单防火墙（ufw）"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash插件"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + 在 Linux 上玩"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
@@ -281,7 +273,7 @@ msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "SSH服务"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
@@ -289,7 +281,7 @@ msgstr "视觉效果"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "对盲人或视力障碍人士有用的套餐。"
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
@@ -300,38 +292,34 @@ msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr "使能系统中的无线蓝牙连接。"
 
 #: cnchi/src/features_info.py:91
-#, fuzzy
 msgid "Open-source web browser from Google."
 msgstr "来自 Mozilla 的流行的开源图形界面网页浏览器"
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "为您带来 Linux 高级电源管理的优势。"
 
 #: cnchi/src/features_info.py:93
-#, fuzzy
 msgid "A popular open-source graphical web browser from Mozilla."
 msgstr "来自 Mozilla 的流行的开源图形界面网页浏览器"
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
-msgstr ""
+msgstr "Vivaldi 是一款免费、快速的网络浏览器，专为高级用户设计。"
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "通常用于多媒体的免费软件。"
 
 #: cnchi/src/features_info.py:96
-#, fuzzy
 msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "安装 AMD 或 Nvidia 的私有图形驱动程序"
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "为游戏爱好者安装 Steam 和 Playonlinux。"
 
 #: cnchi/src/features_info.py:98
-#, fuzzy
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
 msgstr "Apache (或 Nginx) + Mariadb + PHP 安装和设置"
 
@@ -353,7 +341,7 @@ msgstr "控制输入/输出网络流量。"
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "启用 Secure SHell 服务。"
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
@@ -372,7 +360,6 @@ msgstr ""
 "进入[community]库。"
 
 #: cnchi/src/features_info.py:113
-#, fuzzy
 msgid ""
 "Bluetooth is a standard for the short-range wireless\n"
 "interconnection of cellular phones, computers, and\n"
@@ -385,7 +372,6 @@ msgstr ""
 "里蓝牙协议栈的实现典范"
 
 #: cnchi/src/features_info.py:117
-#, fuzzy
 msgid ""
 "CUPS is the standards-based, open source printing\n"
 "system developed by Apple Inc. for OS® X and other\n"
@@ -411,7 +397,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:127
-#, fuzzy
 msgid ""
 "Mozilla Firefox (known simply as Firefox) is a free and\n"
 "open-source web browser developed for Windows, OS X, and Linux,\n"
@@ -471,7 +456,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:153
-#, fuzzy
 msgid ""
 "This option installs a web server (you can choose\n"
 "Apache or Nginx) plus a database server (Mariadb)\n"
@@ -481,7 +465,6 @@ msgstr ""
 "(Mariadb) 和 PHP"
 
 #: cnchi/src/features_info.py:156
-#, fuzzy
 msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
@@ -533,13 +516,12 @@ msgstr ""
 "问 compton github 页面。"
 
 #: cnchi/src/main_window.py:206
-#, fuzzy
 msgid "Next"
 msgstr "下一步"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "后退"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -550,45 +532,44 @@ msgid "Do you really want to quit the installer?"
 msgstr "确实要退出安装程序吗？"
 
 #: cnchi/src/proxy.py:114
-#, fuzzy
 msgid "Cnchi - Internet Connection Proxy Setup"
 msgstr "Cnchi 网络版本：%s"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP代理服务器："
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS代理服务器："
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "FTP代理服务器："
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "SOCKS 主机服务器："
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "将此代理服务器用于所有协议"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "港口："
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "服务器"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "速度"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "时间"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
@@ -607,12 +588,10 @@ msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Antergos 安装器 - 确认"
 
 #: cnchi/src/download/download.py:100
-#, fuzzy
 msgid "Can't create download package list."
 msgstr "无法创建下载集： %s"
 
 #: cnchi/src/download/download.py:113
-#, fuzzy
 msgid "Can't download needed packages. Cnchi can't continue."
 msgstr "无法安装必须的文件，Cnchi安装程序无法继续。"
 
@@ -621,71 +600,67 @@ msgid "Creating the list of packages to download..."
 msgstr "创建包下载列表中…"
 
 #: cnchi/src/download/download.py:179
-#, fuzzy, python-format
+#, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
 msgstr "为包 %s 创建 metalink 错误。安装将会停止"
 
 #: cnchi/src/download/download_requests.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
 msgstr "正在下载 {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be deleted!"
 msgstr "分区 {0} 将被删除"
 
 #: cnchi/src/installation/action.py:58
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created"
 msgstr "分区 {0} 将被删除"
 
 #: cnchi/src/installation/action.py:62
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be modified"
 msgstr "分区 {0} 将被删除"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "设备 {0} 将是"
 
 #: cnchi/src/installation/action.py:67
-#, fuzzy
 msgid "relabeled"
 msgstr "修改标签"
 
 #: cnchi/src/installation/action.py:69
-#, fuzzy
 msgid "not relabeled"
 msgstr "修改标签"
 
 #: cnchi/src/installation/action.py:71
-#, fuzzy
 msgid "formatted"
 msgstr "格式化"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "未格式化"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "安装为 {0}"
 
 #: cnchi/src/installation/action.py:78
-#, fuzzy
 msgid "not mounted"
 msgstr "%s 已经卸载"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "并加密。"
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "并且没有加密。"
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
@@ -703,12 +678,12 @@ msgid "Aborted"
 msgstr "已中止"
 
 #: cnchi/src/installation/install.py:173
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting boot partition {0} into {1} directory"
 msgstr "正在挂载分区 {0} 到 {1} 目录"
 
 #: cnchi/src/installation/install.py:185
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
 msgstr "正在挂载分区 {0} 到 {1} 目录"
 
@@ -733,7 +708,7 @@ msgstr "为 {0} 架构创建一个临时的 pacman.conf"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "更新包管理器安全性。请稍等..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
@@ -762,7 +737,7 @@ msgstr "加密用户 home 目录..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "构建 zfs 模块..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
@@ -793,26 +768,23 @@ msgid "Installing bootloader..."
 msgstr "正在安装 bootloader..."
 
 #: cnchi/src/installation/process.py:73
-#, fuzzy
 msgid "Cannot create package list."
 msgstr "正在获取包列表..."
 
 #: cnchi/src/installation/process.py:90
-#, fuzzy
 msgid "Cannot create download package list (metalinks)."
 msgstr "无法创建下载包列表。详情请查日志输出"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "为 Antergos 准备好磁盘..."
 
 #: cnchi/src/installation/process.py:114
-#, fuzzy
 msgid "Installation will start now!"
 msgstr "安装已完成"
 
 #: cnchi/src/installation/process.py:128
-#, fuzzy, python-format
+#, python-format
 msgid "Error running command {0}: {1}"
 msgstr "运行命令错误： %s"
 
@@ -839,18 +811,18 @@ msgid "Special dirs are not mounted. Skipping."
 msgstr "特定的文件夹未挂载。正在跳过。"
 
 #: cnchi/src/installation/wrapper.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Command {0} failed: {1}"
 msgstr "命令 %s 失败"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition on device {0}. Command {1} has failed: {2}"
 msgstr "在设备 {0} 上创建新分区时出错"
 
 #: cnchi/src/installation/wrapper.py:172
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition table on device {0}. Command {1} failed: {2}"
 msgstr "在设备 {0} 上创建新的分区表时出错"
@@ -887,7 +859,7 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2) 将不会安装"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
@@ -913,7 +885,6 @@ msgid "File already exists."
 msgstr "文件已存在。"
 
 #: cnchi/src/misc/avatars.py:57
-#, fuzzy
 msgid "Choose your avatar"
 msgstr "选择您的语言"
 
@@ -944,12 +915,12 @@ msgstr "密码不匹配"
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f MiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
@@ -972,12 +943,10 @@ msgid "Checking integrity..."
 msgstr "正在检测完整性..."
 
 #: cnchi/src/pacman/pac.py:528
-#, fuzzy
 msgid "Loading packages files..."
 msgstr "正在加载包..."
 
 #: cnchi/src/pacman/pac.py:530
-#, fuzzy
 msgid "Checking target delta integrity..."
 msgstr "正在检查目标增量包完整性..."
 
@@ -986,17 +955,15 @@ msgid "Applying deltas to packages..."
 msgstr "正在为软件包应用增量包..."
 
 #: cnchi/src/pacman/pac.py:534
-#, fuzzy, python-format
+#, python-format
 msgid "Generating {} with {}..."
 msgstr "正在生成语言环境..."
 
 #: cnchi/src/pacman/pac.py:537
-#, fuzzy
 msgid "Downloading files from the repositories..."
 msgstr "正从软件仓库中下载文件..."
 
 #: cnchi/src/pacman/pac.py:539
-#, fuzzy
 msgid "Checking available disk space..."
 msgstr "正在检查磁盘空间..."
 
@@ -1009,7 +976,7 @@ msgid "Downloading missing keys into the keyring..."
 msgstr "正在下载遗失的钥匙到密匙环中..."
 
 #: cnchi/src/pacman/pac.py:545
-#, fuzzy, python-format
+#, python-format
 msgid "Configuring {}"
 msgstr "正在配置 LAMP……"
 
@@ -1024,7 +991,7 @@ msgid "Updating {0} database"
 msgstr "正在升级 {0} 数据库"
 
 #: cnchi/src/pacman/pac.py:600
-#, fuzzy, python-format
+#, python-format
 msgid "Downloading {}..."
 msgstr "正在下载 {0}..."
 
@@ -1046,7 +1013,6 @@ msgid "none"
 msgstr "无"
 
 #: cnchi/src/pages/advanced.py:517
-#, fuzzy
 msgid "Unknown"
 msgstr "未知"
 
@@ -1059,21 +1025,20 @@ msgid "Root partition must be formatted."
 msgstr "根分区必须格式化。"
 
 #: cnchi/src/pages/advanced.py:559
-#, fuzzy
 msgid "Root partition cannot be NTFS or FAT32"
 msgstr "根分区必须格式化。"
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "主分区不能是 NTFS 或 FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "由于尚未定义 /boot/efi，因此 /boot 需要为 fat32。"
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi 需要是 fat32。"
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
@@ -1142,40 +1107,40 @@ msgstr ""
 "Cnchi 将会为您创建此 BIOS 引导分区。"
 
 #: cnchi/src/pages/advanced.py:1243
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
 msgstr "无法创建 BIOS GPT 引导分区"
 
 #: cnchi/src/pages/advanced.py:1420
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
-"{0} 已挂载为交换分区。\n"
+"{0} 已作为交换安装，若要继续，将卸载它。{0} 已挂载为交换分区。\n"
 "继续操作必须要卸载它。\n"
-"点击是以卸载，或否以返回\n"
+"点击是以卸载，或否以返回"
 
 #: cnchi/src/pages/advanced.py:1425
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
-"{0} 已挂载在 '{1}' 。\n"
+"{0} 已安装在 {1} 中，要继续安装，需要将其卸载。{0} 已挂载在 '{1}' 。\n"
 "继续操作必须要卸载它。\n"
-"点击是以卸载，或否以返回\n"
+"点击是以卸载，或否以返回"
 
 #: cnchi/src/pages/advanced.py:1678
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr "无法以标签 '{1}' 格式化 LUKS 设备 '{0}' 因为 '{2}'"
 
 #: cnchi/src/pages/advanced.py:1712
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
 msgstr "无法以标签 '{1}' 格式化分区 '{0}' 因为 '{2}'"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "无法将更改提交到磁盘：{0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1213,7 +1178,7 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
-msgstr ""
+msgstr "我需要有关 Antergos / Windows(tm) 双启动设置的帮助！"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
@@ -1255,12 +1220,10 @@ msgid ""
 msgstr "这将会安装LVM，允许你便捷地管理分区并创建快照。"
 
 #: cnchi/src/pages/ask.py:341
-#, fuzzy
 msgid "Use ZFS with this installation."
 msgstr "使用 LVM 来完成这次安装。"
 
 #: cnchi/src/pages/ask.py:349
-#, fuzzy
 msgid "This will setup ZFS on your drive(s)."
 msgstr "Cnchi 将把 LUKS 安装到 %s 设备"
 
@@ -1269,7 +1232,6 @@ msgid "Set your Home in a different partition/volume"
 msgstr "把你的Home设置为一个不同的分区/卷"
 
 #: cnchi/src/pages/ask.py:366
-#, fuzzy
 msgid ""
 "This will setup your /home directory in a different partition or volume."
 msgstr "这将会把你的/home目录安装到不同的分区或卷上"
@@ -1309,7 +1271,6 @@ msgid "Confirm your password:"
 msgstr "确认密码："
 
 #: cnchi/src/pages/automatic.py:111
-#, fuzzy
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr "LUKS 密码。请不要使用特殊字符或音标 ！"
 
@@ -1322,12 +1283,12 @@ msgid "Automatic Installation Mode"
 msgstr "自动安装模式"
 
 #: cnchi/src/pages/automatic.py:234
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
 msgstr "设备 %s 将有一个 %s 文件系统"
 
 #: cnchi/src/pages/automatic.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem)"
 msgstr "设备 %s 将有一个 %s 文件系统"
 
@@ -1337,7 +1298,6 @@ msgid "Cnchi will install Antergos on device %s"
 msgstr "Cnchi 将在设备 %s 上安装 Antergos"
 
 #: cnchi/src/pages/cache.py:66
-#, fuzzy
 msgid "Select cache partition:"
 msgstr "无法删除分区 {0}"
 
@@ -1380,17 +1340,16 @@ msgstr ""
 
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
-msgstr ""
+msgstr "请现在选择用作缓存的设备（或分区）。"
 
 #: cnchi/src/pages/cache.py:92
-#, fuzzy
 msgid "Cache selection (optional)"
 msgstr "标签(可选)："
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "设备 {} 将被完全擦除！你真的确定吗？"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1398,7 +1357,7 @@ msgstr "系统检测"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi 已更新"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
@@ -1431,7 +1390,7 @@ msgstr "为达到理想结果，请保证该电脑："
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "您必须重新启动才能重试。"
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
@@ -1439,7 +1398,7 @@ msgstr "选择你的桌面"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "显示高级功能"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
@@ -1507,12 +1466,12 @@ msgid "Can't match a keymap for country code '%s'"
 msgstr "无法为国家/地区代码 '%s' 匹配键盘布局"
 
 #: cnchi/src/pages/keymap.py:291
-#, fuzzy, python-format
+#, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
 msgstr "设置键盘的布局名称为 '{0}' ({1}) 和变体名称为 '{2}' ({3})"
 
 #: cnchi/src/pages/keymap.py:298
-#, fuzzy, python-format
+#, python-format
 msgid "Set keyboard to '{0}' ({1})"
 msgstr "设置的键盘布局名称为 '{0}' ({1})"
 
@@ -1521,7 +1480,7 @@ msgid "Notice: The Cnchi Installer is beta software."
 msgstr "注意： Cnchi 安装器尚处于 beta 版本。"
 
 #: cnchi/src/pages/language.py:118
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "<span weight='bold'>{0}</span>\n"
 "\n"
@@ -1538,12 +1497,10 @@ msgstr ""
 "如果你发现任何 bug , 请报告给 {0}"
 
 #: cnchi/src/pages/language.py:137
-#, fuzzy
 msgid "Choose the Installer language"
 msgstr "选择您的语言"
 
 #: cnchi/src/pages/location.py:90
-#, fuzzy
 msgid ""
 "The location you select will be used to help determine the system locale. It "
 "should normally be the country in which you reside."
@@ -1581,21 +1538,20 @@ msgid "Can't get country code from %s location"
 msgstr "无法从 %s 的位置获得国家/地区代码"
 
 #: cnchi/src/pages/mirrors.py:400
-#, fuzzy
 msgid "Mirrors Selection"
 msgstr "功能选择"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "让 Cnchi 对镜像列表进行排序（推荐）"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "保留镜像列表不变（默认情况下）"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "让我管理镜像列表（高级）"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
@@ -1606,7 +1562,6 @@ msgid "Installing Antergos NeXT..."
 msgstr "正在安装 Antergos ..."
 
 #: cnchi/src/pages/slides.py:238
-#, fuzzy
 msgid ""
 "IMPORTANT: There may have been a problem with the bootloader installation "
 "which could prevent your system from booting properly. Before rebooting, you "
@@ -1636,55 +1591,51 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "报告此错误时请参考以下号码："
 
 #: cnchi/src/pages/summary.py:86
-#, fuzzy
 msgid "Installation Summary"
 msgstr "安装类型"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "地点"
 
 #: cnchi/src/pages/summary.py:91
-#, fuzzy
 msgid "Timezone"
 msgstr "时区已设置。"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "键盘"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "桌面环境"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "特征"
 
 #: cnchi/src/pages/summary.py:95
-#, fuzzy
 msgid "Partitions"
 msgstr "分区"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "布局：{0}"
 
 #: cnchi/src/pages/summary.py:121
-#, fuzzy, python-format
+#, python-format
 msgid "Variant: {0}"
 msgstr "正在加载 {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "从安装屏幕获取更改时出错"
 
 #: cnchi/src/pages/summary.py:193
-#, fuzzy
 msgid "Are you REALLY sure you want to continue?"
 msgstr "你确定要将Home目录加密？"
 
@@ -1810,7 +1761,6 @@ msgid "Too many characters"
 msgstr "字符过多"
 
 #: cnchi/src/pages/user_info.py:336
-#, fuzzy
 msgid "Unknown error"
 msgstr "未知"
 
@@ -1859,16 +1809,14 @@ msgid "Display password"
 msgstr "显示密码"
 
 #: cnchi/src/pages/zfs.py:195
-#, fuzzy
 msgid "Use"
 msgstr "已用"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "磁盘"
 
 #: cnchi/src/pages/zfs.py:210
-#, fuzzy
 msgid "Size (GB)"
 msgstr "大小："
 
@@ -1878,64 +1826,57 @@ msgstr "设备"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "磁盘ID"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "ZFS 设置"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "水池类型"
 
 #: cnchi/src/pages/zfs.py:309
-#, fuzzy
 msgid "Partition scheme"
 msgstr "分区"
 
 #: cnchi/src/pages/zfs.py:323
-#, fuzzy
 msgid "Validate password"
 msgstr "可用密码"
 
 #: cnchi/src/pages/zfs.py:329
-#, fuzzy
 msgid "Swap size (MB)"
 msgstr "Swap 分区大小： %dMiB"
 
 #: cnchi/src/pages/zfs.py:333
-#, fuzzy
 msgid "Encrypt swap"
 msgstr "加密"
 
 #: cnchi/src/pages/zfs.py:336
-#, fuzzy
 msgid "Encrypt disk"
 msgstr "加密"
 
 #: cnchi/src/pages/zfs.py:339
-#, fuzzy
 msgid "Pool name"
 msgstr "你的名字"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "强制 ZFS 4k 块大小"
 
 #: cnchi/src/pages/zfs.py:364
-#, fuzzy
 msgid "You must select one drive"
 msgstr "必须输入名字"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "对于 {0} pool_type，您必须至少选择两个驱动器"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "您必须至少选择 {0} 个驱动器"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1947,11 +1888,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "处理所选 ZFS 选项时发生未知错误。"
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "“无”池将在单个选定磁盘上使用 ZFS。"
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1991,16 +1932,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "在设备 {1} 上创建 {0}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "将设备 {0} 添加到 {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "未为 ZFS 池选择任何设备"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -2023,7 +1964,6 @@ msgid "_Apply"
 msgstr "应用(_A)"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
-#, fuzzy
 msgid "Create partition"
 msgstr "创建分区表"
 
@@ -2032,7 +1972,6 @@ msgid "Create Partition Table"
 msgstr "创建分区表"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
-#, fuzzy
 msgid "Edit partition"
 msgstr "分区"
 
@@ -2041,7 +1980,6 @@ msgid "Using LUKS encryption will DELETE all partition contents!"
 msgstr "使用 LUKS 加密将删除所有分区内容!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
-#, fuzzy
 msgid "Encryption properties"
 msgstr "加密选项..."
 
@@ -2058,17 +1996,16 @@ msgid "Confirm password:"
 msgstr "确认密码："
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
-#, fuzzy
 msgid "LUKS passwords do not match! Encryption NOT enabled."
 msgstr "LUKS 密码不匹配!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "卷名称和密码是必填项！未启用加密。"
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "地点："
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
@@ -2152,12 +2089,12 @@ msgid "Can't label a {0} partition"
 msgstr "无法给 {0} 分区标签"
 
 #: cnchi/src/parted3/fs_module.py:194
-#, fuzzy, python-format
+#, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
 msgstr "无法删除分区 {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
-#, fuzzy, python-format
+#, python-format
 msgid "Unknown filesystem {0} for partition {1}"
 msgstr "未知的文件系统 {0}"
 
@@ -2181,7 +2118,7 @@ msgid "Partition is too large!"
 msgstr "分区太大!"
 
 #: cnchi/src/parted3/partition_module.py:329
-#, fuzzy, python-format
+#, python-format
 msgid "Can't detect used space from {0}: {1}"
 msgstr "无法从 {0} 检测已使用空间"
 
@@ -2196,7 +2133,7 @@ msgid "Can't detect used space of EXTFS partition %s"
 msgstr "无法检测 EXTFS 分区 %s 的已使用空间"
 
 #: cnchi/src/parted3/used_space.py:110
-#, fuzzy, c-format
+#, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
 msgstr "无法检测 FAT分区 %s 的已使用空间"
 
@@ -2374,52 +2311,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: 看到意外的标记“%(token)s”"
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# 文件：%(文件名)s，行：%(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(文件名)s:%(行号)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "--style 的值无效：%s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py（Python 的 xgettext）%s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--width 参数必须是整数：%s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "无法读取--排除文件：%s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "读取标准输入"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "正在处理 %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** 看到意外的令牌“%(token)s”"
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "不止一个字符串"
+
+msgid "Graphical Installer"
+msgstr "图形安装程序"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "实时环境的区域设置没有您的语言。目前，后备版本为英语。如果你不会导航并且不懂英语，我建议使用 Google Lens。"
 
 #~ msgid "Error calling hexdump command: %s"
 #~ msgstr "调用 hexdump 命令时出错：%s"

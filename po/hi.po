@@ -23,7 +23,7 @@ msgstr ""
 #: cnchi/src/bootinfo.py:268 cnchi/src/bootinfo.py:271
 #: cnchi/src/bootinfo.py:274 cnchi/src/bootinfo.py:297
 msgid "unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: cnchi/src/cnchi.py:101
 msgid ""
@@ -46,60 +46,60 @@ msgstr ""
 #: cnchi/src/cnchi.py:189
 #, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
-msgstr ""
+msgstr "Cnchi (एंटरगोस इंस्टालर) संस्करण {0}"
 
 #: cnchi/src/cnchi.py:377
 #, python-format
 msgid "Cnchi v{0} - Antergos Installer"
-msgstr ""
+msgstr "Cnchi v{0} - ऐंटरगोस इंस्टालर"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "पहुंच-योग्यता सुविधा को डिफ़ॉल्ट रूप से चालू करें"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
-msgstr ""
+msgstr "जब संभव हो तो पहले से डाउनलोड किए गए xz पैकेज का उपयोग करें"
 
 #: cnchi/src/cnchi.py:387
 msgid "Sets Cnchi log level to 'debug'"
-msgstr ""
+msgstr "Cnchi लॉग स्तर को 'डीबग' पर सेट करता है"
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "डेस्कटॉप वातावरण सेट करता है जिसे स्थापित किया जाएगा"
 
 #: cnchi/src/cnchi.py:393
 msgid "Runs cnchi even when another instance is running"
-msgstr ""
+msgstr "जब कोई अन्य इंस्टेंस चल रहा हो तब भी cnchi चलता है"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
-msgstr ""
+msgstr "पहली स्क्रीन के 'इसे आज़माएं' विकल्प को अक्षम करता है"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "चेक स्क्रीन में चेक को वैकल्पिक बनाता है"
 
 #: cnchi/src/cnchi.py:402
 msgid "Install packages referenced by a local xml file"
-msgstr ""
+msgstr "स्थानीय xml फ़ाइल द्वारा संदर्भित पैकेज स्थापित करें"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
-msgstr ""
+msgstr "stdout पर लॉगिंग संदेश दिखाएँ"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Cnchi संस्करण दिखाएँ और छोड़ें"
 
 #: cnchi/src/cnchi.py:411
 msgid "Show options in development (use at your own risk!)"
-msgstr ""
+msgstr "विकास में विकल्प दिखाएं (अपने जोखिम पर उपयोग करें!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
-msgstr ""
+msgstr "सीएनसीएचआई फ़ाइलें नहीं मिलीं. कृपया, पैक्मैन का उपयोग करके Cnchi स्थापित करें"
 
 #: cnchi/src/desktop_info.py:116
 msgid ""
@@ -191,139 +191,140 @@ msgstr ""
 
 #: cnchi/src/features_info.py:68
 msgid "Adds accessibility packages"
-msgstr ""
+msgstr "एक्सेसिबिलिटी पैकेज जोड़ता है"
 
 #: cnchi/src/features_info.py:69
 msgid "Arch User Repository (AUR) Support"
-msgstr ""
+msgstr "आर्क यूजर रिपॉजिटरी (AUR) सपोर्ट"
 
 #: cnchi/src/features_info.py:70
 msgid "Bluetooth Support"
-msgstr ""
+msgstr "ब्लूटूथ समर्थन"
 
 #: cnchi/src/features_info.py:71
 msgid "Printing Support"
-msgstr ""
+msgstr "मुद्रण समर्थन"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "क्रोमियम वेब ब्राउज़र"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "उन्नत बिजली प्रबंधन"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "फ़ायरफ़ॉक्स वेब ब्राउज़र"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "विवाल्डी वेब ब्राउज़र"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
-msgstr ""
+msgstr "सरल फ़ायरवॉल"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "फ़्लैश प्लगइन्स"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "स्टीम + प्लेऑनलिनक्स"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "ग्राफ़िक ड्राइवर (मालिकाना)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "अपाचे (या Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "कर्नेल (एलटीएस संस्करण)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
-msgstr ""
+msgstr "लिब्रे ऑफिस"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "एसएसएच सेवा"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
-msgstr ""
+msgstr "दृश्य प्रभाव"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "नेत्रहीन या दृष्टिबाधित व्यक्तियों के लिए उपयोगी पैकेज।"
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
-msgstr ""
+msgstr "AUR आर्क उपयोगकर्ताओं के लिए एक समुदाय-संचालित रिपॉजिटरी है।"
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
-msgstr ""
+msgstr "आपके सिस्टम को ब्लूटूथ के माध्यम से वायरलेस कनेक्शन बनाने में सक्षम बनाता है।"
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "Google का ओपन-सोर्स वेब ब्राउज़र।"
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "लिनक्स के लिए उन्नत पावर प्रबंधन का लाभ आपके लिए लाता है।"
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "मोज़िला का एक लोकप्रिय ओपन-सोर्स ग्राफिकल वेब ब्राउज़र।"
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
+"विवाल्डी एक मुफ़्त, तेज़ वेब ब्राउज़र है जो पावर-उपयोगकर्ताओं के लिए डिज़ाइन किया गया है।"
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "फ्रीवेयर सॉफ़्टवेयर आमतौर पर मल्टीमीडिया के लिए उपयोग किया जाता है।"
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "AMD या Nvidia स्वामित्व ग्राफ़िक ड्राइवर स्थापित करता है।"
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "गेमिंग के शौकीनों के लिए स्टीम और प्लेऑनलिनक्स इंस्टॉल करता है।"
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Apache (या Nginx) + Mariadb + PHP इंस्टालेशन और सेटअप।"
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
-msgstr ""
+msgstr "प्रिंटर ड्राइवरों और प्रबंधन उपकरणों की स्थापना।"
 
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
-msgstr ""
+msgstr "ओपन सोर्स ऑफिस सुइट। MS Office फ़ाइलों को संपादित करने का समर्थन करता है।"
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
-msgstr ""
+msgstr "पारदर्शिता, छाया और अन्य डेस्कटॉप प्रभाव सक्षम करें।"
 
 #: cnchi/src/features_info.py:102
 msgid "Control the incoming and outgoing network traffic."
-msgstr ""
+msgstr "इनकमिंग और आउटगोइंग नेटवर्क ट्रैफ़िक को नियंत्रित करें।"
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "सुरक्षित शेल सेवा सक्षम करता है।"
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "दीर्घकालिक समर्थन (एलटीएस) लिनक्स कर्नेल और मॉड्यूल।"
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -457,155 +458,155 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "अगला"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "पीछे"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
-msgstr ""
+msgstr "ऐंटरगोस इंस्टालर"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "क्या आप सचमुच इंस्टॉलर को छोड़ना चाहते हैं?"
 
 #: cnchi/src/proxy.py:114
 msgid "Cnchi - Internet Connection Proxy Setup"
-msgstr ""
+msgstr "Cnchi - इंटरनेट कनेक्शन प्रॉक्सी सेटअप"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP प्रॉक्सी सर्वर:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS प्रॉक्सी सर्वर:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "एफ़टीपी प्रॉक्सी सर्वर:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "सॉक्स होस्ट सर्वर:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "सभी प्रोटोकॉल के लिए इस प्रॉक्सी सर्वर का उपयोग करें"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "पत्तन:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "सर्वर"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "दर"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "समय"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट इंस्टालर - त्रुटि"
 
 #: cnchi/src/show_message.py:91
 msgid "Antergos NeXT Installer - Warning"
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट इंस्टालर - चेतावनी"
 
 #: cnchi/src/show_message.py:109
 msgid "Antergos NeXT Installer - Information"
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट इंस्टालर - सूचना"
 
 #: cnchi/src/show_message.py:127
 msgid "Antergos NeXT Installer - Confirmation"
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट इंस्टालर - पुष्टिकरण"
 
 #: cnchi/src/download/download.py:100
 msgid "Can't create download package list."
-msgstr ""
+msgstr "डाउनलोड पैकेज सूची नहीं बनाई जा सकती."
 
 #: cnchi/src/download/download.py:113
 msgid "Can't download needed packages. Cnchi can't continue."
-msgstr ""
+msgstr "आवश्यक पैकेज डाउनलोड नहीं कर सकते. Cnchi जारी नहीं रह सकता."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
-msgstr ""
+msgstr "डाउनलोड करने के लिए पैकेजों की सूची बनाई जा रही है..."
 
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
-msgstr ""
+msgstr "पैकेज {} के लिए मेटालिंक बनाने में त्रुटि। इंस्टालेशन रुक जाएगा"
 
 #: cnchi/src/download/download_requests.py:125
 #, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
-msgstr ""
+msgstr "{0} {1} ({2}/{3}) लाया जा रहा है..."
 
 #: cnchi/src/installation/action.py:53
 #, python-format
 msgid "Device {0} will be deleted!"
-msgstr ""
+msgstr "डिवाइस {0} हटा दिया जाएगा!"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "डिवाइस {0} बनाया जाएगा"
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "डिवाइस {0} को संशोधित किया जाएगा"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "डिवाइस {0} होगा"
 
 #: cnchi/src/installation/action.py:67
 msgid "relabeled"
-msgstr ""
+msgstr "दोबारा लेबल"
 
 #: cnchi/src/installation/action.py:69
 msgid "not relabeled"
-msgstr ""
+msgstr "दोबारा लेबल नहीं किया गया"
 
 #: cnchi/src/installation/action.py:71
 msgid "formatted"
-msgstr ""
+msgstr "प्रारूपित"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "स्वरूपित नहीं"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "{0} के रूप में माउंट किया गया"
 
 #: cnchi/src/installation/action.py:78
 msgid "not mounted"
-msgstr ""
+msgstr "नहीं लगाया हुआ है"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "और एन्क्रिप्टेड."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "और एन्क्रिप्टेड नहीं."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "अज्ञात फ़ाइल सिस्टम प्रकार {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -615,145 +616,145 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "गर्भपात"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "बूट विभाजन {0} को {1} निर्देशिका में माउंट करना"
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "EFI विभाजन {0} को {1} निर्देशिका में माउंट करना"
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "विभाजन {0} को {1} निर्देशिका में माउंट करना"
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "'{0}' विधि का उपयोग करके इंस्टॉल करना"
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
-msgstr ""
+msgstr "स्थापना समाप्त"
 
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "{0} आर्किटेक्चर के लिए एक अस्थायी pacman.conf बनाना"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "पैकेज प्रबंधक सुरक्षा अद्यतन कर रहा है. कृपया प्रतीक्षा करें..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "पैक्मैन डेटाबेस को ताज़ा नहीं किया जा सकता।"
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
-msgstr ""
+msgstr "आवश्यक पैकेज स्थापित नहीं कर सकते. Cnchi जारी नहीं रह सकता."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "लाइटडीएम डेस्कटॉप प्रबंधक को कॉन्फ़िगर किया जा रहा है..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "लाइटडीएम डिस्प्ले मैनेजर कॉन्फ़िगरेशन पूरा हुआ।"
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "लाइटडीएम डिस्प्ले मैनेजर को कॉन्फ़िगर करने का प्रयास करते समय त्रुटि"
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
-msgstr ""
+msgstr "उपयोगकर्ता होम निर्देशिका को एन्क्रिप्ट किया जा रहा है..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "ZFS मॉड्यूल का निर्माण..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
-msgstr ""
+msgstr "आपका नया सिस्टम कॉन्फ़िगर किया जा रहा है"
 
 #: cnchi/src/installation/post_install.py:729
 msgid "Generating locales..."
-msgstr ""
+msgstr "स्थान उत्पन्न हो रहे हैं..."
 
 #: cnchi/src/installation/post_install.py:741
 msgid "Adjusting hardware clock..."
-msgstr ""
+msgstr "हार्डवेयर घड़ी का समायोजन..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "कीमैप कॉन्फ़िगर किया जा रहा है..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "हार्डवेयर कॉन्फ़िगर किया जा रहा है..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
-msgstr ""
+msgstr "सिस्टम स्टार्टअप को कॉन्फ़िगर किया जा रहा है..."
 
 #: cnchi/src/installation/post_install.py:804
 msgid "Installing bootloader..."
-msgstr ""
+msgstr "बूटलोडर स्थापित किया जा रहा है..."
 
 #: cnchi/src/installation/process.py:73
 msgid "Cannot create package list."
-msgstr ""
+msgstr "पैकेज सूची नहीं बनाई जा सकती."
 
 #: cnchi/src/installation/process.py:90
 msgid "Cannot create download package list (metalinks)."
-msgstr ""
+msgstr "डाउनलोड पैकेज सूची (मेटालिंक) नहीं बना सकते।"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "ऐंटरगोज़ के लिए आपकी डिस्क तैयार हो रही है..."
 
 #: cnchi/src/installation/process.py:114
 msgid "Installation will start now!"
-msgstr ""
+msgstr "इंस्टालेशन अब शुरू होगा!"
 
 #: cnchi/src/installation/process.py:128
 #, python-format
 msgid "Error running command {0}: {1}"
-msgstr ""
+msgstr "आदेश चलाने में त्रुटि {0}: {1}"
 
 #: cnchi/src/installation/select_packages.py:197
 msgid "Getting package list..."
-msgstr ""
+msgstr "पैकेज सूची प्राप्त हो रही है..."
 
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "'%s' बूटलोडर पैकेज जोड़ना"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "%s बूटलोडर पैकेज नहीं मिल सका!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "विशेष डायर पहले से ही लगाए गए हैं। रस्सी कूदना।"
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
-msgstr ""
+msgstr "विशेष डायरें नहीं लगाई गई हैं। रस्सी कूदना।"
 
 #: cnchi/src/installation/wrapper.py:76
 #, python-format
 msgid "Command {0} failed: {1}"
-msgstr ""
+msgstr "कमांड {0} विफल: {1}"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
 #, python-format
@@ -769,28 +770,28 @@ msgstr ""
 
 #: cnchi/src/installation/boot/boot_ui.py:58
 msgid "Use the device below for boot loader installation:"
-msgstr ""
+msgstr "बूट लोडर इंस्टालेशन के लिए नीचे दिए गए डिवाइस का उपयोग करें:"
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "बूटलोडर:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "उपकरण:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "{0} में GRUB(2) BIOS बूट लोडर स्थापित करना"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) BIOS सफलतापूर्वक स्थापित किया गया है।"
 
 #: cnchi/src/installation/boot/grub2.py:327
 msgid "ERROR installing GRUB(2) BIOS."
-msgstr ""
+msgstr "GRUB(2) BIOS स्थापित करने में त्रुटि।"
 
 #: cnchi/src/installation/boot/grub2.py:342
 msgid ""
@@ -799,240 +800,241 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2) स्थापित नहीं किया जाएगा"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "GRUB(2) UEFI {0} बूट लोडर स्थापित करना"
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
-msgstr ""
+msgstr "%s में कोई OEM लोडर नहीं मिला. ग्रब(2) को डीआईआर में कॉपी किया जा रहा है।"
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "ग्रब(2) को ओईएम डीआईआर में कॉपी करना विफल: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "फ़ाइल प्राप्त नहीं हुई।"
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "फ़ाइल पहले से ही मौजूद है।"
 
 #: cnchi/src/misc/avatars.py:57
 msgid "Choose your avatar"
-msgstr ""
+msgstr "अपना अवतार चुनें"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "पारण शब्द बहुत छोटा है"
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "कमजोर पासवर्ड"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "उचित पासवर्ड"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "अच्छा पासवर्ड"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "मज़बूत पारण शब्द"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
-msgstr ""
+msgstr "सांकेतिक शब्द मेल नहीं खाते"
 
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f एमआईबी"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
-msgstr ""
+msgstr "निर्भरताएँ जाँच रहा है..."
 
 #: cnchi/src/pacman/pac.py:516
 msgid "Checking file conflicts..."
-msgstr ""
+msgstr "फ़ाइल विरोधों की जाँच की जा रही है..."
 
 #: cnchi/src/pacman/pac.py:518
 msgid "Resolving dependencies..."
-msgstr ""
+msgstr "निर्भरता का समाधान..."
 
 #: cnchi/src/pacman/pac.py:520
 msgid "Checking inter conflicts..."
-msgstr ""
+msgstr "अंतर्विरोधों की जाँच की जा रही है..."
 
 #: cnchi/src/pacman/pac.py:525
 msgid "Checking integrity..."
-msgstr ""
+msgstr "अखंडता की जाँच हो रही है..."
 
 #: cnchi/src/pacman/pac.py:528
 msgid "Loading packages files..."
-msgstr ""
+msgstr "पैकेज फ़ाइलें लोड हो रही हैं..."
 
 #: cnchi/src/pacman/pac.py:530
 msgid "Checking target delta integrity..."
-msgstr ""
+msgstr "लक्ष्य डेल्टा अखंडता की जाँच की जा रही है..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "पैकेजों में डेल्टा लागू किया जा रहा है..."
 
 #: cnchi/src/pacman/pac.py:534
 #, python-format
 msgid "Generating {} with {}..."
-msgstr ""
+msgstr "{} के साथ {} जनरेट कर रहा है..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "रिपॉजिटरी से फ़ाइलें डाउनलोड हो रही हैं..."
 
 #: cnchi/src/pacman/pac.py:539
 msgid "Checking available disk space..."
-msgstr ""
+msgstr "उपलब्ध डिस्क स्थान की जाँच की जा रही है..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "कीरिंग में चाबियाँ जाँच रहा है..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "कीरिंग में गुम कुंजियाँ डाउनलोड हो रही हैं..."
 
 #: cnchi/src/pacman/pac.py:545
 #, python-format
 msgid "Configuring {}"
-msgstr ""
+msgstr "कॉन्फ़िगर किया जा रहा है {}"
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "{0} इंस्टॉल किया जा रहा है ({1}/{2})"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "{0} डेटाबेस अपडेट किया जा रहा है"
 
 #: cnchi/src/pacman/pac.py:600
 #, python-format
 msgid "Downloading {}..."
-msgstr ""
+msgstr "डाउनलोड हो रहा है {}..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "स्पष्ट रूप से स्थापित"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "किसी अन्य पैकेज के लिए निर्भरता के रूप में स्थापित किया गया"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
 msgid "free space"
-msgstr ""
+msgstr "मुक्त स्थान"
 
 #: cnchi/src/pages/advanced.py:456
 msgid "none"
-msgstr ""
+msgstr "कोई नहीं"
 
 #: cnchi/src/pages/advanced.py:517
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "एक ही माउंट पॉइंट का दो बार उपयोग नहीं किया जा सकता."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
-msgstr ""
+msgstr "रूट विभाजन को स्वरूपित किया जाना चाहिए."
 
 #: cnchi/src/pages/advanced.py:559
 msgid "Root partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "रूट विभाजन NTFS या FAT32 नहीं हो सकता"
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "होम विभाजन NTFS या FAT32 नहीं हो सकता"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
 msgstr ""
+"चूंकि कोई /boot/efi परिभाषित नहीं है (अभी तक), /boot को वसा32 होना आवश्यक है।"
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi को वसा32 होना आवश्यक है।"
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "क्षमा करें, आपने पहले ही {0} प्राथमिक विभाजन बना लिए हैं।"
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
-msgstr ""
+msgstr "क्षमा करें, आपके पास पहले से ही {0} प्राथमिक और 1 विस्तारित विभाजन बनाए गए हैं।"
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
-msgstr ""
+msgstr "उन्नत स्थापना मोड"
 
 #: cnchi/src/pages/advanced.py:1065
 msgid "Mount Checklist:"
-msgstr ""
+msgstr "माउंट चेकलिस्ट:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "जड़"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "गाड़ी की डिक्की"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "ईएफआई"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
-msgstr ""
+msgstr "बदलना"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "पूर्ववत"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
-msgstr ""
+msgstr "नया"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "मिटाना"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "संपादन करना..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "नई विभाजन तालिका"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1045,32 +1047,36 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "BIOS GPT बूट विभाजन नहीं बनाया जा सका: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
+"{0} पहले से ही स्वैप के रूप में माउंट किया गया है, जारी रखने के लिए इसे अनमाउंट किया जाएगा।"
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
+"{0} पहले से ही {1} में माउंट किया हुआ है, जारी रखने के लिए इसे अनमाउंट किया जाएगा।"
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"'{1}' लेबल वाले LUKS डिवाइस '{0}' को '{2}' के रूप में फ़ॉर्मेट नहीं किया जा सका: {3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"'{1}' लेबल वाले विभाजन '{0}' को '{2}' के रूप में प्रारूपित नहीं किया जा सका: {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "आपके परिवर्तन डिस्क पर नहीं भेजे जा सकते: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1088,15 +1094,15 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "अपने इंस्टॉलेशन का नया आकार चुनें"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "वह विभाजन चुनें जिसे आप छोटा करना चाहते हैं:"
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
-msgstr ""
+msgstr "स्थापना के साथ ऐंटरगोस"
 
 #: cnchi/src/pages/alongside.py:266
 msgid ""
@@ -1106,40 +1112,40 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
-msgstr ""
+msgstr "मुझे ऐंटरगोस/विंडोज(टीएम) डुअल बूट सेटअप के लिए मदद चाहिए!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "और"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
-msgstr ""
+msgstr "स्थापना प्रकार"
 
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "{0} को ऐंटरगोस से बदलें"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
-msgstr ""
+msgstr "डिस्क मिटाएँ और ऐंटरगोस स्थापित करें"
 
 #: cnchi/src/pages/ask.py:296
 msgid "Warning: This will erase ALL data on your disk."
-msgstr ""
+msgstr "चेतावनी: इससे आपकी डिस्क का सारा डेटा मिट जाएगा।"
 
 #: cnchi/src/pages/ask.py:305
 msgid "Encrypt this installation for increased security."
-msgstr ""
+msgstr "अधिक सुरक्षा के लिए इस इंस्टॉलेशन को एन्क्रिप्ट करें."
 
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
-msgstr ""
+msgstr "अगले चरण में आपसे एक एन्क्रिप्शन पासवर्ड बनाने के लिए कहा जाएगा।"
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "इस संस्थापन के साथ LVM का उपयोग करें."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1149,15 +1155,15 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "इस संस्थापन के साथ ZFS का प्रयोग करें."
 
 #: cnchi/src/pages/ask.py:349
 msgid "This will setup ZFS on your drive(s)."
-msgstr ""
+msgstr "यह आपके ड्राइव पर ZFS सेटअप करेगा।"
 
 #: cnchi/src/pages/ask.py:358
 msgid "Set your Home in a different partition/volume"
-msgstr ""
+msgstr "अपने घर को एक अलग पार्टीशन/वॉल्यूम में सेट करें"
 
 #: cnchi/src/pages/ask.py:366
 msgid ""
@@ -1166,23 +1172,23 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "आप कैसे आगे बढ़ना चाहेंगे?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "ठीक वही चुनें जहाँ ऐंटरगोज़ स्थापित किया जाना चाहिए।"
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
-msgstr ""
+msgstr "विभाजन तालिका संपादित करें और माउंट पॉइंट चुनें।"
 
 #: cnchi/src/pages/automatic.py:89
 msgid "Select drive:"
-msgstr ""
+msgstr "ड्राइव का चयन करें:"
 
 #: cnchi/src/pages/automatic.py:93
 msgid "WARNING! This will overwrite everything currently on your drive!"
-msgstr ""
+msgstr "चेतावनी! यह आपके ड्राइव पर वर्तमान में मौजूद सभी चीज़ों को अधिलेखित कर देगा!"
 
 #: cnchi/src/pages/automatic.py:98
 msgid ""
@@ -1192,42 +1198,43 @@ msgstr ""
 
 #: cnchi/src/pages/automatic.py:103
 msgid "Encryption Password:"
-msgstr ""
+msgstr "एन्क्रिप्शन पासवर्ड:"
 
 #: cnchi/src/pages/automatic.py:107 cnchi/src/pages/user_info.py:188
 msgid "Confirm your password:"
-msgstr ""
+msgstr "अपने पासवर्ड की पुष्टि करें:"
 
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr ""
+"एलयूकेएस पासवर्ड। हम विशेष वर्णों या उच्चारणों का उपयोग करने की अनुशंसा नहीं करते हैं!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "पासवर्ड दिखाए"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
-msgstr ""
+msgstr "स्वचालित स्थापना मोड"
 
 #: cnchi/src/pages/automatic.py:234
 #, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
-msgstr ""
+msgstr "डिवाइस {0} को {2} के रूप में ({1} फ़ाइल सिस्टम) बनाया जाएगा"
 
 #: cnchi/src/pages/automatic.py:238
 #, python-format
 msgid "Device {0} will be created ({1} filesystem)"
-msgstr ""
+msgstr "डिवाइस {0} बनाया जाएगा ({1} फ़ाइल सिस्टम)"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "Cnchi डिवाइस %s पर ऐंटरगोस स्थापित करेगा"
 
 #: cnchi/src/pages/cache.py:66
 msgid "Select cache partition:"
-msgstr ""
+msgstr "कैश विभाजन का चयन करें:"
 
 #: cnchi/src/pages/cache.py:70
 msgid ""
@@ -1268,29 +1275,29 @@ msgstr ""
 
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
-msgstr ""
+msgstr "कृपया, अब कैश के रूप में उपयोग करने के लिए डिवाइस (या विभाजन) चुनें।"
 
 #: cnchi/src/pages/cache.py:92
 msgid "Cache selection (optional)"
-msgstr ""
+msgstr "कैश चयन (वैकल्पिक)"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "डिवाइस {} पूरी तरह मिटा दिया जाएगा! क्या सचमुच आश्वस्त हैं?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
-msgstr ""
+msgstr "सिस्टम जांच"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi अद्यतन है"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
 msgid "has at least {0}GB available storage space. (*)"
-msgstr ""
+msgstr "कम से कम {0}जीबी स्टोरेज स्थान उपलब्ध है। (*)"
 
 #: cnchi/src/pages/check.py:94
 msgid ""
@@ -1300,11 +1307,11 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:103
 msgid "is plugged in to a power source"
-msgstr ""
+msgstr "एक पावर स्रोत से प्लग किया गया है"
 
 #: cnchi/src/pages/check.py:108
 msgid "is connected to the Internet"
-msgstr ""
+msgstr "इंटरनेट से जुड़ा है"
 
 #: cnchi/src/pages/check.py:112
 msgid ""
@@ -1314,27 +1321,27 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:117
 msgid "For best results, please ensure that this computer:"
-msgstr ""
+msgstr "सर्वोत्तम परिणामों के लिए, कृपया सुनिश्चित करें कि यह कंप्यूटर:"
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "दोबारा प्रयास करने से पहले आपको रीबूट करना होगा।"
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
-msgstr ""
+msgstr "अपना डेस्कटॉप चुनें"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "उन्नत सुविधाएँ दिखाएँ"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
-msgstr ""
+msgstr "फ़ीचर चयन"
 
 #: cnchi/src/pages/features.py:345
 msgid "Arch User Repository - Disclaimer"
-msgstr ""
+msgstr "आर्क उपयोगकर्ता रिपॉजिटरी - अस्वीकरण"
 
 #: cnchi/src/pages/features.py:346
 msgid ""
@@ -1346,7 +1353,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:351
 msgid "Uncomplicated Firewall will be installed with these rules:"
-msgstr ""
+msgstr "सरल फ़ायरवॉल इन नियमों के साथ स्थापित किया जाएगा:"
 
 #: cnchi/src/pages/features.py:353
 #, python-format
@@ -1359,11 +1366,11 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "क्या आप Apache सर्वर के बजाय Nginx सर्वर स्थापित करना चाहते हैं?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
-msgstr ""
+msgstr "अपना कीबोर्ड लेआउट चुनें"
 
 #: cnchi/src/pages/keymap.py:92
 msgid ""
@@ -1378,21 +1385,21 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "देश कोड '%s' के लिए कीमैप से मेल नहीं खा सकता"
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "कीबोर्ड को '{0}' ({1}), वैरिएंट '{2}' ({3}) पर सेट करें"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "कीबोर्ड को '{0}' ({1}) पर सेट करें"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
-msgstr ""
+msgstr "सूचना: Cnchi इंस्टॉलर बीटा सॉफ़्टवेयर है।"
 
 #: cnchi/src/pages/language.py:118
 #, python-format
@@ -1408,7 +1415,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "इंस्टॉलर भाषा चुनें"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1430,44 +1437,44 @@ msgstr ""
 
 #: cnchi/src/pages/location.py:102
 msgid "Country, territory or area:"
-msgstr ""
+msgstr "देश, क्षेत्र या क्षेत्र:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "सभी स्थान दिखाएँ"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
-msgstr ""
+msgstr "अपना स्थान चुनें"
 
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "%s स्थान से देश कोड प्राप्त नहीं किया जा सकता"
 
 #: cnchi/src/pages/mirrors.py:400
 msgid "Mirrors Selection"
-msgstr ""
+msgstr "दर्पण चयन"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Cnchi को दर्पण सूचियों को क्रमबद्ध करने दें (अनुशंसित)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "दर्पण सूचियों को वैसे ही छोड़ दें जैसे वे हैं (डिफ़ॉल्ट रूप से)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "मुझे दर्पण सूचियाँ प्रबंधित करने दें (उन्नत)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
-msgstr ""
+msgstr "कृपया प्रतीक्षा करें..."
 
 #: cnchi/src/pages/slides.py:93
 msgid "Installing Antergos NeXT..."
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट स्थापित कर रहा है..."
 
 #: cnchi/src/pages/slides.py:238
 msgid ""
@@ -1490,292 +1497,292 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "कृपया इस त्रुटि की रिपोर्ट करते समय निम्नलिखित नंबर का संदर्भ लें:"
 
 #: cnchi/src/pages/summary.py:86
 msgid "Installation Summary"
-msgstr ""
+msgstr "स्थापना सारांश"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "जगह"
 
 #: cnchi/src/pages/summary.py:91
 msgid "Timezone"
-msgstr ""
+msgstr "समयक्षेत्र"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "कीबोर्ड"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "डेस्कटॉप वातावरण"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "विशेषताएँ"
 
 #: cnchi/src/pages/summary.py:95
 msgid "Partitions"
-msgstr ""
+msgstr "विभाजन"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "लेआउट: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "प्रकार: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "इंस्टॉल स्क्रीन से परिवर्तन प्राप्त करने में त्रुटि"
 
 #: cnchi/src/pages/summary.py:193
 msgid "Are you REALLY sure you want to continue?"
-msgstr ""
+msgstr "क्या आप सचमुच आश्वस्त हैं कि आप जारी रखना चाहते हैं?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "रैंकिंग दर्पण"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "Cnchi अभी भी आपकी मिरर सूचियों को अद्यतन और अनुकूलित कर रहा है।"
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "कृपया धैर्य रखें..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
-msgstr ""
+msgstr "क्षेत्र:"
 
 #: cnchi/src/pages/timezone.py:99
 msgid "Region:"
-msgstr ""
+msgstr "क्षेत्र:"
 
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
-msgstr ""
+msgstr "घड़ी सिंक्रनाइज़ेशन के लिए नेटवर्क टाइम प्रोटोकॉल (एनटीपी) का उपयोग करें"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
-msgstr ""
+msgstr "अपना समयक्षेत्र चुनें"
 
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "समयक्षेत्र (अक्षांश %s, देशांतर %s) का पता चला।"
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
-msgstr ""
+msgstr "आपका नाम:"
 
 #: cnchi/src/pages/user_info.py:185
 msgid "Your computer's name:"
-msgstr ""
+msgstr "आपके कंप्यूटर का नाम:"
 
 #: cnchi/src/pages/user_info.py:186
 msgid "Pick a username:"
-msgstr ""
+msgstr "प्रयोक्ता नाम उठाओ:"
 
 #: cnchi/src/pages/user_info.py:187
 msgid "Choose a password:"
-msgstr ""
+msgstr "एक पासवर्ड चुनें:"
 
 #: cnchi/src/pages/user_info.py:195
 msgid "Identifies your system to other computers and devices."
-msgstr ""
+msgstr "आपके सिस्टम को अन्य कंप्यूटरों और उपकरणों से पहचानता है।"
 
 #: cnchi/src/pages/user_info.py:200
 msgid "Your name"
-msgstr ""
+msgstr "आपका नाम"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "होस्ट का नाम"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
-msgstr ""
+msgstr "उपयोगकर्ता नाम"
 
 #: cnchi/src/pages/user_info.py:203 cnchi/src/pages/zfs.py:326
 msgid "Password"
-msgstr ""
+msgstr "पासवर्ड"
 
 #: cnchi/src/pages/user_info.py:204
 msgid "Confirm password"
-msgstr ""
+msgstr "पासवर्ड की पुष्टि कीजिये"
 
 #: cnchi/src/pages/user_info.py:211
 msgid "You must enter a name"
-msgstr ""
+msgstr "आपको एक नाम दर्ज करना होगा"
 
 #: cnchi/src/pages/user_info.py:212
 msgid "You must enter a username"
-msgstr ""
+msgstr "आपको एक उपयोगकर्ता नाम दर्ज करना होगा"
 
 #: cnchi/src/pages/user_info.py:213
 msgid "You must enter a password"
-msgstr ""
+msgstr "आपको एक पासवर्ड दर्ज करना होगा"
 
 #: cnchi/src/pages/user_info.py:221
 msgid "Log in automatically"
-msgstr ""
+msgstr "स्वचालित रूप से लॉग इन करें"
 
 #: cnchi/src/pages/user_info.py:222
 msgid "Require my password to log in"
-msgstr ""
+msgstr "लॉग इन करने के लिए मेरे पासवर्ड की आवश्यकता है"
 
 #: cnchi/src/pages/user_info.py:223
 msgid "Encrypt my home folder"
-msgstr ""
+msgstr "मेरे होम फ़ोल्डर को एन्क्रिप्ट करें"
 
 #: cnchi/src/pages/user_info.py:226
 msgid "show password"
-msgstr ""
+msgstr "पासवर्ड दिखाए"
 
 #: cnchi/src/pages/user_info.py:228
 msgid "Create Your User Account"
-msgstr ""
+msgstr "अपना उपयोगकर्ता खाता बनाएं"
 
 #: cnchi/src/pages/user_info.py:263
 msgid "Are you sure you want to encrypt your home directory?"
-msgstr ""
+msgstr "क्या आप वाकई अपनी होम निर्देशिका को एन्क्रिप्ट करना चाहते हैं?"
 
 #: cnchi/src/pages/user_info.py:330
 msgid "Invalid characters entered"
-msgstr ""
+msgstr "अमान्य वर्ण प्रविष्ट किए गए"
 
 #: cnchi/src/pages/user_info.py:332
 msgid "Username can't contain dots"
-msgstr ""
+msgstr "उपयोगकर्ता नाम में बिंदु नहीं हो सकते"
 
 #: cnchi/src/pages/user_info.py:334
 msgid "Too many characters"
-msgstr ""
+msgstr "बहुत सारे पात्र"
 
 #: cnchi/src/pages/user_info.py:336
 msgid "Unknown error"
-msgstr ""
+msgstr "अज्ञात त्रुटि"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "अपने सिस्टम में कोई बदलाव किए बिना ऐंटरगोस नेक्स्ट का उपयोग करें।"
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
-msgstr ""
+msgstr "अपने सिस्टम पर ऐंटरगोस नेक्स्ट नेक्स्ट के लिए एक स्थायी स्थान बनाएं।"
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
-msgstr ""
+msgstr "इसे अजमाएं"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "इसे इंस्टॉल करें"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
-msgstr ""
+msgstr "ऐंटरगोस नेक्स्ट में आपका स्वागत है!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "लोड हो रहा है कृपया प्रतीक्षा करें..."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "इस कंप्यूटर को वाई-फाई नेटवर्क से कनेक्ट करना"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "मैं अभी वाई-फाई नेटवर्क से कनेक्ट नहीं होना चाहता"
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
-msgstr ""
+msgstr "इस नेटवर्क से जुड़ें"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "पासवर्ड:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
-msgstr ""
+msgstr "पासवर्ड प्रदर्शित करें"
 
 #: cnchi/src/pages/zfs.py:195
 msgid "Use"
-msgstr ""
+msgstr "उपयोग"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "डिस्क"
 
 #: cnchi/src/pages/zfs.py:210
 msgid "Size (GB)"
-msgstr ""
+msgstr "आकार (जीबी)"
 
 #: cnchi/src/pages/zfs.py:216 cnchi/src/widgets/partition_treeview.py:78
 msgid "Device"
-msgstr ""
+msgstr "उपकरण"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "डिस्क आईडी"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "ZFS सेटअप"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "पूल प्रकार"
 
 #: cnchi/src/pages/zfs.py:309
 msgid "Partition scheme"
-msgstr ""
+msgstr "विभाजन योजना"
 
 #: cnchi/src/pages/zfs.py:323
 msgid "Validate password"
-msgstr ""
+msgstr "पासवर्ड सत्यापित करें"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "स्वैप आकार (एमबी)"
 
 #: cnchi/src/pages/zfs.py:333
 msgid "Encrypt swap"
-msgstr ""
+msgstr "एन्क्रिप्ट स्वैप"
 
 #: cnchi/src/pages/zfs.py:336
 msgid "Encrypt disk"
-msgstr ""
+msgstr "डिस्क एन्क्रिप्ट करें"
 
 #: cnchi/src/pages/zfs.py:339
 msgid "Pool name"
-msgstr ""
+msgstr "पूल का नाम"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "फोर्स ZFS 4k ब्लॉक आकार"
 
 #: cnchi/src/pages/zfs.py:364
 msgid "You must select one drive"
-msgstr ""
+msgstr "आपको एक ड्राइव का चयन करना होगा"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "{0} पूल_प्रकार के लिए, आपको कम से कम दो ड्राइव का चयन करना होगा"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "आपको कम से कम {0} ड्राइव का चयन करना होगा"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1787,11 +1794,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "चयनित ZFS विकल्पों को संसाधित करते समय एक अज्ञात त्रुटि उत्पन्न हुई।"
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "'कोई नहीं' पूल एकल चयनित डिस्क पर ZFS का उपयोग करेगा।"
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1831,16 +1838,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "डिवाइस {1} पर {0} बनाएं"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "डिवाइस {0} को {1} में जोड़ें"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "ZFS पूल के लिए कोई डिवाइस नहीं चुना गया था"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1854,202 +1861,202 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_रद्द करना"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_आवेदन करना"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
 msgid "Create partition"
-msgstr ""
+msgstr "विभाजन बनाएँ"
 
 #: cnchi/src/pages/dialogs/create_table.py:73
 msgid "Create Partition Table"
-msgstr ""
+msgstr "विभाजन तालिका बनाएँ"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
 msgid "Edit partition"
-msgstr ""
+msgstr "विभाजन संपादित करें"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "LUKS एन्क्रिप्शन का उपयोग करने से सभी विभाजन सामग्री हटा दी जाएगी!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
 msgid "Encryption properties"
-msgstr ""
+msgstr "एन्क्रिप्शन गुण"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "LUKS एन्क्रिप्शन का उपयोग करें:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "LUKS वॉल्यूम नाम:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "पासवर्ड की पुष्टि कीजिये:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "LUKS पासवर्ड मेल नहीं खाते! एन्क्रिप्शन सक्षम नहीं है."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "वॉल्यूम नाम और पासवर्ड अनिवार्य हैं! एन्क्रिप्शन सक्षम नहीं है."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "जगह:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
-msgstr ""
+msgstr "आकार:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:228
 msgid "Type:"
-msgstr ""
+msgstr "प्रकार:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:229
 msgid "Primary"
-msgstr ""
+msgstr "प्राथमिक"
 
 #: cnchi/src/pages/dialogs/partition_base.py:230
 msgid "Logical"
-msgstr ""
+msgstr "तार्किक"
 
 #: cnchi/src/pages/dialogs/partition_base.py:231
 msgid "Extended"
-msgstr ""
+msgstr "विस्तारित"
 
 #: cnchi/src/pages/dialogs/partition_base.py:232
 msgid "Beginning of this space"
-msgstr ""
+msgstr "इस स्थान की शुरुआत"
 
 #: cnchi/src/pages/dialogs/partition_base.py:233
 msgid "End of this space"
-msgstr ""
+msgstr "इस स्थान का अंत"
 
 #: cnchi/src/pages/dialogs/partition_base.py:234
 msgid "Use As:"
-msgstr ""
+msgstr "के रूप में उपयोग:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:235
 msgid "Mount Point:"
-msgstr ""
+msgstr "माउंट पॉइंट:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:236
 msgid "Label (optional):"
-msgstr ""
+msgstr "लेबल (वैकल्पिक):"
 
 #: cnchi/src/pages/dialogs/partition_base.py:237
 msgid "Format:"
-msgstr ""
+msgstr "प्रारूप:"
 
 #: cnchi/src/widgets/partition_treeview.py:82
 msgid "Type"
-msgstr ""
+msgstr "प्रकार"
 
 #: cnchi/src/widgets/partition_treeview.py:86
 msgid "Mount point"
-msgstr ""
+msgstr "माउंट पॉइंट"
 
 #: cnchi/src/widgets/partition_treeview.py:90
 msgid "Label"
-msgstr ""
+msgstr "लेबल"
 
 #: cnchi/src/widgets/partition_treeview.py:97
 msgid "Format"
-msgstr ""
+msgstr "प्रारूप"
 
 #: cnchi/src/widgets/partition_treeview.py:105
 msgid "Size"
-msgstr ""
+msgstr "आकार"
 
 #: cnchi/src/widgets/partition_treeview.py:109
 msgid "Used"
-msgstr ""
+msgstr "इस्तेमाल किया गया"
 
 #: cnchi/src/widgets/partition_treeview.py:113
 msgid "Flags"
-msgstr ""
+msgstr "झंडे"
 
 #: cnchi/src/widgets/partition_treeview.py:120
 msgid "SSD"
-msgstr ""
+msgstr "एसएसडी"
 
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "{0} विभाजन को लेबल नहीं किया जा सकता"
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "विभाजन {0} में कोई नहीं प्रकार का फ़ाइल सिस्टम नहीं बना सकता"
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "विभाजन के लिए अज्ञात फ़ाइल सिस्टम {0} {1}"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "तार्किक आयतन नहीं हटाया जा सकता {0}"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "वॉल्यूम समूह {0} को हटाया नहीं जा सकता"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "भौतिक आयतन नहीं हटाया जा सकता {0}"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
-msgstr ""
+msgstr "विभाजन बहुत बड़ा है!"
 
 #: cnchi/src/parted3/partition_module.py:329
 #, python-format
 msgid "Can't detect used space from {0}: {1}"
-msgstr ""
+msgstr "{0} से प्रयुक्त स्थान का पता नहीं लगाया जा सकता: {1}"
 
 #: cnchi/src/parted3/used_space.py:55
 #, c-format
 msgid "Can't detect used space of NTFS partition %s"
-msgstr ""
+msgstr "एनटीएफएस विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका"
 
 #: cnchi/src/parted3/used_space.py:81
 #, c-format
 msgid "Can't detect used space of EXTFS partition %s"
-msgstr ""
+msgstr "EXTFS विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका"
 
 #: cnchi/src/parted3/used_space.py:110
 #, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
-msgstr ""
+msgstr "FAT विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका: %s"
 
 #: cnchi/src/parted3/used_space.py:143
 #, c-format
 msgid "Can't detect used space of JFS partition %s"
-msgstr ""
+msgstr "JFS विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका"
 
 #: cnchi/src/parted3/used_space.py:170
 #, c-format
 msgid "Can't detect used space of REISERFS partition %s"
-msgstr ""
+msgstr "REISERFS विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका"
 
 #: cnchi/src/parted3/used_space.py:243
 #, c-format
 msgid "Can't detect used space of XFS partition %s"
-msgstr ""
+msgstr "XFS विभाजन %s के प्रयुक्त स्थान का पता नहीं लगा सका"
 
 #: cnchi/utils/pygettext.py:24
 msgid ""
@@ -2210,49 +2217,56 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(फ़ाइल)s:%(lineno)s: अप्रत्याशित टोकन देखा गया \"%(टोकन)s\""
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# फ़ाइल: %(फ़ाइल नाम)s, पंक्ति: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(फ़ाइल नाम)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "--शैली के लिए अमान्य मान: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (पायथन के लिए xgettext) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--विड्थ तर्क एक पूर्णांक होना चाहिए: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "--exclude-file नहीं पढ़ सकता: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "मानक इनपुट पढ़ना"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "%s पर काम कर रहा हूँ"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** अप्रत्याशित टोकन \"%(टोकन)s\" देखा"
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "Morethanonestring"
+
+msgid "Graphical Installer"
+msgstr "ग्राफ़िकल इंस्टालर"
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "लाइव परिवेश के स्थानों में आपकी भाषा नहीं है। फ़ॉलबैक वर्तमान में अंग्रेज़ी में है। यदि आप नेविगेट नहीं कर सकते हैं और अंग्रेजी नहीं जानते हैं, तो मैं Google लेंस का सुझाव देता हूं।"

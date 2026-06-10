@@ -62,7 +62,7 @@ msgstr ""
 "Αρχείο Παραβατικότητας: '{0}'"
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Εκδοση εγκαταστάτη Cnch %s"
 
@@ -73,7 +73,7 @@ msgstr "Cnchi εκδ. {0} - Πρόγραμμα εγκατάστασης του A
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "Ενεργοποιήστε τη δυνατότητα προσβασιμότητας από προεπιλογή"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
@@ -88,10 +88,10 @@ msgid "Sets the Desktop Environment that will be installed"
 msgstr "Ορίζει το Περιβάλλον Εργασίας που θα εγκατασταθεί"
 
 #: cnchi/src/cnchi.py:393
-#, fuzzy
 msgid "Runs cnchi even when another instance is running"
 msgstr ""
-"Εκτελεί το Cinchi ακόμα και αν ανιχνεύσει ότι εκτελείται ένα άλλο instance"
+"Εκτελεί το cnchi ακόμα και όταν εκτελείται μια άλλη παρουσίαΕκτελεί το "
+"Cinchi ακόμα και αν ανιχνεύσει ότι εκτελείται ένα άλλο instance"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
@@ -102,11 +102,10 @@ msgid "Makes checks optional in check screen"
 msgstr "Κάνει προαιρετικούς ελέγχους σε οθόνη ελέγχου"
 
 #: cnchi/src/cnchi.py:402
-#, fuzzy
 msgid "Install packages referenced by a local xml file"
 msgstr ""
-"Εγκαταστείστε τα πακέτα που αναφέρονται από μια τοπική xml αντί για τα "
-"προεπιλεγμένα "
+"Εγκαταστήστε πακέτα που αναφέρονται από ένα τοπικό αρχείο xmlΕγκαταστείστε "
+"τα πακέτα που αναφέρονται από μια τοπική xml αντί για τα προεπιλεγμένα "
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
@@ -114,19 +113,19 @@ msgstr "Εμφάνιση μηνυμάτων καταγραφής στο stdout"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Εμφάνιση έκδοσης Cnchi και έξοδος"
 
 #: cnchi/src/cnchi.py:411
-#, fuzzy
 msgid "Show options in development (use at your own risk!)"
 msgstr ""
-"Εμφάνιση επιλογών  για development (μόνο για προγραμματιστές, μην to "
-"χρησιμοποιείτε αυτό!)"
+"Εμφάνιση επιλογών σε εξέλιξη (χρήση με δική σας ευθύνη!)Εμφάνιση επιλογών  "
+"για development (μόνο για προγραμματιστές, μην to χρησιμοποιείτε αυτό!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
 msgstr ""
-"Τα αρχεία του Cnchi δεν βρέθηκαν. Παρακαλώ, εγκατστείστε το Cnchi "
+"Τα αρχεία Cnchi δεν βρέθηκαν. Εγκαταστήστε το Cnchi χρησιμοποιώντας το "
+"pacmanΤα αρχεία του Cnchi δεν βρέθηκαν. Παρακαλώ, εγκατστείστε το Cnchi "
 "χρησιμοποιώντας το pacman"
 
 #: cnchi/src/desktop_info.py:116
@@ -156,7 +155,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:131
-#, fuzzy
 msgid ""
 "GNOME 3 is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
@@ -193,7 +191,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:150
-#, fuzzy
 msgid ""
 "Xfce is a lightweight desktop environment. It aims to be fast and low on "
 "system resources, while remaining visually appealing and user friendly. It "
@@ -239,7 +236,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:68
-#, fuzzy
 msgid "Adds accessibility packages"
 msgstr "Προσθήκη πακέτων αρχείων συστήματος"
 
@@ -256,20 +252,18 @@ msgid "Printing Support"
 msgstr "Υποστήριξη Εκτύπωσης"
 
 #: cnchi/src/features_info.py:72
-#, fuzzy
 msgid "Chromium Web Browser"
 msgstr "Φυλλομετρητής Firefox"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "Προηγμένη διαχείριση ενέργειας"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
 msgstr "Φυλλομετρητής Firefox"
 
 #: cnchi/src/features_info.py:75
-#, fuzzy
 msgid "Vivaldi Web Browser"
 msgstr "Φυλλομετρητής Firefox"
 
@@ -279,11 +273,11 @@ msgstr "Απλός Τοίχος Προστασίας"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash plugins"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
@@ -303,7 +297,7 @@ msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "Υπηρεσία SSH"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
@@ -311,56 +305,58 @@ msgstr "Οπτικά Εφέ"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "Χρήσιμα πακέτα για άτομα που είναι τυφλά ή με προβλήματα όρασης."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
 msgstr ""
-"Το AUR είναι ένα αποθετήριο για χρήστες Arch που διαχειρίζεται η κοινότητα."
+"Το AUR είναι ένα αποθετήριο που βασίζεται στην κοινότητα για χρήστες του "
+"Arch.Το AUR είναι ένα αποθετήριο για χρήστες Arch που διαχειρίζεται η "
+"κοινότητα."
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr ""
-"Δίνει τη δυνατότητα στο σύστημά σας να πραγματοποιήσει ασύρματες συνδέσεις "
-"μέσω Bluetooth."
+"Επιτρέπει στο σύστημά σας να πραγματοποιεί ασύρματες συνδέσεις μέσω "
+"Bluetooth.Δίνει τη δυνατότητα στο σύστημά σας να πραγματοποιήσει ασύρματες "
+"συνδέσεις μέσω Bluetooth."
 
 #: cnchi/src/features_info.py:91
-#, fuzzy
 msgid "Open-source web browser from Google."
 msgstr ""
-"Ένα δημοφιλές open-source γραφικό πρόγραμμα περιήγησης στο web  από την "
-"Mozilla"
+"Πρόγραμμα περιήγησης ιστού ανοιχτού κώδικα από την Google.Ένα δημοφιλές open-"
+"source γραφικό πρόγραμμα περιήγησης στο web  από την Mozilla"
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "Σας φέρνει τα οφέλη της προηγμένης διαχείρισης ενέργειας για Linux."
 
 #: cnchi/src/features_info.py:93
-#, fuzzy
 msgid "A popular open-source graphical web browser from Mozilla."
 msgstr ""
-"Ένα δημοφιλές open-source γραφικό πρόγραμμα περιήγησης στο web  από την "
-"Mozilla"
+"Ένα δημοφιλές πρόγραμμα περιήγησης γραφικών ανοιχτού κώδικα από τη "
+"Mozilla.Ένα δημοφιλές open-source γραφικό πρόγραμμα περιήγησης στο web  από "
+"την Mozilla"
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
+"Το Vivaldi είναι ένα δωρεάν, γρήγορο πρόγραμμα περιήγησης ιστού σχεδιασμένο "
+"για ισχυρούς χρήστες."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "Δωρεάν λογισμικό που χρησιμοποιείται συνήθως για πολυμέσα."
 
 #: cnchi/src/features_info.py:96
-#, fuzzy
 msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "Εγκαθιστά τον ιδιόκτητο οδηγό γραφικών AMD ή Nvidia"
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "Εγκαθιστά το Steam και το Playonlinux για τους λάτρεις των παιχνιδιών."
 
 #: cnchi/src/features_info.py:98
-#, fuzzy
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
 msgstr "Εγκατάσταση και ρύθμιση Apache (or Nginx) + Mariadb + PHP"
 
@@ -371,7 +367,9 @@ msgstr "Εγκατάσταση οδηγών εκτυπωτών και εργαλ
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
 msgstr ""
-"Σουίτα γραφείου ανοικτού κώδικα. Υποστηρίζει επεξεργασία αρχείων MS Office."
+"Σουίτα γραφείου ανοιχτού κώδικα. Υποστηρίζει την επεξεργασία αρχείων MS "
+"Office.Σουίτα γραφείου ανοικτού κώδικα. Υποστηρίζει επεξεργασία αρχείων MS "
+"Office."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
@@ -383,13 +381,13 @@ msgstr "Έλεγχος της εισερχόμενης και εξερχόμεν
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Ενεργοποιεί την υπηρεσία Secure SHell."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
 msgstr ""
-"Long term support (LTS)/ Mακράς Χρονικής Υποστήριξης  πυρήνας Linux & "
-"modules."
+"Πυρήνας και λειτουργικές μονάδες μακροπρόθεσμης υποστήριξης (LTS) Linux.Long "
+"term support (LTS)/ Mακράς Χρονικής Υποστήριξης  πυρήνας Linux & modules."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -406,7 +404,6 @@ msgstr ""
 "στο αποθετήριο [community]."
 
 #: cnchi/src/features_info.py:113
-#, fuzzy
 msgid ""
 "Bluetooth is a standard for the short-range wireless\n"
 "interconnection of cellular phones, computers, and\n"
@@ -419,7 +416,6 @@ msgstr ""
 "της στοίβας του πρωτοκόλλου Bluetooth είναι το BlueZ"
 
 #: cnchi/src/features_info.py:117
-#, fuzzy
 msgid ""
 "CUPS is the standards-based, open source printing\n"
 "system developed by Apple Inc. for OS® X and other\n"
@@ -446,7 +442,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:127
-#, fuzzy
 msgid ""
 "Mozilla Firefox (known simply as Firefox) is a free and\n"
 "open-source web browser developed for Windows, OS X, and Linux,\n"
@@ -506,7 +501,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:153
-#, fuzzy
 msgid ""
 "This option installs a web server (you can choose\n"
 "Apache or Nginx) plus a database server (Mariadb)\n"
@@ -517,7 +511,6 @@ msgstr ""
 "και PHP"
 
 #: cnchi/src/features_info.py:156
-#, fuzzy
 msgid ""
 "The linux-lts package is an alternative Arch kernel package.\n"
 "This particular kernel version enjoys long-term support from upstream,\n"
@@ -571,13 +564,12 @@ msgstr ""
 "Δείτε τη σελίδα github Compton για περισσότερες πληροφορίες."
 
 #: cnchi/src/main_window.py:206
-#, fuzzy
 msgid "Next"
 msgstr "Επόμενο βήμα"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "Πίσω"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -588,45 +580,44 @@ msgid "Do you really want to quit the installer?"
 msgstr "Θέλετε οπωσδήποτε να τερματίσετε τον εγκαταστάτη;"
 
 #: cnchi/src/proxy.py:114
-#, fuzzy
 msgid "Cnchi - Internet Connection Proxy Setup"
 msgstr "Εκδοση Internet του Cnchi :% s"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "Διακομιστής μεσολάβησης HTTP:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "Διακομιστής μεσολάβησης HTTPS:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "Διακομιστής μεσολάβησης FTP:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "Διακομιστής κεντρικού υπολογιστή SOCKS:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Χρησιμοποιήστε αυτόν τον διακομιστή μεσολάβησης για όλα τα πρωτόκολλα"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "Λιμάνι:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "Υπηρέτης"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "Τιμή"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "Φορά"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
@@ -645,88 +636,85 @@ msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Πρόγραμμα εγκατάστασης Antergos - Επιβεβαίωση"
 
 #: cnchi/src/download/download.py:100
-#, fuzzy
 msgid "Can't create download package list."
 msgstr "Δεν μπορεί να δημιουργηθεί το σετ λήψης %s"
 
 #: cnchi/src/download/download.py:113
-#, fuzzy
 msgid "Can't download needed packages. Cnchi can't continue."
 msgstr ""
-"Αδυναμία εγκατάστασης απαραίτητων πακέτων. Το Cnchi δεν μπορεί να συνεχίσει.."
+"Δεν είναι δυνατή η λήψη των απαραίτητων πακέτων. Το Cnchi δεν μπορεί να "
+"συνεχίσει.Αδυναμία εγκατάστασης απαραίτητων πακέτων. Το Cnchi δεν μπορεί να "
+"συνεχίσει.."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
 msgstr "Δημιουργία λίστας πακέτων για λήψη..."
 
 #: cnchi/src/download/download.py:179
-#, fuzzy, python-format
+#, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
 msgstr ""
-"Σφάλμα κατά τη δημιουργία Metalink για το πακέτο % s. Η εγκατάσταση θα "
-"σταματήσει"
+"Σφάλμα κατά τη δημιουργία μεταλλικού συνδέσμου για το πακέτο {}. Η "
+"εγκατάσταση θα σταματήσειΣφάλμα κατά τη δημιουργία Metalink για το πακέτο "
+"% s. Η εγκατάσταση θα σταματήσει"
 
 #: cnchi/src/download/download_requests.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
 msgstr "Γίνεται λήψη {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be deleted!"
 msgstr "Η κατάτμηση {0} θα διαγραφεί"
 
 #: cnchi/src/installation/action.py:58
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created"
 msgstr "Η κατάτμηση {0} θα διαγραφεί"
 
 #: cnchi/src/installation/action.py:62
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be modified"
 msgstr "Η κατάτμηση {0} θα διαγραφεί"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "Η συσκευή {0} θα είναι"
 
 #: cnchi/src/installation/action.py:67
-#, fuzzy
 msgid "relabeled"
 msgstr "Αλλαγή ετικέτας"
 
 #: cnchi/src/installation/action.py:69
-#, fuzzy
 msgid "not relabeled"
 msgstr "Αλλαγή ετικέτας"
 
 #: cnchi/src/installation/action.py:71
-#, fuzzy
 msgid "formatted"
 msgstr "Διαμόρφωση"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "δεν έχει μορφοποιηθεί"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "τοποθετήθηκε ως {0}"
 
 #: cnchi/src/installation/action.py:78
-#, fuzzy
 msgid "not mounted"
 msgstr "Αποπροσάρτηση % s"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "και κρυπτογραφημένο."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "και όχι κρυπτογραφημένο."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
@@ -747,12 +735,12 @@ msgid "Aborted"
 msgstr "Απορρίφθηκε"
 
 #: cnchi/src/installation/install.py:173
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting boot partition {0} into {1} directory"
 msgstr "Προσάρτηση κατάτμησης  {0} στον κατάλογο  {1} "
 
 #: cnchi/src/installation/install.py:185
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
 msgstr "Προσάρτηση κατάτμησης  {0} στον κατάλογο  {1} "
 
@@ -777,7 +765,7 @@ msgstr "Δημιουργία προσωρινού pacman.conf για αρχιτ�
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "Ενημέρωση ασφάλειας διαχείρισης πακέτων. Παρακαλώ περιμένετε..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
@@ -787,7 +775,9 @@ msgstr "Αδυναμία ανανέωσης βάσης δεδομένων του
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
 msgstr ""
-"Αδυναμία εγκατάστασης απαραίτητων πακέτων. Το Cnchi δεν μπορεί να συνεχίσει.."
+"Δεν είναι δυνατή η εγκατάσταση των απαραίτητων πακέτων. Το Cnchi δεν μπορεί "
+"να συνεχίσει.Αδυναμία εγκατάστασης απαραίτητων πακέτων. Το Cnchi δεν μπορεί "
+"να συνεχίσει.."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
@@ -807,7 +797,7 @@ msgstr "Κρυπτογράφηση προσωπικού καταλόγου χρ�
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "Κατασκευή μονάδων zfs..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
@@ -838,28 +828,26 @@ msgid "Installing bootloader..."
 msgstr "Εγκατάσταση bootloader..."
 
 #: cnchi/src/installation/process.py:73
-#, fuzzy
 msgid "Cannot create package list."
 msgstr "Λήψη καταλόγου πακέτων..."
 
 #: cnchi/src/installation/process.py:90
-#, fuzzy
 msgid "Cannot create download package list (metalinks)."
 msgstr ""
-"Αδυναμία δημιουργίας λίστας πακέτων λήψεων. Ελέγξτε το αρχείο καταγραφών για "
+"Δεν είναι δυνατή η δημιουργία λίστας πακέτων λήψης (μετασυνδέσμοι).Αδυναμία "
+"δημιουργίας λίστας πακέτων λήψεων. Ελέγξτε το αρχείο καταγραφών για "
 "λεπτομέρειες"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "Ετοιμάζοντας τους δίσκους σας για τον Αντέργο..."
 
 #: cnchi/src/installation/process.py:114
-#, fuzzy
 msgid "Installation will start now!"
 msgstr "Η εγκατάσταση ολοκληρώθηκε"
 
 #: cnchi/src/installation/process.py:128
-#, fuzzy, python-format
+#, python-format
 msgid "Error running command {0}: {1}"
 msgstr "Σφάλμα εκτέλεσης εντολής: %s"
 
@@ -886,18 +874,18 @@ msgid "Special dirs are not mounted. Skipping."
 msgstr "Δεν έχουν προσαρτηθεί Special dirs. Παράβλεψη."
 
 #: cnchi/src/installation/wrapper.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Command {0} failed: {1}"
 msgstr "Η εντολή %s απέτυχε"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition on device {0}. Command {1} has failed: {2}"
 msgstr "Σφάλμα δημιουργίας νέας κατάτμησης στην συσκευή {0}"
 
 #: cnchi/src/installation/wrapper.py:172
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition table on device {0}. Command {1} failed: {2}"
 msgstr "Σφάλμα δημιουργίας νέου πίνακα κατάτμησης στην συσκευή {0}"
@@ -934,7 +922,7 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "Το GRUB(2) ΔΕΝ θα εγκατασταθεί"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
@@ -960,7 +948,6 @@ msgid "File already exists."
 msgstr "Το αρχείο υπάρχει ήδη."
 
 #: cnchi/src/misc/avatars.py:57
-#, fuzzy
 msgid "Choose your avatar"
 msgstr "Επιλέξτε την γλώσσα σας"
 
@@ -991,12 +978,12 @@ msgstr "Οι κωδικοί δεν ταιριάζουν"
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f MiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
@@ -1019,12 +1006,10 @@ msgid "Checking integrity..."
 msgstr "Έλεγχος ακεραιότητας..."
 
 #: cnchi/src/pacman/pac.py:528
-#, fuzzy
 msgid "Loading packages files..."
 msgstr "Φόρτωση πακέτων"
 
 #: cnchi/src/pacman/pac.py:530
-#, fuzzy
 msgid "Checking target delta integrity..."
 msgstr "Ελεγχος ακεραιότητας των target deltas"
 
@@ -1033,17 +1018,15 @@ msgid "Applying deltas to packages..."
 msgstr "Εφαρμογή deltas στα πακέτα"
 
 #: cnchi/src/pacman/pac.py:534
-#, fuzzy, python-format
+#, python-format
 msgid "Generating {} with {}..."
 msgstr "Δημιουργία τοπικών ρυθμίσεων..."
 
 #: cnchi/src/pacman/pac.py:537
-#, fuzzy
 msgid "Downloading files from the repositories..."
 msgstr "Γίνεται λήψη αρχείων από τα αποθετήρια..."
 
 #: cnchi/src/pacman/pac.py:539
-#, fuzzy
 msgid "Checking available disk space..."
 msgstr "Γίνεται έλεγχος χώρου στον δίσκο..."
 
@@ -1056,7 +1039,7 @@ msgid "Downloading missing keys into the keyring..."
 msgstr "Γίνεται λήψη κλειδιών που λείπουν στην κλειδοθήκη ..."
 
 #: cnchi/src/pacman/pac.py:545
-#, fuzzy, python-format
+#, python-format
 msgid "Configuring {}"
 msgstr "Διαμόρφωση LΑMP..."
 
@@ -1071,7 +1054,7 @@ msgid "Updating {0} database"
 msgstr "Ενημέρωση {0} βάσης δεδομένων"
 
 #: cnchi/src/pacman/pac.py:600
-#, fuzzy, python-format
+#, python-format
 msgid "Downloading {}..."
 msgstr "Γίνεται λήψη {0}..."
 
@@ -1093,7 +1076,6 @@ msgid "none"
 msgstr "none"
 
 #: cnchi/src/pages/advanced.py:517
-#, fuzzy
 msgid "Unknown"
 msgstr "άγνωστο"
 
@@ -1106,21 +1088,22 @@ msgid "Root partition must be formatted."
 msgstr "Η κατάτμηση root πρέπει να διαμορφωθεί."
 
 #: cnchi/src/pages/advanced.py:559
-#, fuzzy
 msgid "Root partition cannot be NTFS or FAT32"
 msgstr "Η κατάτμηση root πρέπει να διαμορφωθεί."
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Το διαμέρισμα Home δεν μπορεί να είναι NTFS ή FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
 msgstr ""
+"Καθώς δεν έχει οριστεί κανένα /boot/efi (ακόμα), το /boot πρέπει να είναι "
+"fat32."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "Το /boot/efi πρέπει να είναι fat32."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
@@ -1131,8 +1114,9 @@ msgstr "Λυπούμαστε, έχετε ήδη δημιουργήσει {0} π�
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
 msgstr ""
-"Λυπούμαστε, έχετε ήδη δημιουργήσει {0} πρωτεύουσες και 1 εκτεταμένη "
-"κατάτμηση."
+"Λυπούμαστε, έχετε ήδη δημιουργήσει {0} κύρια και 1 εκτεταμένα "
+"διαμερίσματα.Λυπούμαστε, έχετε ήδη δημιουργήσει {0} πρωτεύουσες και 1 "
+"εκτεταμένη κατάτμηση."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
@@ -1191,41 +1175,45 @@ msgstr ""
 "Το Cnchi θα δημιουργήσει αυτή την κατάτμηση εκκίνησης του BIOS για εσάς."
 
 #: cnchi/src/pages/advanced.py:1243
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
 msgstr "Δεν ήταν δυνατή η δημιουργία κατάτμηση εκκίνησης BIOS GPT"
 
 #: cnchi/src/pages/advanced.py:1420
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
-"Το {0} είναι προσαρτημένο ως swap.\n"
+"Το {0} έχει ήδη προσαρτηθεί ως swap, για να συνεχιστεί θα αποπροσαρτηθεί.Το "
+"{0} είναι προσαρτημένο ως swap.\n"
 "Για να συνεχίσετε πρέπει να αποπροσαρτηθεί\n"
-"Κάνετε κλικ στο Ναι για να το αποπροσαρτήσετε ή στο Οχι για να επιστρέψετε.\n"
+"Κάνετε κλικ στο Ναι για να το αποπροσαρτήσετε ή στο Οχι για να επιστρέψετε."
 
 #: cnchi/src/pages/advanced.py:1425
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
-"Tο {0} είναι προσαρτημένο στο '{1}'. \n"
+"Το {0} είναι ήδη προσαρτημένο στο {1}, για να συνεχίσετε θα "
+"αποπροσαρτηθεί.Tο {0} είναι προσαρτημένο στο '{1}'. \n"
 "Για να συνεχίσετε θα πρέπει να αποπροσαρτηθεί.\n"
-"Κάντε κλικ στο κουμπί Ναι για να το αποπροσαρτήσετε ή στο Όχι για επιστροφή\n"
+"Κάντε κλικ στο κουμπί Ναι για να το αποπροσαρτήσετε ή στο Όχι για επιστροφή"
 
 #: cnchi/src/pages/advanced.py:1678
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
-"Αδυναμία διαμόφωσης της συσκευής LUKS '{0}' με την ετικέτα '{1}' ως '{2}'"
+"Δεν ήταν δυνατή η μορφοποίηση της συσκευής LUKS \"{0}\" με την ετικέτα "
+"\"{1}\" ως \"{2}\": {3}Αδυναμία διαμόφωσης της συσκευής LUKS '{0}' με την "
+"ετικέτα '{1}' ως '{2}'"
 
 #: cnchi/src/pages/advanced.py:1712
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
 msgstr "Αδυναμία διαμόρφωσης της κατάτμησης '{0}' με ετικέτα '{1}' ως '{2}'"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "Δεν είναι δυνατή η δέσμευση των αλλαγών σας στο δίσκο: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1264,6 +1252,8 @@ msgstr ""
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
 msgstr ""
+"Χρειάζομαι βοήθεια με μια εγκατάσταση διπλής εκκίνησης Antergos / "
+"Windows(tm)!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
@@ -1293,8 +1283,9 @@ msgstr "Κρυπτογράφηση αυτής της εγκατάστασης γ
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
 msgstr ""
-"Θα σας ζητηθεί να δημιουργήσετε έναν κωδικό πρόσβασης κρυπτογράφησης στο "
-"επόμενο βήμα."
+"Θα σας ζητηθεί να δημιουργήσετε έναν κωδικό κρυπτογράφησης στο επόμενο "
+"βήμα.Θα σας ζητηθεί να δημιουργήσετε έναν κωδικό πρόσβασης κρυπτογράφησης "
+"στο επόμενο βήμα."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
@@ -1309,12 +1300,10 @@ msgstr ""
 "κατατμήσεις και να δημιουργήσετε στιγμιότυπα."
 
 #: cnchi/src/pages/ask.py:341
-#, fuzzy
 msgid "Use ZFS with this installation."
 msgstr "Χρήση LVM με αυτή την εγκατάσταση."
 
 #: cnchi/src/pages/ask.py:349
-#, fuzzy
 msgid "This will setup ZFS on your drive(s)."
 msgstr "Το Cnchi θα εγκαταστήσει  LUKS στη συσκευή% s"
 
@@ -1323,7 +1312,6 @@ msgid "Set your Home in a different partition/volume"
 msgstr "Τοποθετίστε τον προσωπικό σας φάκελο Home σε μία άλλη κατάτμηση / τόμο"
 
 #: cnchi/src/pages/ask.py:366
-#, fuzzy
 msgid ""
 "This will setup your /home directory in a different partition or volume."
 msgstr ""
@@ -1367,7 +1355,6 @@ msgid "Confirm your password:"
 msgstr "Επιβεβαίωση κωδικού:"
 
 #: cnchi/src/pages/automatic.py:111
-#, fuzzy
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr "Κωδικός LUKS.  Μην χρησιμοποιείτε ειδικούς χαρακτήρες ή τόνους!"
 
@@ -1380,12 +1367,12 @@ msgid "Automatic Installation Mode"
 msgstr "Λειτουργία αυτόματης εγκατάστασης"
 
 #: cnchi/src/pages/automatic.py:234
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
 msgstr "Η συσκευή %s θα έχει σύστημα αρχείων %s"
 
 #: cnchi/src/pages/automatic.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem)"
 msgstr "Η συσκευή %s θα έχει σύστημα αρχείων %s"
 
@@ -1395,7 +1382,6 @@ msgid "Cnchi will install Antergos on device %s"
 msgstr "Το Cinchi θα εγκαταστήσει το Antergos στην συσκευή %s"
 
 #: cnchi/src/pages/cache.py:66
-#, fuzzy
 msgid "Select cache partition:"
 msgstr "Αδυναμία διαγραφής κατάτμησης {0}"
 
@@ -1439,16 +1425,17 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"Επιλέξτε τώρα τη συσκευή (ή το διαμέρισμα) που θα χρησιμοποιήσετε ως "
+"προσωρινή μνήμη."
 
 #: cnchi/src/pages/cache.py:92
-#, fuzzy
 msgid "Cache selection (optional)"
 msgstr "Ετικέττα (προαιρετική):"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "Η συσκευή {} θα διαγραφεί πλήρως! Είσαι ΠΡΑΓΜΑΤΙΚΑ σίγουρος;"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1456,7 +1443,7 @@ msgstr "Έλεγχος συστήματος"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Το Cnchi είναι ενημερωμένο"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
@@ -1491,7 +1478,7 @@ msgstr "Για βέλτιστα αποτελέσματα, βεβαιωθείτε
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "Πρέπει να κάνετε επανεκκίνηση πριν προσπαθήσετε ξανά."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
@@ -1499,7 +1486,7 @@ msgstr "Επιλέξτε επιφάνεια εργασίας"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "Εμφάνιση προηγμένων λειτουργιών"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
@@ -1568,24 +1555,25 @@ msgid "Can't match a keymap for country code '%s'"
 msgstr "Αδυναμία αντιπαραβολής κάποιας διάταξης με τον κωδικό της χώρας '% s'"
 
 #: cnchi/src/pages/keymap.py:291
-#, fuzzy, python-format
+#, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
 msgstr ""
-"Ρυθμίστε το πληκτρολόγιο σε διάταξη με όνομα '{0}' ({1}) και 'όνομα "
-"παραλλαγής {2}' ({3})"
+"Ορισμός πληκτρολογίου σε \"{0}\" ({1}), παραλλαγή \"{2}\" ({3})Ρυθμίστε το "
+"πληκτρολόγιο σε διάταξη με όνομα '{0}' ({1}) και 'όνομα παραλλαγής {2}' ({3})"
 
 #: cnchi/src/pages/keymap.py:298
-#, fuzzy, python-format
+#, python-format
 msgid "Set keyboard to '{0}' ({1})"
 msgstr "Ρυθμίστε το πληκτρολόγιο  σε διάταξη με όνομα '{0}' ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
 msgstr ""
-"Σημείωση: Το πρόγραμμα εγκατάστασης Cnchi είναι λογισμικό σε στάδιο beta."
+"Σημείωση: Το Cnchi Installer είναι λογισμικό beta.Σημείωση: Το πρόγραμμα "
+"εγκατάστασης Cnchi είναι λογισμικό σε στάδιο beta."
 
 #: cnchi/src/pages/language.py:118
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "<span weight='bold'>{0}</span>\n"
 "\n"
@@ -1602,12 +1590,10 @@ msgstr ""
 "Αν βρείτε οποιαδήποτε σφάλματα, παρακαλούμε να το αναφέρετε στο {0}"
 
 #: cnchi/src/pages/language.py:137
-#, fuzzy
 msgid "Choose the Installer language"
 msgstr "Επιλέξτε την γλώσσα σας"
 
 #: cnchi/src/pages/location.py:90
-#, fuzzy
 msgid ""
 "The location you select will be used to help determine the system locale. It "
 "should normally be the country in which you reside."
@@ -1647,21 +1633,20 @@ msgid "Can't get country code from %s location"
 msgstr "Αδυναμία εύρεσης κωδικού χώρας από την τοποθεσία %s"
 
 #: cnchi/src/pages/mirrors.py:400
-#, fuzzy
 msgid "Mirrors Selection"
 msgstr "Επιλογή Χαρακτηριστικών"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Αφήστε το Cnchi να ταξινομήσει τις λίστες κατόπτρων (συνιστάται)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "Αφήστε τις λίστες κατόπτρων ως έχουν (από προεπιλογή)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "Επιτρέψτε μου να διαχειριστώ τις λίστες κατόπτρων (για προχωρημένους)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
@@ -1672,7 +1657,6 @@ msgid "Installing Antergos NeXT..."
 msgstr "Εγκατάσταση Antergos..."
 
 #: cnchi/src/pages/slides.py:238
-#, fuzzy
 msgid ""
 "IMPORTANT: There may have been a problem with the bootloader installation "
 "which could prevent your system from booting properly. Before rebooting, you "
@@ -1703,55 +1687,51 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "Αναφέρετε τον ακόλουθο αριθμό κατά την αναφορά αυτού του σφάλματος:"
 
 #: cnchi/src/pages/summary.py:86
-#, fuzzy
 msgid "Installation Summary"
 msgstr "Τύπος Εγκατάστασης"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "Τοποθεσία"
 
 #: cnchi/src/pages/summary.py:91
-#, fuzzy
 msgid "Timezone"
 msgstr "Καθορισμός ζώνης ώρας."
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "Πληκτρολόγιο"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "Περιβάλλον επιφάνειας εργασίας"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "Χαρακτηριστικά"
 
 #: cnchi/src/pages/summary.py:95
-#, fuzzy
 msgid "Partitions"
 msgstr "Κατάτμηση"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "Διάταξη: {0}"
 
 #: cnchi/src/pages/summary.py:121
-#, fuzzy, python-format
+#, python-format
 msgid "Variant: {0}"
 msgstr "Φόρτωση {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "Σφάλμα κατά τη λήψη αλλαγών από την οθόνη εγκατάστασης"
 
 #: cnchi/src/pages/summary.py:193
-#, fuzzy
 msgid "Are you REALLY sure you want to continue?"
 msgstr "Θέλετε σίγουρα να κρυπτογραφήσετε τον φάκελο home σας;"
 
@@ -1762,7 +1742,9 @@ msgstr "Κατάταξη καθρεφτών"
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
 msgstr ""
-"Το Cnchi ενημερώνεται ακόμα και βελτιστοποιεί τις λίστες των καθρεφτών σας."
+"Το Cnchi εξακολουθεί να ενημερώνει και να βελτιστοποιεί τις λίστες καθρέφτη "
+"σας.Το Cnchi ενημερώνεται ακόμα και βελτιστοποιεί τις λίστες των καθρεφτών "
+"σας."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
@@ -1779,8 +1761,9 @@ msgstr "Περιοχή:"
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
 msgstr ""
-"Χρησιμοποιήστε το πρωτόκολλο δικτύου Χρόνου (NTP) για το συγχρονισμό του "
-"ρολογιού"
+"Χρησιμοποιήστε το πρωτόκολλο ώρας δικτύου (NTP) για συγχρονισμό "
+"ρολογιούΧρησιμοποιήστε το πρωτόκολλο δικτύου Χρόνου (NTP) για το συγχρονισμό "
+"του ρολογιού"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
@@ -1880,14 +1863,14 @@ msgid "Too many characters"
 msgstr "Υπερβολικά πολλοί χαρακτήρες"
 
 #: cnchi/src/pages/user_info.py:336
-#, fuzzy
 msgid "Unknown error"
 msgstr "άγνωστο"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
 msgstr ""
-"Χρησιμοποιείστε το Antergos χωρίς να κάνετε καμία αλλαγή στο σύστημά σας."
+"Χρησιμοποιήστε το Antergos NeXT χωρίς να κάνετε αλλαγές στο σύστημά "
+"σας.Χρησιμοποιείστε το Antergos χωρίς να κάνετε καμία αλλαγή στο σύστημά σας."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
@@ -1930,16 +1913,14 @@ msgid "Display password"
 msgstr "Εμφάνιση κωδικού"
 
 #: cnchi/src/pages/zfs.py:195
-#, fuzzy
 msgid "Use"
 msgstr "Χρήση"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "Δίσκος"
 
 #: cnchi/src/pages/zfs.py:210
-#, fuzzy
 msgid "Size (GB)"
 msgstr "Μέγεθος"
 
@@ -1949,52 +1930,45 @@ msgstr "Συσκευή"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "Αναγνωριστικό δίσκου"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "Ρύθμιση ZFS"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "Τύπος πισίνας"
 
 #: cnchi/src/pages/zfs.py:309
-#, fuzzy
 msgid "Partition scheme"
 msgstr "Κατάτμηση"
 
 #: cnchi/src/pages/zfs.py:323
-#, fuzzy
 msgid "Validate password"
 msgstr "Ικανοποιητικός κωδικός"
 
 #: cnchi/src/pages/zfs.py:329
-#, fuzzy
 msgid "Swap size (MB)"
 msgstr "Μέγεθος διαμερίσματος εικονικής μνήμης swap:  %dMiB"
 
 #: cnchi/src/pages/zfs.py:333
-#, fuzzy
 msgid "Encrypt swap"
 msgstr "Κρυπτογράφηση"
 
 #: cnchi/src/pages/zfs.py:336
-#, fuzzy
 msgid "Encrypt disk"
 msgstr "Κρυπτογράφηση"
 
 #: cnchi/src/pages/zfs.py:339
-#, fuzzy
 msgid "Pool name"
 msgstr "Το όνομά σας"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "Force ZFS 4k μέγεθος μπλοκ"
 
 #: cnchi/src/pages/zfs.py:364
-#, fuzzy
 msgid "You must select one drive"
 msgstr "Πρέπει να εισάγεται ένα όνομα"
 
@@ -2002,11 +1976,12 @@ msgstr "Πρέπει να εισάγεται ένα όνομα"
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
 msgstr ""
+"Για το {0} pool_type, πρέπει να επιλέξετε τουλάχιστον δύο μονάδες δίσκου"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "Πρέπει να επιλέξετε τουλάχιστον {0} μονάδες δίσκου"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -2019,10 +1994,12 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
 msgstr ""
+"Παρουσιάστηκε άγνωστο σφάλμα κατά την επεξεργασία των επιλεγμένων επιλογών "
+"ZFS."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "Η ομάδα \"Κανένα\" θα χρησιμοποιεί ZFS σε έναν μόνο επιλεγμένο δίσκο."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -2062,16 +2039,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "Δημιουργία {0} στη συσκευή {1}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "Προσθήκη συσκευής {0} στο {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "Δεν επιλέχθηκαν συσκευές για το ZFS pool"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -2094,7 +2071,6 @@ msgid "_Apply"
 msgstr "_Εφαρμογή"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
-#, fuzzy
 msgid "Create partition"
 msgstr "Δημιουργία Πίνακα Κατατμήσεων"
 
@@ -2103,17 +2079,17 @@ msgid "Create Partition Table"
 msgstr "Δημιουργία Πίνακα Κατατμήσεων"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
-#, fuzzy
 msgid "Edit partition"
 msgstr "Κατάτμηση"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
 msgstr ""
-"Η χρήση κρυπτογράφισης LUKS θα ΔΙΑΓΡΑΨΕΙ  τα περιεχόμενα όλων των κατατμήσεων"
+"Η χρήση της κρυπτογράφησης LUKS θα ΔΙΑΓΡΑΦΕΙ όλα τα περιεχόμενα του "
+"διαμερίσματος!Η χρήση κρυπτογράφισης LUKS θα ΔΙΑΓΡΑΨΕΙ  τα περιεχόμενα όλων "
+"των κατατμήσεων"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
-#, fuzzy
 msgid "Encryption properties"
 msgstr "Επιλογές Κρυπτογράφησης..."
 
@@ -2130,17 +2106,18 @@ msgid "Confirm password:"
 msgstr "Επιβεβαίωση κωδικου:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
-#, fuzzy
 msgid "LUKS passwords do not match! Encryption NOT enabled."
 msgstr "Οι κωδικοί πρόσβασης LUKS δεν ταιριάζουν"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
 msgstr ""
+"Το όνομα του τόμου και ο κωδικός πρόσβασης είναι υποχρεωτικά! Η "
+"κρυπτογράφηση ΔΕΝ ενεργοποιήθηκε."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "Τοποθεσία:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
@@ -2224,12 +2201,12 @@ msgid "Can't label a {0} partition"
 msgstr "Αδυναμία ονομασίας μίας κατάτμησης {0}"
 
 #: cnchi/src/parted3/fs_module.py:194
-#, fuzzy, python-format
+#, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
 msgstr "Αδυναμία διαγραφής κατάτμησης {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
-#, fuzzy, python-format
+#, python-format
 msgid "Unknown filesystem {0} for partition {1}"
 msgstr "Αγνωστο σύστημα αρχείων {0}"
 
@@ -2253,7 +2230,7 @@ msgid "Partition is too large!"
 msgstr "Η κατάτμηση είναι πολύ μεγάλη!"
 
 #: cnchi/src/parted3/partition_module.py:329
-#, fuzzy, python-format
+#, python-format
 msgid "Can't detect used space from {0}: {1}"
 msgstr "Αδυναμία ανίχνευσης χρησιμοποιημένου χώρου από {0}"
 
@@ -2268,12 +2245,12 @@ msgid "Can't detect used space of EXTFS partition %s"
 msgstr "Αδυναμία ανίχνευσης χρησιμοποιημένου χώρου της κατάτμησης EXTFS %s"
 
 #: cnchi/src/parted3/used_space.py:110
-#, fuzzy, c-format
+#, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
 msgstr "Αδυναμία ανίχνευσης χρησιμοποιημένου χώρου της κατάτμησης FAT %s"
 
 #: cnchi/src/parted3/used_space.py:143
-#, fuzzy, c-format
+#, c-format
 msgid "Can't detect used space of JFS partition %s"
 msgstr "Aδυναμία ανίχνευσης χρησιμοποιημένου χώρου της κατάτμησης JFS "
 
@@ -2447,51 +2424,60 @@ msgstr ""
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
 msgstr ""
+"*** %(file)s:%(lineno)s: Εμφανίστηκε απροσδόκητο διακριτικό \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# Αρχείο: %(filename)s, γραμμή: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(filename)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "Μη έγκυρη τιμή για --style: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext για Python) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "Το όρισμα --width πρέπει να είναι ακέραιος: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "Δεν είναι δυνατή η ανάγνωση --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "Ανάγνωση τυπικής εισόδου"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "Εργασία στο %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** Εμφανίστηκε μη αναμενόμενο διακριτικό \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "περισσότερο από τον εντονότερο"
+
+msgid "Graphical Installer"
+msgstr "Πρόγραμμα εγκατάστασης γραφικών"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "Οι τοπικές ρυθμίσεις του ζωντανού περιβάλλοντος δεν έχουν τη γλώσσα σας. Η εναλλακτική είναι προς το παρόν στα αγγλικά. Εάν δεν μπορείτε να πλοηγηθείτε και δεν γνωρίζετε αγγλικά, προτείνω το Google Lens."
 
 #~ msgid "Error calling hexdump command: %s"
 #~ msgstr "Κάποιο λάθος συνέβη κατά την κλήση της εντολής hexdump: %s"
@@ -3530,7 +3516,8 @@ msgstr ""
 #~ "αποθήκευση:% s"
 
 #~ msgid "Update of antergos-next-mirrorlist package failed with error: %s"
-#~ msgstr "Η ενημέρωση του πακέτου antergos-next-mirrorlist απέτυχε με σφάλμα:% s"
+#~ msgstr ""
+#~ "Η ενημέρωση του πακέτου antergos-next-mirrorlist απέτυχε με σφάλμα:% s"
 
 #~ msgid "Error copying new mirrorlist files: %s"
 #~ msgstr "Σφάλμα αντιγραφής νέων αρχείων mirrorlist:% s"

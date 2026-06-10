@@ -22,8 +22,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: ENCODING\n"
 "Generated-By: pygettext.py 1.5\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: cnchi/src/bootinfo.py:81 cnchi/src/bootinfo.py:95 cnchi/src/bootinfo.py:179
 #: cnchi/src/bootinfo.py:184 cnchi/src/bootinfo.py:193
@@ -54,7 +54,7 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Встановлювач Cnchi версії %s"
 
@@ -65,7 +65,7 @@ msgstr "Встановлювач Antergos - Cnchi v{0}"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "Увімкнути функцію доступності за замовчуванням"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
@@ -77,10 +77,9 @@ msgstr "Встановлює рівень логування Cnchi в 'debug'"
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "Встановлює середовище робочого столу, яке буде встановлено"
 
 #: cnchi/src/cnchi.py:393
-#, fuzzy
 msgid "Runs cnchi even when another instance is running"
 msgstr "Запускає Cnchi навіть, якщо його вже запущено"
 
@@ -90,11 +89,11 @@ msgstr "Деактивує опцію \"спробувати\" на початк
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "Робить перевірки необов’язковими на екрані перевірки"
 
 #: cnchi/src/cnchi.py:402
 msgid "Install packages referenced by a local xml file"
-msgstr ""
+msgstr "Встановити пакети, на які посилається локальний файл xml"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
@@ -102,13 +101,13 @@ msgstr "Показувати логи в stdout"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Показати версію Cnchi і вийти"
 
 #: cnchi/src/cnchi.py:411
-#, fuzzy
 msgid "Show options in development (use at your own risk!)"
 msgstr ""
-"Показати розробницькі опції (тільки для розробників, не вибирайте цього!)"
+"Показати варіанти в розробці (використовуйте на свій страх і ризик!)Показати "
+"розробницькі опції (тільки для розробників, не вибирайте цього!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
@@ -140,7 +139,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:131
-#, fuzzy
 msgid ""
 "GNOME 3 is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
@@ -176,7 +174,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/desktop_info.py:150
-#, fuzzy
 msgid ""
 "Xfce is a lightweight desktop environment. It aims to be fast and low on "
 "system resources, while remaining visually appealing and user friendly. It "
@@ -221,7 +218,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/features_info.py:68
-#, fuzzy
 msgid "Adds accessibility packages"
 msgstr "Додання пакунків файлової системи"
 
@@ -238,20 +234,18 @@ msgid "Printing Support"
 msgstr "Підтримка друку"
 
 #: cnchi/src/features_info.py:72
-#, fuzzy
 msgid "Chromium Web Browser"
 msgstr "Веб-браузер Firefox"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "Розширене керування живленням"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
 msgstr "Веб-браузер Firefox"
 
 #: cnchi/src/features_info.py:75
-#, fuzzy
 msgid "Vivaldi Web Browser"
 msgstr "Веб-браузер Firefox"
 
@@ -261,23 +255,23 @@ msgstr "Простий брандмауер"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash плагіни"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "Графічні драйвери (запатентовані)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "Apache (або Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "Ядро (версія LTS)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
@@ -285,7 +279,7 @@ msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "Сервіс SSH"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
@@ -293,7 +287,7 @@ msgstr "Візуальні ефекти"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "Корисні пакети для незрячих або людей з вадами зору."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
@@ -304,38 +298,40 @@ msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr "Дозволяє вашій системі виконувати бездротові підключення по Bluetooth."
 
 #: cnchi/src/features_info.py:91
-#, fuzzy
 msgid "Open-source web browser from Google."
 msgstr "Популярний веб-браузер від Mozilla"
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "Надає вам переваги розширеного керування живленням для Linux."
 
 #: cnchi/src/features_info.py:93
-#, fuzzy
 msgid "A popular open-source graphical web browser from Mozilla."
 msgstr "Популярний веб-браузер від Mozilla"
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
+"Vivaldi — це безкоштовний швидкий веб-браузер, призначений для досвідчених "
+"користувачів."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
 msgstr ""
+"Безкоштовне програмне забезпечення, яке зазвичай використовується для "
+"мультимедіа."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "Встановлює власний графічний драйвер AMD або Nvidia."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "Встановлює Steam і Playonlinux для ентузіастів ігор."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Установка та налаштування Apache (або Nginx) + Mariadb + PHP."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
@@ -344,8 +340,9 @@ msgstr "Встановлення драйверів принтера та ути
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
 msgstr ""
-"Офісний пакет з відкритим вихідним кодом. Підтримує редагування файлів MS "
-"Office."
+"Офісний пакет з відкритим кодом. Підтримує редагування файлів MS "
+"Office.Офісний пакет з відкритим вихідним кодом. Підтримує редагування "
+"файлів MS Office."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
@@ -357,11 +354,11 @@ msgstr "Керування вхідними та вихідними підклю
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Вмикає службу Secure Shell."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "Довгострокова підтримка (LTS) ядра та модулів Linux."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -499,11 +496,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "Далі"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -514,45 +511,44 @@ msgid "Do you really want to quit the installer?"
 msgstr "Ви дійсно хочете вийти з інсталятора?"
 
 #: cnchi/src/proxy.py:114
-#, fuzzy
 msgid "Cnchi - Internet Connection Proxy Setup"
 msgstr "Cnchi, інтернет-версія: %s"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "Проксі-сервер HTTP:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "Проксі-сервер HTTPS:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "Проксі-сервер FTP:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "Хост-сервер SOCKS:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Використовуйте цей проксі-сервер для всіх протоколів"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "Порт:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "Сервер"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "Оцінка"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "час"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
@@ -571,17 +567,16 @@ msgid "Antergos NeXT Installer - Confirmation"
 msgstr "Встановлювач Antergos - Підтвердження"
 
 #: cnchi/src/download/download.py:100
-#, fuzzy
 msgid "Can't create download package list."
 msgstr ""
-"Неможливо створити список пакунків для завантаження. Перегляньте логи для "
-"детальнішої інформації"
+"Не вдається створити список пакетів для завантаження.Неможливо створити "
+"список пакунків для завантаження. Перегляньте логи для детальнішої інформації"
 
 #: cnchi/src/download/download.py:113
-#, fuzzy
 msgid "Can't download needed packages. Cnchi can't continue."
 msgstr ""
-"Не вдалось встановити необхідні пакунки. Подальше встановлення неможливе."
+"Не вдається завантажити потрібні пакети. Cnchi не може продовжувати.Не "
+"вдалось встановити необхідні пакунки. Подальше встановлення неможливе."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
@@ -590,69 +585,65 @@ msgstr "Створення списку пакунків для завантаж
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
-msgstr ""
+msgstr "Помилка створення metallink для пакета {}. Встановлення зупиниться"
 
 #: cnchi/src/download/download_requests.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
 msgstr "Завантаження {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be deleted!"
 msgstr "Розділ {0} буде видалено"
 
 #: cnchi/src/installation/action.py:58
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created"
 msgstr "Розділ {0} буде видалено"
 
 #: cnchi/src/installation/action.py:62
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be modified"
 msgstr "Розділ {0} буде видалено"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "Пристрій {0} буде"
 
 #: cnchi/src/installation/action.py:67
-#, fuzzy
 msgid "relabeled"
 msgstr "Перевизначити"
 
 #: cnchi/src/installation/action.py:69
-#, fuzzy
 msgid "not relabeled"
 msgstr "Перевизначити"
 
 #: cnchi/src/installation/action.py:71
-#, fuzzy
 msgid "formatted"
 msgstr "Формат"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "не відформатований"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "встановлено як {0}"
 
 #: cnchi/src/installation/action.py:78
-#, fuzzy
 msgid "not mounted"
 msgstr "%s  відмонтовано"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "і зашифровано."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "і не зашифровано."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
@@ -670,12 +661,12 @@ msgid "Aborted"
 msgstr "Скасовано"
 
 #: cnchi/src/installation/install.py:173
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting boot partition {0} into {1} directory"
 msgstr "Монтування розділу {0} в теку {1}"
 
 #: cnchi/src/installation/install.py:185
-#, fuzzy, python-format
+#, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
 msgstr "Монтування розділу {0} в теку {1}"
 
@@ -700,7 +691,7 @@ msgstr "Створюється тимчасовий pacman.conf для архі�
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "Оновлення безпеки менеджера пакетів. Будь ласка, зачекайте..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
@@ -710,7 +701,8 @@ msgstr "Неможливо оновити бази даних pacman."
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
 msgstr ""
-"Не вдалось встановити необхідні пакунки. Подальше встановлення неможливе."
+"Не вдається встановити необхідні пакети. Cnchi не може продовжувати.Не "
+"вдалось встановити необхідні пакунки. Подальше встановлення неможливе."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
@@ -730,7 +722,7 @@ msgstr "Шифрування домашньої теки користувача.
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "Створення модулів zfs..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
@@ -746,11 +738,11 @@ msgstr "Налаштування апаратного годинника..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "Налаштування розкладки клавіш..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "Налаштування обладнання..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
@@ -761,28 +753,26 @@ msgid "Installing bootloader..."
 msgstr "Встановлення завантажувача..."
 
 #: cnchi/src/installation/process.py:73
-#, fuzzy
 msgid "Cannot create package list."
 msgstr "Отримання списку пакунків..."
 
 #: cnchi/src/installation/process.py:90
-#, fuzzy
 msgid "Cannot create download package list (metalinks)."
 msgstr ""
-"Неможливо створити список пакунків для завантаження. Перегляньте логи для "
-"детальнішої інформації"
+"Не вдається створити список пакетів для завантаження (metalinks).Неможливо "
+"створити список пакунків для завантаження. Перегляньте логи для детальнішої "
+"інформації"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "Готуємо ваш диск(и) для Antergos..."
 
 #: cnchi/src/installation/process.py:114
-#, fuzzy
 msgid "Installation will start now!"
 msgstr "Встановлення завершено"
 
 #: cnchi/src/installation/process.py:128
-#, fuzzy, python-format
+#, python-format
 msgid "Error running command {0}: {1}"
 msgstr "Помилка виконання команди: %s"
 
@@ -809,18 +799,18 @@ msgid "Special dirs are not mounted. Skipping."
 msgstr "Спеціальні теки не змонтовано. Пропускаємо."
 
 #: cnchi/src/installation/wrapper.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Command {0} failed: {1}"
 msgstr "Неможливо виконати команду %s"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition on device {0}. Command {1} has failed: {2}"
 msgstr "Неможливо створити новий розділ на пристрої {0}"
 
 #: cnchi/src/installation/wrapper.py:172
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Cannot create a new partition table on device {0}. Command {1} failed: {2}"
 msgstr "Помилка при створенні нової таблиці розділів на пристрої {0}"
@@ -857,7 +847,7 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2) НЕ буде встановлено"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
@@ -868,8 +858,8 @@ msgstr "Встановлення завантажувача GRUB(2) UEFI {0}"
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr ""
-"Жодного  завантажувача від виробника не знайдено на %s. Копіювання Grub(2) "
-"до теки."
+"Завантажувач OEM не знайдено в %s. Копіювання Grub(2) у каталог.Жодного  "
+"завантажувача від виробника не знайдено на %s. Копіювання Grub(2) до теки."
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
@@ -885,7 +875,6 @@ msgid "File already exists."
 msgstr "Файл вже існує."
 
 #: cnchi/src/misc/avatars.py:57
-#, fuzzy
 msgid "Choose your avatar"
 msgstr "Виберіть мову"
 
@@ -916,12 +905,12 @@ msgstr "Паролі не співпадають"
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f КіБ"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f МіБ"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
@@ -944,31 +933,27 @@ msgid "Checking integrity..."
 msgstr "Перевірка цілісності..."
 
 #: cnchi/src/pacman/pac.py:528
-#, fuzzy
 msgid "Loading packages files..."
 msgstr "Завантаження пакунків..."
 
 #: cnchi/src/pacman/pac.py:530
-#, fuzzy
 msgid "Checking target delta integrity..."
 msgstr "Перевірка цілісності..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "Застосування дельт до пакетів..."
 
 #: cnchi/src/pacman/pac.py:534
-#, fuzzy, python-format
+#, python-format
 msgid "Generating {} with {}..."
 msgstr "Генерація локалей..."
 
 #: cnchi/src/pacman/pac.py:537
-#, fuzzy
 msgid "Downloading files from the repositories..."
 msgstr "Завантаження файлів з репозиторію..."
 
 #: cnchi/src/pacman/pac.py:539
-#, fuzzy
 msgid "Checking available disk space..."
 msgstr "Перевірка місткості диску..."
 
@@ -981,7 +966,7 @@ msgid "Downloading missing keys into the keyring..."
 msgstr "Завантаження відсутніх ключів до в’язки..."
 
 #: cnchi/src/pacman/pac.py:545
-#, fuzzy, python-format
+#, python-format
 msgid "Configuring {}"
 msgstr "Конфігурація системи..."
 
@@ -996,13 +981,13 @@ msgid "Updating {0} database"
 msgstr "Оновлення бази даних {0}"
 
 #: cnchi/src/pacman/pac.py:600
-#, fuzzy, python-format
+#, python-format
 msgid "Downloading {}..."
 msgstr "Завантаження {0}..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "Явно встановлено"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
@@ -1018,7 +1003,6 @@ msgid "none"
 msgstr "нічого"
 
 #: cnchi/src/pages/advanced.py:517
-#, fuzzy
 msgid "Unknown"
 msgstr "невідомо"
 
@@ -1031,21 +1015,20 @@ msgid "Root partition must be formatted."
 msgstr "Коренева тека має бути відформатованою."
 
 #: cnchi/src/pages/advanced.py:559
-#, fuzzy
 msgid "Root partition cannot be NTFS or FAT32"
 msgstr "Коренева тека має бути відформатованою."
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Головний розділ не може бути NTFS або FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "Оскільки /boot/efi (ще не визначено), /boot має бути fat32."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi має бути fat32."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
@@ -1110,40 +1093,42 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/pages/advanced.py:1243
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
 msgstr "Не вдалося створити розділ BIOS GPT Boot"
 
 #: cnchi/src/pages/advanced.py:1420
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
-"{0} змонтовано в якості розділу підкачки.\n"
+"{0} уже змонтовано як swap, щоб продовжити, його буде відключено.{0} "
+"змонтовано в якості розділу підкачки.\n"
 "Продовження потребує відмонтування.\n"
-"Натисніть Так, щоб відмонтувати, або НІ аби повернутись\n"
+"Натисніть Так, щоб відмонтувати, або НІ аби повернутись"
 
 #: cnchi/src/pages/advanced.py:1425
-#, fuzzy, python-format
+#, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
-"{0} змонтовано в '{1}'.\n"
+"{0} уже змонтовано в {1}, щоб продовжити, його буде відключено.{0} "
+"змонтовано в '{1}'.\n"
 "Продовження потребує відмонтування.\n"
-"Натисніть Так, аби відмонтувати, або Ні щоб повернутись\n"
+"Натисніть Так, аби відмонтувати, або Ні щоб повернутись"
 
 #: cnchi/src/pages/advanced.py:1678
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr "Не вдалось відформатувати розділ '{0}' з міткою '{1}' у '{2}'"
 
 #: cnchi/src/pages/advanced.py:1712
-#, fuzzy, python-format
+#, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
 msgstr "Не вдалось відформатувати розділ '{0}' з міткою '{1}' у '{2}'"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "Неможливо закріпити ваші зміни на диску: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1180,6 +1165,8 @@ msgstr ""
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
 msgstr ""
+"Мені потрібна допомога з налаштуванням подвійного завантаження Antergos / "
+"Windows(tm)!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
@@ -1209,7 +1196,8 @@ msgstr "Шифрування процесу встановлення для пі
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
 msgstr ""
-"Вам буде запропоновано створити пароль для шифрування в наступному кроці."
+"У наступному кроці вам буде запропоновано створити пароль для шифрування.Вам "
+"буде запропоновано створити пароль для шифрування в наступному кроці."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
@@ -1222,12 +1210,10 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/pages/ask.py:341
-#, fuzzy
 msgid "Use ZFS with this installation."
 msgstr "Використовувати LVM для встановлення."
 
 #: cnchi/src/pages/ask.py:349
-#, fuzzy
 msgid "This will setup ZFS on your drive(s)."
 msgstr "Cnchi встановить LUKS на пристрій %s"
 
@@ -1236,14 +1222,13 @@ msgid "Set your Home in a different partition/volume"
 msgstr "Встановіть свій домашній каталог в окремий розділ або том"
 
 #: cnchi/src/pages/ask.py:366
-#, fuzzy
 msgid ""
 "This will setup your /home directory in a different partition or volume."
 msgstr "Це встановить ваш домашній каталог в окремий розділ або том"
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "Як би ви хотіли продовжити?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
@@ -1278,7 +1263,6 @@ msgid "Confirm your password:"
 msgstr "Повторіть пароль:"
 
 #: cnchi/src/pages/automatic.py:111
-#, fuzzy
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr "Пароль для LUKS. Не використовуйте ніяких особливих символів!"
 
@@ -1291,12 +1275,12 @@ msgid "Automatic Installation Mode"
 msgstr "Автоматичний режим встановлення"
 
 #: cnchi/src/pages/automatic.py:234
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
 msgstr "Пристрій %s матиме файлову систему %s"
 
 #: cnchi/src/pages/automatic.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "Device {0} will be created ({1} filesystem)"
 msgstr "Пристрій %s матиме файлову систему %s"
 
@@ -1306,7 +1290,6 @@ msgid "Cnchi will install Antergos on device %s"
 msgstr "Cnchi встановить Antergos на пристрій %s"
 
 #: cnchi/src/pages/cache.py:66
-#, fuzzy
 msgid "Select cache partition:"
 msgstr "Неможливо вилучити розділ {0}"
 
@@ -1350,16 +1333,17 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"Будь ласка, виберіть зараз пристрій (або розділ) для використання в якості "
+"кешу."
 
 #: cnchi/src/pages/cache.py:92
-#, fuzzy
 msgid "Cache selection (optional)"
 msgstr "Мітка (не обов’язково):"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "Пристрій {} буде повністю стерто! Ви справді впевнені?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1367,7 +1351,7 @@ msgstr "Перевірка системи"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi актуальний"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
@@ -1399,12 +1383,13 @@ msgstr ""
 #: cnchi/src/pages/check.py:117
 msgid "For best results, please ensure that this computer:"
 msgstr ""
-"Для досягнення найкращих результатів, будь ласка, переконайтеся, що цей "
+"Щоб отримати найкращі результати, переконайтеся, що цей комп’ютер:Для "
+"досягнення найкращих результатів, будь ласка, переконайтеся, що цей "
 "комп'ютер:"
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "Ви повинні перезавантажити перед повторною спробою."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
@@ -1412,7 +1397,7 @@ msgstr "Оберіть для себе стільницю"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "Показати додаткові функції"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
@@ -1449,7 +1434,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "Бажаєте встановити сервер Nginx замість сервера Apache?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
@@ -1468,17 +1453,17 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "Не вдається збігатися з розкладкою для коду країни \"%s\""
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "Установити клавіатуру на \"{0}\" ({1}), варіант \"{2}\" ({3})"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "Установити клавіатуру на \"{0}\" ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
@@ -1497,7 +1482,6 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/pages/language.py:137
-#, fuzzy
 msgid "Choose the Installer language"
 msgstr "Виберіть мову"
 
@@ -1534,24 +1518,23 @@ msgstr "Оберіть своє розміщення"
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "Не вдається отримати код країни з місця %s"
 
 #: cnchi/src/pages/mirrors.py:400
-#, fuzzy
 msgid "Mirrors Selection"
 msgstr "Вибір функцій"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Дозвольте Cnchi сортувати списки дзеркал (рекомендовано)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "Залишити списки дзеркал як є (за замовчуванням)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "Дозвольте мені керувати списками дзеркал (додатково)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
@@ -1584,69 +1567,65 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "Повідомляючи про цю помилку, будь ласка, вказуйте такий номер:"
 
 #: cnchi/src/pages/summary.py:86
-#, fuzzy
 msgid "Installation Summary"
 msgstr "Тип встановлення"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "Розташування"
 
 #: cnchi/src/pages/summary.py:91
-#, fuzzy
 msgid "Timezone"
 msgstr "Часовий пояс встановлено."
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "Клавіатура"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "Середовище робочого столу"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "особливості"
 
 #: cnchi/src/pages/summary.py:95
-#, fuzzy
 msgid "Partitions"
 msgstr "Розділ"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "Макет: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "Варіант: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "Помилка отримання змін із екрана встановлення"
 
 #: cnchi/src/pages/summary.py:193
-#, fuzzy
 msgid "Are you REALLY sure you want to continue?"
 msgstr "Ви дійсно хочете зашифрувати свою домашню теку?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "Рейтингові дзеркала"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "Cnchi все ще оновлює та оптимізує ваші списки дзеркал."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "Прошу терпіння..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
@@ -1659,6 +1638,7 @@ msgstr "Регіон:"
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
 msgstr ""
+"Використовуйте мережевий протокол часу (NTP) для синхронізації годинника"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
@@ -1667,7 +1647,7 @@ msgstr "Оберіть свою часову зону"
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "Виявлено часовий пояс (широта %s, довгота %s)."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
@@ -1695,7 +1675,7 @@ msgstr "Ваше ім’я"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "Ім'я хоста"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
@@ -1758,13 +1738,12 @@ msgid "Too many characters"
 msgstr "Забагато символів"
 
 #: cnchi/src/pages/user_info.py:336
-#, fuzzy
 msgid "Unknown error"
 msgstr "невідомо"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "Використовуйте Antergos NeXT, не вносячи жодних змін у свою систему."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
@@ -1807,16 +1786,14 @@ msgid "Display password"
 msgstr "Показати пароль"
 
 #: cnchi/src/pages/zfs.py:195
-#, fuzzy
 msgid "Use"
 msgstr "Використано"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "диск"
 
 #: cnchi/src/pages/zfs.py:210
-#, fuzzy
 msgid "Size (GB)"
 msgstr "Розмір"
 
@@ -1826,64 +1803,57 @@ msgstr "Пристрій"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "ID диска"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "Налаштування ZFS"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "Тип басейну"
 
 #: cnchi/src/pages/zfs.py:309
-#, fuzzy
 msgid "Partition scheme"
 msgstr "Розділ"
 
 #: cnchi/src/pages/zfs.py:323
-#, fuzzy
 msgid "Validate password"
 msgstr "Нормальний пароль"
 
 #: cnchi/src/pages/zfs.py:329
-#, fuzzy
 msgid "Swap size (MB)"
 msgstr "Розмір розділа swap: %dMiB"
 
 #: cnchi/src/pages/zfs.py:333
-#, fuzzy
 msgid "Encrypt swap"
 msgstr "Зашифрувати"
 
 #: cnchi/src/pages/zfs.py:336
-#, fuzzy
 msgid "Encrypt disk"
 msgstr "Зашифрувати"
 
 #: cnchi/src/pages/zfs.py:339
-#, fuzzy
 msgid "Pool name"
 msgstr "Ваше ім’я"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "Примусовий розмір блоку ZFS 4k"
 
 #: cnchi/src/pages/zfs.py:364
-#, fuzzy
 msgid "You must select one drive"
 msgstr "Ви маєте вказати ім’я"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "Для {0} pool_type потрібно вибрати принаймні два диски"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "Необхідно вибрати принаймні {0} дисків"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1895,11 +1865,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "Під час обробки вибраних параметрів ZFS сталася невідома помилка."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "Пул «Немає» використовуватиме ZFS на одному вибраному диску."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1939,16 +1909,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "Створити {0} на пристрої {1}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "Додати пристрій {0} до {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "Для пулу ZFS не вибрано жодного пристрою"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1971,7 +1941,6 @@ msgid "_Apply"
 msgstr "_Застосувати"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
-#, fuzzy
 msgid "Create partition"
 msgstr "Створити таблицю розділів"
 
@@ -1980,16 +1949,14 @@ msgid "Create Partition Table"
 msgstr "Створити таблицю розділів"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
-#, fuzzy
 msgid "Edit partition"
 msgstr "Розділ"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "Використання шифрування LUKS ВИДАЛИТЬ весь вміст розділу!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
-#, fuzzy
 msgid "Encryption properties"
 msgstr "Опції шифрування..."
 
@@ -2007,15 +1974,15 @@ msgstr "Повторити пароль:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "Паролі LUKS не збігаються! Шифрування НЕ ввімкнено."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "Ім'я тома та пароль обов'язкові! Шифрування НЕ ввімкнено."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "Розташування:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
@@ -2099,12 +2066,12 @@ msgid "Can't label a {0} partition"
 msgstr "Неможливо назвати розділ {0}"
 
 #: cnchi/src/parted3/fs_module.py:194
-#, fuzzy, python-format
+#, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
 msgstr "Неможливо вилучити розділ {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
-#, fuzzy, python-format
+#, python-format
 msgid "Unknown filesystem {0} for partition {1}"
 msgstr "Невідомий тип файлової системи {0}"
 
@@ -2128,7 +2095,7 @@ msgid "Partition is too large!"
 msgstr "Розділ завеликий!"
 
 #: cnchi/src/parted3/partition_module.py:329
-#, fuzzy, python-format
+#, python-format
 msgid "Can't detect used space from {0}: {1}"
 msgstr "Неможливо визначити використаний обсяг із {0}"
 
@@ -2143,7 +2110,7 @@ msgid "Can't detect used space of EXTFS partition %s"
 msgstr "Не вдалось виявити використане місце на EXTFS-розділі %s"
 
 #: cnchi/src/parted3/used_space.py:110
-#, fuzzy, c-format
+#, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
 msgstr "Не вдалось виявити використане місце на FAT-розділі %s"
 
@@ -2321,52 +2288,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: виявлено неочікуваний маркер \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# Файл: %(filename)s, рядок: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(назва файлу)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "Недійсне значення для --style: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext для Python) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--width аргумент має бути цілим числом: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "Неможливо прочитати --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "Читання стандартного введення"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "Працюю над %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** Помічено неочікуваний маркер \"%(токен)s\""
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "morethanonestring"
+
+msgid "Graphical Installer"
+msgstr "Графічний інсталятор"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "Локалі живого середовища не містять вашої мови. Запасний варіант наразі англійською мовою. Якщо ви не вмієте орієнтуватися і не знаєте англійської, пропоную Google Lens."
 
 #~ msgid "Error calling hexdump command: %s"
 #~ msgstr "Помилка виклику команди hexdump: %s"

@@ -25,7 +25,7 @@ msgstr ""
 #: cnchi/src/bootinfo.py:268 cnchi/src/bootinfo.py:271
 #: cnchi/src/bootinfo.py:274 cnchi/src/bootinfo.py:297
 msgid "unknown"
-msgstr ""
+msgstr "неизвестен"
 
 #: cnchi/src/cnchi.py:101
 msgid ""
@@ -46,22 +46,22 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Cnchi инсталатор версия %s"
 
 #: cnchi/src/cnchi.py:377
 #, python-format
 msgid "Cnchi v{0} - Antergos Installer"
-msgstr ""
+msgstr "Cnchi v{0} – Програма за инсталиране на Antergos"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "Задайте функцията за достъпност включена по подразбиране"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
-msgstr ""
+msgstr "Използвайте предварително изтеглени xz пакети, когато е възможно"
 
 #: cnchi/src/cnchi.py:387
 msgid "Sets Cnchi log level to 'debug'"
@@ -69,39 +69,39 @@ msgstr "Задава нивото на логване на Cnchi като 'debug
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "Задава работната среда, която ще бъде инсталирана"
 
 #: cnchi/src/cnchi.py:393
 msgid "Runs cnchi even when another instance is running"
-msgstr ""
+msgstr "Изпълнява cnchi дори когато се изпълнява друг екземпляр"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
-msgstr ""
+msgstr "Деактивира опцията „опитайте“ на първия екран"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "Прави проверките незадължителни в екрана за проверка"
 
 #: cnchi/src/cnchi.py:402
 msgid "Install packages referenced by a local xml file"
-msgstr ""
+msgstr "Инсталирайте пакети, посочени от локален xml файл"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
-msgstr ""
+msgstr "Показване на съобщения за регистриране в stdout"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Покажете версията на Cnchi и излезте"
 
 #: cnchi/src/cnchi.py:411
 msgid "Show options in development (use at your own risk!)"
-msgstr ""
+msgstr "Показване на опции в разработка (използвайте на свой собствен риск!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
-msgstr ""
+msgstr "Cnchi файловете не са намерени. Моля, инсталирайте Cnchi с pacman"
 
 #: cnchi/src/desktop_info.py:116
 msgid ""
@@ -193,139 +193,142 @@ msgstr ""
 
 #: cnchi/src/features_info.py:68
 msgid "Adds accessibility packages"
-msgstr ""
+msgstr "Добавя пакети за достъпност"
 
 #: cnchi/src/features_info.py:69
 msgid "Arch User Repository (AUR) Support"
-msgstr ""
+msgstr "Поддръжка на Arch User Repository (AUR)."
 
 #: cnchi/src/features_info.py:70
 msgid "Bluetooth Support"
-msgstr ""
+msgstr "Bluetooth поддръжка"
 
 #: cnchi/src/features_info.py:71
 msgid "Printing Support"
-msgstr ""
+msgstr "Поддръжка на печат"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "Уеб браузър Chromium"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "Разширено управление на захранването"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "Уеб браузър Firefox"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "Уеб браузър Vivaldi"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
-msgstr ""
+msgstr "Неусложнена защитна стена"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "Flash добавки"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "Графични драйвери (собствени)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "Apache (или Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "Ядро (LTS версия)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
-msgstr ""
+msgstr "LibreOffice"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "SSH услуга"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
-msgstr ""
+msgstr "Визуални ефекти"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "Полезни пакети за незрящи или хора с увредено зрение."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
-msgstr ""
+msgstr "AUR е управлявано от общността хранилище за потребители на Arch."
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
 msgstr ""
+"Позволява на вашата система да осъществява безжични връзки чрез Bluetooth."
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "Уеб браузър с отворен код от Google."
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
 msgstr ""
+"Носи ви предимствата на разширеното управление на захранването за Linux."
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "Популярен графичен уеб браузър с отворен код от Mozilla."
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
+"Vivaldi е безплатен, бърз уеб браузър, предназначен за опитни потребители."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "Безплатен софтуер, който обикновено се използва за мултимедия."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "Инсталира собствен графичен драйвер на AMD или Nvidia."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "Инсталира Steam и Playonlinux за ентусиасти на игри."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Инсталиране и настройка на Apache (или Nginx) + Mariadb + PHP."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
-msgstr ""
+msgstr "Инсталиране на драйвери за принтер и инструменти за управление."
 
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
-msgstr ""
+msgstr "Офис пакет с отворен код. Поддържа редактиране на MS Office файлове."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
-msgstr ""
+msgstr "Активирайте прозрачност, сенки и други ефекти на работния плот."
 
 #: cnchi/src/features_info.py:102
 msgid "Control the incoming and outgoing network traffic."
-msgstr ""
+msgstr "Контролирайте входящия и изходящия мрежов трафик."
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Активира услугата Secure SHell."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "Дългосрочна поддръжка (LTS) Linux ядро ​​и модули."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -459,11 +462,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "Следваща"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -471,143 +474,144 @@ msgstr "Antergos инсталатор"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "Наистина ли искате да излезете от инсталатора?"
 
 #: cnchi/src/proxy.py:114
 msgid "Cnchi - Internet Connection Proxy Setup"
-msgstr ""
+msgstr "Cnchi - Настройка на прокси за интернет връзка"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP прокси сървър:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS прокси сървър:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "FTP прокси сървър:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "SOCKS хост сървър:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Използвайте този прокси сървър за всички протоколи"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "Порт:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "сървър"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "Оценете"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "време"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
-msgstr ""
+msgstr "Antergos NeXT Installer - Грешка"
 
 #: cnchi/src/show_message.py:91
 msgid "Antergos NeXT Installer - Warning"
-msgstr ""
+msgstr "Antergos NeXT Installer - Предупреждение"
 
 #: cnchi/src/show_message.py:109
 msgid "Antergos NeXT Installer - Information"
-msgstr ""
+msgstr "Antergos NeXT Installer - Информация"
 
 #: cnchi/src/show_message.py:127
 msgid "Antergos NeXT Installer - Confirmation"
-msgstr ""
+msgstr "Antergos NeXT Installer - Потвърждение"
 
 #: cnchi/src/download/download.py:100
 msgid "Can't create download package list."
-msgstr ""
+msgstr "Не може да се създаде списък с пакети за изтегляне."
 
 #: cnchi/src/download/download.py:113
 msgid "Can't download needed packages. Cnchi can't continue."
 msgstr ""
+"Не могат да се изтеглят необходимите пакети. Cnchi не може да продължи."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
-msgstr ""
+msgstr "Създава се списък с пакети за изтегляне..."
 
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
-msgstr ""
+msgstr "Грешка при създаването на metallink за пакет {}. Инсталирането ще спре"
 
 #: cnchi/src/download/download_requests.py:125
 #, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
-msgstr ""
+msgstr "Извлича се {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
 #, python-format
 msgid "Device {0} will be deleted!"
-msgstr ""
+msgstr "Устройство {0} ще бъде изтрито!"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "Ще бъде създадено устройство {0}"
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "Устройство {0} ще бъде променено"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "Устройство {0} ще бъде"
 
 #: cnchi/src/installation/action.py:67
 msgid "relabeled"
-msgstr ""
+msgstr "преетикетиран"
 
 #: cnchi/src/installation/action.py:69
 msgid "not relabeled"
-msgstr ""
+msgstr "не е преетикетиран"
 
 #: cnchi/src/installation/action.py:71
 msgid "formatted"
-msgstr ""
+msgstr "форматиран"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "не е форматиран"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "монтиран като {0}"
 
 #: cnchi/src/installation/action.py:78
 msgid "not mounted"
-msgstr ""
+msgstr "не е монтиран"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "и криптирани."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "и не е криптиран."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "Неизвестен тип файлова система {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -617,145 +621,145 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "Прекратено"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "Монтиране на зареждащ дял {0} в директория {1}"
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "Монтиране на EFI дял {0} в директория {1}"
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "Монтиране на дял {0} в директория {1}"
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "Инсталиране чрез метода „{0}“."
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
-msgstr ""
+msgstr "Инсталацията приключи"
 
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "Създаване на временен pacman.conf за {0} архитектура"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "Актуализиране на сигурността на мениджъра на пакети. моля изчакайте..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "Базите данни на pacman не могат да бъдат опреснени."
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
-msgstr ""
+msgstr "Не мога да инсталирам необходимите пакети. Cnchi не може да продължи."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "Конфигуриране на LightDM десктоп мениджър..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "Конфигурирането на диспечера на дисплея LightDM е завършено."
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "Грешка при опит за конфигуриране на диспечера на дисплея LightDM"
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
-msgstr ""
+msgstr "Шифрова се началната директория на потребителя..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "Изграждане на zfs модули..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
-msgstr ""
+msgstr "Конфигуриране на вашата нова система"
 
 #: cnchi/src/installation/post_install.py:729
 msgid "Generating locales..."
-msgstr ""
+msgstr "Генериране на локали..."
 
 #: cnchi/src/installation/post_install.py:741
 msgid "Adjusting hardware clock..."
-msgstr ""
+msgstr "Регулиране на хардуерен часовник..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "Конфигуриране на клавиатурната карта..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "Конфигуриране на хардуера..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
-msgstr ""
+msgstr "Конфигуриране на стартиране на системата..."
 
 #: cnchi/src/installation/post_install.py:804
 msgid "Installing bootloader..."
-msgstr ""
+msgstr "Инсталиране на зареждащото устройство..."
 
 #: cnchi/src/installation/process.py:73
 msgid "Cannot create package list."
-msgstr ""
+msgstr "Не може да се създаде списък с пакети."
 
 #: cnchi/src/installation/process.py:90
 msgid "Cannot create download package list (metalinks)."
-msgstr ""
+msgstr "Не може да се създаде списък с пакети за изтегляне (metalinks)."
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "Подготвяме вашия диск(ове) за Antergos..."
 
 #: cnchi/src/installation/process.py:114
 msgid "Installation will start now!"
-msgstr ""
+msgstr "Инсталацията ще започне сега!"
 
 #: cnchi/src/installation/process.py:128
 #, python-format
 msgid "Error running command {0}: {1}"
-msgstr ""
+msgstr "Грешка при изпълнение на команда {0}: {1}"
 
 #: cnchi/src/installation/select_packages.py:197
 msgid "Getting package list..."
-msgstr ""
+msgstr "Извлича се списък с пакети..."
 
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "Добавяне на пакети за зареждане на '%s'"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "Не можах да намеря %s пакети за първоначално зареждане!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "Вече са монтирани специални директории. Прескачане."
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
-msgstr ""
+msgstr "Не са монтирани специални директории. Прескачане."
 
 #: cnchi/src/installation/wrapper.py:76
 #, python-format
 msgid "Command {0} failed: {1}"
-msgstr ""
+msgstr "Неуспешна команда {0}: {1}"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
 #, python-format
@@ -772,27 +776,28 @@ msgstr ""
 #: cnchi/src/installation/boot/boot_ui.py:58
 msgid "Use the device below for boot loader installation:"
 msgstr ""
+"Използвайте устройството по-долу за инсталиране на зареждащото устройство:"
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "Буутлоудър:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "Устройство:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "Инсталиране на GRUB(2) BIOS програма за зареждане в {0}"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) BIOS е инсталиран успешно."
 
 #: cnchi/src/installation/boot/grub2.py:327
 msgid "ERROR installing GRUB(2) BIOS."
-msgstr ""
+msgstr "ГРЕШКА при инсталиране на GRUB(2) BIOS."
 
 #: cnchi/src/installation/boot/grub2.py:342
 msgid ""
@@ -801,240 +806,241 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2) НЯМА да бъде инсталиран"
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "Инсталиране на GRUB(2) UEFI {0} програма за зареждане"
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr ""
+"Не е намерено средство за зареждане на OEM в %s. Копиране на Grub(2) в dir."
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "Неуспешно копиране на Grub(2) в OEM директория: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "Файлът не е намерен."
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "Файлът вече съществува."
 
 #: cnchi/src/misc/avatars.py:57
 msgid "Choose your avatar"
-msgstr ""
+msgstr "Изберете своя аватар"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "Паролата е твърде кратка"
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "Слаба парола"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "Честна парола"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "Добра парола"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "Силна парола"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Паролите не съвпадат"
 
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f KiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f MiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
-msgstr ""
+msgstr "Проверка на зависимостите..."
 
 #: cnchi/src/pacman/pac.py:516
 msgid "Checking file conflicts..."
-msgstr ""
+msgstr "Проверка на файлови конфликти..."
 
 #: cnchi/src/pacman/pac.py:518
 msgid "Resolving dependencies..."
-msgstr ""
+msgstr "Разрешаване на зависимости..."
 
 #: cnchi/src/pacman/pac.py:520
 msgid "Checking inter conflicts..."
-msgstr ""
+msgstr "Проверка на вътрешни конфликти..."
 
 #: cnchi/src/pacman/pac.py:525
 msgid "Checking integrity..."
-msgstr ""
+msgstr "Проверка на целостта..."
 
 #: cnchi/src/pacman/pac.py:528
 msgid "Loading packages files..."
-msgstr ""
+msgstr "Зареждат се файлове с пакети..."
 
 #: cnchi/src/pacman/pac.py:530
 msgid "Checking target delta integrity..."
-msgstr ""
+msgstr "Проверка на целевата делта цялост..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "Прилага се делта към пакети..."
 
 #: cnchi/src/pacman/pac.py:534
 #, python-format
 msgid "Generating {} with {}..."
-msgstr ""
+msgstr "Генериране на {} с {}..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "Изтегляне на файлове от хранилищата..."
 
 #: cnchi/src/pacman/pac.py:539
 msgid "Checking available disk space..."
-msgstr ""
+msgstr "Проверка на свободното дисково пространство..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "Проверка на ключовете в ключодържателя..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "Изтегляне на липсващи ключове в ключодържателя..."
 
 #: cnchi/src/pacman/pac.py:545
 #, python-format
 msgid "Configuring {}"
-msgstr ""
+msgstr "Конфигуриране на {}"
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "Инсталиране на {0} ({1}/{2})"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "Актуализиране на базата данни на {0}"
 
 #: cnchi/src/pacman/pac.py:600
 #, python-format
 msgid "Downloading {}..."
-msgstr ""
+msgstr "Изтегля се {}..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "Изрично инсталиран"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "Инсталиран като зависимост за друг пакет"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
 msgid "free space"
-msgstr ""
+msgstr "свободно пространство"
 
 #: cnchi/src/pages/advanced.py:456
 msgid "none"
-msgstr ""
+msgstr "няма"
 
 #: cnchi/src/pages/advanced.py:517
 msgid "Unknown"
-msgstr ""
+msgstr "неизвестен"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "Не може да се използва една и съща точка на монтиране два пъти."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
-msgstr ""
+msgstr "Основният дял трябва да бъде форматиран."
 
 #: cnchi/src/pages/advanced.py:559
 msgid "Root partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Основният дял не може да бъде NTFS или FAT32"
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "Началният дял не може да бъде NTFS или FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "Тъй като /boot/efi не е дефиниран (все още), /boot трябва да е fat32."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi трябва да е fat32."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "За съжаление вече имате създадени {0} основни дяла."
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
-msgstr ""
+msgstr "За съжаление вече имате създадени {0} основен и 1 разширен дял."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
-msgstr ""
+msgstr "Разширен режим на инсталиране"
 
 #: cnchi/src/pages/advanced.py:1065
 msgid "Mount Checklist:"
-msgstr ""
+msgstr "Контролен списък за монтиране:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "корен"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "Обувка"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "EFI"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
-msgstr ""
+msgstr "Размяна"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "Отмяна"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
-msgstr ""
+msgstr "Нов"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "Изтриване"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "Редактиране..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "Нова преградна маса"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1047,32 +1053,33 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "Не можа да се създаде BIOS GPT Boot дял: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
-msgstr ""
+msgstr "{0} вече е монтиран като суап, за да продължите, ще бъде демонтиран."
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
-msgstr ""
+msgstr "{0} вече е монтиран в {1}, за да продължите, ще бъде демонтиран."
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"Неуспешно форматиране на LUKS устройство „{0}“ с етикет „{1}“ като „{2}“: {3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
-msgstr ""
+msgstr "Неуспешно форматиране на дял „{0}“ с етикет „{1}“ като „{2}“: {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "Промените ви не могат да бъдат записани на диск: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1090,15 +1097,15 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "Изберете новия размер на вашата инсталация"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "Изберете дяла, който искате да намалите:"
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
-msgstr ""
+msgstr "Antergos заедно с инсталацията"
 
 #: cnchi/src/pages/alongside.py:266
 msgid ""
@@ -1109,39 +1116,42 @@ msgstr ""
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
 msgstr ""
+"Имам нужда от помощ с настройка за двойно зареждане на Antergos / "
+"Windows(tm)!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "и"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
-msgstr ""
+msgstr "Тип инсталация"
 
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "Заменете {0} с Antergos"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
-msgstr ""
+msgstr "Изтрийте диска и инсталирайте Antergos"
 
 #: cnchi/src/pages/ask.py:296
 msgid "Warning: This will erase ALL data on your disk."
-msgstr ""
+msgstr "Предупреждение: Това ще изтрие ВСИЧКИ данни на вашия диск."
 
 #: cnchi/src/pages/ask.py:305
 msgid "Encrypt this installation for increased security."
-msgstr ""
+msgstr "Шифровайте тази инсталация за повишена сигурност."
 
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
 msgstr ""
+"Ще бъдете помолени да създадете парола за шифроване в следващата стъпка."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "Използвайте LVM с тази инсталация."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1151,15 +1161,15 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "Използвайте ZFS с тази инсталация."
 
 #: cnchi/src/pages/ask.py:349
 msgid "This will setup ZFS on your drive(s)."
-msgstr ""
+msgstr "Това ще настрои ZFS на вашия диск(ове)."
 
 #: cnchi/src/pages/ask.py:358
 msgid "Set your Home in a different partition/volume"
-msgstr ""
+msgstr "Задайте дома си в различен дял/том"
 
 #: cnchi/src/pages/ask.py:366
 msgid ""
@@ -1168,23 +1178,24 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "Как бихте искали да продължите?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "Изберете точно къде трябва да се инсталира Antergos."
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
-msgstr ""
+msgstr "Редактирайте таблицата на дяловете и изберете точки за монтиране."
 
 #: cnchi/src/pages/automatic.py:89
 msgid "Select drive:"
-msgstr ""
+msgstr "Изберете устройство:"
 
 #: cnchi/src/pages/automatic.py:93
 msgid "WARNING! This will overwrite everything currently on your drive!"
 msgstr ""
+"ПРЕДУПРЕЖДЕНИЕ! Това ще презапише всичко в момента на вашето устройство!"
 
 #: cnchi/src/pages/automatic.py:98
 msgid ""
@@ -1194,42 +1205,43 @@ msgstr ""
 
 #: cnchi/src/pages/automatic.py:103
 msgid "Encryption Password:"
-msgstr ""
+msgstr "Парола за шифроване:"
 
 #: cnchi/src/pages/automatic.py:107 cnchi/src/pages/user_info.py:188
 msgid "Confirm your password:"
-msgstr ""
+msgstr "Потвърдете паролата си:"
 
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
 msgstr ""
+"LUKS парола. Не препоръчваме използването на специални знаци или ударения!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "Покажи парола"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
-msgstr ""
+msgstr "Режим на автоматична инсталация"
 
 #: cnchi/src/pages/automatic.py:234
 #, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
-msgstr ""
+msgstr "Устройство {0} ще бъде създадено ({1} файлова система) като {2}"
 
 #: cnchi/src/pages/automatic.py:238
 #, python-format
 msgid "Device {0} will be created ({1} filesystem)"
-msgstr ""
+msgstr "Устройство {0} ще бъде създадено ({1} файлова система)"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "Cnchi ще инсталира Antergos на устройство %s"
 
 #: cnchi/src/pages/cache.py:66
 msgid "Select cache partition:"
-msgstr ""
+msgstr "Изберете кеш дял:"
 
 #: cnchi/src/pages/cache.py:70
 msgid ""
@@ -1271,28 +1283,29 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"Моля, изберете сега устройството (или дяла), което да използвате като кеш."
 
 #: cnchi/src/pages/cache.py:92
 msgid "Cache selection (optional)"
-msgstr ""
+msgstr "Избор на кеш (по избор)"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "Устройството {} ще бъде напълно изтрито! НАИСТИНА ли си сигурен?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
-msgstr ""
+msgstr "Проверка на системата"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi е актуален"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
 msgid "has at least {0}GB available storage space. (*)"
-msgstr ""
+msgstr "има поне {0} GB налично място за съхранение. (*)"
 
 #: cnchi/src/pages/check.py:94
 msgid ""
@@ -1302,11 +1315,11 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:103
 msgid "is plugged in to a power source"
-msgstr ""
+msgstr "е включен към източник на захранване"
 
 #: cnchi/src/pages/check.py:108
 msgid "is connected to the Internet"
-msgstr ""
+msgstr "е свързан към интернет"
 
 #: cnchi/src/pages/check.py:112
 msgid ""
@@ -1316,27 +1329,27 @@ msgstr ""
 
 #: cnchi/src/pages/check.py:117
 msgid "For best results, please ensure that this computer:"
-msgstr ""
+msgstr "За най-добри резултати, моля, уверете се, че този компютър:"
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "Трябва да рестартирате, преди да опитате отново."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
-msgstr ""
+msgstr "Изберете своя работен плот"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "Показване на разширени функции"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
-msgstr ""
+msgstr "Избор на функция"
 
 #: cnchi/src/pages/features.py:345
 msgid "Arch User Repository - Disclaimer"
-msgstr ""
+msgstr "Потребителско хранилище на Arch – отказ от отговорност"
 
 #: cnchi/src/pages/features.py:346
 msgid ""
@@ -1348,7 +1361,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:351
 msgid "Uncomplicated Firewall will be installed with these rules:"
-msgstr ""
+msgstr "Неусложнената защитна стена ще бъде инсталирана със следните правила:"
 
 #: cnchi/src/pages/features.py:353
 #, python-format
@@ -1361,11 +1374,11 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "Искате ли да инсталирате сървъра Nginx вместо сървъра Apache?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
-msgstr ""
+msgstr "Изберете вашата клавиатурна подредба"
 
 #: cnchi/src/pages/keymap.py:92
 msgid ""
@@ -1380,21 +1393,21 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "Не може да се съпостави клавиатурна карта за код на държава „%s“"
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "Задайте клавиатурата на „{0}“ ({1}), вариант „{2}“ ({3})"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "Задаване на клавиатурата на „{0}“ ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
-msgstr ""
+msgstr "Забележка: Cnchi Installer е бета софтуер."
 
 #: cnchi/src/pages/language.py:118
 #, python-format
@@ -1410,7 +1423,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "Изберете езика на инсталатора"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1432,44 +1445,44 @@ msgstr ""
 
 #: cnchi/src/pages/location.py:102
 msgid "Country, territory or area:"
-msgstr ""
+msgstr "Държава, територия или област:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "Показване на всички местоположения"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
-msgstr ""
+msgstr "Изберете вашето местоположение"
 
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "Не може да се получи код на държава от %s местоположение"
 
 #: cnchi/src/pages/mirrors.py:400
 msgid "Mirrors Selection"
-msgstr ""
+msgstr "Избор на огледала"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Нека Cnchi сортира списъците с огледални сървъри (препоръчително)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "Оставете списъците с огледални сървъри както са (по подразбиране)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "Нека управлявам списъците с огледални сървъри (разширено)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
-msgstr ""
+msgstr "моля изчакайте..."
 
 #: cnchi/src/pages/slides.py:93
 msgid "Installing Antergos NeXT..."
-msgstr ""
+msgstr "Инсталиране на Antergos NeXT..."
 
 #: cnchi/src/pages/slides.py:238
 msgid ""
@@ -1492,292 +1505,292 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "Моля, посочете следния номер, когато докладвате за тази грешка:"
 
 #: cnchi/src/pages/summary.py:86
 msgid "Installation Summary"
-msgstr ""
+msgstr "Резюме на инсталацията"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "Местоположение"
 
 #: cnchi/src/pages/summary.py:91
 msgid "Timezone"
-msgstr ""
+msgstr "Часова зона"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "Клавиатура"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "Работна среда"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "Характеристики"
 
 #: cnchi/src/pages/summary.py:95
 msgid "Partitions"
-msgstr ""
+msgstr "Прегради"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "Оформление: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "Вариант: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "Грешка при получаване на промени от екрана за инсталиране"
 
 #: cnchi/src/pages/summary.py:193
 msgid "Are you REALLY sure you want to continue?"
-msgstr ""
+msgstr "НАИСТИНА ли сте сигурни, че искате да продължите?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "Огледала за класиране"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "Cnchi все още актуализира и оптимизира вашите огледални списъци."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "Моля, имайте търпение..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
-msgstr ""
+msgstr "зона:"
 
 #: cnchi/src/pages/timezone.py:99
 msgid "Region:"
-msgstr ""
+msgstr "регион:"
 
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
-msgstr ""
+msgstr "Използвайте Network Time Protocol (NTP) за синхронизиране на часовника"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
-msgstr ""
+msgstr "Изберете вашата часова зона"
 
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "Открита е часова зона (широчина %s, дължина %s)."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
-msgstr ""
+msgstr "Вашето име:"
 
 #: cnchi/src/pages/user_info.py:185
 msgid "Your computer's name:"
-msgstr ""
+msgstr "Името на вашия компютър:"
 
 #: cnchi/src/pages/user_info.py:186
 msgid "Pick a username:"
-msgstr ""
+msgstr "Изберете потребителско име:"
 
 #: cnchi/src/pages/user_info.py:187
 msgid "Choose a password:"
-msgstr ""
+msgstr "Изберете парола:"
 
 #: cnchi/src/pages/user_info.py:195
 msgid "Identifies your system to other computers and devices."
-msgstr ""
+msgstr "Идентифицира вашата система за други компютри и устройства."
 
 #: cnchi/src/pages/user_info.py:200
 msgid "Your name"
-msgstr ""
+msgstr "Вашето име"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "Име на хост"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
-msgstr ""
+msgstr "Потребителско име"
 
 #: cnchi/src/pages/user_info.py:203 cnchi/src/pages/zfs.py:326
 msgid "Password"
-msgstr ""
+msgstr "Парола"
 
 #: cnchi/src/pages/user_info.py:204
 msgid "Confirm password"
-msgstr ""
+msgstr "Потвърдете паролата"
 
 #: cnchi/src/pages/user_info.py:211
 msgid "You must enter a name"
-msgstr ""
+msgstr "Трябва да въведете име"
 
 #: cnchi/src/pages/user_info.py:212
 msgid "You must enter a username"
-msgstr ""
+msgstr "Трябва да въведете потребителско име"
 
 #: cnchi/src/pages/user_info.py:213
 msgid "You must enter a password"
-msgstr ""
+msgstr "Трябва да въведете парола"
 
 #: cnchi/src/pages/user_info.py:221
 msgid "Log in automatically"
-msgstr ""
+msgstr "Влезте автоматично"
 
 #: cnchi/src/pages/user_info.py:222
 msgid "Require my password to log in"
-msgstr ""
+msgstr "Изисквай паролата ми за влизане"
 
 #: cnchi/src/pages/user_info.py:223
 msgid "Encrypt my home folder"
-msgstr ""
+msgstr "Шифроване на моята домашна папка"
 
 #: cnchi/src/pages/user_info.py:226
 msgid "show password"
-msgstr ""
+msgstr "покажи парола"
 
 #: cnchi/src/pages/user_info.py:228
 msgid "Create Your User Account"
-msgstr ""
+msgstr "Създайте своя потребителски акаунт"
 
 #: cnchi/src/pages/user_info.py:263
 msgid "Are you sure you want to encrypt your home directory?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да шифровате началната си директория?"
 
 #: cnchi/src/pages/user_info.py:330
 msgid "Invalid characters entered"
-msgstr ""
+msgstr "Въведени са невалидни знаци"
 
 #: cnchi/src/pages/user_info.py:332
 msgid "Username can't contain dots"
-msgstr ""
+msgstr "Потребителското име не може да съдържа точки"
 
 #: cnchi/src/pages/user_info.py:334
 msgid "Too many characters"
-msgstr ""
+msgstr "Твърде много знаци"
 
 #: cnchi/src/pages/user_info.py:336
 msgid "Unknown error"
-msgstr ""
+msgstr "Неизвестна грешка"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "Използвайте Antergos NeXT, без да правите промени в системата си."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
-msgstr ""
+msgstr "Създайте постоянно място за Antergos NeXT NeXT във вашата система."
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
-msgstr ""
+msgstr "Опитайте"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "Инсталирайте го"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
-msgstr ""
+msgstr "Добре дошли в Antergos NeXT!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "Зарежда се, моля изчакайте..."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "Свързване на този компютър към Wi-Fi мрежа"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "Не искам да се свързвам с Wi-Fi мрежа в момента"
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
-msgstr ""
+msgstr "Свържете се с тази мрежа"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "Парола:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
-msgstr ""
+msgstr "Показване на парола"
 
 #: cnchi/src/pages/zfs.py:195
 msgid "Use"
-msgstr ""
+msgstr "Използвайте"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "диск"
 
 #: cnchi/src/pages/zfs.py:210
 msgid "Size (GB)"
-msgstr ""
+msgstr "Размер (GB)"
 
 #: cnchi/src/pages/zfs.py:216 cnchi/src/widgets/partition_treeview.py:78
 msgid "Device"
-msgstr ""
+msgstr "устройство"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "ID на диска"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "Настройка на ZFS"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "Тип басейн"
 
 #: cnchi/src/pages/zfs.py:309
 msgid "Partition scheme"
-msgstr ""
+msgstr "Схема на разделяне"
 
 #: cnchi/src/pages/zfs.py:323
 msgid "Validate password"
-msgstr ""
+msgstr "Потвърдете паролата"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "Размер на суап (MB)"
 
 #: cnchi/src/pages/zfs.py:333
 msgid "Encrypt swap"
-msgstr ""
+msgstr "Шифроване на суап"
 
 #: cnchi/src/pages/zfs.py:336
 msgid "Encrypt disk"
-msgstr ""
+msgstr "Шифроване на диска"
 
 #: cnchi/src/pages/zfs.py:339
 msgid "Pool name"
-msgstr ""
+msgstr "Име на басейна"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "Force ZFS 4k размер на блок"
 
 #: cnchi/src/pages/zfs.py:364
 msgid "You must select one drive"
-msgstr ""
+msgstr "Трябва да изберете едно устройство"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "За {0} pool_type трябва да изберете поне две устройства"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "Трябва да изберете поне {0} диска"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1789,11 +1802,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "Възникна неизвестна грешка при обработката на избрани ZFS опции."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "Пулът „Няма“ ще използва ZFS на един избран диск."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1833,16 +1846,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "Създайте {0} на устройство {1}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "Добавете устройство {0} към {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "Не са избрани устройства за ZFS пула"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1856,202 +1869,202 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_Отказ"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_Приложи"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
 msgid "Create partition"
-msgstr ""
+msgstr "Създаване на дял"
 
 #: cnchi/src/pages/dialogs/create_table.py:73
 msgid "Create Partition Table"
-msgstr ""
+msgstr "Създаване на таблица с дялове"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
 msgid "Edit partition"
-msgstr ""
+msgstr "Редактиране на дял"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "Използването на LUKS криптиране ще ИЗТРИЕ цялото съдържание на дяла!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
 msgid "Encryption properties"
-msgstr ""
+msgstr "Криптиращи свойства"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "Използвайте LUKS криптиране:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "Име на тома LUKS:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "Потвърдете паролата:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "LUKS паролите не съвпадат! Шифроването НЕ е активирано."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "Името на тома и паролата са задължителни! Шифроването НЕ е активирано."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "местоположение:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
-msgstr ""
+msgstr "размер:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:228
 msgid "Type:"
-msgstr ""
+msgstr "Тип:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:229
 msgid "Primary"
-msgstr ""
+msgstr "Първичен"
 
 #: cnchi/src/pages/dialogs/partition_base.py:230
 msgid "Logical"
-msgstr ""
+msgstr "Логично"
 
 #: cnchi/src/pages/dialogs/partition_base.py:231
 msgid "Extended"
-msgstr ""
+msgstr "Разширено"
 
 #: cnchi/src/pages/dialogs/partition_base.py:232
 msgid "Beginning of this space"
-msgstr ""
+msgstr "Началото на това пространство"
 
 #: cnchi/src/pages/dialogs/partition_base.py:233
 msgid "End of this space"
-msgstr ""
+msgstr "Край на това пространство"
 
 #: cnchi/src/pages/dialogs/partition_base.py:234
 msgid "Use As:"
-msgstr ""
+msgstr "Използвайте като:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:235
 msgid "Mount Point:"
-msgstr ""
+msgstr "Точка на монтиране:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:236
 msgid "Label (optional):"
-msgstr ""
+msgstr "Етикет (по избор):"
 
 #: cnchi/src/pages/dialogs/partition_base.py:237
 msgid "Format:"
-msgstr ""
+msgstr "формат:"
 
 #: cnchi/src/widgets/partition_treeview.py:82
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: cnchi/src/widgets/partition_treeview.py:86
 msgid "Mount point"
-msgstr ""
+msgstr "Точка на монтиране"
 
 #: cnchi/src/widgets/partition_treeview.py:90
 msgid "Label"
-msgstr ""
+msgstr "Етикет"
 
 #: cnchi/src/widgets/partition_treeview.py:97
 msgid "Format"
-msgstr ""
+msgstr "формат"
 
 #: cnchi/src/widgets/partition_treeview.py:105
 msgid "Size"
-msgstr ""
+msgstr "Размер"
 
 #: cnchi/src/widgets/partition_treeview.py:109
 msgid "Used"
-msgstr ""
+msgstr "Използвани"
 
 #: cnchi/src/widgets/partition_treeview.py:113
 msgid "Flags"
-msgstr ""
+msgstr "Знамена"
 
 #: cnchi/src/widgets/partition_treeview.py:120
 msgid "SSD"
-msgstr ""
+msgstr "SSD"
 
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "Не може да се етикетира {0} дял"
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "Не може да се създаде файлова система от тип None в дял {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "Неизвестна файлова система {0} за дял {1}"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "Не може да се премахне логически том {0}"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "Не може да се премахне групата томове {0}"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "Не може да се премахне физическият том {0}"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
-msgstr ""
+msgstr "Дялът е твърде голям!"
 
 #: cnchi/src/parted3/partition_module.py:329
 #, python-format
 msgid "Can't detect used space from {0}: {1}"
-msgstr ""
+msgstr "Не може да се открие използвано пространство от {0}: {1}"
 
 #: cnchi/src/parted3/used_space.py:55
 #, c-format
 msgid "Can't detect used space of NTFS partition %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на NTFS дял %s"
 
 #: cnchi/src/parted3/used_space.py:81
 #, c-format
 msgid "Can't detect used space of EXTFS partition %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на EXTFS дял %s"
 
 #: cnchi/src/parted3/used_space.py:110
 #, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на FAT дял %s: %s"
 
 #: cnchi/src/parted3/used_space.py:143
 #, c-format
 msgid "Can't detect used space of JFS partition %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на JFS дял %s"
 
 #: cnchi/src/parted3/used_space.py:170
 #, c-format
 msgid "Can't detect used space of REISERFS partition %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на REISERFS дял %s"
 
 #: cnchi/src/parted3/used_space.py:243
 #, c-format
 msgid "Can't detect used space of XFS partition %s"
-msgstr ""
+msgstr "Не може да се открие използваното пространство на XFS дял %s"
 
 #: cnchi/utils/pygettext.py:24
 msgid ""
@@ -2212,52 +2225,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: Видян неочакван токен „%(token)s“"
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# Файл: %(filename)s, ред: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(име на файл)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "Невалидна стойност за --style: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext за Python) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "Аргументът --width трябва да бъде цяло число: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "Не може да се прочете --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "Четене на стандартен вход"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "Работи върху %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** Видян неочакван токен „%(токен)s“"
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "morethanonestring"
+
+msgid "Graphical Installer"
+msgstr "Графичен инсталатор"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "Локалите на живата среда нямат вашия език. В момента резервният вариант е на английски. Ако не можете да навигирате и не знаете английски, предлагам Google Lens."
 
 #~ msgid "Using '%s' file as package list"
 #~ msgstr "Използване на файлът '%s' за списък с пакети"

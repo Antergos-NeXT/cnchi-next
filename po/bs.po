@@ -2257,3 +2257,6 @@ msgstr ""
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
 msgstr ""
+
+msgid "Graphical Installer"
+msgstr ""

@@ -46,7 +46,7 @@ NM_STATE_CONNECTED_GLOBAL = 70
 
 _DROPPED_PRIVILEGES = 0
 
-_CNCHI_SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "data", "locale")
+_CNCHI_SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "data", "locale")
 
 
 def get_locale_dir():

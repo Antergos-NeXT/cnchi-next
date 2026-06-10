@@ -2419,6 +2419,10 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "Cnchi installer version %s"
 #~ msgstr "Cnchi installer version %s"
 

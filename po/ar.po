@@ -47,62 +47,63 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "مثبت أنترجوس"
 
 #: cnchi/src/cnchi.py:377
 #, python-format
 msgid "Cnchi v{0} - Antergos Installer"
-msgstr ""
+msgstr "Cnchi v{0} - مثبت Antergos"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "قم بتعيين ميزة إمكانية الوصول بشكل افتراضي"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
-msgstr ""
+msgstr "استخدم حزم xz التي تم تنزيلها مسبقًا عندما يكون ذلك ممكنًا"
 
 #: cnchi/src/cnchi.py:387
 msgid "Sets Cnchi log level to 'debug'"
-msgstr ""
+msgstr "يضبط مستوى سجل Cnchi على \"تصحيح الأخطاء\""
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "يضبط بيئة سطح المكتب التي سيتم تثبيتها"
 
 #: cnchi/src/cnchi.py:393
 msgid "Runs cnchi even when another instance is running"
-msgstr ""
+msgstr "يتم تشغيل cnchi حتى عند تشغيل مثيل آخر"
 
 #: cnchi/src/cnchi.py:396
 msgid "Disables first screen's 'try it' option"
-msgstr ""
+msgstr "تعطيل خيار \"جربه\" على الشاشة الأولى"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "يجعل الشيكات اختيارية في شاشة الاختيار"
 
 #: cnchi/src/cnchi.py:402
 msgid "Install packages referenced by a local xml file"
-msgstr ""
+msgstr "تثبيت الحزم المشار إليها بواسطة ملف XML محلي"
 
 #: cnchi/src/cnchi.py:405
 msgid "Show logging messages to stdout"
-msgstr ""
+msgstr "إظهار رسائل التسجيل إلى stdout"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "إظهار إصدار Cnchi والخروج"
 
 #: cnchi/src/cnchi.py:411
 msgid "Show options in development (use at your own risk!)"
-msgstr ""
+msgstr "عرض الخيارات قيد التطوير (استخدمها على مسؤوليتك الخاصة!)"
 
 #: cnchi/src/cnchi.py:466
 msgid "Cnchi files not found. Please, install Cnchi using pacman"
 msgstr ""
+"لم يتم العثور على ملفات Cnchi. من فضلك، قم بتثبيت Cnchi باستخدام pacman"
 
 #: cnchi/src/desktop_info.py:116
 msgid ""
@@ -194,139 +195,139 @@ msgstr ""
 
 #: cnchi/src/features_info.py:68
 msgid "Adds accessibility packages"
-msgstr ""
+msgstr "يضيف حزم إمكانية الوصول"
 
 #: cnchi/src/features_info.py:69
 msgid "Arch User Repository (AUR) Support"
-msgstr ""
+msgstr "دعم مستودع مستخدم القوس (AUR)."
 
 #: cnchi/src/features_info.py:70
 msgid "Bluetooth Support"
-msgstr ""
+msgstr "دعم البلوتوث"
 
 #: cnchi/src/features_info.py:71
 msgid "Printing Support"
-msgstr ""
+msgstr "دعم الطباعة"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "متصفح الويب كروميوم"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "إدارة الطاقة المتقدمة"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "متصفح الويب فايرفوكس"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "متصفح الويب فيفالدي"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
-msgstr ""
+msgstr "جدار حماية غير معقد"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "ملحقات فلاش"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "ستيم + بلايون لينكس"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "برامج تشغيل الرسومات (الملكية)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "أباتشي (أو Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "النواة (إصدار LTS)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
-msgstr ""
+msgstr "ليبر أوفيس"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "خدمة إس إس إتش"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
-msgstr ""
+msgstr "المؤثرات البصرية"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "حزم مفيدة للأفراد المكفوفين أو ضعاف البصر."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
-msgstr ""
+msgstr "AUR هو مستودع يحركه المجتمع لمستخدمي Arch."
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
-msgstr ""
+msgstr "تمكن نظامك من إجراء اتصالات لاسلكية عبر البلوتوث."
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "متصفح ويب مفتوح المصدر من جوجل."
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "يجلب لك فوائد إدارة الطاقة المتقدمة لنظام التشغيل Linux."
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "متصفح ويب رسومي مفتوح المصدر مشهور من Mozilla."
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
-msgstr ""
+msgstr "Vivaldi هو متصفح ويب مجاني وسريع مصمم للمستخدمين المتميزين."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "برامج مجانية تستخدم عادة للوسائط المتعددة."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "يقوم بتثبيت برنامج تشغيل الرسومات الخاص بـ AMD أو Nvidia."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "يقوم بتثبيت Steam وPlayonlinux لعشاق الألعاب."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "تثبيت وإعداد Apache (أو Nginx) + Mariadb + PHP."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
-msgstr ""
+msgstr "تثبيت برامج تشغيل الطابعة وأدوات الإدارة."
 
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
-msgstr ""
+msgstr "مجموعة مكتبية مفتوحة المصدر. يدعم تحرير ملفات MS Office."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
-msgstr ""
+msgstr "تمكين الشفافية والظلال وتأثيرات سطح المكتب الأخرى."
 
 #: cnchi/src/features_info.py:102
 msgid "Control the incoming and outgoing network traffic."
-msgstr ""
+msgstr "التحكم في حركة مرور الشبكة الواردة والصادرة."
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "تمكين خدمة Secure SHell."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "دعم طويل المدى (LTS) لنواة ووحدات Linux."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -460,11 +461,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "التالي"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "خلف"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -472,144 +473,143 @@ msgstr "مثبت أنترجوس"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "هل تريد حقًا إنهاء برنامج التثبيت؟"
 
 #: cnchi/src/proxy.py:114
 msgid "Cnchi - Internet Connection Proxy Setup"
-msgstr ""
+msgstr "Cnchi - إعداد وكيل اتصال الإنترنت"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "خادم وكيل HTTP:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "خادم وكيل HTTPS:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "خادم وكيل بروتوكول نقل الملفات:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "الخادم المضيف SOCKS:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "استخدم هذا الخادم الوكيل لجميع البروتوكولات"
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "ميناء:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "الخادم"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "معدل"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "وقت"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
-msgstr ""
+msgstr "خطأ في برنامج تثبيت Antergos NeXT"
 
 #: cnchi/src/show_message.py:91
 msgid "Antergos NeXT Installer - Warning"
-msgstr ""
+msgstr "برنامج تثبيت Antergos NeXT - تحذير"
 
 #: cnchi/src/show_message.py:109
 msgid "Antergos NeXT Installer - Information"
-msgstr ""
+msgstr "Antergos NeXT Installer - المعلومات"
 
 #: cnchi/src/show_message.py:127
 msgid "Antergos NeXT Installer - Confirmation"
-msgstr ""
+msgstr "تثبيت Antergos NeXT - تأكيد"
 
 #: cnchi/src/download/download.py:100
 msgid "Can't create download package list."
-msgstr ""
+msgstr "لا يمكن إنشاء قائمة حزم التنزيل."
 
 #: cnchi/src/download/download.py:113
 msgid "Can't download needed packages. Cnchi can't continue."
-msgstr ""
+msgstr "لا يمكن تنزيل الحزم المطلوبة. Cnchi لا يستطيع الاستمرار."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
-msgstr ""
+msgstr "جارٍ إنشاء قائمة الحزم التي سيتم تنزيلها..."
 
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
-msgstr ""
+msgstr "حدث خطأ أثناء إنشاء رابط معدني للحزمة {}. سيتوقف التثبيت"
 
 #: cnchi/src/download/download_requests.py:125
 #, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
-msgstr ""
+msgstr "جارٍ جلب {0} {1} ({2}/{3})..."
 
 #: cnchi/src/installation/action.py:53
 #, python-format
 msgid "Device {0} will be deleted!"
-msgstr ""
+msgstr "سيتم حذف الجهاز {0}!"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "سيتم إنشاء الجهاز {0}."
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "سيتم تعديل الجهاز {0}."
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "سيكون الجهاز {0}."
 
 #: cnchi/src/installation/action.py:67
 msgid "relabeled"
-msgstr ""
+msgstr "إعادة تسمية"
 
 #: cnchi/src/installation/action.py:69
 msgid "not relabeled"
-msgstr ""
+msgstr "لم يتم إعادة تسميتها"
 
 #: cnchi/src/installation/action.py:71
-#, fuzzy
 msgid "formatted"
 msgstr "تهيئة"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "غير مهيأ"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "مثبت كـ {0}"
 
 #: cnchi/src/installation/action.py:78
 msgid "not mounted"
-msgstr ""
+msgstr "غير مثبتة"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "ومشفرة."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "وغير مشفرة."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "نوع نظام ملفات غير معروف {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -619,145 +619,145 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "تم إحباطه"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "تركيب قسم التمهيد {0} في الدليل {1}."
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "تركيب قسم EFI {0} في الدليل {1}."
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "تركيب القسم {0} في الدليل {1}."
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "التثبيت باستخدام الطريقة '{0}'"
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
-msgstr ""
+msgstr "انتهى التثبيت"
 
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "إنشاء pacman.conf مؤقت لبنية {0}."
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "تحديث أمان مدير الحزم. انتظر من فضلك..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "لا يمكن تحديث قواعد بيانات بكمن."
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
-msgstr ""
+msgstr "لا يمكن تثبيت الحزم الضرورية. Cnchi لا يستطيع الاستمرار."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "جارٍ تكوين مدير سطح المكتب LightDM..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "اكتمل تكوين مدير عرض LightDM."
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "حدث خطأ أثناء محاولة تكوين مدير العرض LightDM"
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
-msgstr ""
+msgstr "جارٍ تشفير الدليل المنزلي للمستخدم..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "بناء وحدات zfs..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
-msgstr ""
+msgstr "تكوين النظام الجديد الخاص بك"
 
 #: cnchi/src/installation/post_install.py:729
 msgid "Generating locales..."
-msgstr ""
+msgstr "جارٍ إنشاء المواقع..."
 
 #: cnchi/src/installation/post_install.py:741
 msgid "Adjusting hardware clock..."
-msgstr ""
+msgstr "ضبط ساعة الأجهزة..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "جارٍ تكوين خريطة المفاتيح..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "تكوين الأجهزة..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
-msgstr ""
+msgstr "تكوين بدء تشغيل النظام..."
 
 #: cnchi/src/installation/post_install.py:804
 msgid "Installing bootloader..."
-msgstr ""
+msgstr "تثبيت محمل الإقلاع..."
 
 #: cnchi/src/installation/process.py:73
 msgid "Cannot create package list."
-msgstr ""
+msgstr "لا يمكن إنشاء قائمة الحزم."
 
 #: cnchi/src/installation/process.py:90
 msgid "Cannot create download package list (metalinks)."
-msgstr ""
+msgstr "لا يمكن إنشاء قائمة حزم التنزيل (الروابط المعدنية)."
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "جارٍ تجهيز القرص (الأقراص) الخاص بك لـ Antergos..."
 
 #: cnchi/src/installation/process.py:114
 msgid "Installation will start now!"
-msgstr ""
+msgstr "سيبدأ التثبيت الآن!"
 
 #: cnchi/src/installation/process.py:128
 #, python-format
 msgid "Error running command {0}: {1}"
-msgstr ""
+msgstr "خطأ في تشغيل الأمر {0}: {1}"
 
 #: cnchi/src/installation/select_packages.py:197
 msgid "Getting package list..."
-msgstr ""
+msgstr "جارٍ الحصول على قائمة الحزم..."
 
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "إضافة حزم أداة تحميل التشغيل '%s'"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "تعذر العثور على حزم أداة تحميل التشغيل %s!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "تم بالفعل تركيب dirs الخاصة. تخطي."
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
-msgstr ""
+msgstr "لم يتم تركيب dirs الخاصة. تخطي."
 
 #: cnchi/src/installation/wrapper.py:76
 #, python-format
 msgid "Command {0} failed: {1}"
-msgstr ""
+msgstr "فشل الأمر {0}: {1}"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
 #, python-format
@@ -773,28 +773,28 @@ msgstr ""
 
 #: cnchi/src/installation/boot/boot_ui.py:58
 msgid "Use the device below for boot loader installation:"
-msgstr ""
+msgstr "استخدم الجهاز أدناه لتثبيت أداة تحميل التشغيل:"
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "محمل الإقلاع:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "جهاز:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "تثبيت أداة تحميل التمهيد GRUB(2) BIOS في {0}"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
-msgstr ""
+msgstr "تم تثبيت BIOS GRUB(2) بنجاح."
 
 #: cnchi/src/installation/boot/grub2.py:327
 msgid "ERROR installing GRUB(2) BIOS."
-msgstr ""
+msgstr "حدث خطأ أثناء تثبيت BIOS GRUB(2)."
 
 #: cnchi/src/installation/boot/grub2.py:342
 msgid ""
@@ -803,149 +803,149 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "لن يتم تثبيت GRUB(2)."
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "تثبيت محمل الإقلاع GRUB(2) UEFI {0}."
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
-msgstr ""
+msgstr "لم يتم العثور على أداة تحميل OEM في %s. نسخ Grub(2) إلى dir."
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "فشل نسخ Grub(2) إلى OEM dir: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "لم يتم العثور على الملف."
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "الملف موجود بالفعل."
 
 #: cnchi/src/misc/avatars.py:57
 msgid "Choose your avatar"
-msgstr ""
+msgstr "اختر الصورة الرمزية الخاصة بك"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "كلمة المرور قصيرة جدًا"
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "كلمة مرور ضعيفة"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "كلمة المرور العادلة"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "كلمة مرور جيدة"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "كلمة مرور قوية"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
-msgstr ""
+msgstr "كلمات المرور غير متطابقة"
 
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1f كيلو بايت"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2f م.ب"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
-msgstr ""
+msgstr "التحقق من التبعيات..."
 
 #: cnchi/src/pacman/pac.py:516
 msgid "Checking file conflicts..."
-msgstr ""
+msgstr "جارٍ التحقق من تعارضات الملفات..."
 
 #: cnchi/src/pacman/pac.py:518
 msgid "Resolving dependencies..."
-msgstr ""
+msgstr "حل التبعيات..."
 
 #: cnchi/src/pacman/pac.py:520
 msgid "Checking inter conflicts..."
-msgstr ""
+msgstr "التحقق من الصراعات بين..."
 
 #: cnchi/src/pacman/pac.py:525
 msgid "Checking integrity..."
-msgstr ""
+msgstr "التحقق من النزاهة..."
 
 #: cnchi/src/pacman/pac.py:528
 msgid "Loading packages files..."
-msgstr ""
+msgstr "جارٍ تحميل ملفات الحزم..."
 
 #: cnchi/src/pacman/pac.py:530
 msgid "Checking target delta integrity..."
-msgstr ""
+msgstr "التحقق من سلامة دلتا الهدف..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "تطبيق الدلتا على الحزم..."
 
 #: cnchi/src/pacman/pac.py:534
 #, python-format
 msgid "Generating {} with {}..."
-msgstr ""
+msgstr "توليد {} مع {}..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "تحميل الملفات من المستودعات..."
 
 #: cnchi/src/pacman/pac.py:539
 msgid "Checking available disk space..."
-msgstr ""
+msgstr "التحقق من مساحة القرص المتوفرة..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "التحقق من المفاتيح في حلقة المفاتيح..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "جارٍ تنزيل المفاتيح المفقودة في حلقة المفاتيح..."
 
 #: cnchi/src/pacman/pac.py:545
 #, python-format
 msgid "Configuring {}"
-msgstr ""
+msgstr "تكوين {}"
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "تثبيت {0} ({1}/{2})"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "تحديث قاعدة البيانات {0}."
 
 #: cnchi/src/pacman/pac.py:600
 #, python-format
 msgid "Downloading {}..."
-msgstr ""
+msgstr "جاري التحميل {}..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "تم التثبيت صراحة"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "تم تثبيته باعتباره تبعية لحزمة أخرى"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
@@ -954,74 +954,73 @@ msgstr "المساحة الخالية"
 
 #: cnchi/src/pages/advanced.py:456
 msgid "none"
-msgstr ""
+msgstr "لا أحد"
 
 #: cnchi/src/pages/advanced.py:517
-#, fuzzy
 msgid "Unknown"
 msgstr "مجهول"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "لا يمكن استخدام نفس نقطة التثبيت مرتين."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
-msgstr ""
+msgstr "يجب تنسيق القسم الجذر."
 
 #: cnchi/src/pages/advanced.py:559
 msgid "Root partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "لا يمكن أن يكون القسم الجذر NTFS أو FAT32"
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "لا يمكن أن يكون القسم الرئيسي NTFS أو FAT32"
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "نظرًا لعدم تحديد /boot/efi (حتى الآن)، يجب أن يكون /boot Fat32."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi يجب أن يكون Fat32."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "عذرًا، لقد قمت بالفعل بإنشاء {0} قسم أساسي."
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
-msgstr ""
+msgstr "عذرًا، لقد قمت بالفعل بإنشاء قسم واحد ({0}) أساسي وقسم موسع واحد."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
-msgstr ""
+msgstr "وضع التثبيت المتقدم"
 
 #: cnchi/src/pages/advanced.py:1065
 msgid "Mount Checklist:"
-msgstr ""
+msgstr "قائمة التحقق من التركيب:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "جذر"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "التمهيد"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "إيفي"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
-msgstr ""
+msgstr "تبديل"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "تراجع"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
@@ -1029,15 +1028,15 @@ msgstr "جديد"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "يمسح"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "يحرر..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "جدول تقسيم جديد"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1050,32 +1049,32 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "تعذر إنشاء قسم تمهيد BIOS GPT: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
-msgstr ""
+msgstr "تم تثبيت {0} بالفعل كمبادلة، وللمتابعة سيتم إلغاء تثبيته."
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
-msgstr ""
+msgstr "تم تثبيت {0} بالفعل في {1}، وللمتابعة سيتم إلغاء تثبيته."
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
-msgstr ""
+msgstr "تعذر تهيئة جهاز LUKS '{0}' بالتسمية '{1}' كـ '{2}': {3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
-msgstr ""
+msgstr "لا يمكن تهيئة القسم '{0}' بالتسمية '{1}' كـ '{2}': {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "لا يمكن تنفيذ تغييراتك على القرص: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1093,15 +1092,15 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "اختر الحجم الجديد للتثبيت الخاص بك"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "اختر القسم الذي تريد تقليصه:"
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
-msgstr ""
+msgstr "Antergos إلى جانب التثبيت"
 
 #: cnchi/src/pages/alongside.py:266
 msgid ""
@@ -1111,40 +1110,40 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
-msgstr ""
+msgstr "أحتاج إلى مساعدة في إعداد التمهيد المزدوج لـ Antergos / Windows(tm)!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "و"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
-msgstr ""
+msgstr "نوع التثبيت"
 
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "استبدل {0} بـ Antergos"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
-msgstr ""
+msgstr "امسح القرص وقم بتثبيت Antergos"
 
 #: cnchi/src/pages/ask.py:296
 msgid "Warning: This will erase ALL data on your disk."
-msgstr ""
+msgstr "تحذير: سيؤدي هذا إلى مسح كافة البيانات الموجودة على القرص الخاص بك."
 
 #: cnchi/src/pages/ask.py:305
 msgid "Encrypt this installation for increased security."
-msgstr ""
+msgstr "قم بتشفير هذا التثبيت لزيادة الأمان."
 
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
-msgstr ""
+msgstr "سيُطلب منك إنشاء كلمة مرور تشفير في الخطوة التالية."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "استخدم LVM مع هذا التثبيت."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1154,15 +1153,15 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "استخدم ZFS مع هذا التثبيت."
 
 #: cnchi/src/pages/ask.py:349
 msgid "This will setup ZFS on your drive(s)."
-msgstr ""
+msgstr "سيؤدي هذا إلى إعداد ZFS على محرك (محركات) الأقراص الخاص بك."
 
 #: cnchi/src/pages/ask.py:358
 msgid "Set your Home in a different partition/volume"
-msgstr ""
+msgstr "اضبط منزلك في قسم/حجم مختلف"
 
 #: cnchi/src/pages/ask.py:366
 msgid ""
@@ -1171,23 +1170,23 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "كيف تريد المتابعة؟"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "اختر المكان الذي سيتم تثبيت Antergos فيه بالضبط."
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
-msgstr ""
+msgstr "تحرير جدول الأقسام واختيار نقاط التحميل."
 
 #: cnchi/src/pages/automatic.py:89
 msgid "Select drive:"
-msgstr ""
+msgstr "حدد محرك الأقراص:"
 
 #: cnchi/src/pages/automatic.py:93
 msgid "WARNING! This will overwrite everything currently on your drive!"
-msgstr ""
+msgstr "تحذير! سيؤدي هذا إلى استبدال كل شيء موجود حاليًا على محرك الأقراص لديك!"
 
 #: cnchi/src/pages/automatic.py:98
 msgid ""
@@ -1197,42 +1196,42 @@ msgstr ""
 
 #: cnchi/src/pages/automatic.py:103
 msgid "Encryption Password:"
-msgstr ""
+msgstr "كلمة مرور التشفير:"
 
 #: cnchi/src/pages/automatic.py:107 cnchi/src/pages/user_info.py:188
 msgid "Confirm your password:"
-msgstr ""
+msgstr "تأكيد كلمة المرور الخاصة بك:"
 
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
-msgstr ""
+msgstr "كلمة المرور لوكس. لا ننصح باستخدام أحرف أو لهجات خاصة!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "إظهار كلمة المرور"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
-msgstr ""
+msgstr "وضع التثبيت التلقائي"
 
 #: cnchi/src/pages/automatic.py:234
 #, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
-msgstr ""
+msgstr "سيتم إنشاء الجهاز {0} (نظام الملفات {1}) باسم {2}"
 
 #: cnchi/src/pages/automatic.py:238
 #, python-format
 msgid "Device {0} will be created ({1} filesystem)"
-msgstr ""
+msgstr "سيتم إنشاء الجهاز {0} (نظام الملفات {1})"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "سيقوم Cnchi بتثبيت Antergos على الجهاز %s"
 
 #: cnchi/src/pages/cache.py:66
 msgid "Select cache partition:"
-msgstr ""
+msgstr "حدد قسم ذاكرة التخزين المؤقت:"
 
 #: cnchi/src/pages/cache.py:70
 msgid ""
@@ -1274,15 +1273,16 @@ msgstr ""
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
 msgstr ""
+"من فضلك، اختر الآن الجهاز (أو القسم) الذي تريد استخدامه كذاكرة تخزين مؤقت."
 
 #: cnchi/src/pages/cache.py:92
 msgid "Cache selection (optional)"
-msgstr ""
+msgstr "اختيار ذاكرة التخزين المؤقت (اختياري)"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "سيتم مسح الجهاز {} ​​بالكامل! هل أنت متأكد حقا؟"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1290,12 +1290,12 @@ msgstr "فحص النظام"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi محدث"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
 msgid "has at least {0}GB available storage space. (*)"
-msgstr ""
+msgstr "يحتوي على مساحة تخزينية متاحة تبلغ {0}غيغابايت على الأقل. (*)"
 
 #: cnchi/src/pages/check.py:94
 msgid ""
@@ -1325,23 +1325,23 @@ msgstr "للحصول على أفضل النتائج، يرجى التأكد من
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "يجب عليك إعادة التشغيل قبل إعادة المحاولة مرة أخرى."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
-msgstr ""
+msgstr "اختر سطح المكتب الخاص بك"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "إظهار الميزات المتقدمة"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
-msgstr ""
+msgstr "اختيار الميزة"
 
 #: cnchi/src/pages/features.py:345
 msgid "Arch User Repository - Disclaimer"
-msgstr ""
+msgstr "مستودع مستخدم Arch - إخلاء المسؤولية"
 
 #: cnchi/src/pages/features.py:346
 msgid ""
@@ -1353,7 +1353,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:351
 msgid "Uncomplicated Firewall will be installed with these rules:"
-msgstr ""
+msgstr "سيتم تثبيت جدار الحماية غير المعقد وفقًا لهذه القواعد:"
 
 #: cnchi/src/pages/features.py:353
 #, python-format
@@ -1366,11 +1366,11 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "هل تريد تثبيت خادم Nginx بدلاً من خادم Apache؟"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
-msgstr ""
+msgstr "حدد تخطيط لوحة المفاتيح الخاصة بك"
 
 #: cnchi/src/pages/keymap.py:92
 msgid ""
@@ -1385,21 +1385,21 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "لا يمكن مطابقة خريطة المفاتيح لرمز البلد '%s'"
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "اضبط لوحة المفاتيح على '{0}' ({1})، المتغير '{2}' ({3})"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "اضبط لوحة المفاتيح على '{0}' ({1})"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
-msgstr ""
+msgstr "ملاحظة: برنامج تثبيت Cnchi هو برنامج تجريبي."
 
 #: cnchi/src/pages/language.py:118
 #, python-format
@@ -1415,7 +1415,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "اختر لغة التثبيت"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1437,44 +1437,44 @@ msgstr ""
 
 #: cnchi/src/pages/location.py:102
 msgid "Country, territory or area:"
-msgstr ""
+msgstr "البلد أو الإقليم أو المنطقة:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "إظهار كافة المواقع"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
-msgstr ""
+msgstr "حدد موقعك"
 
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "لا يمكن الحصول على رمز البلد من موقع %s"
 
 #: cnchi/src/pages/mirrors.py:400
 msgid "Mirrors Selection"
-msgstr ""
+msgstr "اختيار المرايا"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "السماح لـ Cnchi بفرز قوائم المرايا (مستحسن)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "ترك قوائم المرايا كما هي (افتراضيا)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "السماح لي بإدارة قوائم المرايا (متقدم)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
-msgstr ""
+msgstr "انتظر من فضلك..."
 
 #: cnchi/src/pages/slides.py:93
 msgid "Installing Antergos NeXT..."
-msgstr ""
+msgstr "تثبيت Antergos NeXT..."
 
 #: cnchi/src/pages/slides.py:238
 msgid ""
@@ -1497,212 +1497,210 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "يرجى الرجوع إلى الرقم التالي عند الإبلاغ عن هذا الخطأ:"
 
 #: cnchi/src/pages/summary.py:86
 msgid "Installation Summary"
-msgstr ""
+msgstr "ملخص التثبيت"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "موقع"
 
 #: cnchi/src/pages/summary.py:91
 msgid "Timezone"
-msgstr ""
+msgstr "المنطقة الزمنية"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "لوحة المفاتيح"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "بيئة سطح المكتب"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "سمات"
 
 #: cnchi/src/pages/summary.py:95
-#, fuzzy
 msgid "Partitions"
 msgstr "قسم"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "التخطيط: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "البديل: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "حدث خطأ أثناء الحصول على التغييرات من شاشة التثبيت"
 
 #: cnchi/src/pages/summary.py:193
 msgid "Are you REALLY sure you want to continue?"
-msgstr ""
+msgstr "هل أنت متأكد حقا أنك تريد الاستمرار؟"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "مرايا الترتيب"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "لا يزال Cnchi يقوم بتحديث وتحسين قوائم المرآة الخاصة بك."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "يرجى التحلي بالصبر..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
-msgstr ""
+msgstr "منطقة:"
 
 #: cnchi/src/pages/timezone.py:99
 msgid "Region:"
-msgstr ""
+msgstr "منطقة:"
 
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
-msgstr ""
+msgstr "استخدم بروتوكول وقت الشبكة (NTP) لمزامنة الساعة"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
-msgstr ""
+msgstr "حدد منطقتك الزمنية"
 
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "تم اكتشاف المنطقة الزمنية (خط العرض %s، خط الطول %s)."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
-msgstr ""
+msgstr "اسمك:"
 
 #: cnchi/src/pages/user_info.py:185
 msgid "Your computer's name:"
-msgstr ""
+msgstr "اسم جهاز الكمبيوتر الخاص بك:"
 
 #: cnchi/src/pages/user_info.py:186
 msgid "Pick a username:"
-msgstr ""
+msgstr "اختر اسم مستخدم:"
 
 #: cnchi/src/pages/user_info.py:187
 msgid "Choose a password:"
-msgstr ""
+msgstr "اختر كلمة مرور:"
 
 #: cnchi/src/pages/user_info.py:195
 msgid "Identifies your system to other computers and devices."
-msgstr ""
+msgstr "يحدد نظامك لأجهزة الكمبيوتر والأجهزة الأخرى."
 
 #: cnchi/src/pages/user_info.py:200
 msgid "Your name"
-msgstr ""
+msgstr "اسمك"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "اسم المضيف"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
-msgstr ""
+msgstr "اسم المستخدم"
 
 #: cnchi/src/pages/user_info.py:203 cnchi/src/pages/zfs.py:326
 msgid "Password"
-msgstr ""
+msgstr "كلمة المرور"
 
 #: cnchi/src/pages/user_info.py:204
 msgid "Confirm password"
-msgstr ""
+msgstr "تأكيد كلمة المرور"
 
 #: cnchi/src/pages/user_info.py:211
 msgid "You must enter a name"
-msgstr ""
+msgstr "يجب عليك إدخال اسم"
 
 #: cnchi/src/pages/user_info.py:212
 msgid "You must enter a username"
-msgstr ""
+msgstr "يجب عليك إدخال اسم مستخدم"
 
 #: cnchi/src/pages/user_info.py:213
 msgid "You must enter a password"
-msgstr ""
+msgstr "يجب عليك إدخال كلمة المرور"
 
 #: cnchi/src/pages/user_info.py:221
 msgid "Log in automatically"
-msgstr ""
+msgstr "تسجيل الدخول تلقائيا"
 
 #: cnchi/src/pages/user_info.py:222
 msgid "Require my password to log in"
-msgstr ""
+msgstr "تتطلب كلمة المرور الخاصة بي لتسجيل الدخول"
 
 #: cnchi/src/pages/user_info.py:223
 msgid "Encrypt my home folder"
-msgstr ""
+msgstr "تشفير المجلد الرئيسي الخاص بي"
 
 #: cnchi/src/pages/user_info.py:226
 msgid "show password"
-msgstr ""
+msgstr "إظهار كلمة المرور"
 
 #: cnchi/src/pages/user_info.py:228
 msgid "Create Your User Account"
-msgstr ""
+msgstr "قم بإنشاء حساب المستخدم الخاص بك"
 
 #: cnchi/src/pages/user_info.py:263
 msgid "Are you sure you want to encrypt your home directory?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد تشفير الدليل الرئيسي الخاص بك؟"
 
 #: cnchi/src/pages/user_info.py:330
 msgid "Invalid characters entered"
-msgstr ""
+msgstr "تم إدخال أحرف غير صالحة"
 
 #: cnchi/src/pages/user_info.py:332
 msgid "Username can't contain dots"
-msgstr ""
+msgstr "لا يمكن أن يحتوي اسم المستخدم على نقاط"
 
 #: cnchi/src/pages/user_info.py:334
 msgid "Too many characters"
-msgstr ""
+msgstr "عدد كبير جدًا من الشخصيات"
 
 #: cnchi/src/pages/user_info.py:336
-#, fuzzy
 msgid "Unknown error"
 msgstr "مجهول"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "استخدم Antergos NeXT دون إجراء أي تغييرات على نظامك."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
-msgstr ""
+msgstr "قم بإنشاء مكان دائم لـ Antergos NeXT NeXT على نظامك."
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
-msgstr ""
+msgstr "جربه"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "تثبيته"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
-msgstr ""
+msgstr "مرحبًا بك في Antergos NeXT!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "جاري التحميل برجاء الإنتظار..."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "توصيل هذا الكمبيوتر بشبكة wi-fi"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "لا أريد الاتصال بشبكة wi-fi الآن"
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
@@ -1710,7 +1708,7 @@ msgstr "اتصِل بالشبكة"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "كلمة المرور:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
@@ -1718,76 +1716,73 @@ msgstr "عرض كلمة السِر"
 
 #: cnchi/src/pages/zfs.py:195
 msgid "Use"
-msgstr ""
+msgstr "يستخدم"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "القرص"
 
 #: cnchi/src/pages/zfs.py:210
-#, fuzzy
 msgid "Size (GB)"
 msgstr "الحجم"
 
 #: cnchi/src/pages/zfs.py:216 cnchi/src/widgets/partition_treeview.py:78
 msgid "Device"
-msgstr ""
+msgstr "جهاز"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "معرف القرص"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "إعداد ZFS"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "نوع حمام السباحة"
 
 #: cnchi/src/pages/zfs.py:309
-#, fuzzy
 msgid "Partition scheme"
 msgstr "قسم"
 
 #: cnchi/src/pages/zfs.py:323
-#, fuzzy
 msgid "Validate password"
 msgstr "عرض كلمة السِر"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "حجم المبادلة (ميجابايت)"
 
 #: cnchi/src/pages/zfs.py:333
 msgid "Encrypt swap"
-msgstr ""
+msgstr "تشفير المبادلة"
 
 #: cnchi/src/pages/zfs.py:336
 msgid "Encrypt disk"
-msgstr ""
+msgstr "تشفير القرص"
 
 #: cnchi/src/pages/zfs.py:339
 msgid "Pool name"
-msgstr ""
+msgstr "اسم المسبح"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "فرض حجم كتلة ZFS 4K"
 
 #: cnchi/src/pages/zfs.py:364
 msgid "You must select one drive"
-msgstr ""
+msgstr "يجب عليك تحديد محرك أقراص واحد"
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "بالنسبة لنوع التجمع {0}، يجب عليك تحديد محركي أقراص على الأقل"
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "يجب عليك تحديد {0} من محركات الأقراص على الأقل"
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1799,11 +1794,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "حدث خطأ غير معروف أثناء معالجة خيارات ZFS المختارة."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "سيستخدم التجمع \"لا شيء\" ZFS على قرص واحد محدد."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1843,16 +1838,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "إنشاء {0} على الجهاز {1}"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "أضف الجهاز {0} إلى {1}"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "لم يتم اختيار أي أجهزة لتجميع ZFS"
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1866,59 +1861,57 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_يلغي"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_يتقدم"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
-#, fuzzy
 msgid "Create partition"
 msgstr "قسم"
 
 #: cnchi/src/pages/dialogs/create_table.py:73
 msgid "Create Partition Table"
-msgstr ""
+msgstr "إنشاء جدول الأقسام"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
-#, fuzzy
 msgid "Edit partition"
 msgstr "قسم"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "سيؤدي استخدام تشفير LUKS إلى حذف جميع محتويات القسم!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
 msgid "Encryption properties"
-msgstr ""
+msgstr "خصائص التشفير"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "استخدم تشفير LUKS:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "اسم المجلد LUKS:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "تأكيد كلمة المرور:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "كلمات مرور LUKS غير متطابقة! التشفير غير ممكّن."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "اسم المجلد وكلمة المرور إلزامية! التشفير غير ممكّن."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "موقع:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
@@ -1930,35 +1923,35 @@ msgstr "النوع"
 
 #: cnchi/src/pages/dialogs/partition_base.py:229
 msgid "Primary"
-msgstr ""
+msgstr "أساسي"
 
 #: cnchi/src/pages/dialogs/partition_base.py:230
 msgid "Logical"
-msgstr ""
+msgstr "منطقي"
 
 #: cnchi/src/pages/dialogs/partition_base.py:231
 msgid "Extended"
-msgstr ""
+msgstr "ممتد"
 
 #: cnchi/src/pages/dialogs/partition_base.py:232
 msgid "Beginning of this space"
-msgstr ""
+msgstr "بداية هذا الفضاء"
 
 #: cnchi/src/pages/dialogs/partition_base.py:233
 msgid "End of this space"
-msgstr ""
+msgstr "نهاية هذا الفضاء"
 
 #: cnchi/src/pages/dialogs/partition_base.py:234
 msgid "Use As:"
-msgstr ""
+msgstr "استخدم كـ:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:235
 msgid "Mount Point:"
-msgstr ""
+msgstr "نقطة جبل:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:236
 msgid "Label (optional):"
-msgstr ""
+msgstr "التسمية (اختياري):"
 
 #: cnchi/src/pages/dialogs/partition_base.py:237
 msgid "Format:"
@@ -1966,15 +1959,15 @@ msgstr "تهيئة"
 
 #: cnchi/src/widgets/partition_treeview.py:82
 msgid "Type"
-msgstr ""
+msgstr "يكتب"
 
 #: cnchi/src/widgets/partition_treeview.py:86
 msgid "Mount point"
-msgstr ""
+msgstr "نقطة جبل"
 
 #: cnchi/src/widgets/partition_treeview.py:90
 msgid "Label"
-msgstr ""
+msgstr "ملصق"
 
 #: cnchi/src/widgets/partition_treeview.py:97
 msgid "Format"
@@ -1986,84 +1979,84 @@ msgstr "الحجم"
 
 #: cnchi/src/widgets/partition_treeview.py:109
 msgid "Used"
-msgstr ""
+msgstr "مستخدم"
 
 #: cnchi/src/widgets/partition_treeview.py:113
 msgid "Flags"
-msgstr ""
+msgstr "أعلام"
 
 #: cnchi/src/widgets/partition_treeview.py:120
 msgid "SSD"
-msgstr ""
+msgstr "SSD"
 
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "لا يمكن تسمية قسم {0}."
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "لا يمكن إنشاء نظام ملفات من النوع \"لا شيء\" في القسم {0}"
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "نظام ملفات غير معروف {0} للقسم {1}"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "لا يمكن إزالة وحدة التخزين المنطقية {0}"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "لا يمكن إزالة مجموعة المجلدات {0}"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "لا يمكن إزالة وحدة التخزين الفعلية {0}"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
-msgstr ""
+msgstr "القسم كبير جدًا!"
 
 #: cnchi/src/parted3/partition_module.py:329
 #, python-format
 msgid "Can't detect used space from {0}: {1}"
-msgstr ""
+msgstr "لا يمكن اكتشاف المساحة المستخدمة من {0}: {1}"
 
 #: cnchi/src/parted3/used_space.py:55
 #, c-format
 msgid "Can't detect used space of NTFS partition %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم NTFS %s"
 
 #: cnchi/src/parted3/used_space.py:81
 #, c-format
 msgid "Can't detect used space of EXTFS partition %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم EXTFS %s"
 
 #: cnchi/src/parted3/used_space.py:110
 #, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم FAT %s : %s"
 
 #: cnchi/src/parted3/used_space.py:143
 #, c-format
 msgid "Can't detect used space of JFS partition %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم JFS %s"
 
 #: cnchi/src/parted3/used_space.py:170
 #, c-format
 msgid "Can't detect used space of REISERFS partition %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم REISERFS %s"
 
 #: cnchi/src/parted3/used_space.py:243
 #, c-format
 msgid "Can't detect used space of XFS partition %s"
-msgstr ""
+msgstr "لا يمكن الكشف عن المساحة المستخدمة لقسم XFS %s"
 
 #: cnchi/utils/pygettext.py:24
 msgid ""
@@ -2225,51 +2218,60 @@ msgstr ""
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
 msgstr ""
+"*** %(file)s:%(lineno)s: تمت رؤية الرمز المميز غير المتوقع \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# الملف: %(اسم الملف)s، السطر: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(اسم الملف)s:%(lineno)د"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "قيمة غير صالحة لـ --style: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py (xgettext for Python) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--width يجب أن تكون الوسيطة عددًا صحيحًا: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "لا يمكن قراءة --exclude-file: %s"
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "قراءة المدخلات القياسية"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "العمل على %s"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** تمت رؤية الرمز المميز غير المتوقع \"%(token)s\""
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "com.morethanonestring"
+
+msgid "Graphical Installer"
+msgstr "المثبت الرسومي"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "لا تحتوي لغات البيئة الحية على لغتك. البديل موجود حاليًا باللغة الإنجليزية. إذا كنت لا تستطيع التنقل ولا تعرف اللغة الإنجليزية، أقترح استخدام Google Lens."
 
 #~ msgid "We have Internet connection."
 #~ msgstr "لدينا إتصال بالأنترنت"

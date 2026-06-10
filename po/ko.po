@@ -25,7 +25,7 @@ msgstr ""
 #: cnchi/src/bootinfo.py:268 cnchi/src/bootinfo.py:271
 #: cnchi/src/bootinfo.py:274 cnchi/src/bootinfo.py:297
 msgid "unknown"
-msgstr ""
+msgstr "알려지지 않은"
 
 #: cnchi/src/cnchi.py:101
 msgid ""
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 
 #: cnchi/src/cnchi.py:189
-#, fuzzy, python-format
+#, python-format
 msgid "Cnchi (Antergos Installer) version {0}"
 msgstr "Cnichi 설치 프로그램 버전 %s"
 
@@ -59,7 +59,7 @@ msgstr "Cnchi v{0} - Antergos 설치 프로그램"
 
 #: cnchi/src/cnchi.py:381
 msgid "Set accessibility feature on by default"
-msgstr ""
+msgstr "기본적으로 접근성 기능을 켜짐으로 설정"
 
 #: cnchi/src/cnchi.py:384
 msgid "Use pre-downloaded xz packages when possible"
@@ -71,10 +71,9 @@ msgstr "Cnchi log level 을 'debug' 로 설정"
 
 #: cnchi/src/cnchi.py:390
 msgid "Sets the Desktop Environment that will be installed"
-msgstr ""
+msgstr "설치될 데스크탑 환경을 설정합니다."
 
 #: cnchi/src/cnchi.py:393
-#, fuzzy
 msgid "Runs cnchi even when another instance is running"
 msgstr "다른 인스턴스가 실행 중이어도 cnchi를 실행합니다."
 
@@ -84,10 +83,9 @@ msgstr "첫 화면의 \"써보기\" 옵션 비활성화 하기"
 
 #: cnchi/src/cnchi.py:399
 msgid "Makes checks optional in check screen"
-msgstr ""
+msgstr "확인 화면에서 확인을 선택 사항으로 만듭니다."
 
 #: cnchi/src/cnchi.py:402
-#, fuzzy
 msgid "Install packages referenced by a local xml file"
 msgstr "기본값 대신 로컬 xml 에 의해 조회된 꾸러미들을 설치하기"
 
@@ -97,10 +95,9 @@ msgstr "stdout 에 로깅 메시지 보이기"
 
 #: cnchi/src/cnchi.py:408
 msgid "Show Cnchi version and quit"
-msgstr ""
+msgstr "Cnchi 버전을 표시하고 종료합니다."
 
 #: cnchi/src/cnchi.py:411
-#, fuzzy
 msgid "Show options in development (use at your own risk!)"
 msgstr "개발자 옵션 보이기(개발자용 입니다, 사용하지 마세요!)"
 
@@ -198,139 +195,139 @@ msgstr ""
 
 #: cnchi/src/features_info.py:68
 msgid "Adds accessibility packages"
-msgstr ""
+msgstr "접근성 패키지를 추가합니다."
 
 #: cnchi/src/features_info.py:69
 msgid "Arch User Repository (AUR) Support"
-msgstr ""
+msgstr "AUR(아치 사용자 저장소) 지원"
 
 #: cnchi/src/features_info.py:70
 msgid "Bluetooth Support"
-msgstr ""
+msgstr "블루투스 지원"
 
 #: cnchi/src/features_info.py:71
 msgid "Printing Support"
-msgstr ""
+msgstr "인쇄 지원"
 
 #: cnchi/src/features_info.py:72
 msgid "Chromium Web Browser"
-msgstr ""
+msgstr "크롬 웹 브라우저"
 
 #: cnchi/src/features_info.py:73
 msgid "Advanced power management"
-msgstr ""
+msgstr "고급 전원 관리"
 
 #: cnchi/src/features_info.py:74
 msgid "Firefox Web Browser"
-msgstr ""
+msgstr "파이어폭스 웹 브라우저"
 
 #: cnchi/src/features_info.py:75
 msgid "Vivaldi Web Browser"
-msgstr ""
+msgstr "비발디 웹 브라우저"
 
 #: cnchi/src/features_info.py:76
 msgid "Uncomplicated Firewall"
-msgstr ""
+msgstr "복잡하지 않은 방화벽"
 
 #: cnchi/src/features_info.py:77
 msgid "Flash plugins"
-msgstr ""
+msgstr "플래시 플러그인"
 
 #: cnchi/src/features_info.py:78
 msgid "Steam + PlayonLinux"
-msgstr ""
+msgstr "Steam + PlayonLinux"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
-msgstr ""
+msgstr "그래픽 드라이버(독점)"
 
 #: cnchi/src/features_info.py:80
 msgid "Apache (or Nginx) + Mariadb + PHP"
-msgstr ""
+msgstr "Apache(또는 Nginx) + Mariadb + PHP"
 
 #: cnchi/src/features_info.py:81
 msgid "Kernel (LTS version)"
-msgstr ""
+msgstr "커널(LTS 버전)"
 
 #: cnchi/src/features_info.py:82
 msgid "LibreOffice"
-msgstr ""
+msgstr "리브레 오피스"
 
 #: cnchi/src/features_info.py:83
 msgid "SSH Service"
-msgstr ""
+msgstr "SSH 서비스"
 
 #: cnchi/src/features_info.py:84
 msgid "Visual Effects"
-msgstr ""
+msgstr "시각 효과"
 
 #: cnchi/src/features_info.py:88 cnchi/src/features_info.py:108
 msgid "Useful packages for individuals who are blind or visually impaired."
-msgstr ""
+msgstr "시각 장애가 있는 개인에게 유용한 패키지입니다."
 
 #: cnchi/src/features_info.py:89
 msgid "The AUR is a community-driven repository for Arch users."
-msgstr ""
+msgstr "AUR은 Arch 사용자를 위한 커뮤니티 중심 저장소입니다."
 
 #: cnchi/src/features_info.py:90
 msgid "Enables your system to make wireless connections via Bluetooth."
-msgstr ""
+msgstr "시스템이 Bluetooth를 통해 무선 연결을 할 수 있도록 합니다."
 
 #: cnchi/src/features_info.py:91
 msgid "Open-source web browser from Google."
-msgstr ""
+msgstr "Google의 오픈 소스 웹 브라우저."
 
 #: cnchi/src/features_info.py:92
 msgid "Brings you the benefits of advanced power management for Linux."
-msgstr ""
+msgstr "Linux용 고급 전원 관리의 이점을 제공합니다."
 
 #: cnchi/src/features_info.py:93
 msgid "A popular open-source graphical web browser from Mozilla."
-msgstr ""
+msgstr "Mozilla의 인기 있는 오픈 소스 그래픽 웹 브라우저입니다."
 
 #: cnchi/src/features_info.py:94
 msgid "Vivaldi is a free, fast web browser designed for power-users."
-msgstr ""
+msgstr "Vivaldi는 고급 사용자를 위해 설계된 무료 빠른 웹 브라우저입니다."
 
 #: cnchi/src/features_info.py:95
 msgid "Freeware software normally used for multimedia."
-msgstr ""
+msgstr "일반적으로 멀티미디어에 사용되는 프리웨어 소프트웨어입니다."
 
 #: cnchi/src/features_info.py:96
 msgid "Installs AMD or Nvidia proprietary graphic driver."
-msgstr ""
+msgstr "AMD 또는 Nvidia 독점 그래픽 드라이버를 설치합니다."
 
 #: cnchi/src/features_info.py:97
 msgid "Installs Steam and Playonlinux for gaming enthusiasts."
-msgstr ""
+msgstr "게임 매니아를 위해 Steam 및 Playonlinux를 설치합니다."
 
 #: cnchi/src/features_info.py:98
 msgid "Apache (or Nginx) + Mariadb + PHP installation and setup."
-msgstr ""
+msgstr "Apache(또는 Nginx) + Mariadb + PHP 설치 및 설정."
 
 #: cnchi/src/features_info.py:99
 msgid "Installation of printer drivers and management tools."
-msgstr ""
+msgstr "프린터 드라이버 및 관리 도구 설치."
 
 #: cnchi/src/features_info.py:100
 msgid "Open source office suite. Supports editing MS Office files."
-msgstr ""
+msgstr "오픈 소스 오피스 제품군. MS Office 파일 편집을 지원합니다."
 
 #: cnchi/src/features_info.py:101
 msgid "Enable transparency, shadows, and other desktop effects."
-msgstr ""
+msgstr "투명도, 그림자 및 기타 데스크탑 효과를 활성화합니다."
 
 #: cnchi/src/features_info.py:102
 msgid "Control the incoming and outgoing network traffic."
-msgstr ""
+msgstr "들어오고 나가는 네트워크 트래픽을 제어합니다."
 
 #: cnchi/src/features_info.py:103
 msgid "Enables Secure SHell service."
-msgstr ""
+msgstr "Secure SHell 서비스를 활성화합니다."
 
 #: cnchi/src/features_info.py:104
 msgid "Long term support (LTS) Linux kernel and modules."
-msgstr ""
+msgstr "LTS(장기 지원) Linux 커널 및 모듈."
 
 #: cnchi/src/features_info.py:109
 msgid ""
@@ -464,11 +461,11 @@ msgstr ""
 
 #: cnchi/src/main_window.py:206
 msgid "Next"
-msgstr ""
+msgstr "다음"
 
 #: cnchi/src/main_window.py:207
 msgid "Back"
-msgstr ""
+msgstr "뒤쪽에"
 
 #: cnchi/src/main_window.py:265
 msgid "Antergos Installer"
@@ -476,146 +473,147 @@ msgstr "Antergos 설치 프로그램"
 
 #: cnchi/src/main_window.py:438
 msgid "Do you really want to quit the installer?"
-msgstr ""
+msgstr "설치 프로그램을 정말로 종료하시겠습니까?"
 
 #: cnchi/src/proxy.py:114
 msgid "Cnchi - Internet Connection Proxy Setup"
-msgstr ""
+msgstr "Cnchi - 인터넷 연결 프록시 설정"
 
 #: cnchi/src/proxy.py:117
 msgid "HTTP proxy server:"
-msgstr ""
+msgstr "HTTP 프록시 서버:"
 
 #: cnchi/src/proxy.py:119
 msgid "HTTPS proxy server:"
-msgstr ""
+msgstr "HTTPS 프록시 서버:"
 
 #: cnchi/src/proxy.py:121
 msgid "FTP proxy server:"
-msgstr ""
+msgstr "FTP 프록시 서버:"
 
 #: cnchi/src/proxy.py:123
 msgid "SOCKS host server:"
-msgstr ""
+msgstr "SOCKS 호스트 서버:"
 
 #: cnchi/src/proxy.py:125
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "모든 프로토콜에 이 프록시 서버를 사용하세요."
 
 #: cnchi/src/proxy.py:133
 msgid "Port:"
-msgstr ""
+msgstr "포트:"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Server"
-msgstr ""
+msgstr "섬기는 사람"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Rate"
-msgstr ""
+msgstr "비율"
 
 #: cnchi/src/rank_mirrors.py:272
 msgid "Time"
-msgstr ""
+msgstr "시간"
 
 #: cnchi/src/show_message.py:73
 msgid "Antergos NeXT Installer - Error"
-msgstr ""
+msgstr "Antergos NeXT 설치 프로그램 - 오류"
 
 #: cnchi/src/show_message.py:91
 msgid "Antergos NeXT Installer - Warning"
-msgstr ""
+msgstr "Antergos NeXT 설치 프로그램 - 경고"
 
 #: cnchi/src/show_message.py:109
 msgid "Antergos NeXT Installer - Information"
-msgstr ""
+msgstr "Antergos NeXT 설치 프로그램 - 정보"
 
 #: cnchi/src/show_message.py:127
 msgid "Antergos NeXT Installer - Confirmation"
-msgstr ""
+msgstr "Antergos NeXT 설치 프로그램 - 확인"
 
 #: cnchi/src/download/download.py:100
-#, fuzzy
 msgid "Can't create download package list."
 msgstr ""
-"내려받을 꾸러미 목록을 만들 수 없습니다. 자세한 사할은 출력된 로그를 확인하세"
-"요"
+"다운로드 패키지 목록을 생성할 수 없습니다.내려받을 꾸러미 목록을 만들 수 없습"
+"니다. 자세한 사할은 출력된 로그를 확인하세요"
 
 #: cnchi/src/download/download.py:113
 msgid "Can't download needed packages. Cnchi can't continue."
-msgstr ""
+msgstr "필요한 패키지를 다운로드할 수 없습니다. Cnchi는 계속할 수 없습니다."
 
 #: cnchi/src/download/download.py:152
 msgid "Creating the list of packages to download..."
-msgstr ""
+msgstr "다운로드할 패키지 목록을 만드는 중..."
 
 #: cnchi/src/download/download.py:179
 #, python-format
 msgid "Error creating metalink for package {}. Installation will stop"
 msgstr ""
+"패키지 {}에 대한 메타링크를 생성하는 중 오류가 발생했습니다. 설치가 중지됩니"
+"다"
 
 #: cnchi/src/download/download_requests.py:125
 #, python-format
 msgid "Fetching {0} {1} ({2}/{3})..."
-msgstr ""
+msgstr "{0} {1}({2}/{3}) 가져오는 중..."
 
 #: cnchi/src/installation/action.py:53
 #, python-format
 msgid "Device {0} will be deleted!"
-msgstr ""
+msgstr "장치 {0}이(가) 삭제됩니다!"
 
 #: cnchi/src/installation/action.py:58
 #, python-format
 msgid "Device {0} will be created"
-msgstr ""
+msgstr "장치 {0}이(가) 생성됩니다"
 
 #: cnchi/src/installation/action.py:62
 #, python-format
 msgid "Device {0} will be modified"
-msgstr ""
+msgstr "장치 {0}이(가) 수정됩니다"
 
 #: cnchi/src/installation/action.py:64
 #, python-format
 msgid "Device {0} will be "
-msgstr ""
+msgstr "장치 {0}은(는)"
 
 #: cnchi/src/installation/action.py:67
 msgid "relabeled"
-msgstr ""
+msgstr "라벨을 다시 붙인"
 
 #: cnchi/src/installation/action.py:69
 msgid "not relabeled"
-msgstr ""
+msgstr "라벨이 다시 지정되지 않음"
 
 #: cnchi/src/installation/action.py:71
 msgid "formatted"
-msgstr ""
+msgstr "포맷된"
 
 #: cnchi/src/installation/action.py:73
 msgid "not formatted"
-msgstr ""
+msgstr "포맷되지 않음"
 
 #: cnchi/src/installation/action.py:75
 #, python-format
 msgid "mounted as {0}"
-msgstr ""
+msgstr "{0}으로 마운트됨"
 
 #: cnchi/src/installation/action.py:78
 msgid "not mounted"
-msgstr ""
+msgstr "마운트되지 않음"
 
 #: cnchi/src/installation/action.py:81
 msgid "and encrypted."
-msgstr ""
+msgstr "암호화되었습니다."
 
 #: cnchi/src/installation/action.py:83
 msgid "and not encrypted."
-msgstr ""
+msgstr "암호화되지 않았습니다."
 
 #: cnchi/src/installation/auto_partition.py:335
 #, python-format
 msgid "Unknown filesystem type {0}"
-msgstr ""
+msgstr "알 수 없는 파일 시스템 유형 {0}"
 
 #: cnchi/src/installation/auto_partition.py:623
 msgid ""
@@ -625,148 +623,147 @@ msgstr ""
 
 #: cnchi/src/installation/firewall.py:86
 msgid "Aborted"
-msgstr ""
+msgstr "중단됨"
 
 #: cnchi/src/installation/install.py:173
 #, python-format
 msgid "Mounting boot partition {0} into {1} directory"
-msgstr ""
+msgstr "부팅 파티션 {0}을(를) {1} 디렉터리에 마운트하는 중"
 
 #: cnchi/src/installation/install.py:185
 #, python-format
 msgid "Mounting EFI partition {0} into {1} directory"
-msgstr ""
+msgstr "EFI 파티션 {0}을(를) {1} 디렉터리에 마운트하는 중"
 
 #: cnchi/src/installation/install.py:206
 #, python-format
 msgid "Mounting partition {0} into {1} directory"
-msgstr ""
+msgstr "파티션 {0}을(를) {1} 디렉터리에 마운트하는 중"
 
 #: cnchi/src/installation/install.py:236
 #, python-format
 msgid "Installing using the '{0}' method"
-msgstr ""
+msgstr "'{0}' 메서드를 사용하여 설치"
 
 #: cnchi/src/installation/install.py:344
 msgid "Installation finished"
-msgstr ""
+msgstr "설치 완료"
 
 #: cnchi/src/installation/install.py:371
 #, python-format
 msgid "Creating a temporary pacman.conf for {0} architecture"
-msgstr ""
+msgstr "{0} 아키텍처에 대한 임시 pacman.conf 생성"
 
 #: cnchi/src/installation/install.py:394
 msgid "Updating package manager security. Please wait..."
-msgstr ""
+msgstr "패키지 관리자 보안을 업데이트하는 중입니다. 기다리세요..."
 
 #: cnchi/src/installation/install.py:413
 #: cnchi/src/installation/select_packages.py:134
 msgid "Can't refresh pacman databases."
-msgstr ""
+msgstr "팩맨 데이터베이스를 새로 고칠 수 없습니다."
 
 #: cnchi/src/installation/install.py:521
 msgid "Can't install necessary packages. Cnchi can't continue."
-msgstr ""
+msgstr "필요한 패키지를 설치할 수 없습니다. Cnchi는 계속할 수 없습니다."
 
 #: cnchi/src/installation/post_install.py:259
 msgid "Configuring LightDM desktop manager..."
-msgstr ""
+msgstr "LightDM 데스크탑 관리자 구성 중..."
 
 #: cnchi/src/installation/post_install.py:295
 msgid "LightDM display manager configuration completed."
-msgstr ""
+msgstr "LightDM 디스플레이 관리자 구성이 완료되었습니다."
 
 #: cnchi/src/installation/post_install.py:298
 msgid "Error while trying to configure the LightDM display manager"
-msgstr ""
+msgstr "LightDM 디스플레이 관리자를 구성하는 중 오류가 발생했습니다."
 
 #: cnchi/src/installation/post_install.py:535
 msgid "Encrypting user home dir..."
-msgstr ""
+msgstr "사용자 홈 디렉토리를 암호화하는 중..."
 
 #: cnchi/src/installation/post_install.py:558
 msgid "Building zfs modules..."
-msgstr ""
+msgstr "zfs 모듈 빌드 중..."
 
 #: cnchi/src/installation/post_install.py:626
 msgid "Configuring your new system"
-msgstr ""
+msgstr "새 시스템 구성"
 
 #: cnchi/src/installation/post_install.py:729
 msgid "Generating locales..."
-msgstr ""
+msgstr "로케일 생성 중..."
 
 #: cnchi/src/installation/post_install.py:741
 msgid "Adjusting hardware clock..."
-msgstr ""
+msgstr "하드웨어 시계 조정 중..."
 
 #: cnchi/src/installation/post_install.py:744
 msgid "Configuring keymap..."
-msgstr ""
+msgstr "키맵 구성 중..."
 
 #: cnchi/src/installation/post_install.py:750
 msgid "Configuring hardware..."
-msgstr ""
+msgstr "하드웨어 구성 중..."
 
 #: cnchi/src/installation/post_install.py:785
 msgid "Configuring System Startup..."
-msgstr ""
+msgstr "시스템 시작 구성 중..."
 
 #: cnchi/src/installation/post_install.py:804
 msgid "Installing bootloader..."
-msgstr ""
+msgstr "부트로더 설치 중..."
 
 #: cnchi/src/installation/process.py:73
 msgid "Cannot create package list."
-msgstr ""
+msgstr "패키지 목록을 생성할 수 없습니다."
 
 #: cnchi/src/installation/process.py:90
-#, fuzzy
 msgid "Cannot create download package list (metalinks)."
 msgstr ""
-"내려받을 꾸러미 목록을 만들 수 없습니다. 자세한 사할은 출력된 로그를 확인하세"
-"요"
+"다운로드 패키지 목록(메탈링크)을 생성할 수 없습니다.내려받을 꾸러미 목록을 만"
+"들 수 없습니다. 자세한 사할은 출력된 로그를 확인하세요"
 
 #: cnchi/src/installation/process.py:104
 msgid "Getting your disk(s) ready for Antergos..."
-msgstr ""
+msgstr "Antergos를 위한 디스크 준비 중..."
 
 #: cnchi/src/installation/process.py:114
 msgid "Installation will start now!"
-msgstr ""
+msgstr "이제 설치가 시작됩니다!"
 
 #: cnchi/src/installation/process.py:128
-#, fuzzy, python-format
+#, python-format
 msgid "Error running command {0}: {1}"
 msgstr "hexdump 명령을 호출하는 중 오류가 발생하였습니다: %s"
 
 #: cnchi/src/installation/select_packages.py:197
 msgid "Getting package list..."
-msgstr ""
+msgstr "패키지 목록을 가져오는 중..."
 
 #: cnchi/src/installation/select_packages.py:351
 #, c-format
 msgid "Adding '%s' bootloader packages"
-msgstr ""
+msgstr "'%s' 부트로더 패키지 추가"
 
 #: cnchi/src/installation/select_packages.py:357
 #, c-format
 msgid "Couldn't find %s bootloader packages!"
-msgstr ""
+msgstr "%s 부트로더 패키지를 찾을 수 없습니다!"
 
 #: cnchi/src/installation/special_dirs.py:75
 msgid "Special dirs are already mounted. Skipping."
-msgstr ""
+msgstr "특수 디렉토리가 이미 마운트되었습니다. 건너뛰는 중입니다."
 
 #: cnchi/src/installation/special_dirs.py:107
 msgid "Special dirs are not mounted. Skipping."
-msgstr ""
+msgstr "특수 디렉토리는 마운트되지 않습니다. 건너뛰는 중입니다."
 
 #: cnchi/src/installation/wrapper.py:76
 #, python-format
 msgid "Command {0} failed: {1}"
-msgstr ""
+msgstr "명령 {0} 실패: {1}"
 
 #: cnchi/src/installation/wrapper.py:108 cnchi/src/installation/wrapper.py:152
 #, python-format
@@ -782,28 +779,28 @@ msgstr ""
 
 #: cnchi/src/installation/boot/boot_ui.py:58
 msgid "Use the device below for boot loader installation:"
-msgstr ""
+msgstr "부트로더 설치를 위해 아래 장치를 사용하십시오:"
 
 #: cnchi/src/installation/boot/boot_ui.py:63
 msgid "Bootloader:"
-msgstr ""
+msgstr "부트로더:"
 
 #: cnchi/src/installation/boot/boot_ui.py:67
 msgid "Device:"
-msgstr ""
+msgstr "장치:"
 
 #: cnchi/src/installation/boot/grub2.py:294
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in {0}"
-msgstr ""
+msgstr "{0}에 GRUB(2) BIOS 부트 로더 설치"
 
 #: cnchi/src/installation/boot/grub2.py:323
 msgid "GRUB(2) BIOS has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) BIOS가 성공적으로 설치되었습니다."
 
 #: cnchi/src/installation/boot/grub2.py:327
 msgid "ERROR installing GRUB(2) BIOS."
-msgstr ""
+msgstr "GRUB(2) BIOS를 설치하는 동안 오류가 발생했습니다."
 
 #: cnchi/src/installation/boot/grub2.py:342
 msgid ""
@@ -812,241 +809,240 @@ msgstr ""
 
 #: cnchi/src/installation/boot/grub2.py:345
 msgid "GRUB(2) will NOT be installed"
-msgstr ""
+msgstr "GRUB(2)는 설치되지 않습니다."
 
 #: cnchi/src/installation/boot/grub2.py:350
 #, python-format
 msgid "Installing GRUB(2) UEFI {0} boot loader"
-msgstr ""
+msgstr "GRUB(2) UEFI {0} 부트로더 설치"
 
 #: cnchi/src/installation/boot/grub2.py:387
 #, c-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
-msgstr ""
+msgstr "%s에 OEM 로더가 없습니다. Grub(2)을 dir에 복사하는 중입니다."
 
 #: cnchi/src/installation/boot/grub2.py:390
 #, c-format
 msgid "Copying Grub(2) into OEM dir failed: %s"
-msgstr ""
+msgstr "Grub(2)을 OEM 디렉토리에 복사하지 못했습니다: %s"
 
 #: cnchi/src/installation/boot/grub2.py:394
 msgid "File not found."
-msgstr ""
+msgstr "파일을 찾을 수 없습니다."
 
 #: cnchi/src/installation/boot/grub2.py:396
 msgid "File already exists."
-msgstr ""
+msgstr "파일이 이미 존재합니다."
 
 #: cnchi/src/misc/avatars.py:57
-#, fuzzy
 msgid "Choose your avatar"
 msgstr "데스크탑 선택"
 
 #: cnchi/src/misc/validation.py:142
 msgid "Password is too short"
-msgstr ""
+msgstr "비밀번호가 너무 짧습니다."
 
 #: cnchi/src/misc/validation.py:145
 msgid "Weak password"
-msgstr ""
+msgstr "취약한 비밀번호"
 
 #: cnchi/src/misc/validation.py:148
 msgid "Fair password"
-msgstr ""
+msgstr "공정한 비밀번호"
 
 #: cnchi/src/misc/validation.py:151
 msgid "Good password"
-msgstr ""
+msgstr "좋은 비밀번호"
 
 #: cnchi/src/misc/validation.py:154
 msgid "Strong password"
-msgstr ""
+msgstr "강력한 비밀번호"
 
 #: cnchi/src/misc/validation.py:173
 msgid "Passwords do not match"
-msgstr ""
+msgstr "비밀번호가 일치하지 않습니다."
 
 #: cnchi/src/pacman/pac.py:109
 #, c-format
 msgid "%.1f KiB"
-msgstr ""
+msgstr "%.1fKiB"
 
 #: cnchi/src/pacman/pac.py:111
 #, c-format
 msgid "%.2f MiB"
-msgstr ""
+msgstr "%.2fMiB"
 
 #: cnchi/src/pacman/pac.py:514
 msgid "Checking dependencies..."
-msgstr ""
+msgstr "종속성 확인 중..."
 
 #: cnchi/src/pacman/pac.py:516
 msgid "Checking file conflicts..."
-msgstr ""
+msgstr "파일 충돌 확인 중..."
 
 #: cnchi/src/pacman/pac.py:518
 msgid "Resolving dependencies..."
-msgstr ""
+msgstr "종속성 해결 중..."
 
 #: cnchi/src/pacman/pac.py:520
 msgid "Checking inter conflicts..."
-msgstr ""
+msgstr "상호 충돌을 확인하는 중..."
 
 #: cnchi/src/pacman/pac.py:525
 msgid "Checking integrity..."
-msgstr ""
+msgstr "무결성 확인 중..."
 
 #: cnchi/src/pacman/pac.py:528
 msgid "Loading packages files..."
-msgstr ""
+msgstr "패키지 파일 로드 중..."
 
 #: cnchi/src/pacman/pac.py:530
 msgid "Checking target delta integrity..."
-msgstr ""
+msgstr "대상 델타 무결성 확인 중..."
 
 #: cnchi/src/pacman/pac.py:532
 msgid "Applying deltas to packages..."
-msgstr ""
+msgstr "패키지에 델타 적용 중..."
 
 #: cnchi/src/pacman/pac.py:534
 #, python-format
 msgid "Generating {} with {}..."
-msgstr ""
+msgstr "{}로 {} 생성 중..."
 
 #: cnchi/src/pacman/pac.py:537
 msgid "Downloading files from the repositories..."
-msgstr ""
+msgstr "저장소에서 파일을 다운로드하는 중..."
 
 #: cnchi/src/pacman/pac.py:539
 msgid "Checking available disk space..."
-msgstr ""
+msgstr "사용 가능한 디스크 공간을 확인하는 중..."
 
 #: cnchi/src/pacman/pac.py:541
 msgid "Checking keys in keyring..."
-msgstr ""
+msgstr "키링의 키를 확인하는 중..."
 
 #: cnchi/src/pacman/pac.py:543
 msgid "Downloading missing keys into the keyring..."
-msgstr ""
+msgstr "누락된 키를 키링에 다운로드하는 중..."
 
 #: cnchi/src/pacman/pac.py:545
 #, python-format
 msgid "Configuring {}"
-msgstr ""
+msgstr "{} 구성"
 
 #: cnchi/src/pacman/pac.py:578
 #, python-format
 msgid "Installing {0} ({1}/{2})"
-msgstr ""
+msgstr "{0}({1}/{2}) 설치 중"
 
 #: cnchi/src/pacman/pac.py:598
 #, python-format
 msgid "Updating {0} database"
-msgstr ""
+msgstr "{0} 데이터베이스 업데이트 중"
 
 #: cnchi/src/pacman/pac.py:600
 #, python-format
 msgid "Downloading {}..."
-msgstr ""
+msgstr "{} 다운로드 중..."
 
 #: cnchi/src/pacman/pkginfo.py:206
 msgid "Explicitly installed"
-msgstr ""
+msgstr "명시적으로 설치됨"
 
 #: cnchi/src/pacman/pkginfo.py:208
 msgid "Installed as a dependency for another package"
-msgstr ""
+msgstr "다른 패키지에 대한 종속성으로 설치됨"
 
 #: cnchi/src/pages/advanced.py:233 cnchi/src/pages/advanced.py:474
 #: cnchi/src/pages/advanced.py:489
 msgid "free space"
-msgstr ""
+msgstr "여유 공간"
 
 #: cnchi/src/pages/advanced.py:456
 msgid "none"
-msgstr ""
+msgstr "없음"
 
 #: cnchi/src/pages/advanced.py:517
 msgid "Unknown"
-msgstr ""
+msgstr "알려지지 않은"
 
 #: cnchi/src/pages/advanced.py:557 cnchi/src/pages/advanced.py:915
 msgid "Can't use same mount point twice."
-msgstr ""
+msgstr "동일한 마운트 지점을 두 번 사용할 수 없습니다."
 
 #: cnchi/src/pages/advanced.py:558
 msgid "Root partition must be formatted."
-msgstr ""
+msgstr "루트 파티션을 포맷해야 합니다."
 
 #: cnchi/src/pages/advanced.py:559
 msgid "Root partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "루트 파티션은 NTFS 또는 FAT32일 수 없습니다."
 
 #: cnchi/src/pages/advanced.py:560
 msgid "Home partition cannot be NTFS or FAT32"
-msgstr ""
+msgstr "홈 파티션은 NTFS 또는 FAT32일 수 없습니다."
 
 #: cnchi/src/pages/advanced.py:561
 msgid "As no /boot/efi is defined (yet), /boot needs to be fat32."
-msgstr ""
+msgstr "아직 /boot/efi가 정의되어 있지 않으므로 /boot는 fat32여야 합니다."
 
 #: cnchi/src/pages/advanced.py:562
 msgid "/boot/efi needs to be fat32."
-msgstr ""
+msgstr "/boot/efi는 fat32여야 합니다."
 
 #: cnchi/src/pages/advanced.py:871
 #, python-format
 msgid "Sorry, you already have {0} primary partitions created."
-msgstr ""
+msgstr "죄송합니다. 이미 {0}개의 기본 파티션이 생성되었습니다."
 
 #: cnchi/src/pages/advanced.py:877
 #, python-format
 msgid "Sorry, you already have {0} primary and 1 extended partitions created."
-msgstr ""
+msgstr "죄송합니다. 이미 기본 파티션 {0}개와 확장 파티션 1개가 생성되었습니다."
 
 #: cnchi/src/pages/advanced.py:1061
 msgid "Advanced Installation Mode"
-msgstr ""
+msgstr "고급 설치 모드"
 
 #: cnchi/src/pages/advanced.py:1065
 msgid "Mount Checklist:"
-msgstr ""
+msgstr "마운트 체크리스트:"
 
 #: cnchi/src/pages/advanced.py:1071
 msgid "Root"
-msgstr ""
+msgstr "뿌리"
 
 #: cnchi/src/pages/advanced.py:1075
 msgid "Boot"
-msgstr ""
+msgstr "신병"
 
 #: cnchi/src/pages/advanced.py:1079
 msgid "EFI"
-msgstr ""
+msgstr "EFI"
 
 #: cnchi/src/pages/advanced.py:1083
 msgid "Swap"
-msgstr ""
+msgstr "교환"
 
 #: cnchi/src/pages/advanced.py:1093
 msgid "Undo"
-msgstr ""
+msgstr "끄르다"
 
 #: cnchi/src/pages/advanced.py:1094
 msgid "New"
-msgstr ""
+msgstr "새로운"
 
 #: cnchi/src/pages/advanced.py:1095
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: cnchi/src/pages/advanced.py:1096
 msgid "Edit..."
-msgstr ""
+msgstr "편집하다..."
 
 #: cnchi/src/pages/advanced.py:1097
 msgid "New partition table"
-msgstr ""
+msgstr "새로운 파티션 테이블"
 
 #: cnchi/src/pages/advanced.py:1182
 msgid ""
@@ -1059,32 +1055,35 @@ msgstr ""
 #: cnchi/src/pages/advanced.py:1243
 #, python-format
 msgid "Couldn't create BIOS GPT Boot partition: {}"
-msgstr ""
+msgstr "BIOS GPT 부팅 파티션을 생성할 수 없습니다: {}"
 
 #: cnchi/src/pages/advanced.py:1420
 #, python-format
 msgid "{0} is already mounted as swap, to continue it will be unmounted."
 msgstr ""
+"{0}은(는) 이미 스왑으로 마운트되었습니다. 계속하려면 마운트 해제됩니다."
 
 #: cnchi/src/pages/advanced.py:1425
 #, python-format
 msgid "{0} is already mounted in {1}, to continue it will be unmounted."
 msgstr ""
+"{0}은(는) 이미 {1}에 마운트되어 있습니다. 계속하려면 마운트 해제됩니다."
 
 #: cnchi/src/pages/advanced.py:1678
 #, python-format
 msgid "Couldn't format LUKS device '{0}' with label '{1}' as '{2}': {3}"
 msgstr ""
+"'{1}' 라벨이 있는 LUKS 장치 '{0}'을(를) '{2}'로 포맷할 수 없습니다: {3}"
 
 #: cnchi/src/pages/advanced.py:1712
 #, python-format
 msgid "Couldn't format partition '{0}' with label '{1}' as '{2}': {3}"
-msgstr ""
+msgstr "레이블이 '{1}'인 파티션 '{0}'을(를) '{2}'로 포맷할 수 없습니다: {3}"
 
 #: cnchi/src/pages/advanced.py:1734
 #, python-format
 msgid "Cannot commit your changes to disk: {0}"
-msgstr ""
+msgstr "변경 사항을 디스크에 커밋할 수 없습니다: {0}"
 
 #: cnchi/src/pages/alongside.py:160
 #, python-format
@@ -1102,15 +1101,15 @@ msgstr ""
 
 #: cnchi/src/pages/alongside.py:223
 msgid "Choose the new size of your installation"
-msgstr ""
+msgstr "새로운 설치 크기를 선택하세요"
 
 #: cnchi/src/pages/alongside.py:227
 msgid "Choose the partition that you want to shrink:"
-msgstr ""
+msgstr "축소하려는 파티션을 선택하십시오."
 
 #: cnchi/src/pages/alongside.py:230
 msgid "Antergos Alongside Installation"
-msgstr ""
+msgstr "설치와 함께 Antergos"
 
 #: cnchi/src/pages/alongside.py:266
 msgid ""
@@ -1120,40 +1119,40 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:143
 msgid "I need help with an Antergos / Windows(tm) dual boot setup!"
-msgstr ""
+msgstr "Antergos / Windows(tm) 듀얼 부팅 설정에 도움이 필요합니다!"
 
 #: cnchi/src/pages/ask.py:260
 msgid " and "
-msgstr ""
+msgstr "그리고"
 
 #: cnchi/src/pages/ask.py:274
 msgid "Installation Type"
-msgstr ""
+msgstr "설치 유형"
 
 #: cnchi/src/pages/ask.py:289
 #, python-format
 msgid "Replace {0} with Antergos"
-msgstr ""
+msgstr "{0}를 Antergos로 교체"
 
 #: cnchi/src/pages/ask.py:291
 msgid "Erase disk and install Antergos"
-msgstr ""
+msgstr "디스크 지우기 및 Antergos 설치"
 
 #: cnchi/src/pages/ask.py:296
 msgid "Warning: This will erase ALL data on your disk."
-msgstr ""
+msgstr "경고: 이렇게 하면 디스크의 모든 데이터가 지워집니다."
 
 #: cnchi/src/pages/ask.py:305
 msgid "Encrypt this installation for increased security."
-msgstr ""
+msgstr "보안 강화를 위해 이 설치를 암호화합니다."
 
 #: cnchi/src/pages/ask.py:313
 msgid "You will be asked to create an encryption password in the next step."
-msgstr ""
+msgstr "다음 단계에서 암호화 비밀번호를 생성하라는 메시지가 표시됩니다."
 
 #: cnchi/src/pages/ask.py:323
 msgid "Use LVM with this installation."
-msgstr ""
+msgstr "이 설치에는 LVM을 사용하십시오."
 
 #: cnchi/src/pages/ask.py:331
 msgid ""
@@ -1163,15 +1162,15 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:341
 msgid "Use ZFS with this installation."
-msgstr ""
+msgstr "이 설치에는 ZFS를 사용하십시오."
 
 #: cnchi/src/pages/ask.py:349
 msgid "This will setup ZFS on your drive(s)."
-msgstr ""
+msgstr "그러면 드라이브에 ZFS가 설정됩니다."
 
 #: cnchi/src/pages/ask.py:358
 msgid "Set your Home in a different partition/volume"
-msgstr ""
+msgstr "집을 다른 파티션/볼륨으로 설정하세요"
 
 #: cnchi/src/pages/ask.py:366
 msgid ""
@@ -1180,23 +1179,23 @@ msgstr ""
 
 #: cnchi/src/pages/ask.py:390 cnchi/src/pages/mirrors.py:422
 msgid "How would you like to proceed?"
-msgstr ""
+msgstr "어떻게 진행하시겠습니까?"
 
 #: cnchi/src/pages/ask.py:403
 msgid "Choose exactly where Antergos should be installed."
-msgstr ""
+msgstr "Antergos를 설치할 위치를 정확히 선택하세요."
 
 #: cnchi/src/pages/ask.py:407
 msgid "Edit partition table and choose mount points."
-msgstr ""
+msgstr "파티션 테이블을 편집하고 마운트 지점을 선택합니다."
 
 #: cnchi/src/pages/automatic.py:89
 msgid "Select drive:"
-msgstr ""
+msgstr "드라이브 선택:"
 
 #: cnchi/src/pages/automatic.py:93
 msgid "WARNING! This will overwrite everything currently on your drive!"
-msgstr ""
+msgstr "경고! 현재 드라이브에 있는 모든 내용을 덮어쓰게 됩니다!"
 
 #: cnchi/src/pages/automatic.py:98
 msgid ""
@@ -1206,42 +1205,42 @@ msgstr ""
 
 #: cnchi/src/pages/automatic.py:103
 msgid "Encryption Password:"
-msgstr ""
+msgstr "암호화 비밀번호:"
 
 #: cnchi/src/pages/automatic.py:107 cnchi/src/pages/user_info.py:188
 msgid "Confirm your password:"
-msgstr ""
+msgstr "비밀번호를 확인하세요:"
 
 #: cnchi/src/pages/automatic.py:111
 msgid "LUKS Password. We do not recommend using special characters or accents!"
-msgstr ""
+msgstr "루크스 비밀번호. 특수 문자나 악센트는 사용하지 않는 것이 좋습니다!"
 
 #: cnchi/src/pages/automatic.py:116
 msgid "Show password"
-msgstr ""
+msgstr "비밀번호 표시"
 
 #: cnchi/src/pages/automatic.py:118
 msgid "Automatic Installation Mode"
-msgstr ""
+msgstr "자동 설치 모드"
 
 #: cnchi/src/pages/automatic.py:234
 #, python-format
 msgid "Device {0} will be created ({1} filesystem) as {2}"
-msgstr ""
+msgstr "{0} 장치가 {2}(으)로 생성됩니다({1} 파일 시스템)."
 
 #: cnchi/src/pages/automatic.py:238
 #, python-format
 msgid "Device {0} will be created ({1} filesystem)"
-msgstr ""
+msgstr "장치 {0}이(가) 생성됩니다({1} 파일 시스템)"
 
 #: cnchi/src/pages/automatic.py:275
 #, c-format
 msgid "Cnchi will install Antergos on device %s"
-msgstr ""
+msgstr "Cnchi는 %s 장치에 Antergos를 설치합니다."
 
 #: cnchi/src/pages/cache.py:66
 msgid "Select cache partition:"
-msgstr ""
+msgstr "캐시 파티션 선택:"
 
 #: cnchi/src/pages/cache.py:70
 msgid ""
@@ -1282,16 +1281,16 @@ msgstr ""
 
 #: cnchi/src/pages/cache.py:87
 msgid "Please, choose now the device (or partition) to use as cache."
-msgstr ""
+msgstr "이제 캐시로 사용할 장치(또는 파티션)를 선택하십시오."
 
 #: cnchi/src/pages/cache.py:92
 msgid "Cache selection (optional)"
-msgstr ""
+msgstr "캐시 선택(선택 사항)"
 
 #: cnchi/src/pages/cache.py:130
 #, python-format
 msgid "Device {} will be fully erased! Are you REALLY sure?"
-msgstr ""
+msgstr "장치 {}이(가) 완전히 지워집니다! 정말로 확신하시나요?"
 
 #: cnchi/src/pages/check.py:82
 msgid "System Check"
@@ -1299,7 +1298,7 @@ msgstr "시스템 검사"
 
 #: cnchi/src/pages/check.py:86
 msgid "Cnchi is up to date"
-msgstr ""
+msgstr "Cnchi가 최신 상태입니다"
 
 #: cnchi/src/pages/check.py:90
 #, python-format
@@ -1334,7 +1333,7 @@ msgstr "가장 좋은 결과를 위해, 이 컴퓨터가 다음을 만족하는�
 
 #: cnchi/src/pages/check.py:129
 msgid "You must reboot before retrying again."
-msgstr ""
+msgstr "다시 시도하기 전에 재부팅해야 합니다."
 
 #: cnchi/src/pages/desktop.py:133
 msgid "Choose Your Desktop"
@@ -1342,15 +1341,15 @@ msgstr "데스크탑 선택"
 
 #: cnchi/src/pages/features.py:277
 msgid "Show advanced features"
-msgstr ""
+msgstr "고급 기능 표시"
 
 #: cnchi/src/pages/features.py:280
 msgid "Feature Selection"
-msgstr ""
+msgstr "기능 선택"
 
 #: cnchi/src/pages/features.py:345
 msgid "Arch User Repository - Disclaimer"
-msgstr ""
+msgstr "아치 사용자 저장소 - 면책조항"
 
 #: cnchi/src/pages/features.py:346
 msgid ""
@@ -1362,7 +1361,7 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:351
 msgid "Uncomplicated Firewall will be installed with these rules:"
-msgstr ""
+msgstr "복잡하지 않은 방화벽은 다음 규칙에 따라 설치됩니다."
 
 #: cnchi/src/pages/features.py:353
 #, python-format
@@ -1375,11 +1374,11 @@ msgstr ""
 
 #: cnchi/src/pages/features.py:383
 msgid "Do you want to install the Nginx server instead of the Apache server?"
-msgstr ""
+msgstr "Apache 서버 대신 Nginx 서버를 설치하시겠습니까?"
 
 #: cnchi/src/pages/keymap.py:87
 msgid "Select Your Keyboard Layout"
-msgstr ""
+msgstr "키보드 레이아웃을 선택하세요"
 
 #: cnchi/src/pages/keymap.py:92
 msgid ""
@@ -1394,21 +1393,21 @@ msgstr ""
 #: cnchi/src/pages/keymap.py:144
 #, c-format
 msgid "Can't match a keymap for country code '%s'"
-msgstr ""
+msgstr "국가 코드 '%s'에 대한 키맵이 일치하지 않습니다."
 
 #: cnchi/src/pages/keymap.py:291
 #, python-format
 msgid "Set keyboard to '{0}' ({1}), variant '{2}' ({3})"
-msgstr ""
+msgstr "키보드를 '{0}'({1}), 변형 '{2}'({3})으로 설정"
 
 #: cnchi/src/pages/keymap.py:298
 #, python-format
 msgid "Set keyboard to '{0}' ({1})"
-msgstr ""
+msgstr "키보드를 '{0}'({1})으로 설정"
 
 #: cnchi/src/pages/language.py:115
 msgid "Notice: The Cnchi Installer is beta software."
-msgstr ""
+msgstr "주의 사항: Cnchi 설치 프로그램은 베타 소프트웨어입니다."
 
 #: cnchi/src/pages/language.py:118
 #, python-format
@@ -1424,7 +1423,7 @@ msgstr ""
 
 #: cnchi/src/pages/language.py:137
 msgid "Choose the Installer language"
-msgstr ""
+msgstr "설치 프로그램 언어 선택"
 
 #: cnchi/src/pages/location.py:90
 msgid ""
@@ -1446,44 +1445,44 @@ msgstr ""
 
 #: cnchi/src/pages/location.py:102
 msgid "Country, territory or area:"
-msgstr ""
+msgstr "국가, 영토 또는 지역:"
 
 #: cnchi/src/pages/location.py:107
 msgid "Show all locations"
-msgstr ""
+msgstr "모든 위치 표시"
 
 #: cnchi/src/pages/location.py:110
 msgid "Select your location"
-msgstr ""
+msgstr "귀하의 위치를 ​​선택하세요"
 
 #: cnchi/src/pages/location.py:310
 #, c-format
 msgid "Can't get country code from %s location"
-msgstr ""
+msgstr "%s 위치에서 국가 코드를 가져올 수 없습니다."
 
 #: cnchi/src/pages/mirrors.py:400
 msgid "Mirrors Selection"
-msgstr ""
+msgstr "거울 선택"
 
 #: cnchi/src/pages/mirrors.py:408
 msgid "Let Cnchi sort the mirrors lists (recommended)"
-msgstr ""
+msgstr "Cnchi가 미러 목록을 정렬하도록 허용(권장)"
 
 #: cnchi/src/pages/mirrors.py:413
 msgid "Leave the mirrors lists as they are (by default)"
-msgstr ""
+msgstr "미러 목록을 그대로 둡니다(기본값)"
 
 #: cnchi/src/pages/mirrors.py:418
 msgid "Let me manage the mirrors lists (advanced)"
-msgstr ""
+msgstr "미러 목록을 관리하겠습니다(고급)"
 
 #: cnchi/src/pages/slides.py:91
 msgid "Please wait..."
-msgstr ""
+msgstr "기다리세요..."
 
 #: cnchi/src/pages/slides.py:93
 msgid "Installing Antergos NeXT..."
-msgstr ""
+msgstr "안테르고스 넥스트(Antergos NeXT) 설치..."
 
 #: cnchi/src/pages/slides.py:238
 msgid ""
@@ -1506,292 +1505,292 @@ msgstr ""
 
 #: cnchi/src/pages/slides.py:275
 msgid "Please reference the following number when reporting this error: "
-msgstr ""
+msgstr "이 오류를 보고할 때 다음 번호를 참조하세요."
 
 #: cnchi/src/pages/summary.py:86
 msgid "Installation Summary"
-msgstr ""
+msgstr "설치 요약"
 
 #: cnchi/src/pages/summary.py:90
 msgid "Location"
-msgstr ""
+msgstr "위치"
 
 #: cnchi/src/pages/summary.py:91
 msgid "Timezone"
-msgstr ""
+msgstr "시간대"
 
 #: cnchi/src/pages/summary.py:92
 msgid "Keyboard"
-msgstr ""
+msgstr "건반"
 
 #: cnchi/src/pages/summary.py:93
 msgid "Desktop Environment"
-msgstr ""
+msgstr "데스크탑 환경"
 
 #: cnchi/src/pages/summary.py:94
 msgid "Features"
-msgstr ""
+msgstr "특징"
 
 #: cnchi/src/pages/summary.py:95
 msgid "Partitions"
-msgstr ""
+msgstr "파티션"
 
 #: cnchi/src/pages/summary.py:119
 #, python-format
 msgid "Layout: {0}"
-msgstr ""
+msgstr "레이아웃: {0}"
 
 #: cnchi/src/pages/summary.py:121
 #, python-format
 msgid "Variant: {0}"
-msgstr ""
+msgstr "변형: {0}"
 
 #: cnchi/src/pages/summary.py:149 cnchi/src/pages/summary.py:156
 msgid "Error getting changes from install screen"
-msgstr ""
+msgstr "설치 화면에서 변경사항을 가져오는 중 오류가 발생했습니다."
 
 #: cnchi/src/pages/summary.py:193
 msgid "Are you REALLY sure you want to continue?"
-msgstr ""
+msgstr "정말 계속하시겠습니까?"
 
 #: cnchi/src/pages/summary.py:221
 msgid "Ranking mirrors"
-msgstr ""
+msgstr "순위 거울"
 
 #: cnchi/src/pages/summary.py:224
 msgid "Cnchi is still updating and optimizing your mirror lists."
-msgstr ""
+msgstr "Cnchi는 계속해서 미러 목록을 업데이트하고 최적화하고 있습니다."
 
 #: cnchi/src/pages/summary.py:227
 msgid "Please be patient..."
-msgstr ""
+msgstr "조금만 기다려주세요..."
 
 #: cnchi/src/pages/timezone.py:95
 msgid "Zone:"
-msgstr ""
+msgstr "존:"
 
 #: cnchi/src/pages/timezone.py:99
 msgid "Region:"
-msgstr ""
+msgstr "지역:"
 
 #: cnchi/src/pages/timezone.py:103
 msgid "Use Network Time Protocol (NTP) for clock synchronization"
-msgstr ""
+msgstr "시계 동기화를 위해 NTP(Network Time Protocol) 사용"
 
 #: cnchi/src/pages/timezone.py:106
 msgid "Select Your Timezone"
-msgstr ""
+msgstr "시간대를 선택하세요"
 
 #: cnchi/src/pages/timezone.py:316
 #, c-format
 msgid "Timezone (latitude %s, longitude %s) detected."
-msgstr ""
+msgstr "시간대(위도 %s, 경도 %s)가 감지되었습니다."
 
 #: cnchi/src/pages/user_info.py:184
 msgid "Your name:"
-msgstr ""
+msgstr "귀하의 이름:"
 
 #: cnchi/src/pages/user_info.py:185
 msgid "Your computer's name:"
-msgstr ""
+msgstr "컴퓨터 이름:"
 
 #: cnchi/src/pages/user_info.py:186
 msgid "Pick a username:"
-msgstr ""
+msgstr "사용자 이름을 선택하세요:"
 
 #: cnchi/src/pages/user_info.py:187
 msgid "Choose a password:"
-msgstr ""
+msgstr "비밀번호를 선택하세요:"
 
 #: cnchi/src/pages/user_info.py:195
 msgid "Identifies your system to other computers and devices."
-msgstr ""
+msgstr "다른 컴퓨터 및 장치에서 시스템을 식별합니다."
 
 #: cnchi/src/pages/user_info.py:200
 msgid "Your name"
-msgstr ""
+msgstr "당신의 이름"
 
 #: cnchi/src/pages/user_info.py:201
 msgid "Hostname"
-msgstr ""
+msgstr "호스트 이름"
 
 #: cnchi/src/pages/user_info.py:202
 msgid "Username"
-msgstr ""
+msgstr "사용자 이름"
 
 #: cnchi/src/pages/user_info.py:203 cnchi/src/pages/zfs.py:326
 msgid "Password"
-msgstr ""
+msgstr "비밀번호"
 
 #: cnchi/src/pages/user_info.py:204
 msgid "Confirm password"
-msgstr ""
+msgstr "비밀번호 확인"
 
 #: cnchi/src/pages/user_info.py:211
 msgid "You must enter a name"
-msgstr ""
+msgstr "이름을 입력해야 합니다."
 
 #: cnchi/src/pages/user_info.py:212
 msgid "You must enter a username"
-msgstr ""
+msgstr "사용자 이름을 입력해야 합니다."
 
 #: cnchi/src/pages/user_info.py:213
 msgid "You must enter a password"
-msgstr ""
+msgstr "비밀번호를 입력해야 합니다."
 
 #: cnchi/src/pages/user_info.py:221
 msgid "Log in automatically"
-msgstr ""
+msgstr "자동으로 로그인"
 
 #: cnchi/src/pages/user_info.py:222
 msgid "Require my password to log in"
-msgstr ""
+msgstr "로그인하려면 비밀번호가 필요합니다"
 
 #: cnchi/src/pages/user_info.py:223
 msgid "Encrypt my home folder"
-msgstr ""
+msgstr "내 홈 폴더 암호화"
 
 #: cnchi/src/pages/user_info.py:226
 msgid "show password"
-msgstr ""
+msgstr "비밀번호 표시"
 
 #: cnchi/src/pages/user_info.py:228
 msgid "Create Your User Account"
-msgstr ""
+msgstr "사용자 계정 만들기"
 
 #: cnchi/src/pages/user_info.py:263
 msgid "Are you sure you want to encrypt your home directory?"
-msgstr ""
+msgstr "홈 디렉토리를 암호화하시겠습니까?"
 
 #: cnchi/src/pages/user_info.py:330
 msgid "Invalid characters entered"
-msgstr ""
+msgstr "잘못된 문자가 입력되었습니다."
 
 #: cnchi/src/pages/user_info.py:332
 msgid "Username can't contain dots"
-msgstr ""
+msgstr "사용자 이름에는 점이 포함될 수 없습니다."
 
 #: cnchi/src/pages/user_info.py:334
 msgid "Too many characters"
-msgstr ""
+msgstr "문자가 너무 많습니다."
 
 #: cnchi/src/pages/user_info.py:336
 msgid "Unknown error"
-msgstr ""
+msgstr "알 수 없는 오류"
 
 #: cnchi/src/pages/welcome.py:103
 msgid "Use Antergos NeXT without making any changes to your system."
-msgstr ""
+msgstr "시스템을 변경하지 않고 Antergos NeXT를 사용하세요."
 
 #: cnchi/src/pages/welcome.py:109
 msgid "Create a permanent place for Antergos NeXT NeXT on your system."
-msgstr ""
+msgstr "시스템에 Antergos NeXT NeXT를 위한 영구적인 장소를 만드세요."
 
 #: cnchi/src/pages/welcome.py:113
 msgid "Try It"
-msgstr ""
+msgstr "시도해 보세요"
 
 #: cnchi/src/pages/welcome.py:119
 msgid "Install It"
-msgstr ""
+msgstr "설치"
 
 #: cnchi/src/pages/welcome.py:122
 msgid "Welcome to Antergos NeXT!"
-msgstr ""
+msgstr "안테르고스 넥스트(Antergos NeXT)에 오신 것을 환영합니다!"
 
 #: cnchi/src/pages/welcome.py:153
 msgid "Loading, please wait..."
-msgstr ""
+msgstr "로드 중입니다. 잠시 기다려 주세요."
 
 #: cnchi/src/pages/wireless.py:68
 msgid "Connecting this computer to a wi-fi network"
-msgstr ""
+msgstr "이 컴퓨터를 Wi-Fi 네트워크에 연결하기"
 
 #: cnchi/src/pages/wireless.py:72
 msgid "I don't want to connect to a wi-fi network right now"
-msgstr ""
+msgstr "지금은 Wi-Fi 네트워크에 연결하고 싶지 않습니다."
 
 #: cnchi/src/pages/wireless.py:75
 msgid "Connect to this network"
-msgstr ""
+msgstr "이 네트워크에 연결"
 
 #: cnchi/src/pages/wireless.py:77 cnchi/src/pages/dialogs/luks_settings.py:130
 msgid "Password:"
-msgstr ""
+msgstr "비밀번호:"
 
 #: cnchi/src/pages/wireless.py:78
 msgid "Display password"
-msgstr ""
+msgstr "비밀번호 표시"
 
 #: cnchi/src/pages/zfs.py:195
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: cnchi/src/pages/zfs.py:204
 msgid "Disk"
-msgstr ""
+msgstr "디스크"
 
 #: cnchi/src/pages/zfs.py:210
 msgid "Size (GB)"
-msgstr ""
+msgstr "크기(GB)"
 
 #: cnchi/src/pages/zfs.py:216 cnchi/src/widgets/partition_treeview.py:78
 msgid "Device"
-msgstr ""
+msgstr "장치"
 
 #: cnchi/src/pages/zfs.py:222
 msgid "Disk ID"
-msgstr ""
+msgstr "디스크 ID"
 
 #: cnchi/src/pages/zfs.py:261
 msgid "ZFS Setup"
-msgstr ""
+msgstr "ZFS 설정"
 
 #: cnchi/src/pages/zfs.py:295
 msgid "Pool type"
-msgstr ""
+msgstr "풀 유형"
 
 #: cnchi/src/pages/zfs.py:309
 msgid "Partition scheme"
-msgstr ""
+msgstr "파티션 구성표"
 
 #: cnchi/src/pages/zfs.py:323
 msgid "Validate password"
-msgstr ""
+msgstr "비밀번호 확인"
 
 #: cnchi/src/pages/zfs.py:329
 msgid "Swap size (MB)"
-msgstr ""
+msgstr "스왑 크기(MB)"
 
 #: cnchi/src/pages/zfs.py:333
 msgid "Encrypt swap"
-msgstr ""
+msgstr "스왑 암호화"
 
 #: cnchi/src/pages/zfs.py:336
 msgid "Encrypt disk"
-msgstr ""
+msgstr "디스크 암호화"
 
 #: cnchi/src/pages/zfs.py:339
 msgid "Pool name"
-msgstr ""
+msgstr "풀 이름"
 
 #: cnchi/src/pages/zfs.py:342
 msgid "Force ZFS 4k block size"
-msgstr ""
+msgstr "ZFS 4k 블록 크기 강제"
 
 #: cnchi/src/pages/zfs.py:364
 msgid "You must select one drive"
-msgstr ""
+msgstr "드라이브를 하나 선택해야 합니다."
 
 #: cnchi/src/pages/zfs.py:369
 #, python-format
 msgid "For the {0} pool_type, you must select at least two drives"
-msgstr ""
+msgstr "{0} pool_type의 경우 드라이브를 2개 이상 선택해야 합니다."
 
 #: cnchi/src/pages/zfs.py:384
 #, python-format
 msgid "You must select at least {0} drives"
-msgstr ""
+msgstr "드라이브를 {0}개 이상 선택해야 합니다."
 
 #: cnchi/src/pages/zfs.py:389
 #, python-format
@@ -1803,11 +1802,11 @@ msgstr ""
 
 #: cnchi/src/pages/zfs.py:399
 msgid "An unknown error occurred while processing chosen ZFS options."
-msgstr ""
+msgstr "선택한 ZFS 옵션을 처리하는 동안 알 수 없는 오류가 발생했습니다."
 
 #: cnchi/src/pages/zfs.py:419
 msgid "'None' pool will use ZFS on a single selected disk."
-msgstr ""
+msgstr "'없음' 풀은 선택된 단일 디스크에서 ZFS를 사용합니다."
 
 #: cnchi/src/pages/zfs.py:421
 msgid ""
@@ -1847,16 +1846,16 @@ msgstr ""
 #: cnchi/src/pages/zfs.py:563
 #, python-format
 msgid "Create {0} on device {1}"
-msgstr ""
+msgstr "{1} 기기에 {0} 생성"
 
 #: cnchi/src/pages/zfs.py:567
 #, python-format
 msgid "Add device {0} to {1}"
-msgstr ""
+msgstr "{1}에 기기 {0} 추가"
 
 #: cnchi/src/pages/zfs.py:1133
 msgid "No devices were selected for the ZFS pool"
-msgstr ""
+msgstr "ZFS 풀에 대해 선택된 장치가 없습니다."
 
 #: cnchi/src/pages/zfs.py:1160
 msgid ""
@@ -1870,202 +1869,202 @@ msgstr ""
 #: cnchi/src/pages/dialogs/luks_settings.py:108
 #: cnchi/src/pages/dialogs/partition_base.py:90
 msgid "_Cancel"
-msgstr ""
+msgstr "_취소"
 
 #: cnchi/src/pages/dialogs/changelist.py:70
 #: cnchi/src/pages/dialogs/luks_settings.py:109
 #: cnchi/src/pages/dialogs/partition_base.py:91
 msgid "_Apply"
-msgstr ""
+msgstr "_적용하다"
 
 #: cnchi/src/pages/dialogs/create_partition.py:135
 msgid "Create partition"
-msgstr ""
+msgstr "파티션 생성"
 
 #: cnchi/src/pages/dialogs/create_table.py:73
 msgid "Create Partition Table"
-msgstr ""
+msgstr "파티션 테이블 생성"
 
 #: cnchi/src/pages/dialogs/edit_partition.py:64
 msgid "Edit partition"
-msgstr ""
+msgstr "파티션 편집"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:84
 msgid "Using LUKS encryption will DELETE all partition contents!"
-msgstr ""
+msgstr "LUKS 암호화를 사용하면 모든 파티션 내용이 삭제됩니다!"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:125
 msgid "Encryption properties"
-msgstr ""
+msgstr "암호화 속성"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:128
 msgid "Use LUKS encryption:"
-msgstr ""
+msgstr "LUKS 암호화 사용:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:129
 msgid "LUKS volume name:"
-msgstr ""
+msgstr "LUKS 볼륨 이름:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:131
 msgid "Confirm password:"
-msgstr ""
+msgstr "비밀번호 확인:"
 
 #: cnchi/src/pages/dialogs/luks_settings.py:201
 msgid "LUKS passwords do not match! Encryption NOT enabled."
-msgstr ""
+msgstr "LUKS 비밀번호가 일치하지 않습니다! 암호화가 활성화되지 않았습니다."
 
 #: cnchi/src/pages/dialogs/luks_settings.py:205
 msgid "Volume name and password are mandatory! Encryption NOT enabled."
-msgstr ""
+msgstr "볼륨 이름과 비밀번호는 필수입니다! 암호화가 활성화되지 않았습니다."
 
 #: cnchi/src/pages/dialogs/partition_base.py:226
 msgid "Location:"
-msgstr ""
+msgstr "위치:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:227
 msgid "Size:"
-msgstr ""
+msgstr "크기:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:228
 msgid "Type:"
-msgstr ""
+msgstr "유형:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:229
 msgid "Primary"
-msgstr ""
+msgstr "주요한"
 
 #: cnchi/src/pages/dialogs/partition_base.py:230
 msgid "Logical"
-msgstr ""
+msgstr "논리적"
 
 #: cnchi/src/pages/dialogs/partition_base.py:231
 msgid "Extended"
-msgstr ""
+msgstr "펼친"
 
 #: cnchi/src/pages/dialogs/partition_base.py:232
 msgid "Beginning of this space"
-msgstr ""
+msgstr "이 공간의 시작"
 
 #: cnchi/src/pages/dialogs/partition_base.py:233
 msgid "End of this space"
-msgstr ""
+msgstr "이 공간의 끝"
 
 #: cnchi/src/pages/dialogs/partition_base.py:234
 msgid "Use As:"
-msgstr ""
+msgstr "다음으로 사용:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:235
 msgid "Mount Point:"
-msgstr ""
+msgstr "마운트 지점:"
 
 #: cnchi/src/pages/dialogs/partition_base.py:236
 msgid "Label (optional):"
-msgstr ""
+msgstr "라벨(선택사항):"
 
 #: cnchi/src/pages/dialogs/partition_base.py:237
 msgid "Format:"
-msgstr ""
+msgstr "체재:"
 
 #: cnchi/src/widgets/partition_treeview.py:82
 msgid "Type"
-msgstr ""
+msgstr "유형"
 
 #: cnchi/src/widgets/partition_treeview.py:86
 msgid "Mount point"
-msgstr ""
+msgstr "마운트 포인트"
 
 #: cnchi/src/widgets/partition_treeview.py:90
 msgid "Label"
-msgstr ""
+msgstr "상표"
 
 #: cnchi/src/widgets/partition_treeview.py:97
 msgid "Format"
-msgstr ""
+msgstr "체재"
 
 #: cnchi/src/widgets/partition_treeview.py:105
 msgid "Size"
-msgstr ""
+msgstr "크기"
 
 #: cnchi/src/widgets/partition_treeview.py:109
 msgid "Used"
-msgstr ""
+msgstr "사용된"
 
 #: cnchi/src/widgets/partition_treeview.py:113
 msgid "Flags"
-msgstr ""
+msgstr "플래그"
 
 #: cnchi/src/widgets/partition_treeview.py:120
 msgid "SSD"
-msgstr ""
+msgstr "SSD"
 
 #: cnchi/src/parted3/fs_module.py:172
 #, python-format
 msgid "Can't label a {0} partition"
-msgstr ""
+msgstr "{0} 파티션에 라벨을 지정할 수 없습니다."
 
 #: cnchi/src/parted3/fs_module.py:194
 #, python-format
 msgid "Cannot make a filesystem of type None in partition {0}"
-msgstr ""
+msgstr "{0} 파티션에 None 유형의 파일 시스템을 만들 수 없습니다."
 
 #: cnchi/src/parted3/fs_module.py:216
 #, python-format
 msgid "Unknown filesystem {0} for partition {1}"
-msgstr ""
+msgstr "파티션 {1}의 알 수 없는 파일 시스템 {0}"
 
 #: cnchi/src/parted3/lvm.py:93
 #, python-format
 msgid "Can't remove logical volume {0}"
-msgstr ""
+msgstr "논리 볼륨 {0}을(를) 제거할 수 없습니다"
 
 #: cnchi/src/parted3/lvm.py:112
 #, python-format
 msgid "Can't remove volume group {0}"
-msgstr ""
+msgstr "볼륨 그룹 {0}을(를) 제거할 수 없습니다"
 
 #: cnchi/src/parted3/lvm.py:125
 #, python-format
 msgid "Can't remove physical volume {0}"
-msgstr ""
+msgstr "물리적 볼륨 {0}을(를) 제거할 수 없습니다"
 
 #: cnchi/src/parted3/partition_module.py:260
 msgid "Partition is too large!"
-msgstr ""
+msgstr "파티션이 너무 큽니다!"
 
 #: cnchi/src/parted3/partition_module.py:329
 #, python-format
 msgid "Can't detect used space from {0}: {1}"
-msgstr ""
+msgstr "{0}: {1}에서 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/src/parted3/used_space.py:55
 #, c-format
 msgid "Can't detect used space of NTFS partition %s"
-msgstr ""
+msgstr "NTFS 파티션 %s의 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/src/parted3/used_space.py:81
 #, c-format
 msgid "Can't detect used space of EXTFS partition %s"
-msgstr ""
+msgstr "EXTFS 파티션 %s의 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/src/parted3/used_space.py:110
 #, c-format
 msgid "Can't detect used space of FAT partition %s : %s"
-msgstr ""
+msgstr "FAT 파티션 %s의 사용된 공간을 감지할 수 없습니다: %s"
 
 #: cnchi/src/parted3/used_space.py:143
 #, c-format
 msgid "Can't detect used space of JFS partition %s"
-msgstr ""
+msgstr "JFS 파티션 %s의 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/src/parted3/used_space.py:170
 #, c-format
 msgid "Can't detect used space of REISERFS partition %s"
-msgstr ""
+msgstr "REISERFS 파티션 %s의 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/src/parted3/used_space.py:243
 #, c-format
 msgid "Can't detect used space of XFS partition %s"
-msgstr ""
+msgstr "XFS 파티션 %s의 사용된 공간을 감지할 수 없습니다."
 
 #: cnchi/utils/pygettext.py:24
 msgid ""
@@ -2226,52 +2225,60 @@ msgstr ""
 
 #: cnchi/utils/pygettext.py:416
 msgid "*** %(file)s:%(lineno)s: Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** %(file)s:%(lineno)s: 예상치 못한 토큰 \"%(token)s\"이 표시됨"
 
 #: cnchi/utils/pygettext.py:463
 msgid "# File: %(filename)s, line: %(lineno)d"
-msgstr ""
+msgstr "# 파일: %(filename)s, 줄: %(lineno)d"
 
 #: cnchi/utils/pygettext.py:470
 msgid " %(filename)s:%(lineno)d"
-msgstr ""
+msgstr "%(파일 이름)s:%(lineno)d"
 
 #: cnchi/utils/pygettext.py:539
 #, c-format
 msgid "Invalid value for --style: %s"
-msgstr ""
+msgstr "--style에 대한 값이 잘못되었습니다: %s"
 
 #: cnchi/utils/pygettext.py:547
 #, c-format
 msgid "pygettext.py (xgettext for Python) %s"
-msgstr ""
+msgstr "pygettext.py(Python용 xgettext) %s"
 
 #: cnchi/utils/pygettext.py:553
 #, c-format
 msgid "--width argument must be an integer: %s"
-msgstr ""
+msgstr "--width 인수는 정수여야 합니다: %s"
 
 #: cnchi/utils/pygettext.py:580
 #, c-format
 msgid "Can't read --exclude-file: %s"
-msgstr ""
+msgstr "--exclude-file: %s을(를) 읽을 수 없습니다."
 
 #: cnchi/utils/pygettext.py:599
 msgid "Reading standard input"
-msgstr ""
+msgstr "표준 입력 읽기"
 
 #: cnchi/utils/pygettext.py:604
 #, c-format
 msgid "Working on %s"
-msgstr ""
+msgstr "%s에서 작업 중"
 
 #: cnchi/utils/pygettext.py:640
 msgid "*** Seen unexpected token \"%(token)s\""
-msgstr ""
+msgstr "*** 예상치 못한 토큰 \"%(token)s\"이(가) 표시되었습니다."
 
 #: cnchi/utils/pygettext.py:641
 msgid "morethanonestring"
-msgstr ""
+msgstr "morethanonestring"
+
+msgid "Graphical Installer"
+msgstr "그래픽 설치 프로그램"
+
+
+
+msgid "The live environment's locales does not have your language. The fallback is currently in English. If you cannot navigate and do not know English, I suggest Google Lens."
+msgstr "라이브 환경의 로케일에 귀하의 언어가 없습니다. 폴백은 현재 영어로 되어 있습니다. 길을 찾을 수 없고 영어를 모른다면 Google Lens를 추천합니다."
 
 #~ msgid "Unknown partition id %s"
 #~ msgstr "알 수 없는 파티션 id %s"

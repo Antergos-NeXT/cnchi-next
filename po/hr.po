@@ -2325,6 +2325,10 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "We have Internet connection."
 #~ msgstr "Imamo internet vezu."
 

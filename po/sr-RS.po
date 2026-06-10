@@ -2275,5 +2275,9 @@ msgstr ""
 msgid "morethanonestring"
 msgstr ""
 
+
+msgid "Graphical Installer"
+msgstr ""
+
 #~ msgid "location changed to : %s"
 #~ msgstr "локација промењена на: %s"
