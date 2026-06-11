@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ ALPM constants from /usr/include/alpm.h """
 
 # Dependencies will be computed for a package.

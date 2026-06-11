@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Detects installed OSes (needs root privileges)"""
 
 import os
@@ -69,7 +68,6 @@ OS_RELEASE_PATHS = ["usr/lib/os-release", "etc/os-release"]
 
 UNKNOWN = "unknown"
 
-
 def _check_windows(mount_name):
     """ Checks for a Microsoft Windows installed """
 
@@ -91,7 +89,6 @@ def _check_windows(mount_name):
 
     return detected_os
 
-
 def _search_for_marks(path, marks):
     """ Search for specific string (mark) in path file """
     if os.path.exists(path):
@@ -111,7 +108,6 @@ def _check_vista(system_path):
             return True
     return False
 
-
 def _check_win7(system_path):
     """ Searches for Windows 7 """
     for name in WINLOAD_NAMES:
@@ -119,7 +115,6 @@ def _check_win7(system_path):
         if _search_for_marks(path, SEVEN_MARKS):
             return True
     return False
-
 
 def _check_winxp(system_path):
     """ Searches for Windows XP """
@@ -129,14 +124,12 @@ def _check_winxp(system_path):
             return True
     return False
 
-
 @misc.raise_privileges
 def _hexdump8081(partition):
     """ Runs hexdump on partition to try to identify the boot sector """
     cmd = ["/usr/bin/hexdump", "-v", "-n", "2", "-s", "0x80", "-e", '2/1 "%02x"', partition]
     hexdump = call(cmd)
     return hexdump
-
 
 def _get_partition_info(partition):
     """ Get bytes 0x80-0x81 of VBR to identify Boot sectors. """
@@ -170,7 +163,6 @@ def _get_partition_info(partition):
         logging.debug("Unknown partition id %s", bytes80_to_81)
     return UNKNOWN
 
-
 def _check_reactos(mount_name):
     """ Checks for ReactOS """
     detected_os = UNKNOWN
@@ -178,7 +170,6 @@ def _check_reactos(mount_name):
     if os.path.exists(path):
         detected_os = "ReactOS"
     return detected_os
-
 
 def _check_dos(mount_name):
     """ Checks for DOS and W9x """
@@ -195,7 +186,6 @@ def _check_dos(mount_name):
                 if mark in system_file:
                     detected_os = mark
     return detected_os
-
 
 def _check_linux(mount_name):
     """ Checks for linux """
@@ -246,7 +236,6 @@ def _check_linux(mount_name):
             detected_os = text
     return detected_os
 
-
 def _get_os(mount_name):
     """ Detect installed OSes """
     #  If partition is mounted, try to identify the Operating System
@@ -264,7 +253,6 @@ def _get_os(mount_name):
         detected_os = _check_dos(mount_name)
 
     return detected_os
-
 
 def get_os_dict():
     """ Returns all detected OSes in a dict """
@@ -294,7 +282,6 @@ def get_os_dict():
 
     return oses
 
-
 def windows_startup_folder(mount_path):
     """ Returns windows startup folder """
     locations = [
@@ -311,7 +298,6 @@ def windows_startup_folder(mount_path):
         if os.path.exists(path):
             return path
     return ''
-
 
 if __name__ == '__main__':
     print(get_os_dict())

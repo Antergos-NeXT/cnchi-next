@@ -29,10 +29,9 @@
 """ Web View """
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 gi.require_version('WebKit2', '4.1')
 from gi.repository import Gtk, GLib, WebKit2
-
 
 class BrowserWindow(Gtk.Window):
     """ Shows a browser window showing passed url """
@@ -43,9 +42,9 @@ class BrowserWindow(Gtk.Window):
 
         self.set_resizable(False)
         scrolled_window = Gtk.ScrolledWindow()
-        self.add(scrolled_window)
+        self.set_child(scrolled_window)
 
-        self.connect('delete-event', self.on_destroy)
+        self.connect('close-request', self.on_destroy)
 
         # https://lazka.github.io/pgi-docs/WebKit2-4.1/classes/Settings.html
         settings = WebKit2.Settings().new()
@@ -54,7 +53,7 @@ class BrowserWindow(Gtk.Window):
         self.webview.connect('decide-policy', self.decide_policy_cb)
         self.webview.connect('load_changed', self.load_changed_cb)
 
-        scrolled_window.add(self.webview)
+        scrolled_window.set_child(self.webview)
 
     def on_destroy(self, _event, _data):
         """ Destroys window """
@@ -66,9 +65,7 @@ class BrowserWindow(Gtk.Window):
         return True
 
     def load_changed_cb(self, webview, load_event):
-        """ Show browser window when url is loaded """
-        if load_event == WebKit2.LoadEvent.FINISHED:
-            self.show_all()
+        pass
 
     def load_url(self, url):
         """ Load url """

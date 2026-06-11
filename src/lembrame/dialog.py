@@ -30,17 +30,15 @@
 
 import gi
 
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 import os
 
 from lembrame.credentials import LembrameCredentials
 
-
 def _(msg):
     return msg
-
 
 class LembrameDialog(Gtk.Dialog):
     """ Asks user for lembrame credentials """
@@ -62,7 +60,7 @@ class LembrameDialog(Gtk.Dialog):
 
         dialog_grid = self.gui.get_object("LembrameDialogGrid")
         content_area = self.get_content_area()
-        content_area.add(dialog_grid)
+        content_area.append(dialog_grid)
 
     def translate_ui(self):
         """ Translate GUI widgets """

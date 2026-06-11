@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Get partition used space """
 
 import subprocess
@@ -41,7 +40,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 @misc.raise_privileges
 def get_used_ntfs(part):
@@ -68,7 +66,6 @@ def get_used_ntfs(part):
         used = (vsize - fsize) / vsize
     return used
 
-
 @misc.raise_privileges
 def get_used_ext(part):
     """ Gets used space in an ext4 partition """
@@ -93,7 +90,6 @@ def get_used_ext(part):
                 fsize = int(line.split(':')[-1].strip())
         used = (vsize - fsize) / vsize
     return used
-
 
 @misc.raise_privileges
 def get_used_fat(part):
@@ -130,7 +126,6 @@ def get_used_fat(part):
 
     return used
 
-
 @misc.raise_privileges
 def get_used_jfs(part):
     """ Gets used space in a JFS partition """
@@ -156,7 +151,6 @@ def get_used_jfs(part):
         used = (vsize - fsize) / vsize
 
     return used
-
 
 @misc.raise_privileges
 def get_used_reiser(part):
@@ -186,7 +180,6 @@ def get_used_reiser(part):
         used = (vsize - fsize) / vsize
 
     return used
-
 
 @misc.raise_privileges
 def get_used_btrfs(part, show_error=True):
@@ -229,7 +222,6 @@ def get_used_btrfs(part, show_error=True):
 
     return used
 
-
 @misc.raise_privileges
 def get_used_xfs(part):
     """ Gets used space in a XFS partition """
@@ -257,14 +249,12 @@ def get_used_xfs(part):
 
     return used
 
-
 @misc.raise_privileges
 def get_used_f2fs(part):
     """ Get f2fs partition used space """
     # TODO: Use a f2fs installation to check the output format when getting part info.
     used = 0
     return used
-
 
 def is_btrfs(part):
     """ Checks if part is a Btrfs partition """
@@ -273,7 +263,6 @@ def is_btrfs(part):
         return False
     else:
         return True
-
 
 def get_used_space(part, part_type):
     """ Get used space in a partition """

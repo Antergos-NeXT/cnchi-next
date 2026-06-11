@@ -46,14 +46,11 @@ except NameError as err:
     def _(message):
         return message
 
-
 DEST_DIR = "/install"
-
 
 def is_int(num):
     """ Checks if num is an integer """
     return isinstance(num, int)
-
 
 class InstallationZFS(GtkBaseBox):
     """ ZFS installation screen class """
@@ -372,7 +369,6 @@ class InstallationZFS(GtkBaseBox):
 
         self.translate_ui()
         self.zfs_treeview.fill_device_list()
-        self.show_all()
         self.fill_bootloader_entry()
         self.forward_button.set_sensitive(self.check_pool_type())
 

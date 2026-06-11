@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Interacts with pyparted """
 
 import subprocess
@@ -78,7 +77,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 @misc.raise_privileges
 def get_devices():
@@ -136,13 +134,11 @@ def get_devices():
 
     return disk_dic
 
-
 def make_new_disk(dev_path, new_type):
     """ Make a new disk """
     new_dev = parted.Device(dev_path)
     new_disk = parted.freshDisk(new_dev, new_type)
     return new_disk
-
 
 @misc.raise_privileges
 def get_partitions(diskob):
@@ -195,7 +191,6 @@ def get_partitions(diskob):
 
     return part_dic
 
-
 @misc.raise_privileges
 def delete_partition(diskob, part):
     """ Remove partition from disk object """
@@ -207,7 +202,6 @@ def delete_partition(diskob, part):
         logging.error(message)
         show.error(None, message)
 
-
 def get_partition_size(diskob, part):
     """ Get disk object's partition size """
     dev = diskob.device
@@ -216,7 +210,6 @@ def get_partition_size(diskob, part):
     return mbs
 
 # length : geometry length
-
 
 def get_size_txt(length, sector_size):
     """ Get size string """
@@ -232,7 +225,6 @@ def get_size_txt(length, sector_size):
         size_txt = "%dG" % size
 
     return size_txt
-
 
 @misc.raise_privileges
 def create_partition(diskob, part_type, geom):
@@ -268,7 +260,6 @@ def create_partition(diskob, part_type, geom):
         diskob.addPartition(partition=npartition, constraint=nconstraint)
         return npartition
 
-
 def geom_builder(diskob, first_sector, last_sector, size_in_mbytes,
                  beginning=True):
     """ Helper function to calculate geometry.
@@ -303,7 +294,6 @@ def geom_builder(diskob, first_sector, last_sector, size_in_mbytes,
     ngeom = parted.Geometry(device=dev, start=start_sector, end=end_sector)
     return ngeom
 
-
 def check_mounted(part):
     """" Simple check to see if partition is mounted (or busy) """
     if part.busy:
@@ -311,11 +301,9 @@ def check_mounted(part):
     else:
         return 0
 
-
 def get_used_space(part):
     """ Get partition used space """
     return get_used_space_from_path(part.path)
-
 
 def get_used_space_from_path(path):
     """ Get partition used space """
@@ -334,7 +322,6 @@ def get_used_space_from_path(path):
 
     return used_space
 
-
 def get_largest_size(diskob, part):
     """ Call this to set the initial size of new partition in frontend, but also
     the MAX to which user may enter. """
@@ -347,7 +334,6 @@ def get_largest_size(diskob, part):
 # Second arg is either None if successful
 # or exception if failure
 
-
 def set_flag(flagno, part):
     """ Set partition flag """
     ret = (0, None)
@@ -356,7 +342,6 @@ def set_flag(flagno, part):
     except Exception as ex:
         ret = (1, ex)
     return ret
-
 
 def unset_flag(flagno, part):
     """ Remove partition flag """
@@ -367,16 +352,13 @@ def unset_flag(flagno, part):
         ret = (1, ex)
     return ret
 
-
 def get_flags(part):
     """ Get partition flags """
     return part.getFlagsAsString
 
-
 def get_flag(part, flag):
     """ Get partition flag """
     return part.getFlag(flag)
-
 
 @misc.raise_privileges
 def finalize_changes(diskob):
@@ -386,7 +368,6 @@ def finalize_changes(diskob):
     except parted._ped.IOException as io_error:
         logging.error(str(io_error))
         raise IOError(str(io_error))
-
 
 def order_partitions(partdic):
     """ Pass the result of get_partitions here and it will return list
@@ -400,7 +381,6 @@ def order_partitions(partdic):
 # To expand a partition:
 # 1. Expand partition
 # 2. Expand fs (resize)
-
 
 @misc.raise_privileges
 def split_partition(device_path, partition_path, new_size_in_mb):
@@ -449,7 +429,6 @@ def split_partition(device_path, partition_path, new_size_in_mb):
     create_partition(disk, 0, my_geometry)
 
     finalize_changes(disk)
-
 
 def example():
     """ Usage example """

@@ -31,7 +31,7 @@
 import os
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GdkPixbuf
 
 # When testing, no _() is available
@@ -40,7 +40,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class Avatars(Gtk.Dialog):
     """ Avatar chooser dialog """
@@ -55,8 +54,7 @@ class Avatars(Gtk.Dialog):
         self.set_modal(True)
         self.set_decorated(False)
         self.set_title(_("Choose your avatar"))
-
-        self.set_border_width(3)
+# self.set_border_width(3)  # GTK4: use CSS
         self.set_default_size(-1, -1)
         self.set_resizable(False)
 
@@ -77,7 +75,7 @@ class Avatars(Gtk.Dialog):
         iconview.connect("item-activated", self.avatar_selected)
 
         area = self.get_content_area()
-        area.add(iconview)
+        area.append(iconview)
 
         image = Gtk.Image()
 
@@ -90,7 +88,6 @@ class Avatars(Gtk.Dialog):
                 Avatars.AVATAR_HEIGHT,
                 GdkPixbuf.InterpType.BILINEAR)
             self.list_store.append([avatar, new_pixbuf])
-        self.show_all()
 
     def avatar_selected(self, _iconview, treepath):
         """ Store selected avatar """
@@ -101,7 +98,6 @@ def test_module():
     """ Test avatar dialog """
     data_path = "/usr/share/cnchi/data"
     window = Avatars(data_path)
-    window.show_all()
     Gtk.main()
 
 if __name__ == "__main__":

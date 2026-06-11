@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Cache selection screen """
 
 import logging
@@ -36,7 +35,7 @@ import subprocess
 import parted
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 import misc.extra as misc
@@ -115,7 +114,6 @@ class Cache(GtkBaseBox):
         self.translate_ui()
         self.populate_devices_and_partitions()
         self.umount_cache()
-        self.show_all()
 
     def prepare_whole_device(self, device_path):
         """ Function that deletes device and creates a partition

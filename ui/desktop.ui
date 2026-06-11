@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <requires lib="gtk+" version="3.18"/>
+    <requires lib="gtk" version="4.0"/>
     <object class="GtkBox" id="desktop">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -12,7 +12,6 @@
                 <property name="width_request">180</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="shadow_type">in</property>
                 <property name="hexpand">False</property>
                 <property name="vexpand">True</property>
                 <child>
@@ -21,13 +20,12 @@
                         <property name="can_focus">True</property>
                     </object>
                 </child>
-            </object>
-            <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-            </packing>
-        </child>
+            <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkBox" id="box1">
                 <property name="visible">True</property>
@@ -42,13 +40,12 @@
                         <property name="valign">center</property>
                         <property name="hexpand">True</property>
                         <property name="vexpand">True</property>
-                    </object>
-                    <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                    </packing>
-                </child>
+                    <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkLabel" id="desktop_info">
                         <property name="visible">True</property>
@@ -59,19 +56,17 @@
                         <property name="halign">start</property>
                         <property name="justify">fill</property>
                         <property name="margin_top">5</property>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                    </packing>
-                </child>
-            </object>
-            <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-            </packing>
-        </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
+            <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
     </object>
 </interface>

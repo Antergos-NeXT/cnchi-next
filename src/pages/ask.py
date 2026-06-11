@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Asks which type of installation the user wants to perform """
 
 import os
@@ -34,13 +33,16 @@ import logging
 import subprocess
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 import bootinfo
 from pages.gtkbasebox import GtkBaseBox
 import misc.extra as misc
-from browser_window import BrowserWindow
+try:
+    from browser_window import BrowserWindow
+except ImportError:
+    BrowserWindow = None
 
 # When testing, no _() is available
 try:
@@ -48,7 +50,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 def check_alongside_disk_layout():
     """ Alongside can only work if user has followed the recommended
@@ -79,7 +80,6 @@ def check_alongside_disk_layout():
 
     return False
 
-
 def load_zfs():
     """ Load ZFS kernel module """
     cmd = ["modprobe", "zfs"]
@@ -92,7 +92,6 @@ def load_zfs():
         logging.warning("%s", error_msg)
         return False
     return True
-
 
 class InstallationAsk(GtkBaseBox):
     """ Asks user which type of installation wants to perform """
@@ -146,7 +145,8 @@ class InstallationAsk(GtkBaseBox):
         btn.connect(
             'clicked', self.alongside_wiki_button_clicked)
         ask_box = self.gui.get_object("ask")
-        ask_box.pack_start(btn, True, False, 0)
+        ask_box.append(btn)
+        btn.set_vexpand(True)
 
         self.browser = None
 
@@ -229,7 +229,6 @@ class InstallationAsk(GtkBaseBox):
             widget.set_active(setting_value)
 
         self.translate_ui()
-        self.show_all()
 
         if not self.settings.get('enable_alongside'):
             self.hide_option("alongside")
@@ -513,7 +512,6 @@ class InstallationAsk(GtkBaseBox):
         if widget.get_active():
             self.next_page = "installation_advanced"
             self.enable_automatic_options(False)
-
 
 if __name__ == '__main__':
     from test_screen import _, run

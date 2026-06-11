@@ -27,7 +27,6 @@
 
 import os
 
-
 def _resolve_link_root(root, path):
     """Helper for realpath_root. See posixpath._resolve_link."""
     paths_seen = set()
@@ -46,7 +45,6 @@ def _resolve_link_root(root, path):
             path = os.path.normpath(resolved)
         fullpath = os.path.join(root, path[1:])
     return path
-
 
 def _realpath_root_recurse(root, filename):
     """Helper for realpath_root."""
@@ -68,7 +66,6 @@ def _realpath_root_recurse(root, filename):
 
     return os.path.abspath(filename)
 
-
 def realpath_root(root, filename):
     """Like os.path.realpath, but resolved relative to root.
     filename must be absolute."""
@@ -76,7 +73,6 @@ def realpath_root(root, filename):
     if chrooted_filename.startswith('/'):
         chrooted_filename = chrooted_filename[1:]
     return os.path.join(root, chrooted_filename)
-
 
 def find_on_path_root(root, command):
     """Is command on the executable search path relative to root?"""
@@ -91,7 +87,6 @@ def find_on_path_root(root, command):
             return True
     return False
 
-
 def find_on_path(command):
     """Is command on the executable search path?"""
     if 'PATH' not in os.environ:
@@ -105,14 +100,12 @@ def find_on_path(command):
             return True
     return False
 
-
 def unlink_force(path):
     """Unlink path, without worrying about whether it exists."""
     try:
         os.unlink(path)
     except OSError:
         pass
-
 
 def glob_root(root, pathname):
     """Like glob.iglob, but resolved relative to root.

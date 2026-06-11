@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Features information """
 
 ICON_NAMES = {
@@ -53,17 +52,14 @@ ICON_NAMES = {
 As each desktop has its own features, these are listed
 in desktop_info module instead of here. """
 
-
 ADVANCED = [
     'aur', 'firefox', 'vivaldi', 'firewall', 'flash', 'graphic_drivers',
     'lamp', 'lts', 'sshd', 'visual']
 """ list: These features are considered 'advanced' so it won't be shown by default """
 
-
 def _(message):
     """ See http://docs.python.org/2/library/gettext.html "22.1.3.4. Deferred translations" """
     return message
-
 
 TITLES = {
     'a11y': _("Adds accessibility packages"),

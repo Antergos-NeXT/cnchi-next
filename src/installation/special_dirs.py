@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Mount / Unmount /dev et al. Used in the installation process """
 
 import logging
@@ -41,7 +40,6 @@ except NameError as err:
         return message
 
 _SPECIAL_DIRS_MOUNTED = False
-
 
 def _get_mounts():
     """ Gets all mount parameters for each mount """
@@ -64,7 +62,6 @@ def _get_mounts():
         mounts.append(("efivarfs", efi_dir, "efivarfs", "nosuid,noexec,nodev"))
 
     return mounts
-
 
 def mount(dest_dir):
     """ Mount special directories for our chroot """
@@ -96,7 +93,6 @@ def mount(dest_dir):
                 process_error.output)
 
     _SPECIAL_DIRS_MOUNTED = True
-
 
 def umount(dest_dir):
     """ Umount special directories for our chroot """

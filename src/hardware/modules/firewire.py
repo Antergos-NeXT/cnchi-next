@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Firewire driver installation """
 
 try:
@@ -38,7 +37,6 @@ CLASS_NAME = "Firewire"
 CLASS_ID = ""
 VENDOR_ID = "0x1180"
 DEVICES = ['0x0832']
-
 
 class Firewire(Hardware):
     """ Firewire support """

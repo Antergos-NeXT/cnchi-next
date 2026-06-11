@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.18.3 -->
 <interface>
-    <requires lib="gtk+" version="3.18"/>
+    <requires lib="gtk" version="4.0"/>
     <object class="GtkBox" id="cache">
         <property name="can_focus">False</property>
         <property name="margin_start">10</property>
@@ -25,51 +25,47 @@
                         <property name="pixel_size">48</property>
                         <property name="icon_name">dialog-warning</property>
                         <property name="icon_size">6</property>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                    </packing>
-                </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkLabel" id="text_info">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="halign">center</property>
-                        <property name="label" translatable="yes"></property>
+                        <property name="label" translatable="yes"/>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                    </packing>
-                </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-            </packing>
-        </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkLabel" id="info_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="halign">center</property>
-                <property name="label" translatable="yes"></property>
+                <property name="label" translatable="yes"/>
                 <property name="use_markup">True</property>
                 <property name="wrap">True</property>
                 <property name="justify">left</property>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkBox" id="box2">
                 <property name="visible">True</property>
@@ -82,32 +78,29 @@
                         <property name="can_focus">False</property>
                         <property name="halign">end</property>
                         <property name="label" translatable="yes">Select drive:</property>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                    </packing>
-                </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkComboBoxText" id="select_part">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="halign">start</property>
-                        <signal name="changed" handler="select_part_changed" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                    </packing>
-                </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-            </packing>
-        </child>
+                        
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
     </object>
 </interface>

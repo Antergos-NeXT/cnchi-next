@@ -34,7 +34,6 @@ import os
 from installation import wrapper
 from misc.run_cmd import call, popen
 
-
 def close_antergos_next_devices():
     """ Close LUKS devices (they may have been left open because of a previous
     failed installation) """
@@ -47,7 +46,6 @@ def close_antergos_next_devices():
         if os.path.exists(volume):
             cmd = ["/usr/bin/cryptsetup", "luksClose", volume]
             call(cmd, msg=err_msg)
-
 
 def setup(luks_device, luks_name, luks_options):
     """ Setups a luks device """

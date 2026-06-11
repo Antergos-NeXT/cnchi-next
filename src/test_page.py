@@ -26,16 +26,14 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Test page (simulates main window to test a ui page) """
 
 import os
 import sys
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gdk
-
 
 CNCHI_PATH = "/usr/share/cnchi"
 sys.path.append(CNCHI_PATH)
@@ -113,14 +111,13 @@ def get_page(page_name, params):
         page = cache.Cache(params)
     return page
 
-
 def run(page_name):
     """ Run page to be able to test it """
 
     window = Gtk.Window()
     window.connect('destroy', Gtk.main_quit)
     # window.set_size_request(600, 500)
-    window.set_border_width(0)
+# window.set_border_width(0)  # GTK4: use CSS
     window.set_title("Cnchi - Test of {0} page".format(page_name))
 
     import logging
@@ -182,8 +179,7 @@ def run(page_name):
 
     if page is not None:
         # page.set_property("halign", Gtk.Align.CENTER)
-        window.add(page)
-        window.show_all()
+        window.set_child(page)
         page.prepare('forward')
         Gtk.main()
     else:

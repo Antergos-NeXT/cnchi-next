@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Chroot related functions. Used in the installation process """
 
 import logging
@@ -39,7 +38,6 @@ import shutil
 from misc.extra import InstallError, raised_privileges
 
 DEST_DIR = "/install"
-
 
 def ensured_executable(cmd):
     """
@@ -60,7 +58,6 @@ def ensured_executable(cmd):
 
     return shutil.which(cmd[0]) is not None
 
-
 def log_exception_info():
     """ This function logs information about the exception that is currently
         being handled. The information returned is specific both to the current
@@ -76,7 +73,6 @@ def log_exception_info():
         lines = ''.join(trace).split('\n')
         for line in lines:
             logging.error(line.rstrip())
-
 
 def call(cmd, warning=True, error=False, fatal=False, msg=None, timeout=None,
          stdin=None, debug=True):
@@ -124,7 +120,6 @@ def call(cmd, warning=True, error=False, fatal=False, msg=None, timeout=None,
             else:
                 log_exception_info()
         return False
-
 
 def chroot_call(cmd, chroot_dir=DEST_DIR, fatal=False, msg=None, timeout=None,
                 stdin=None):
@@ -186,7 +181,6 @@ def chroot_call(cmd, chroot_dir=DEST_DIR, fatal=False, msg=None, timeout=None,
         else:
             log_exception_info()
         return False
-
 
 def popen(cmd, warning=True, error=False, fatal=False, msg=None, stdin=subprocess.PIPE):
     """ Helper function that calls Popen (useful if we need to use pipes) """

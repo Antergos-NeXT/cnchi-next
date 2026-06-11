@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Bootloader installation """
 
 import os
@@ -34,7 +33,6 @@ import os
 from misc.run_cmd import call
 import parted3.fs_module as fs
 import logging
-
 
 class Bootloader():
     """ Class to perform boot loader installation """

@@ -63,7 +63,6 @@ MAX_ROOT_SIZE = 30000
 # (if installing kde and not enough free space is available is their fault, not ours)
 MIN_ROOT_SIZE = 8000
 
-
 class AutoPartition():
     """ Class used by the automatic installation method """
 
@@ -776,7 +775,6 @@ class AutoPartition():
 
         if self.luks and self.luks_password == "":
             self.copy_luks_keyfiles()
-
 
 def test_module():
     """ Test autopartition module """

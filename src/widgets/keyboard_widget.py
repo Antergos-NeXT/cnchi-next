@@ -27,7 +27,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Keyboard widget that shows keyboard layout and variant types to the user """
 
 import subprocess
@@ -35,13 +34,12 @@ import math
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GObject
 
 import cairo
 
 from misc.extra import raised_privileges
-
 
 def unicode_to_string(raw):
     """ U+ , or +U+ ... to string """
@@ -50,7 +48,6 @@ def unicode_to_string(raw):
     elif raw[0:2] == "+U":
         return chr(int(raw[3:], 16))
     return ""
-
 
 class KeyboardWidget(Gtk.DrawingArea):
     """ Draws a keyboard widget """
@@ -274,7 +271,6 @@ class KeyboardWidget(Gtk.DrawingArea):
             i += 1
         return my_x, rect_width
 
-
     def do_draw(self, context):
         """ context: current Cairo context """
         # alloc = self.get_allocation()
@@ -435,6 +431,5 @@ class KeyboardWidget(Gtk.DrawingArea):
                 alt = ""
 
             self.codes.append((plain, shift, ctrl, alt))
-
 
 GObject.type_register(KeyboardWidget)

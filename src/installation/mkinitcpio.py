@@ -26,14 +26,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Module to setup and run mkinitcpio """
 
 import logging
 import os
 
 from misc.run_cmd import chroot_call
-
 
 def run(dest_dir, settings, mount_devices, blvm):
     """ Runs mkinitcpio """
@@ -55,7 +53,6 @@ def run(dest_dir, settings, mount_devices, blvm):
         cmd = ['sh', '-c',
                'LANG={0} /usr/bin/mkinitcpio -p linux-lts'.format(locale)]
         chroot_call(cmd, dest_dir)
-
 
 def get_hooks(dest_dir, settings, swap, blvm, usr):
     """ Get hooks for mkinitcpio """
@@ -102,7 +99,6 @@ def get_hooks(dest_dir, settings, swap, blvm, usr):
 
     return hooks
 
-
 def get_modules(settings):
     """ Get modules line for mkinitcpio """
 
@@ -122,7 +118,6 @@ def get_modules(settings):
 
     return modules
 
-
 def get_files(settings):
     """ Get files line for mkinitcpio """
 
@@ -134,7 +129,6 @@ def get_files(settings):
             files.append(libgcc_path)
 
     return files
-
 
 def set_hooks_modules_and_files(dest_dir, hooks, modules, files):
     """ Set up mkinitcpio.conf """

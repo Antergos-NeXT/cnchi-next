@@ -38,7 +38,7 @@ import re
 import xml.etree.cElementTree as elementTree
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 from pages.gtkbasebox import GtkBaseBox
@@ -108,8 +108,9 @@ class Location(GtkBaseBox):
 
     def select_first_listbox_item(self):
         """ Sets first listbox item as selected """
-        listbox_row = self.listbox.get_children()[0]
-        self.listbox.select_row(listbox_row)
+        listbox_row = self.listbox.get_row_at_index(0)
+        if listbox_row:
+            self.listbox.select_row(listbox_row)
 
     def select_detected_country(self):
         """ Selects listbox item that matches detected country using GeoIP database """
@@ -119,8 +120,10 @@ class Location(GtkBaseBox):
         if self.geoip_country:
             names = self.geoip_country.names
             #logging.debug(names)
-            for listbox_row in self.listbox.get_children():
-                label = listbox_row.get_children()[0]
+            model = self.listbox.observe_children()
+            for i in range(model.get_n_items()):
+                listbox_row = model.get_item(i)
+                label = listbox_row.get_child()
                 if label is not None:
                     label = label.get_text()
                     for name in names.values():
@@ -151,8 +154,6 @@ class Location(GtkBaseBox):
         self.select_detected_country()
         self.translate_ui()
         self.forward_button.set_sensitive(True)
-
-        self.show_all()
 
         self.settings.set('install_id', self.get_and_save_install_id())
 
@@ -231,21 +232,23 @@ class Location(GtkBaseBox):
         """ Fills listbox with all territories (areas) """
         areas = self.get_areas()
 
-        for listbox_row in self.listbox.get_children():
+        while True:
+            listbox_row = self.listbox.get_row_at_index(0)
+            if listbox_row is None:
+                break
             listbox_row.destroy()
 
         for area in areas:
             label = Gtk.Label.new()
             label.set_markup(area)
-            label.show_all()
-            self.listbox.add(label)
+            self.listbox.append(label)
 
         self.selected_country = areas[0]
 
     def on_listbox_row_selected(self, _listbox, listbox_row):
         """ A territory (area) has been selected """
         if listbox_row is not None:
-            label = listbox_row.get_children()[0]
+            label = listbox_row.get_child()
             if label is not None:
                 self.selected_country = label.get_text()
 
@@ -321,7 +324,6 @@ class Location(GtkBaseBox):
         """ Obtains and saves an installation ID for future reference """
         context_filter = ContextFilter()
         return context_filter.get_and_save_install_id(is_location_screen=True)
-
 
 # When testing, no _() is available
 try:

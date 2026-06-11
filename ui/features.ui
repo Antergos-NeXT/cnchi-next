@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <requires lib="gtk+" version="3.18"/>
+    <requires lib="gtk" version="4.0"/>
     <object class="GtkBox" id="features">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -18,30 +18,26 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="hscrollbar_policy">never</property>
-                <property name="shadow_type">in</property>
                 <child>
                     <object class="GtkListBox" id="listbox">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                     </object>
                 </child>
-            </object>
-            <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-            </packing>
-        </child>
+            <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkCheckButton" id="advanced_checkbutton">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
                 <property name="active">True</property>
-                <property name="draw_indicator">True</property>
                 <property name="margin_top">5</property>
-                <signal name="toggled" handler="show_advanced_toggled" swapped="no"/>
+                
                     <child>
                         <object class="GtkLabel" id="advanced_checkbutton_label">
                             <property name="visible">True</property>
@@ -49,12 +45,11 @@
                             <property name="label" translatable="yes">Use this device for boot loader installation:</property>
                         </object>
                     </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
     </object>
 </interface>

@@ -130,7 +130,6 @@ class PostFeatures():
                 except OSError as err:
                     logging.error("Couldn't modify %s file: %s", path, err)
 
-
     def read_file_from_install(self, path):
         """ Read file from new installation /install """
         lines = []

@@ -26,14 +26,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Proxy dialog """
 
 import logging
 import os
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 # When testing, no _() is available
@@ -42,7 +41,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class ProxyDialog(Gtk.Dialog):
     """ Asks user for proxy settings """
@@ -77,7 +75,7 @@ class ProxyDialog(Gtk.Dialog):
 
         dialog_grid = self.gui.get_object("ProxyDialogGrid")
         content_area = self.get_content_area()
-        content_area.add(dialog_grid)
+        content_area.append(dialog_grid)
 
     def use_same_proxy_activated(self, switch, _data):
         """ Use same proxy for all protocols """

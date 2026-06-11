@@ -26,14 +26,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Desktop screen """
 
 import os
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GdkPixbuf
 
 import desktop_info
@@ -82,7 +81,7 @@ class DesktopAsk(GtkBaseBox):
         if self.desktop_image is None:
             self.desktop_image = Gtk.Image.new_from_file(path)
             overlay = self.gui.get_object("image_overlay")
-            overlay.add(self.desktop_image)
+            overlay.set_child(self.desktop_image)
         else:
             self.desktop_image.set_from_file(path)
 
@@ -107,8 +106,7 @@ class DesktopAsk(GtkBaseBox):
                         icon_path)
                 else:
                     self.icon_desktop_image = Gtk.Image.new_from_icon_name(
-                        "image-missing",
-                        Gtk.IconSize.DIALOG)
+                        "image-missing")
 
             overlay = self.gui.get_object("image_overlay")
             overlay.add_overlay(self.icon_desktop_image)
@@ -126,7 +124,7 @@ class DesktopAsk(GtkBaseBox):
                     self.icon_desktop_image.set_from_file(icon_path)
                 else:
                     self.icon_desktop_image.set_from_icon_name(
-                        "image-missing", Gtk.IconSize.DIALOG)
+                        "image-missing")
 
         if set_header:
             # set header text
@@ -136,13 +134,12 @@ class DesktopAsk(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare screen """
         self.translate_ui(self.desktop_choice)
-        self.show_all()
 
     def set_desktop_list(self):
         """ Set desktop list in the ListBox """
         for desktop in sorted(desktop_info.NAMES):
             if desktop in self.enabled_desktops:
-                box = Gtk.HBox()
+                box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
 
                 filename = "desktop-environment-" + desktop.lower() + ".svg"
                 icon_path = os.path.join(
@@ -159,15 +156,14 @@ class DesktopAsk(GtkBaseBox):
                         image = Gtk.Image.new_from_file(icon_path)
                     else:
                         image = Gtk.Image.new_from_icon_name(
-                            "image-missing",
-                            Gtk.IconSize.LARGE_TOOLBAR)
-                box.pack_start(image, False, False, 2)
+                            "image-missing")
+                box.append(image)
 
                 label = Gtk.Label()
                 label.set_markup(desktop_info.NAMES[desktop])
-                box.pack_start(label, False, False, 2)
+                box.append(label)
 
-                self.listbox.add(box)
+                self.listbox.append(box)
 
         # Set Gnome as default
         self.select_default_row(desktop_info.NAMES["gnome"])
@@ -179,10 +175,10 @@ class DesktopAsk(GtkBaseBox):
             WARNING: IF LAYOUT IS CHANGED IN fill_listbox THEN THIS SHOULD BE
             CHANGED ACCORDINGLY. """
         box1 = row1.get_child()
-        label1 = box1.get_children()[1]
+        label1 = box1.get_first_child().get_next_sibling()
 
         box2 = row2.get_child()
-        label2 = box2.get_children()[1]
+        label2 = box2.get_first_child().get_next_sibling()
 
         text = [label1.get_text(), label2.get_text()]
         # sorted_text = misc.sort_list(text, self.settings.get("locale"))
@@ -199,12 +195,14 @@ class DesktopAsk(GtkBaseBox):
         """ Selects default row
             WARNING: IF LAYOUT IS CHANGED IN desktop.ui THEN THIS SHOULD BE
             CHANGED ACCORDINGLY. """
-        for listbox_row in self.listbox.get_children():
-            for vbox in listbox_row.get_children():
-                label = vbox.get_children()[1]
-                if desktop_name == label.get_text():
-                    self.listbox.select_row(listbox_row)
-                    return
+        model = self.listbox.observe_children()
+        for i in range(model.get_n_items()):
+            listbox_row = model.get_item(i)
+            box = listbox_row.get_child()
+            label = box.get_first_child().get_next_sibling()
+            if desktop_name == label.get_text():
+                self.listbox.select_row(listbox_row)
+                return
 
     def set_desktop(self, desktop):
         """ Show desktop info """
@@ -219,10 +217,10 @@ class DesktopAsk(GtkBaseBox):
             WARNING: IF LAYOUT IS CHANGED IN desktop.ui THEN THIS SHOULD BE
             CHANGED ACCORDINGLY. """
         if listbox_row is not None:
-            for vbox in listbox_row:
-                label = vbox.get_children()[1]
-                desktop = label.get_text()
-                self.set_desktop(desktop)
+            box = listbox_row.get_child()
+            label = box.get_first_child().get_next_sibling()
+            desktop = label.get_text()
+            self.set_desktop(desktop)
 
     def store_values(self):
         """ Store desktop """
@@ -237,7 +235,6 @@ class DesktopAsk(GtkBaseBox):
         """ Scrolls treeview to show the desired cell """
         treeview.scroll_to_cell(path)
         return False
-
 
 # When testing, no _() is available
 try:

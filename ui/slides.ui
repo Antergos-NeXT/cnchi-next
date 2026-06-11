@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <requires lib="gtk+" version="3.20"/>
+    <requires lib="gtk" version="4.0"/>
     <object class="GtkBox" id="slides">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -15,57 +15,52 @@
                 <property name="hexpand">True</property>
                 <child>
                     <object class="GtkImage" id="slide1">
-                    <property name='visible'>False</property>
+                    <property name="visible">False</property>
                     <property name="hexpand">True</property>
                     </object>
                 </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkProgressBar" id="downloads_progress_bar">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_start">10</property>
                 <property name="margin_end">10</property>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkProgressBar" id="progress_bar">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_start">10</property>
                 <property name="margin_end">10</property>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkLabel" id="info_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_start">10</property>
                 <property name="margin_end">10</property>
-                <property name="xalign">0</property>
-                <property name="label" translatable="yes"></property>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">3</property>
-            </packing>
-        </child>
+                <property name="label" translatable="yes"/>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
     </object>
 </interface>

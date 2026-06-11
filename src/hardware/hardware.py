@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Hardware related packages installation """
 
 import logging
@@ -202,7 +201,6 @@ class Hardware():
                     err.output)
             except subprocess.TimeoutExpired as timeout_error:
                 logging.error(timeout_error)
-
 
 class HardwareInstall():
     """ This class checks user's hardware """
@@ -411,7 +409,6 @@ class HardwareInstall():
         for obj in self.objects_used:
             obj.post_install(dest_dir)
 
-
 def test():
     """ Test module function """
     def _(text):
@@ -430,7 +427,6 @@ def test():
         txt = " ".join(hardware_pkgs)
         print("Hardware module added these packages :")
         print(txt)
-
 
 if __name__ == "__main__":
     test()

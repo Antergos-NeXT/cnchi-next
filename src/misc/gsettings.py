@@ -32,7 +32,6 @@ import logging
 
 from misc.run_cmd import chroot_call
 
-
 def set(installation_user, schema, key, value):
     """ Set a gnome setting """
     cmd = [
@@ -43,7 +42,6 @@ def set(installation_user, schema, key, value):
     logging.debug("Running set on gsettings: %s", ''.join(str(e) + ' ' for e in cmd))
     return chroot_call(cmd)
 
-
 def get(installation_user, schema, key):
     """ Get a gnome setting """
     cmd = [
@@ -53,7 +51,6 @@ def get(installation_user, schema, key):
 
     logging.debug("Running get on gsettings: %s", ''.join(str(e) + ' ' for e in cmd))
     return chroot_call(cmd)
-
 
 def dconf_load(installation_user, schema, file):
     """ Load dconf setup from a file """

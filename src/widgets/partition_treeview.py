@@ -29,7 +29,7 @@
 """ Partition Treeview Widget """
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GObject
 
 # When testing, no _() is available
@@ -38,7 +38,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class PartitionTreeview(Gtk.TreeView):
     """ Partition Treeview Class """

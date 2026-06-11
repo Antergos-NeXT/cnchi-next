@@ -28,7 +28,6 @@
 
 """ Language page """
 
-
 import gettext
 import locale
 import os
@@ -36,7 +35,7 @@ import logging
 import sys
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 from pages.gtkbasebox import GtkBaseBox
@@ -55,7 +54,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class Language(GtkBaseBox):
     """ Language page """
@@ -110,14 +108,15 @@ class Language(GtkBaseBox):
     def on_listbox_row_selected(self, _listbox, listbox_row):
         """ Someone selected a different row of the listbox """
         if listbox_row is not None:
-            for vbox in listbox_row:
-                for label in vbox.get_children():
-                    (_current_language,
-                     _sorted_choices,
-                     display_map) = i18n.get_languages(self.language_list)
-                    lang = label.get_text()
-                    lang_code = display_map[lang][1]
-                    self.set_language(lang_code)
+            box = listbox_row.get_child()
+            label = box.get_first_child()
+            if label:
+                (_current_language,
+                 _sorted_choices,
+                 display_map) = i18n.get_languages(self.language_list)
+                lang = label.get_text()
+                lang_code = display_map[lang][1]
+                self.set_language(lang_code)
 
     def translate_ui(self):
         """ Translates all ui elements """
@@ -168,11 +167,11 @@ class Language(GtkBaseBox):
 
         current_language = self.langcode_to_lang(display_map)
         for lang in sorted_choices:
-            box = Gtk.VBox()
+            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
             label = Gtk.Label()
             label.set_markup(lang)
-            box.add(label)
-            self.listbox.add(box)
+            box.append(label)
+            self.listbox.append(box)
             if current_language == lang:
                 self.select_default_row(current_language)
 
@@ -208,10 +207,13 @@ class Language(GtkBaseBox):
 
     def select_default_row(self, language):
         """ Selects language in lisbox """
-        for listbox_row in self.listbox.get_children():
-            for vbox in listbox_row.get_children():
-                label = vbox.get_children()[0]
-                if language == label.get_text():
+        model = self.listbox.observe_children()
+        for i in range(model.get_n_items()):
+            listbox_row = model.get_item(i)
+            child = listbox_row.get_first_child()
+            if child:
+                label = child.get_first_child()
+                if label and language == label.get_text():
                     self.listbox.select_row(listbox_row)
                     return
 
@@ -220,8 +222,10 @@ class Language(GtkBaseBox):
         lang = ""
         listbox_row = self.listbox.get_selected_row()
         if listbox_row is not None:
-            for vbox in listbox_row:
-                for label in vbox.get_children():
+            child = listbox_row.get_first_child()
+            if child:
+                label = child.get_first_child()
+                if label:
                     lang = label.get_text()
 
         (_current_language, _sorted_choices, display_map) = i18n.get_languages(self.language_list)
@@ -240,11 +244,10 @@ class Language(GtkBaseBox):
         self.translate_ui()
         # Enable forward button
         self.forward_button.set_sensitive(True)
-        self.show_all()
 
         # a11y
-        self.listbox.set_can_default(True)
-        self.main_window.set_default(self.listbox)
+        self.listbox.set_receives_default(True)
+        self.main_window.set_default_widget(self.listbox)
 
     def on_setup_proxy(self, _widget, _data=None):
         """ Ask for proxy settings """

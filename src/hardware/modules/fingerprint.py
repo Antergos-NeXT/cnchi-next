@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Various Fingerprint devices driver installation """
 
 # Support for consumer fingerprint reader devices.
@@ -59,7 +58,6 @@ DEVICES = [
     ('0x08ff', '0x2580'),
     ('0x08ff', '0x5501'),
     ('0x147e', '0x2017')]
-
 
 class FingerPrint(Hardware):
     """ Fingerprint devices driver """

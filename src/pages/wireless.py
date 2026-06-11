@@ -30,7 +30,6 @@ import misc.nm as nm
 
 from pages.gtkbasebox import GtkBaseBox
 
-
 class Wireless(GtkBaseBox):
     """ Wireless page """
     def __init__(self, params, prev_page="check", next_page="desktop"):
@@ -155,7 +154,6 @@ class Wireless(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare page for showing """
         self.translate_ui()
-        self.show_all()
         if not nm.wireless_hardware_present():
             self.nmwidget.set_sensitive(False)
             btn = self.gui.get_object('use_wireless')
@@ -165,7 +163,6 @@ class Wireless(GtkBaseBox):
     def store_values():
         """ Store changes """
         return True
-
 
 # When testing, no _() is available
 try:

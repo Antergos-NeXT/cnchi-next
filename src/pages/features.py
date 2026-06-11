@@ -26,14 +26,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Features screen """
 import subprocess
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+gi.require_version('Gtk', '4.0')
+from gi.repository import Gtk, GLib
 
 import desktop_info
 import features_info
@@ -80,7 +79,6 @@ class Graphics():
     def bumblebee(self):
         """ Returns true if an nVidia and an Intel card are detected """
         return self.nvidia() and self.i915()
-
 
 class Features(GtkBaseBox):
     """ Features screen class """
@@ -132,10 +130,10 @@ class Features(GtkBaseBox):
         """ Someone selected a different row of the listbox
             WARNING: IF LIST LAYOUT IS CHANGED THEN THIS SHOULD BE CHANGED ACCORDINGLY. """
         if listbox_row is not None:
-            for vbox in listbox_row:
-                switch = vbox.get_children()[2]
-                if switch:
-                    switch.set_active(not switch.get_active())
+            box = listbox_row.get_child()
+            switch = box.get_last_child()
+            if switch:
+                switch.set_active(not switch.get_active())
 
     def add_feature_icon(self, feature, box):
         """ Adds feature icon to listbox row box """
@@ -145,16 +143,16 @@ class Features(GtkBaseBox):
             logging.debug("No icon found for feature %s", feature)
             icon_name = "missing"
 
-        image = Gtk.Image.new_from_icon_name(icon_name, Gtk.IconSize.DND)
+        image = Gtk.Image.new_from_icon_name(icon_name)
         object_name = "image_" + feature
         image.set_name(object_name)
         image.set_property('margin_start', 10)
         self.listbox_rows[feature].append(image)
-        box.pack_start(image, False, False, 0)
+        box.append(image)
 
     def add_feature_label(self, feature, box):
         """ Adds feature title and label to listbox row box """
-        text_box = Gtk.VBox()
+        text_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         object_name = "label_title_" + feature
         label_title = Gtk.Label.new()
@@ -162,7 +160,8 @@ class Features(GtkBaseBox):
         label_title.set_justify(Gtk.Justification.LEFT)
         label_title.set_name(object_name)
         self.listbox_rows[feature].append(label_title)
-        text_box.pack_start(label_title, False, True, 0)
+        label_title.set_vexpand(True)
+        text_box.append(label_title)
 
         object_name = "label_" + feature
         label = Gtk.Label.new()
@@ -170,8 +169,8 @@ class Features(GtkBaseBox):
         label.set_justify(Gtk.Justification.LEFT)
         label.set_name(object_name)
         self.listbox_rows[feature].append(label)
-        text_box.pack_start(label, False, False, 0)
-        box.pack_start(text_box, False, False, 0)
+        text_box.append(label)
+        box.append(text_box)
 
     def on_switch_activated(self, switch, _gparam):
         """ Feature has been activated or deactivated """
@@ -224,12 +223,15 @@ class Features(GtkBaseBox):
         switch.set_property('margin_end', 10)
         switch.connect("notify::active", self.on_switch_activated)
         self.listbox_rows[feature].append(switch)
-        box.pack_end(switch, False, False, 0)
+        box.append(switch)
 
     def fill_listbox(self):
         """ Fills listbox with all the features and switches """
-        for listbox_row in self.listbox.get_children():
-            listbox_row.destroy()
+        while True:
+            row = self.listbox.get_row_at_index(0)
+            if row is None:
+                break
+            row.destroy()
 
         self.listbox_rows = {}
 
@@ -255,9 +257,7 @@ class Features(GtkBaseBox):
             self.add_feature_label(feature, box)
             self.add_feature_switch(feature, box)
             # Add row to our gtklist
-            self.listbox.add(box)
-
-        self.listbox.show_all()
+            self.listbox.append(box)
 
     def update_advanced_features(self):
         """ Shows or hides advanced features """
@@ -281,12 +281,12 @@ class Features(GtkBaseBox):
             WARNING: IF LAYOUT IS CHANGED IN fill_listbox THEN THIS SHOULD BE
             CHANGED ACCORDINGLY. """
         box1 = row1.get_child()
-        txt_box1 = box1.get_children()[1]
-        label1 = txt_box1.get_children()[0]
+        txt_box1 = box1.get_first_child().get_next_sibling()
+        label1 = txt_box1.get_first_child()
 
         box2 = row2.get_child()
-        txt_box2 = box2.get_children()[1]
-        label2 = txt_box2.get_children()[0]
+        txt_box2 = box2.get_first_child().get_next_sibling()
+        label2 = txt_box2.get_first_child()
 
         text = [label1.get_text(), label2.get_text()]
         # sorted_text = misc.sort_list(text, self.settings.get("locale"))
@@ -398,36 +398,32 @@ class Features(GtkBaseBox):
         txt1 = "<big>{0}</big>".format(txt1)
         txt2 = "<i>{0}</i>".format(txt2)
 
-        info = Gtk.MessageDialog(
-            transient_for=self.get_main_window(),
-            modal=True,
-            destroy_with_parent=True,
-            message_type=Gtk.MessageType.INFO,
-            buttons=Gtk.ButtonsType.CLOSE)
-        info.set_markup(txt1)
-        info.format_secondary_markup(txt2)
-        info.run()
-        info.destroy()
+        info = Gtk.AlertDialog()
+        info.set_message(txt1)
+        info.set_detail(txt2)
+        info.set_buttons(["Close"])
+        info.show(self.get_main_window())
 
     def ask_nginx(self):
         """ LAMP: Ask user if he wants Apache or Nginx """
         if self.settings.get("feature_lamp"):
-            info = Gtk.MessageDialog(
-                transient_for=self.get_main_window(),
-                modal=True,
-                destroy_with_parent=True,
-                message_type=Gtk.MessageType.INFO,
-                buttons=Gtk.ButtonsType.YES_NO)
-            info.set_markup("LAMP / LEMP")
-            msg = _(
-                "Do you want to install the Nginx server instead of the Apache server?")
-            info.format_secondary_markup(msg)
-            response = info.run()
-            info.destroy()
-            if response == Gtk.ResponseType.YES:
-                self.settings.set("feature_lemp", True)
-            else:
-                self.settings.set("feature_lemp", False)
+            dialog = Gtk.AlertDialog()
+            dialog.set_message("LAMP / LEMP")
+            dialog.set_detail(msg)
+            dialog.set_buttons(["_No", "_Yes"])
+            dialog.set_default_button(1)
+            dialog.set_cancel_button(0)
+            dialog.choose(self.get_main_window(), None, self._on_ask_nginx_response)
+
+    def _on_ask_nginx_response(self, dialog, result):
+        try:
+            response = dialog.choose_finish(result)
+        except GLib.Error:
+            response = -1
+        if response == 1:
+            self.settings.set("feature_lemp", True)
+        else:
+            self.settings.set("feature_lemp", False)
 
     def ask_lembrame(self):
         """ Asks user for lembrame credentials """
@@ -476,7 +472,6 @@ class Features(GtkBaseBox):
             set(desktop_info.EXCLUDED_FEATURES[desktop]))
         self.fill_listbox()
         self.translate_ui()
-        self.show_all()
         if not self.defaults_loaded:
             self.switch_defaults_on()
             # Only load defaults once
@@ -493,7 +488,6 @@ class Features(GtkBaseBox):
             is_active = self.settings.get("feature_" + feature)
             if row[Features.COL_SWITCH] is not None and is_active is not None:
                 row[Features.COL_SWITCH].set_active(is_active)
-
 
 # When testing, no _() is available
 try:

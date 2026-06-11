@@ -36,7 +36,6 @@ import requests
 
 from info import CNCHI_VERSION, CNCHI_RELEASE_STAGE
 
-
 class Singleton(type):
     """ Single instance """
     _instance = None
@@ -58,7 +57,6 @@ class Singleton(type):
         obj.key = 'X-{}-{}'.format(obj.name, obj.description)
 
         return obj
-
 
 class ContextFilter(logging.Filter, metaclass=Singleton):
     """ Context filter for logging methods to send logs to bugsnag """

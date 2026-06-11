@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Desktop Environments information """
 
 # Enabled desktops
@@ -74,7 +73,6 @@ ALL_FEATURES = [
     "games", "graphic_drivers", "lamp", "lembrame", "lts", "office", "sshd", "visual", "vivaldi"]
 """ List: All features """
 
-
 EXCLUDED_FEATURES = {
     'base': ["bluetooth", "chromium", "firefox", "firewall", "flash", "games",
              "graphic_drivers", "office", "visual", "vivaldi", "lembrame"],
@@ -107,11 +105,9 @@ SESSIONS = {
 }
 """ Dict: Session names for lightDM setup (/usr/share/xsessions) """
 
-
 def _(message):
     """ See http://docs.python.org/2/library/gettext.html "22.1.3.4. Deferred translations" """
     return message
-
 
 DESCRIPTIONS = {
     'base':     _("This option will install Antergos NeXT as command-line only system, "

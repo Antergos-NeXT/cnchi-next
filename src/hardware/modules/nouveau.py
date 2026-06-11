@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Nouveau (Nvidia) driver installation """
 
 try:
@@ -44,7 +43,6 @@ DEVICES = []
 # Give this driver more priority so it is chosen instead of
 # nvidia or nvidia-390xx or nvidia-340xx or nvidia-304xx
 PRIORITY = 3
-
 
 class Nouveau(Hardware):
     """ Nvidia open graphics driver """

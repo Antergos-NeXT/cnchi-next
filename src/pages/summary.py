@@ -26,16 +26,14 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Summary screen (last chance for the user) """
-
 
 import logging
 import os
 import multiprocessing
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 import desktop_info
@@ -59,7 +57,6 @@ NM_STATE_CONNECTED_GLOBAL = 70
 UPOWER = 'org.freedesktop.UPower'
 UPOWER_PATH = '/org/freedesktop/UPower'
 MIN_ROOT_SIZE = 8000000000
-
 
 class Summary(GtkBaseBox):
     """ Summary Screen """
@@ -178,8 +175,6 @@ class Summary(GtkBaseBox):
         # self.forward_button.set_label(_("Install now!"))
         # self.forward_button.set_name('fwd_btn_install_now')
 
-        self.show_all()
-
         # Hide features statebox if no features are selected
         if self.num_features == 0:
             names = ["features_statebox", "features_label"]
@@ -189,7 +184,7 @@ class Summary(GtkBaseBox):
 
     def store_values(self):
         """ User wants to continue """
-        parent = self.get_toplevel()
+        parent = self.get_root()
         msg = _("Are you REALLY sure you want to continue?")
 
         try:
@@ -239,7 +234,6 @@ class Summary(GtkBaseBox):
         wait_window.set_modal(True)
         wait_window.set_transient_for(self.get_main_window())
         wait_window.set_default_size(360, 180)
-        wait_window.set_position(Gtk.WindowPosition.CENTER)
 
         return (wait_window, progress_bar)
 
@@ -270,7 +264,6 @@ class Summary(GtkBaseBox):
 
         # Rankmirrors is still running. Show wait dialog
         wait_window, progress_bar = self.create_wait_window()
-        wait_window.show_all()
 
         rankmirrors_active = True
         while rankmirrors_active:

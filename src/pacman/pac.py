@@ -28,7 +28,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Module interface to pyalpm """
 
 from collections import OrderedDict
@@ -59,7 +58,6 @@ except NameError as err:
 
 _DEFAULT_ROOT_DIR = "/"
 _DEFAULT_DB_PATH = "/var/lib/pacman"
-
 
 class Pac():
     """ Communicates with libalpm using pyalpm """
@@ -603,7 +601,6 @@ class Pac():
             except PermissionError as permission_error:
                 print("Can't open ", log_path, " : ", permission_error)
 
-
 def test():
     """ Test case """
     import gettext
@@ -634,7 +631,6 @@ def test():
     # pacman_options = {"downloadonly": True}
     # pacman.do_install(pkgs=["base"], conflicts=[], options=pacman_options)
     pacman.release()
-
 
 if __name__ == "__main__":
     test()

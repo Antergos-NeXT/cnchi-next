@@ -201,7 +201,6 @@ class DownloadPackages():
         self.events.add('info', "")
         return True
 
-
 def test():
     """ Test function """
     import gettext
@@ -228,7 +227,6 @@ def test():
         settings={},
         callback_queue=None)
     download_packages.start_download()
-
 
 if __name__ == '__main__':
     test()

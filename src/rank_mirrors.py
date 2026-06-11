@@ -27,7 +27,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Creates mirrorlist sorted by both latest updates and fastest connection """
 
 import http.client
@@ -380,7 +379,6 @@ class RankMirrors(multiprocessing.Process):
             self.fraction_pipe.close()
 
         logging.debug("Auto mirror selection has been run successfully.")
-
 
     @staticmethod
     def update_mirrorlists():

@@ -26,16 +26,14 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Installation advanced module. Custom partition screen """
-
 
 import os
 import logging
 import re
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gdk
 
 import misc.extra as misc
@@ -73,7 +71,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class InstallationAdvanced(GtkBaseBox):
     """ Installation advanced class. Custom partitioning. """
@@ -150,7 +147,7 @@ class InstallationAdvanced(GtkBaseBox):
             'partition_treeview_scrolledwindow')
         self.partition_treeview = PartitionTreeview()
         self.partition_treeview.prepare()
-        self.scrolledwindow.add(self.partition_treeview)
+        self.scrolledwindow.set_child(self.partition_treeview)
 
         # Connect partition treeview's checkbox cells
         self.partition_treeview.connect_format_cell(self.format_cell_toggled)
@@ -585,7 +582,6 @@ class InstallationAdvanced(GtkBaseBox):
                 "Can't edit a partition with a LVM filesystem type")
             return
 
-        self.edit_part_dlg.show_all()
         self.edit_part_dlg.prepare()
 
         # Fill partition dialog with correct data
@@ -901,7 +897,6 @@ class InstallationAdvanced(GtkBaseBox):
 
         params['max_size_mb'] = max_size_mb
 
-        self.create_part_dlg.show_all()
         self.create_part_dlg.prepare(params)
 
         # Finally, show the create partition dialog
@@ -1105,7 +1100,7 @@ class InstallationAdvanced(GtkBaseBox):
 
         for grp in btns:
             btn_id, icon, lbl = grp
-            image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.BUTTON)
+            image = Gtk.Image.new_from_icon_name(icon)
             btn = self.gui.get_object(btn_id)
             btn.set_always_show_image(True)
             btn.set_image(image)
@@ -1116,7 +1111,6 @@ class InstallationAdvanced(GtkBaseBox):
 
         self.translate_ui()
         self.update_view()
-        self.show_all()
 
         self.fill_bootloader_entry()
 
@@ -1163,7 +1157,6 @@ class InstallationAdvanced(GtkBaseBox):
         # disk_sel, result = self.disks[disk_path]
         main_window = self.get_main_window()
 
-        self.create_table_dlg.show_all()
         self.create_table_dlg.prepare()
 
         response = self.create_table_dlg.run()
@@ -1545,11 +1538,8 @@ class InstallationAdvanced(GtkBaseBox):
     @staticmethod
     def set_cursor(cursor_type):
         """ Sets mouse cursor in root window """
-        gdk_screen = Gdk.Screen.get_default()
-        if gdk_screen:
-            gdk_window = gdk_screen.get_root_window()
-            if gdk_window:
-                gdk_window.set_cursor(Gdk.Cursor(cursor_type))
+        from misc.extra import set_cursor as misc_set_cursor
+        misc_set_cursor(cursor_type)
 
     def store_values(self):
         """ Store user choices """

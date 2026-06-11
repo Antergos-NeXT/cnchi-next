@@ -34,6 +34,8 @@ import multiprocessing
 import sys
 
 import gi
+gi.require_version('Gtk', '4.0')
+gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GdkPixbuf
 
@@ -51,13 +53,11 @@ except NameError as err:
     def _(message):
         return message
 
-
 _KONAMI = [
     Gdk.KEY_Up, Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Down,
     Gdk.KEY_Left, Gdk.KEY_Right, Gdk.KEY_Left, Gdk.KEY_Right,
     Gdk.KEY_b, Gdk.KEY_a,
 ]
-
 
 class Welcome(GtkBaseBox):
     """ Welcome screen class """
@@ -111,7 +111,8 @@ class Welcome(GtkBaseBox):
                 image['path'],
                 image['width'],
                 image['height'])
-            self.images[key].set_from_pixbuf(pixbuf)
+            texture = Gdk.Texture.new_for_pixbuf(pixbuf)
+            self.images[key].set_from_paintable(texture)
 
         # Locale fallback warning
         self._locale_warning = None
@@ -123,10 +124,7 @@ class Welcome(GtkBaseBox):
             self._locale_warning.set_property('margin_top', 10)
             self._locale_warning.set_property('margin_bottom', 10)
             self._locale_warning.set_name('locale-warning-label')
-            self.gui.get_object('welcome').pack_start(
-                self._locale_warning, False, False, 0)
-            self.gui.get_object('welcome').reorder_child(
-                self._locale_warning, 1)
+            self.gui.get_object('welcome').append(self._locale_warning)
 
     def translate_ui(self):
         """ Translates all ui elements """
@@ -186,14 +184,14 @@ class Welcome(GtkBaseBox):
 
     def store_values(self):
         """ Store changes (none in this page) """
-        self.forward_button.show()
+        self.forward_button.set_visible(True)
         return True
 
-    def _on_key_press(self, _widget, event):
+    def _on_key_press(self, controller, keyval, keycode, state):
         """ Track Konami code sequence """
         if not self.settings.get('re_up'):
             return False
-        if event.keyval == _KONAMI[self._konami_idx]:
+        if keyval == _KONAMI[self._konami_idx]:
             self._konami_idx += 1
             if self._konami_idx >= len(_KONAMI):
                 self._konami_idx = 0
@@ -229,25 +227,24 @@ class Welcome(GtkBaseBox):
                 "I suggest Google Lens.")
             self._locale_warning.set_markup(
                 '<span foreground="#FFA500">⚠ {}</span>'.format(txt))
-            self._locale_warning.show()
+            self._locale_warning.set_visible(True)
 
-        self.show_all()
-        self.forward_button.hide()
+        self.set_visible(True)
+        self.forward_button.set_visible(False)
 
-        if self.settings.get('re_up'):
-            self.labels['quote'].set_markup(
-                '<span size="small" style="italic">"{}"</span>'.format(
-                    quotes.get_random_quote()))
-            self.labels['quote'].show()
-        else:
-            self.labels['quote'].hide()
+        self.labels['quote'].set_markup(
+            '<span size="small" style="italic">"{}"</span>'.format(
+                quotes.get_random_quote()))
+        self.labels['quote'].set_visible(True)
 
         self._konami_idx = 0
-        self.main_window.connect('key-press-event', self._on_key_press)
+        self._key_controller = Gtk.EventControllerKey.new()
+        self._key_controller.connect("key-pressed", self._on_key_press)
+        self.add_controller(self._key_controller)
 
         # a11y Set install option as default if ENTER is pressed
-        self.buttons['graph'].set_can_default(True)
-        self.main_window.set_default(self.buttons['graph'])
+        self.buttons['graph'].set_receives_default(True)
+        self.main_window.set_default_widget(self.buttons['graph'])
 
         if self.no_tryit:
             self.buttons['tryit'].set_sensitive(False)

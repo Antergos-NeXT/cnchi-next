@@ -51,17 +51,14 @@ import misc.gsettings as gsettings
 from misc.run_cmd import chroot_call
 from misc.extra import InstallError
 
-
 def _(msg):
     return msg
-
 
 def get_key_decryption_file(pass_hash, salt):
     """ Gets key for decryption """
     for _index in range(2, 2 ** 17):
         pass_hash = libnacl.crypto_hash_sha512(salt + pass_hash)
     return libnacl.crypto_hash_sha256(salt + pass_hash)
-
 
 class Lembrame:
     """ Lembrame main class """

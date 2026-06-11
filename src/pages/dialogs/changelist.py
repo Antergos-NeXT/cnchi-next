@@ -26,13 +26,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Changelist dialog (advanced mode) """
 
 import os
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 # When testing, no _() is available
@@ -71,7 +70,7 @@ class ChangeListDialog(Gtk.Dialog):
 
         for grp in btns:
             (btn_id, icon, lbl) = grp
-            image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.BUTTON)
+            image = Gtk.Image.new_from_icon_name(icon)
             btn = self.gui.get_object(btn_id)
             btn.set_always_show_image(True)
             btn.set_image(image)

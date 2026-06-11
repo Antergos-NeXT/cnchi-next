@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Module to download packages using requests library """
 
 import os
@@ -76,7 +75,6 @@ class CopyToCache(threading.Thread):
                 except (FileNotFoundError, FileExistsError, OSError):
                     pass
 
-
 class Download():
     """ Class to download packages using requests
         This class tries to previously download all necessary packages for
@@ -100,7 +98,6 @@ class Download():
         self.last_event = {}
 
         self.copy_to_cache_threads = []
-
 
     def start(self, downloads):
         """ Downloads using requests """

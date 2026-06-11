@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.19.0 -->
 <interface>
-    <requires lib="gtk+" version="3.18"/>
+    <requires lib="gtk" version="4.0"/>
     <object class="GtkImage" id="help_img1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="stock">gtk-info</property>
-    </object>
+        </object>
     <object class="GtkImage" id="help_img2">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="stock">gtk-info</property>
-    </object>
+        </object>
     <object class="GtkListStore" id="liststore"/>
     <object class="GtkBox" id="zfs">
         <property name="visible">True</property>
@@ -37,13 +35,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">Pool Type:</property>
-                            </object>
-                            <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                            </packing>
-                        </child>
+                            <property name="hexpand">False</property>
+                                <property name="vexpand">False</property>
+                                <property name="halign">fill</property>
+                                <property name="valign">fill</property>
+                                </object>
+                            </child>
                         <child>
                             <object class="GtkComboBoxText" id="pool_type_combo">
                                 <property name="visible">True</property>
@@ -52,37 +49,30 @@
                                 <items>
                                     <item translatable="yes">None</item>
                                 </items>
-                                <signal name="changed" handler="pool_type_combo_changed" swapped="no"/>
-                            </object>
-                            <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                            </packing>
-                        </child>
+                                
+                            <property name="hexpand">False</property>
+                                <property name="vexpand">False</property>
+                                <property name="halign">fill</property>
+                                <property name="valign">fill</property>
+                                </object>
+                            </child>
                         <child>
                             <object class="GtkButton" id="pool_type_help_btn">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
-                                <property name="image">help_img1</property>
-                                <property name="always_show_image">True</property>
-                                <signal name="clicked" handler="on_pool_type_help_btn_clicked" swapped="no"/>
-                            </object>
-                            <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                            </packing>
-                        </child>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="padding">10</property>
-                        <property name="position">0</property>
-                    </packing>
-                </child>
+                                <property name="hexpand">False</property>
+                                <property name="vexpand">False</property>
+                                <property name="halign">fill</property>
+                                <property name="valign">fill</property>
+                                </object>
+                            </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkBox" id="box12">
                         <property name="visible">True</property>
@@ -93,13 +83,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">Partition Scheme:</property>
-                            </object>
-                            <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                            </packing>
-                        </child>
+                            <property name="hexpand">False</property>
+                                <property name="vexpand">False</property>
+                                <property name="halign">fill</property>
+                                <property name="valign">fill</property>
+                                </object>
+                            </child>
                         <child>
                             <object class="GtkComboBoxText" id="partition_scheme_combo">
                                 <property name="visible">True</property>
@@ -109,53 +98,45 @@
                                     <item translatable="yes">GPT</item>
                                     <item translatable="yes">MBR</item>
                                 </items>
-                                <signal name="changed" handler="partition_scheme_changed" swapped="no"/>
-                            </object>
-                            <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                            </packing>
-                        </child>
-                    </object>
-                    <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="padding">10</property>
-                        <property name="position">1</property>
-                    </packing>
-                </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="padding">10</property>
-                <property name="position">0</property>
-            </packing>
-        </child>
+                                
+                            <property name="hexpand">False</property>
+                                <property name="vexpand">False</property>
+                                <property name="halign">fill</property>
+                                <property name="valign">fill</property>
+                                </object>
+                            </child>
+                    <property name="hexpand">False</property>
+                        <property name="vexpand">False</property>
+                        <property name="halign">fill</property>
+                        <property name="valign">fill</property>
+                        </object>
+                    </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkScrolledWindow" id="scrolledwindow">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="shadow_type">in</property>
                 <child>
                     <object class="GtkTreeView" id="treeview">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="model">liststore</property>
-                        <child internal-child="selection">
+                        <child>
                             <object class="GtkTreeSelection" id="treeview-selection"/>
                         </child>
                     </object>
                 </child>
-            </object>
-            <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="padding">10</property>
-                <property name="position">1</property>
-            </packing>
-        </child>
+            <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
         <child>
             <object class="GtkGrid" id="grid2">
                 <property name="visible">True</property>
@@ -168,24 +149,15 @@
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Check Password:</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">3</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkEntry" id="password_check_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="visibility">False</property>
-                        <property name="invisible_char">●</property>
                         <property name="width_chars">8</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">3</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkCheckButton" id="encrypt_swap_btn">
                         <property name="label" translatable="yes">Encrypt Swap</property>
@@ -193,54 +165,31 @@
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
                         <property name="valign">start</property>
-                        <property name="xalign">0.5</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="on_encrypt_swap_btn_toggled" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">2</property>
-                    </packing>
-                </child>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkEntry" id="password_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="visibility">False</property>
-                        <property name="invisible_char">●</property>
                         <property name="width_chars">8</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">2</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkLabel" id="password_lbl">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Password:</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">2</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkCheckButton" id="encrypt_disk_btn">
                         <property name="label" translatable="yes">Encrypt Disk</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="xalign">0.5</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="on_encrypt_disk_btn_toggled" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">1</property>
-                    </packing>
-                </child>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkLabel" id="swap_size_lbl">
                         <property name="visible">True</property>
@@ -248,62 +197,36 @@
                         <property name="label" translatable="yes">Swap Size (MB):
                         </property>
                     </object>
-                    <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">1</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkEntry" id="swap_size_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">3</property>
-                        <property name="top_attach">1</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkCheckButton" id="pool_name_btn">
                         <property name="label" translatable="yes">Pool Name:</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="xalign">0.5</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="on_pool_name_btn_toggled" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                    </packing>
-                </child>
+                        </object>
+                    </child>
                 <child>
                     <object class="GtkEntry" id="pool_name_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">8</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkCheckButton" id="force_4k_btn">
                         <property name="label" translatable="yes">Force ZFS 4k block size</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="xalign">0.5</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="on_force_4k_btn_toggled" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="left_attach">3</property>
-                        <property name="top_attach">0</property>
-                    </packing>
-                </child>
+                        </object>
+                    </child>
 
                 <child>
                     <object class="GtkLabel" id="bootloader_label">
@@ -311,38 +234,23 @@
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Bootloader:</property>
                     </object>
-                    <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">3</property>
-                    </packing>
-                </child>
+                    </child>
                 <child>
                     <object class="GtkComboBoxText" id="bootloader_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_start">5</property>
-                        <signal name="changed" handler="on_bootloader_entry_changed" swapped="no"/>
+                        
                     </object>
-                    <packing>
-                        <property name="left_attach">3</property>
-                        <property name="top_attach">3</property>
-                    </packing>
-                </child>
+                    </child>
 
                 <child>
                     <object class="GtkButton" id="force_4k_help_btn">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
-                        <property name="image">help_img2</property>
-                        <property name="always_show_image">True</property>
-                        <signal name="clicked" handler="on_force_4k_help_btn_clicked" swapped="no"/>
-                    </object>
-                    <packing>
-                        <property name="left_attach">4</property>
-                        <property name="top_attach">0</property>
-                    </packing>
-                </child>
+                        </object>
+                    </child>
                 <child>
                     <placeholder/>
                 </child>
@@ -361,12 +269,11 @@
                 <child>
                     <placeholder/>
                 </child>
-            </object>
-            <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">3</property>
-            </packing>
-        </child>
+            <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="halign">fill</property>
+                <property name="valign">fill</property>
+                </object>
+            </child>
     </object>
 </interface>

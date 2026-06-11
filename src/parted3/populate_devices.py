@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Get devices and parititons information in a str list """
 
 import logging
@@ -68,7 +67,6 @@ def populate_devices(do_partitions=False, min_size_gb=0):
             else:
                 devices[line] = dev.path
     return devices
-
 
 @misc.raise_privileges
 def populate_partitions(dev, min_size_gb=0):

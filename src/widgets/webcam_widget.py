@@ -33,13 +33,12 @@ import os
 
 import gi
 gi.require_version('Gst', '1.0')
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import GObject, Gst, Gtk
 
 # Needed for window.get_xid(), xvimagesink.set_window_handle(), respectively:
 gi.require_version('GstVideo', '1.0')
 from gi.repository import GdkX11, GstVideo
-
 
 class WebcamWidget(Gtk.DrawingArea):
     """ Webcam widget """
@@ -139,15 +138,14 @@ class WebcamWidget(Gtk.DrawingArea):
 
 GObject.type_register(WebcamWidget)
 
-
 def test_module():
     """ function to test this module """
-    window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
+    window = Gtk.Window()
     window.set_title("Webcam test")
     window.set_default_size(160, 90)
     window.connect("destroy", Gtk.main_quit, "WM destroy")
-    vbox = Gtk.VBox()
-    window.add(vbox)
+    vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+    window.set_child(vbox)
 
     overlay = Gtk.Overlay.new()
     overlay.show()
@@ -159,15 +157,12 @@ def test_module():
         webcam.clicked)
 
     overlay.add_overlay(event_box)
-    event_box.add(webcam)
+    event_box.set_child(webcam)
 
     webcam.set_halign(Gtk.Align.START)
     webcam.set_valign(Gtk.Align.START)
 
-    vbox.add(overlay)
-    window.show_all()
-    webcam.show_all()
-    GObject.threads_init()
+    vbox.append(overlay)
     Gtk.main()
 
 if __name__ == '__main__':

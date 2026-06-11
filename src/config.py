@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Configuration module for Cnchi """
 
 import multiprocessing
@@ -35,7 +34,6 @@ import os
 _ctx = multiprocessing.get_context('fork')
 
 _SRC_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-
 
 class Settings():
     """ Store all Cnchi setup options here """

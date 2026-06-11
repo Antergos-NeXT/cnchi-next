@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ GRUB2 bootloader installation """
 
 import logging
@@ -45,14 +44,12 @@ try:
 except ImportError:
     pass
 
-
 # When testing, no _() is available
 try:
     _("")
 except NameError as err:
     def _(message):
         return message
-
 
 class Grub2():
     """ Class to perform boot loader installation """

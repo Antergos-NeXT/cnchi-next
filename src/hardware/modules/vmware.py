@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Vmware driver installation """
 
 try:
@@ -38,7 +37,6 @@ CLASS_NAME = "Vmware"
 CLASS_ID = ""
 VENDOR_ID = "0x15ad"
 DEVICES = ["0x0405", "0x0710"]
-
 
 class Vmware(Hardware):
     """ Vmware tools and drivers """

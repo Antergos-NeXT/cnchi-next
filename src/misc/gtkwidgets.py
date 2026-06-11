@@ -24,7 +24,7 @@
 
 import cairo
 import gi
-gi.require_version("Gtk", "3.0")
+gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk, GLib, Gdk, GObject, Pango
 
 try:
@@ -32,12 +32,10 @@ try:
 except ImportError:
     import extra as misc
 
-
 def refresh():
     """ Tell Gtk loop to run pending events """
     while Gtk.events_pending():
         Gtk.main_iteration()
-
 
 def draw_round_rect(context, rounded, start_x, start_y, width, height):
     """ Draw a rectangle with rounded corners """
@@ -58,15 +56,13 @@ def draw_round_rect(context, rounded, start_x, start_y, width, height):
                      start_x + rounded, start_y)
     context.close_path()
 
-
 def gtk_to_cairo_color(gtk_color):
     """ Converts gtk color to cairo color format """
     color = Gdk.RGBA()
     color.parse(gtk_color)
     return color.red, color.green, color.blue
 
-
-class StylizedFrame(Gtk.Bin):
+class StylizedFrame(Gtk.Widget):
     """ Frame with rounded corners """
     __gtype_name__ = 'StylizedFrame'
     __gproperties__ = {
@@ -79,16 +75,29 @@ class StylizedFrame(Gtk.Bin):
     }
 
     def __init__(self):
-        Gtk.Bin.__init__(self)
+        Gtk.Widget.__init__(self)
         self.radius = 10
         self.width = 1
+        self._child = None
+
+    def set_child(self, child):
+        """ Set the child widget (GTK4: replaces Gtk.Bin.add) """
+        if self._child:
+            self._child.unparent()
+        self._child = child
+        if child:
+            child.set_parent(self)
+
+    def get_child(self):
+        """ Get the child widget """
+        return self._child
 
     def do_get_property(self, prop):
         """ Get object property """
         if prop.name in ('radius', 'width'):
             return getattr(self, prop.name)
         else:
-            return Gtk.Bin.get_property(self, prop)
+            return GObject.GObject.get_property(self, prop)
 
     def do_set_property(self, prop, value):
         """ Set object property """
@@ -96,7 +105,7 @@ class StylizedFrame(Gtk.Bin):
             setattr(self, prop.name, value)
             self.queue_draw()
         else:
-            Gtk.Bin.set_property(self, prop, value)
+            GObject.GObject.set_property(self, prop, value)
 
     def paint_background(self, context):
         """ Draw widget background """
@@ -123,21 +132,21 @@ class StylizedFrame(Gtk.Bin):
             self.get_child().draw(context)
 GObject.type_register(StylizedFrame)
 
-
 class DiskBox(Gtk.Box):
     """ Disk Box widget """
     __gtype_name__ = 'DiskBox'
 
     def add(self, partition, size):
         """ Add a partition """
-        Gtk.Box.add(self, partition, expand=False)
+        self.append(partition)
+        partition.set_hexpand(False)
+        partition.set_vexpand(False)
         partition.set_size_request(size, -1)
 
     def clear(self):
         """ Remove all partitions """
         self.forall(lambda x: self.remove(x))
 GObject.type_register(DiskBox)
-
 
 class PartitionBox(StylizedFrame):
     """ Widget to contain partition info """
@@ -174,7 +183,7 @@ class PartitionBox(StylizedFrame):
         if prop.name == 'title':
             self.ostitle.set_markup('<b>{0}</b>'.format(value))
         elif prop.name == 'icon-name':
-            self.logo.set_from_icon_name(value, Gtk.IconSize.DIALOG)
+            self.logo.set_from_icon_name(value)
         elif prop.name == 'icon-file':
             self.icon_file = value
             self.logo.set_from_file(value)
@@ -186,42 +195,40 @@ class PartitionBox(StylizedFrame):
 
     def __init__(self, title="", extra="", icon_name="", icon_file=""):
         StylizedFrame.__init__(self)
-        vbox = Gtk.Box()
+        vbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         vbox.set_orientation(Gtk.Orientation.VERTICAL)
 
         if icon_file:
             self.logo = Gtk.Image.new_from_file(icon_file)
         else:
             self.logo = Gtk.Image.new_from_icon_name(
-                icon_name,
-                Gtk.IconSize.DIALOG)
+                icon_name)
 
         self.icon_file = icon_file
 
         self.logo.set_halign(Gtk.Align.CENTER)
-        vbox.pack_start(self.logo, False, True, 0)
+        vbox.append(self.logo)
 
         self.ostitle = Gtk.Label()
         self.ostitle.set_ellipsize(Pango.EllipsizeMode.END)
-        vbox.pack_start(self.ostitle, False, True, 0)
+        vbox.append(self.ostitle)
 
         self.extra = Gtk.Label()
         self.extra.set_ellipsize(Pango.EllipsizeMode.END)
         self.extra.set_halign(Gtk.Align.CENTER)
-        vbox.pack_start(self.extra, False, True, 0)
+        vbox.append(self.extra)
 
         self.size = Gtk.Label()
         self.size.set_ellipsize(Pango.EllipsizeMode.END)
         self.size.set_halign(Gtk.Align.CENTER)
-        vbox.pack_start(self.size, False, True, 0)
-        self.add(vbox)
+        vbox.append(self.size)
+        self.set_child(vbox)
 
         self.ostitle.set_markup('<b>{0}</b>'.format(title))
 
         # Take up the space that would otherwise be used to create symmetry.
         txt = '<small>{0}</small>'.format(extra and extra or ' ')
         self.extra.set_markup(txt)
-        self.show_all()
 
     def set_size_in_mb(self, size):
         """ Set partition size in MB """
@@ -264,7 +271,6 @@ class PartitionBox(StylizedFrame):
         context.fill_preserve()
 GObject.type_register(PartitionBox)
 
-
 class ResizeWidget(Gtk.Frame):
     """ Widget used to resize partitions """
     __gtype_name__ = 'ResizeWidget'
@@ -289,7 +295,7 @@ class ResizeWidget(Gtk.Frame):
             name = prop.name.replace('-', '_')
             return getattr(self, name)
         else:
-            return Gtk.Alignment.get_property(self, prop)
+            return GObject.GObject.get_property(self, prop)
 
     def do_set_property(self, prop, value):
         """ Set object property """
@@ -298,8 +304,7 @@ class ResizeWidget(Gtk.Frame):
             setattr(self, name, value)
             self.queue_draw()
         else:
-            # print(prop.name, value)
-            Gtk.Alignment.set_property(self, prop, value)
+            GObject.GObject.set_property(self, prop, value)
 
     def __init__(self, part_size, min_size, max_size):
         """ part_size: The size (MB) of the existing partition.
@@ -321,17 +326,15 @@ class ResizeWidget(Gtk.Frame):
 
         self.set_size_request(600, -1)
 
-        self.set_shadow_type(Gtk.ShadowType.NONE)
-
-        self.paned = Gtk.Paned.new(Gtk.Orientation.HORIZONTAL)
+        self.paned = Gtk.Paned(orientation=Gtk.Orientation.HORIZONTAL)
 
         self.existing_part = PartitionBox()
-        self.paned.pack1(self.existing_part, resize=True, shrink=False)
+        self.paned.set_start_child(self.existing_part)
 
         self.new_part = PartitionBox()
-        self.paned.pack2(self.new_part, resize=True, shrink=False)
+        self.paned.set_end_child(self.new_part)
 
-        self.add(self.paned)
+        self.set_child(self.paned)
 
     def set_part_title(self, part, title, subtitle=None):
         """ Set partition title """
@@ -429,7 +432,6 @@ class ResizeWidget(Gtk.Frame):
             return size
 GObject.type_register(ResizeWidget)
 
-
 class StateBox(StylizedFrame):
     """ Widget used to show any kind of information """
     __gtype_name__ = 'StateBox'
@@ -454,11 +456,11 @@ class StateBox(StylizedFrame):
 
     def __init__(self, text=''):
         StylizedFrame.__init__(self)
-        hbox = Gtk.Box()
+        hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         hbox.set_spacing(10)
         self.image = Gtk.Image()
         self.image.set_from_icon_name(
-            Gtk.STOCK_YES, Gtk.IconSize.LARGE_TOOLBAR)
+            "object-select-symbolic")
         self.image.set_margin_start(7)
         self.label = Gtk.Label(label=text)
         self.label.set_margin_end(15)
@@ -466,11 +468,10 @@ class StateBox(StylizedFrame):
         self.label.set_margin_bottom(15)
         self.label.set_halign(Gtk.Align.START)
 
-        hbox.pack_start(self.image, False, True, 0)
-        hbox.pack_start(self.label, True, True, 0)
+        hbox.append(self.image)
+        hbox.append(self.label)
 
-        self.add(hbox)
-        self.show_all()
+        self.set_child(hbox)
 
         self.status = True
 
@@ -479,10 +480,10 @@ class StateBox(StylizedFrame):
         self.status = state
         if state:
             self.image.set_from_icon_name(
-                Gtk.STOCK_YES, Gtk.IconSize.LARGE_TOOLBAR)
+                "object-select-symbolic")
         else:
             self.image.set_from_icon_name(
-                Gtk.STOCK_NO, Gtk.IconSize.LARGE_TOOLBAR)
+                "dialog-cancel")
 
     def get_state(self):
         """ Get widget state """
@@ -496,7 +497,6 @@ class StateBox(StylizedFrame):
         """ Hides widget """
         super().hide()
 GObject.type_register(StateBox)
-
 
 class Builder(Gtk.Builder):
     """ GtkBuilder should have .get_object_ids() method """

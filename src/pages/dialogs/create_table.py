@@ -26,13 +26,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Create disk table dialog (advanced mode) """
 
 import os
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GObject
 
 import misc.extra as misc
@@ -65,7 +64,7 @@ class CreateTableDialog(Gtk.Dialog):
         self.gui.connect_signals(self)
 
         area = self.get_content_area()
-        area.add(self.gui.get_object('create_table_vbox'))
+        area.append(self.gui.get_object('create_table_vbox'))
 
         self.add_button(Gtk.STOCK_APPLY, Gtk.ResponseType.APPLY)
         self.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
@@ -91,6 +90,5 @@ class CreateTableDialog(Gtk.Dialog):
         combo.append_text("GUID Partition Table (GPT)")
         # Automatically select first entry
         misc.select_first_combobox_item(combo)
-
 
 GObject.type_register(CreateTableDialog)

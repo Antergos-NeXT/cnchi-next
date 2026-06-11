@@ -33,7 +33,7 @@ import os
 import random
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GdkPixbuf
 
 import show_message as show
@@ -51,7 +51,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class UserInfo(GtkBaseBox):
     """ Asks for user information """
@@ -102,7 +101,7 @@ class UserInfo(GtkBaseBox):
                 self.webcam.clicked)
 
             self.overlay.add_overlay(event_box)
-            event_box.add(self.webcam)
+            event_box.set_child(self.webcam)
 
             self.webcam.set_halign(Gtk.Align.START)
             self.webcam.set_valign(Gtk.Align.START)
@@ -154,32 +153,34 @@ class UserInfo(GtkBaseBox):
         """ Sets avatar image """
         icon_path = os.path.join(self.avatars_path, avatar + '.png')
         if os.path.exists(icon_path):
-            if not self.avatar_image:
-                self.avatar_image = Gtk.Image.new_from_file(icon_path)
-                event_box = Gtk.EventBox.new()
-                event_box.connect(
-                    'button-press-event',
-                    self.avatar_clicked)
-                self.overlay.set_size_request(
-                    UserInfo.AVATAR_WIDTH,
-                    UserInfo.AVATAR_HEIGHT)
-                self.overlay.add_overlay(event_box)
-                event_box.add(self.avatar_image)
-            else:
-                self.avatar_image.set_from_file(icon_path)
-            self.selected_avatar_path = icon_path
-            # Resize it
-            pixbuf = self.avatar_image.get_pixbuf()
-            new_pixbuf = pixbuf.scale_simple(
+            # Load and scale pixbuf first, then set on image
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
+                icon_path,
                 UserInfo.AVATAR_WIDTH,
-                UserInfo.AVATAR_HEIGHT,
-                GdkPixbuf.InterpType.BILINEAR)
-            self.avatar_image.set_from_pixbuf(new_pixbuf)
+                UserInfo.AVATAR_HEIGHT)
+            if pixbuf:
+                new_pixbuf = pixbuf.scale_simple(
+                    UserInfo.AVATAR_WIDTH,
+                    UserInfo.AVATAR_HEIGHT,
+                    GdkPixbuf.InterpType.BILINEAR)
+                if not self.avatar_image:
+                    self.avatar_image = Gtk.Image.new_from_pixbuf(new_pixbuf)
+                    gesture = Gtk.GestureClick()
+                    gesture.set_button(1)
+                    gesture.connect("pressed", self.avatar_clicked)
+                    self.avatar_image.add_controller(gesture)
+                    self.overlay.set_size_request(
+                        UserInfo.AVATAR_WIDTH,
+                        UserInfo.AVATAR_HEIGHT)
+                    self.overlay.add_overlay(self.avatar_image)
+                else:
+                    self.avatar_image.set_from_pixbuf(new_pixbuf)
+                self.selected_avatar_path = icon_path
         else:
             self.avatar_image = None
             logging.warning("Cannot load '%s' avatar", avatar)
 
-    def avatar_clicked(self, _widget, _button):
+    def avatar_clicked(self, _gesture, _n_press, _x, _y):
         """ Avatar image has been clicked """
         main_window = self.settings.get("main_window")
         avatars = avatars_chooser.Avatars(
@@ -289,12 +290,6 @@ class UserInfo(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare screen """
         self.translate_ui()
-        self.show_all()
-
-        if self.webcam and not self.webcam.error:
-            self.webcam.show_all()
-        elif self.avatar_image:
-            self.avatar_image.show_all()
 
         # Disable autologin if using 'base' desktop
         if self.settings.get('desktop') == "base":
@@ -348,7 +343,7 @@ class UserInfo(GtkBaseBox):
                 icon_type = UserInfo.ICON_WARNING
             else:
                 icon_type = UserInfo.ICON_OK
-            image.set_from_icon_name(icon_type, Gtk.IconSize.LARGE_TOOLBAR)
+            image.set_from_icon_name(icon_type)
             image.show()
 
         label = self.widgets[element].get('label', None)

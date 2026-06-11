@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ systemd-networkd configuration in base install. """
 # https://wiki.archlinux.org/index.php/Systemd-networkd
 
@@ -40,7 +39,6 @@ import logging
 from misc.run_cmd import chroot_call
 
 DEST_DIR = "/install"
-
 
 def setup(ssid=None, passphrase=None):
     """ Configure system-networkd for base installs """
@@ -122,7 +120,6 @@ def setup(ssid=None, passphrase=None):
             chroot_call(cmd)
             # cmd = ["systemctl", "enable", "dhcpcd@{0}".format(link)]
             # chroot_run(cmd)
-
 
 if __name__ == '__main__':
     def _(msg):

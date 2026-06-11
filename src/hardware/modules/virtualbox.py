@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Virtualbox driver installation """
 
 try:
@@ -40,7 +39,6 @@ CLASS_NAME = "Virtualbox"
 CLASS_ID = "0x03"
 VENDOR_ID = "0x80ee"
 DEVICES = ['0xbeef']
-
 
 class Virtualbox(Hardware):
     """ Virtualbox modules """

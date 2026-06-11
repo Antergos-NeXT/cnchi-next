@@ -20,14 +20,12 @@
 
 """ Internationalisation helper functions (read languagelist.data) """
 
-
 def utf8(my_string, errors="strict"):
     """ Decode a string as UTF-8 if it isn't already Unicode. """
     if isinstance(my_string, str):
         return my_string
     else:
         return str(my_string, "utf-8", errors)
-
 
 def get_languages(language_list="data/languagelist.data.gz", current_language_index=-1):
     """ Returns a tuple of (current language, sorted choices, display map). """

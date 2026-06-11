@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Let advanced users manage mirrorlist files """
 
 import logging
@@ -35,7 +34,7 @@ import os
 import shutil
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gdk, GObject
 
 try:
@@ -58,7 +57,6 @@ except NameError as err:
     def _(message):
         return message
 
-
 class MirrorListBoxRow(Gtk.ListBoxRow):
     """ Represents a mirror """
     def __init__(self, url, active, switch_cb, drag_cbs):
@@ -70,9 +68,8 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
 
         box = Gtk.Box(spacing=20)
 
-        self.handle = Gtk.EventBox.new()
-        self.handle.add(Gtk.Image.new_from_icon_name("open-menu-symbolic", 1))
-        box.pack_start(self.handle, False, False, 0)
+        self.handle = Gtk.Image.new_from_icon_name("open-menu-symbolic")
+        box.append(self.handle)
 
         # Add mirror url label
         self.label = Gtk.Label.new()
@@ -83,7 +80,7 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
         url_parts = url.split('/')
         text_url = url_parts[0] + "//" + url_parts[2]
         self.label.set_text(text_url)
-        box.pack_start(self.label, False, True, 0)
+        box.append(self.label)
 
         # Add mirror switch
         self.switch = Gtk.Switch.new()
@@ -93,33 +90,28 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
         self.switch.set_property('margin_end', 10)
         self.switch.connect("notify::active", switch_cb)
         self.switch.set_active(active)
-        box.pack_end(self.switch, False, False, 0)
+        box.prepend(self.switch)
 
         self.add(box)
 
         self.set_selectable(True)
 
-        # Drag and drop
-        # Source
-        self.handle.drag_source_set(
-            Gdk.ModifierType.BUTTON1_MASK, [], Gdk.DragAction.MOVE)
-        self.handle.drag_source_add_text_targets()
-        self.handle.connect("drag-begin", drag_cbs['drag-begin'])
-        self.handle.connect("drag-data-get", drag_cbs['drag-data-get'])
-        #self.handle.connect("drag-data-delete", self.drag_data_delete)
-        #self.handle.connect("drag-end", self.drag_end)
+        # TODO GTK4: reimplement drag-and-drop with Gtk.DragSource/Gtk.DropTarget
+        # Source (old GTK3 API removed)
+        # self.handle.drag_source_set(
+        #     Gdk.ModifierType.BUTTON1_MASK, [], Gdk.DragAction.MOVE)
+        # self.handle.drag_source_add_text_targets()
+        # self.handle.connect("drag-begin", drag_cbs['drag-begin'])
+        # self.handle.connect("drag-data-get", drag_cbs['drag-data-get'])
 
-        # Destination
-        self.drag_dest_set(Gtk.DestDefaults.ALL, [], Gdk.DragAction.MOVE)
-        self.drag_dest_add_text_targets()
-        self.connect("drag-data-received", drag_cbs['drag-data-received'])
-        #self.connect("drag-motion", self.drag_motion);
-        #self.connect("drag-crop", self.drag_crop);
+        # Destination (GTK3 API removed)
+        # self.drag_dest_set(Gtk.DestDefaults.ALL, [], Gdk.DragAction.MOVE)
+        # self.drag_dest_add_text_targets()
+        # self.connect("drag-data-received", drag_cbs['drag-data-received'])
 
     def is_active(self):
         """ Returns if the mirror is active """
         return self.switch.get_active()
-
 
 class MirrorListBox(Gtk.ListBox):
     """ List that stores all mirrors """
@@ -204,8 +196,11 @@ class MirrorListBox(Gtk.ListBox):
 
     def fillme(self):
         """ Fill listbox with mirrors info """
-        for listboxrow in self.get_children():
-            listboxrow.destroy()
+        while True:
+            child = self.get_first_child()
+            if child is None:
+                break
+            self.remove(child)
 
         drag_cbs = {
             'drag-begin': self.drag_begin,
@@ -258,7 +253,7 @@ class MirrorListBox(Gtk.ListBox):
         surface.set_device_offset(-pos_x, -pos_y)
         Gtk.drag_set_icon_surface(drag_context, surface)
 
-        hand_cursor = Gdk.Cursor(Gdk.CursorType.HAND1)
+        hand_cursor = Gdk.Cursor.new_from_name("pointer")
         self.get_window().set_cursor(hand_cursor)
 
     def drag_data_get(self, widget, _drag_context, selection_data, _info, _time):
@@ -281,7 +276,6 @@ class MirrorListBox(Gtk.ListBox):
                 new_index = widget.get_index()
                 self.mirrors.insert(new_index, self.mirrors.pop(old_index))
                 self.fillme()
-                self.show_all()
         except (KeyError, ValueError) as err:
             logging.warning(err)
 
@@ -330,7 +324,6 @@ class MirrorListBox(Gtk.ListBox):
                     arch_mirrors.append(self.trim_mirror_url(url))
             self.settings.set('rankmirrors_result', arch_mirrors)
 
-
 class Mirrors(GtkBaseBox):
     """ Page that shows mirrolists so the user can arrange them manually """
 
@@ -354,7 +347,7 @@ class Mirrors(GtkBaseBox):
             self.listboxes.append(mirror_listbox)
 
         for index, scrolled_window in enumerate(self.scrolledwindows):
-            scrolled_window.add(self.listboxes[index])
+            scrolled_window.set_child(self.listboxes[index])
 
         self.listboxes_box = self.gui.get_object("listboxes_box")
 
@@ -397,7 +390,6 @@ class Mirrors(GtkBaseBox):
         """ Let user choose mirrorlist ordering """
         self.use_rankmirrors = False
         self.use_listboxes = True
-        self.show_all()
         self.check_active_mirrors()
         self.listboxes_box.set_sensitive(True)
 
@@ -423,7 +415,6 @@ class Mirrors(GtkBaseBox):
     def prepare(self, direction):
         """ Prepares screen """
         self.translate_ui()
-        self.show_all()
         # self.listboxes_box.hide()
         self.listboxes_box.set_sensitive(False)
         self.forward_button.set_sensitive(True)

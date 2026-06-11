@@ -1,269 +1,326 @@
-#main {
-    font-family: 'Open Sans';
-    font-size: 11px;
-}
+/* ============================================
+   Antergos NeXT Cnchi - GTK4 Stylesheet
+   EndeavourOS Calamares-inspired dark theme
+   ============================================ */
 
-#location {
-    font-size: 11px;
-}
+/* =========== MAIN LAYOUT =========== */
 
 window {
-    border-color: transparent;
-    font-family: 'Open Sans';
+    background-color: #2a2e32;
+}
+
+#main {
+    font-family: 'Open Sans', 'Segoe UI', 'Cantarell', sans-serif;
+    font-size: 12px;
+    background-color: #2a2e32;
+}
+
+/* =========== SIDEBAR =========== */
+
+#sidebar {
+    background-color: #31363b;
+    color: #ffffff;
+    min-width: 260px;
+}
+
+#sidebar_header {
+    background-color: transparent;
+    padding: 24px 16px 16px;
+}
+
+#sidebar_logo {
+    margin-bottom: 12px;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.sidebar-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.version-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    padding: 4px 16px;
+}
+
+/* =========== ABOUT BUTTON =========== */
+
+#about_section {
+    background-color: transparent;
+    padding: 4px 0;
+}
+
+.about-button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.4);
+    border: none;
+    font-size: 11px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.about-button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========== STEP INDICATORS =========== */
+
+.steps-list {
+    background-color: transparent;
+}
+
+.steps-list > row {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    min-height: 44px;
+}
+
+.step-row {
+    padding: 8px 16px;
+    background-color: transparent;
+    transition: all 200ms ease-out;
+}
+
+.step-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.step-indicator {
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.step-indicator.completed {
+    background-color: #7d7dfb;
+    color: #ffffff;
+}
+
+.step-indicator.completed label {
+    font-weight: 700;
+}
+
+.step-indicator.active {
+    background-color: #7d7dfb;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(125, 125, 251, 0.4);
+}
+
+.step-label {
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
 }
 
-#logo {
-    background-color: transparent;
-    margin-top: 0px;
+.step-label.completed {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.title {
-    background-color: transparent;
-    color: #2EA3F2;
-    font-size: 11px;
-    font-weight: 600;
-    font-family: 'Open Sans';
-    text-shadow: 0px 1px 0px #222;
-}
-
-.label.subtitle, #header .subtitle, .subtitle {
-    font-size: 13px;
-    font-weight: 400;
-    font-family: 'Open Sans';
-    color: #eee;
-}
-
-#header {
-    background-image: url('/usr/share/cnchi/data/images/header.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border-bottom: 0px;
-    border-color: transparent;
-    font-family: 'Open Sans';
-    padding: 8px 12px;
-}
-
-#process_progressbar, #i_progressbar, #a_progressbar {
-    border-radius: 1px;
-}
-
-#process_progressbar {
-    min-height: 3px;
-}
-
-#i_progressbar, #a_progressbar {
-    min-height: 12px;
-}
-
-GtkProgressBar.progressbar {
-    color: #2EA3F2;
-    border-color: shade(#2EA3F2, 0.9);
-    background-image: linear-gradient(to bottom, #2EA3F2, #2EA3F2);
-}
-
-#fwd_btn, #bk_btn {
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-#fwd_btn {
-    border-radius: 0px 2px 2px 0px;
-}
-
-#bk_btn {
-    border-radius: 2px 0px 0px 2px;
-}
-
-#fwd_btn:hover, #bk_btn:hover,
-#fwd_btn:hover label, #bk_btn:hover label {
-    color: #2EA3F2;
-}
-
-#fwd_btn:active, #bk_btn:active,
-#fwd_btn:active label, #bk_btn:active label {
-    color: #333A4C;
-    box-shadow: inset 0px -3px 1px rgba(255, 255, 255, 1), inset 0 0px 3px rgba(95, 95, 95, 0.90);
-    background-color: shade(@theme_bg_color, 1.08);
-}
-
-#fwd_btn label, #bk_btn label {
-    font-size: 11px;
-}
-
-#fwd_btn_install_now,
-#fwd_btn_install_now label {
-    background-color: #2EA3F2;
+.step-label.active {
     color: #ffffff;
-    border-radius: 0px 2px 2px 0px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    border-color: #2e94e3;
-    border-width: 1px;
-    font-size: 10px;
-    font-weight: 500;
-}
-
-#fwd_btn_save,
-#fwd_btn_save label {
-    background-color: #2EA3F2;
-    color: #ffffff;
-    border-radius: 0px 2px 2px 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-color: #2e94e3;
-    border-width: 1px;
-    font-size: 10px;
-    font-weight: 500;
-}
-
-#fwd_btn_install_now:active, #fwd_btn_save:active,
-#fwd_btn_install_now:active label, #fwd_btn_save:active label {
-    color: #333A4C;
-    box-shadow: inset 0px -3px 1px rgba(255, 255, 255, 0.4), inset 0 0px 3px rgba(95, 95, 95, 0.80);
-}
-
-#fwd_btn_install_now:hover, #fwd_btn_save:hover,
-#fwd_btn_install_now:hover label, #fwd_btn_save:hover label {
-    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.4);
-}
-
-.header-bar .close_button {
-    padding-left: 5px;
-    padding-right: 0px;
-}
-
-headerbar separator {
-    color: rgba(255, 255, 255, 0.08);
-}
-
-toolbar separator, separator, headerbar separator {
-    margin-left: 10px;
-}
-
-list, .list {
-    background-color: #eee;
-}
-
-list row:active, list row:selected, .list-row:active, .list-row:selected {
-    background-color: #2EA3F2;
-}
-
-#tryit_btn, #graph_btn,
-#tryit_btn label, #graph_btn label {
-    padding: 12px 20px;
-    border-radius: 3px;
-    border-color: #f0f0f0;
-    border-width: 2px;
-    background: rgba(255, 255, 255, 1);
-    font-size: 15px;
-    font-weight: 500;
-    color: #2EA3F2;
-    transition: all 0.1s ease-in;
-}
-
-#tryit_btn:focus, #graph_btn:focus,
-#tryit_btn:focus label, #graph_btn:focus label {
-    padding: 12px 20px;
-    border-radius: 3px;
-    border-color: #2EA3F2;
-    border-width: 2px;
-    background: rgba(255, 255, 255, 1);
-    font-size: 15px;
-    font-weight: 500;
-    color: #2EA3F2;
-    transition: all 0.1s ease-in;
-}
-
-#tryit_btn:hover, #graph_btn:hover,
-#tryit_btn:hover label, #graph_btn:hover label {
-    padding-top: 9px;
-    padding-bottom: 9px;
-    background: #2EA3F2;
-    color: #fff;
-    border-radius: 0px;
-    border-width: 0px;
-    border-bottom-width: 1px;
-    font-size: 20px;
-}
-
-#tryit_label, #installit_label {
-    font-size: 11px;
-}
-
-/*GtkSwitch.trough:active {
-    border-color: shade(#2EA3F2, 0.9);
-    background-color: #2EA3F2;
-    background-image: none;
-}
-
-GtkTreeView row:selected {
-    background-color: #2EA3F2;
-    border-color: shade(#2EA3F2, 0.9);
-}*/
-
-#auto_radio_btn label, #advanced_radio_btn label {
-    font-size: 13px;
     font-weight: 600;
 }
 
-#lvm_btn label, #enc_btn label, #zfs_btn label, #home_btn label {
+/* =========== CONTENT AREA =========== */
+
+#page_header_area {
+    background-color: transparent;
+}
+
+.page-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 4px;
+}
+
+#main_stack {
+    background-color: #2a2e32;
+}
+
+/* =========== BOTTOM NAVIGATION BAR =========== */
+
+#bottom_bar {
+    background-color: #31363b;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px 16px;
+}
+
+.step-counter {
     font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-#lvm_label, #enc_label, #zfs_label, #home_label {
-    font-size: 10px;
-    font-style: italic;
+.navigation-button {
+    min-width: 100px;
+    min-height: 36px;
+    padding: 4px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: transparent;
+    color: #ffffff;
+    transition: all 150ms ease-out;
 }
 
+.navigation-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation-button:active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.next-button {
+    background-color: #7d7dfb;
+    color: #ffffff;
+    border: none;
+}
+
+.next-button:hover {
+    background-color: #9696fc;
+}
+
+.next-button:active {
+    background-color: #6363e0;
+}
+
+/* =========== WELCOME PAGE =========== */
+
+#welcome {
+    background-color: #2a2e32;
+}
+
+/* =========== PAGE INNER WIDGETS =========== */
+
+/* All page content boxes */
+#welcome label,
+#language label,
+#location label,
+#desktop label,
+#check label,
+#features label,
+#keymap label {
+    color: #ffffff;
+}
+
+/* =========== SCROLLED WINDOWS =========== */
+
+scrolledwindow {
+    border: none;
+}
+
+scrolledwindow scrollbar {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+scrolledwindow scrollbar slider {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* =========== LISTBOX =========== */
+
+listbox {
+    background-color: transparent;
+}
+
+listbox > row {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px;
+}
+
+listbox > row:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+listbox > row:selected {
+    background-color: rgba(125, 125, 251, 0.3);
+}
+
+/* =========== KEYBOARD PREVIEW =========== */
+
+#keyboard_preview {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* =========== MISC =========== */
+
+#mirrors #intro_label,
 #ask #intro_label {
     font-size: 16px;
-}
-
-#mirrors #intro_label {
-    font-size: 16px;
-}
-
-#location-label-choose-country  {
-    font-size: 14px;
-}
-
-#location-label-help  {
-    font-size: 14px;
-    font-style: italic;
-}
-
-#location-checkbutton-show-all-locations {
-    font-size: 14px;
+    color: #ffffff;
 }
 
 #slides scrolledwindow {
     border: none;
 }
 
-StateBox {
-    border-radius: 2px;
-}
-
-#location-listbox, .row .label {
-    font-size: 12px;
-}
-
-#location-listbox, .row .label:hover {
-    font-size: 12px;
-}
-
 .dialog-vbox {
     font-size: 11px;
 }
 
-#check label, #check .label {
-    color: #eee;
+/* =========== PROGRESS BAR =========== */
+
+progressbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+progressbar trough {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    min-height: 4px;
+}
+
+progressbar progress {
+    background-color: #7d7dfb;
+    border-radius: 2px;
+}
+
+/* =========== ANIMATIONS =========== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(125, 125, 251, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(125, 125, 251, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(125, 125, 251, 0); }
+}
+
+.step-indicator.active {
+    animation: pulse 2s infinite;
+}
+
+/* Notifications */
+.flash-message {
+    background-color: #7d7dfb;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-weight: 600;
 }

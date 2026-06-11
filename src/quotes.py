@@ -29,6 +29,5 @@ QUOTES = [
 
 import random
 
-
 def get_random_quote():
     return random.choice(QUOTES)

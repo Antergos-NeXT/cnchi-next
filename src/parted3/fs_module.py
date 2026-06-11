@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Functions to work with file systems """
 
 import subprocess
@@ -57,7 +56,6 @@ def get_uuid(part):
     logging.error("Can't get partition %s UUID", part)
     return ""
 
-
 def get_label(part):
     """ Get partition label """
     info = get_info(part)
@@ -66,7 +64,6 @@ def get_label(part):
     logging.debug(
         "Can't get partition %s label (or it does not have any)", part)
     return ""
-
 
 @misc.raise_privileges
 def get_info(part):
@@ -90,7 +87,6 @@ def get_info(part):
 
     return partdic
 
-
 @misc.raise_privileges
 def get_type(part):
     """ Get partition filesystem type """
@@ -103,7 +99,6 @@ def get_type(part):
         except subprocess.CalledProcessError as err:
             logging.warning("Error running %s: %s", err.cmd, err.output)
     return ret
-
 
 def get_pknames():
     """ PKNAME: internal parent kernel device name """
@@ -132,7 +127,6 @@ def get_pknames():
                 except IndexError as err:
                     pass
     return pknames
-
 
 @misc.raise_privileges
 def label_fs(fstype, part, label):
@@ -168,7 +162,6 @@ def label_fs(fstype, part, label):
     else:
         ret = (1, _("Cnchi does not know how to label a {0} partition").format(fstype))
     return ret
-
 
 @misc.raise_privileges
 def create_fs(part, fstype, label='', options=''):
@@ -264,7 +257,6 @@ def is_ssd(disk_path):
     with open(filename) as my_file:
         return my_file.read() == "0\n"
 
-
 # To shrink a partition:
 # 1. Shrink fs
 # 2. Shrink partition (resize)
@@ -290,7 +282,6 @@ def resize(part, fs_type, new_size_in_mb):
 
     return res
 
-
 @misc.raise_privileges
 def resize_ntfs(part, new_size_in_mb):
     """ Resize a ntfs partition """
@@ -308,14 +299,12 @@ def resize_ntfs(part, new_size_in_mb):
 
     return True
 
-
 @misc.raise_privileges
 def resize_fat(_part, _new_size_in_mb):
     """ Resize a fat partition """
     # https://bbs.archlinux.org/viewtopic.php?id=131728
     # the only Linux tool that was capable of resizing fat32, isn't capable of it anymore?
     return False
-
 
 @misc.raise_privileges
 def resize_ext(part, new_size_in_mb):

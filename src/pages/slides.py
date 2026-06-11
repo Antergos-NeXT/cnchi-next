@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Shows slides while installing. Also manages installing messages and progress bars """
 
 import sys
@@ -35,9 +34,8 @@ import os
 import queue
 import subprocess
 
-
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GLib, GdkPixbuf
 
 import show_message as show
@@ -97,7 +95,6 @@ class Slides(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare slides screen """
         self.translate_ui()
-        self.show_all()
 
         # Last screen reached, hide main progress bar (the one at the top).
         self.main_progressbar.hide()
@@ -163,7 +160,6 @@ class Slides(GtkBaseBox):
         """ Stop pulsing progressbar """
         self.should_pulse = False
         # self.progress_bar.hide()
-        self.info_label.show_all()
 
     def start_pulse(self):
         """ Start pulsing progressbar """
@@ -179,7 +175,6 @@ class Slides(GtkBaseBox):
             self.info_label.set_markup("")
             self.info_label.hide()
             # Show progress bar (just in case)
-            self.progress_bar.show_all()
             self.progress_bar.set_show_text(True)
             self.should_pulse = True
             GLib.timeout_add(100, pbar_pulse)

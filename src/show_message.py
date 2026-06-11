@@ -30,15 +30,13 @@
 
 import sys
 import os
-#import multiprocessing
 
 import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+gi.require_version('Gtk', '4.0')
+from gi.repository import Gtk, GLib
 
 from misc import extra as misc
 
-# When testing, no _() is available
 try:
     _("")
 except NameError as err:
@@ -46,88 +44,78 @@ except NameError as err:
         return msg
 
 
-def fatal_error(parent, my_message):
-    """ Shows an error message and quits """
+def _make_alert(title, message, buttons=None):
+    alert = Gtk.AlertDialog()
+    alert.set_message(title)
+    alert.set_detail(str(message))
+    if buttons:
+        alert.set_buttons(buttons)
+    return alert
 
+
+def fatal_error(parent, my_message):
     path = "/var/tmp/cnchi/.setup-running"
     if os.path.exists(path):
         with misc.raised_privileges():
             os.remove(path)
-
-    # multiprocessing.active_children()
-
     error(parent, my_message)
     sys.exit(1)
 
 
 def error(parent, my_message):
-    """ Shows an error message """
-
     if not isinstance(parent, Gtk.Window):
         parent = None
-
-    my_message = str(my_message)
-    msg_dialog = Gtk.MessageDialog(transient_for=parent,
-                                   modal=True,
-                                   destroy_with_parent=True,
-                                   message_type=Gtk.MessageType.ERROR,
-                                   buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos NeXT Installer - Error"))
-    msg_dialog.format_secondary_text(my_message)
-    msg_dialog.run()
-    msg_dialog.destroy()
+    alert = _make_alert(
+        _("Antergos NeXT Installer - Error"),
+        my_message,
+        [_("_Close")])
+    alert.choose(parent, None, lambda *a: None)
 
 
 def warning(parent, my_message):
-    """ Shows a warning message """
-
     if not isinstance(parent, Gtk.Window):
         parent = None
-
-    my_message = str(my_message)
-    msg_dialog = Gtk.MessageDialog(transient_for=parent,
-                                   modal=True,
-                                   destroy_with_parent=True,
-                                   message_type=Gtk.MessageType.WARNING,
-                                   buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos NeXT Installer - Warning"))
-    msg_dialog.format_secondary_text(my_message)
-    msg_dialog.run()
-    msg_dialog.destroy()
+    alert = _make_alert(
+        _("Antergos NeXT Installer - Warning"),
+        my_message,
+        [_("_Close")])
+    alert.choose(parent, None, lambda *a: None)
 
 
 def message(parent, my_message):
-    """ Show message """
-
     if not isinstance(parent, Gtk.Window):
         parent = None
-
-    my_message = str(my_message)
-    msg_dialog = Gtk.MessageDialog(transient_for=parent,
-                                   modal=True,
-                                   destroy_with_parent=True,
-                                   message_type=Gtk.MessageType.INFO,
-                                   buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Antergos NeXT Installer - Information"))
-    msg_dialog.format_secondary_text(my_message)
-    msg_dialog.run()
-    msg_dialog.destroy()
+    alert = _make_alert(
+        _("Antergos NeXT Installer - Information"),
+        my_message,
+        [_("_Close")])
+    alert.choose(parent, None, lambda *a: None)
 
 
 def question(parent, my_message):
-    """ Shows a question message """
-
     if not isinstance(parent, Gtk.Window):
         parent = None
-
-    my_message = str(my_message)
-    msg_dialog = Gtk.MessageDialog(transient_for=parent,
-                                   modal=True,
-                                   destroy_with_parent=True,
-                                   message_type=Gtk.MessageType.QUESTION,
-                                   buttons=Gtk.ButtonsType.YES_NO,
-                                   text=_("Antergos NeXT Installer - Confirmation"))
-    msg_dialog.format_secondary_text(my_message)
-    response = msg_dialog.run()
-    msg_dialog.destroy()
+    alert = _make_alert(
+        _("Antergos NeXT Installer - Confirmation"),
+        my_message,
+        [_("_No"), _("_Yes")])
+    alert.set_default_button(1)
+    alert.set_cancel_button(0)
+    response = None
+    loop = GLib.MainLoop()
+    def on_response(dialog, result):
+        nonlocal response
+        try:
+            idx = dialog.choose_finish(result)
+        except GLib.Error:
+            idx = -1
+        if idx == 1:
+            response = Gtk.ResponseType.YES
+        elif idx == 0:
+            response = Gtk.ResponseType.NO
+        else:
+            response = Gtk.ResponseType.NO
+        loop.quit()
+    alert.choose(parent, None, on_response)
+    loop.run()
     return response

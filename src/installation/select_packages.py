@@ -51,7 +51,6 @@ except NameError as err:
     def _(message):
         return message
 
-
 class SelectPackages():
     """ Package list creation class """
 
@@ -390,7 +389,6 @@ class SelectPackages():
         if not_found:
             txt = _("Cannot find these packages: {}").format(', '.join(not_found))
             raise misc.InstallError(txt)
-
 
     def cleanup_packages_list(self):
         """ Cleans up a bit our packages list """

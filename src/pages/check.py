@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Check screen (detects if Antergos prerequisites are meet) """
 
 import logging
@@ -59,7 +58,6 @@ except NameError as err:
     def _(message):
         return message
 
-
 class Check(GtkBaseBox):
     """ Check class """
 
@@ -89,7 +87,6 @@ class Check(GtkBaseBox):
         self.packaging_issues = None
 
         self.label_space = self.gui.get_object("label_space")
-
 
     def translate_ui(self):
         """ Translates all ui elements """
@@ -178,7 +175,6 @@ class Check(GtkBaseBox):
     def prepare(self, direction):
         """ Load screen """
         self.translate_ui()
-        self.show_all()
 
         self.forward_button.set_sensitive(self.results['check_all'])
 
@@ -192,7 +188,6 @@ class Check(GtkBaseBox):
         self.proc.daemon = True
         self.proc.name = "check_proc"
         self.proc.start()
-
 
 class CheckProcess(multiprocessing.Process):
     """ Thread that asks our server for user's location """
@@ -230,7 +225,6 @@ class CheckProcess(multiprocessing.Process):
 
         if has_internet and space and not packaging_issues:
             self.results['check_all'] = True
-
 
     def on_battery(self):
         """ Checks if we are on battery power """

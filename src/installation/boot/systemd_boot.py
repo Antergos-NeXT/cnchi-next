@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Systemd-boot (gummiboot) installation """
 
 import logging
@@ -35,7 +34,6 @@ import os
 import parted3.fs_module as fs
 
 from misc.run_cmd import chroot_call
-
 
 class SystemdBoot():
     """ Class to perform boot loader installation """

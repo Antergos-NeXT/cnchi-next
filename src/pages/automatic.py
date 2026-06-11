@@ -26,13 +26,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Automatic installation screen """
 
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 from pages.gtkbasebox import GtkBaseBox
@@ -55,7 +54,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class InstallationAutomatic(GtkBaseBox):
     """ Automatic Installation Screen """
@@ -147,7 +145,6 @@ class InstallationAutomatic(GtkBaseBox):
         self.boot_ui.fill_bootloader_device_entry()
         self.populate_devices()
 
-        self.show_all()
         self.fill_bootloader_entry()
 
         luks_grid = self.gui.get_object('luks_grid')
@@ -180,8 +177,7 @@ class InstallationAutomatic(GtkBaseBox):
                 install_ok = False
 
             self.image_password_ok.set_from_icon_name(
-                icon,
-                Gtk.IconSize.LARGE_TOOLBAR)
+                icon)
             self.image_password_ok.set_opacity(1)
 
         self.forward_button.set_sensitive(install_ok)

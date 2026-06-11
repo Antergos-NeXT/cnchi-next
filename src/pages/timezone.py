@@ -49,7 +49,6 @@ except NameError as err:
     def _(message):
         return message
 
-
 class Timezone(GtkBaseBox):
     """ Timezone screen """
 
@@ -62,7 +61,7 @@ class Timezone(GtkBaseBox):
         self.combobox_region = self.gui.get_object('comboboxtext_region')
 
         # Show regions in three columns
-        self.combobox_region.set_wrap_width(3)
+        # GTK4: set_wrap_width removed
 
         self.tzdb = tz.Database()
         self.timezone = None
@@ -83,7 +82,7 @@ class Timezone(GtkBaseBox):
 
         # Strip .UTF-8 from locale, icu doesn't parse it
         self.locale = os.environ['LANG'].rsplit('.', 1)[0]
-        self.map_window.add(self.tzmap)
+        self.map_window.set_child(self.tzmap)
         self.tzmap.show()
 
     def translate_ui(self):
@@ -215,8 +214,6 @@ class Timezone(GtkBaseBox):
                 logging.warning(
                     "Can't autodetect timezone coordinates: %s", value_error)
 
-        self.show_all()
-
     def start_auto_timezone_process(self):
         """ Starts timezone thread """
         proc = AutoTimezoneProcess(
@@ -285,7 +282,6 @@ class Timezone(GtkBaseBox):
     def on_switch_ntp_activate(self, ntp_switch, _data):
         """ activated/deactivated ntp switch """
         self.settings.set('use_timesyncd', ntp_switch.get_active())
-
 
 class AutoTimezoneProcess(multiprocessing.Process):
     """ Thread that asks a geolocation API for user's location """

@@ -26,14 +26,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """
 LAMP stack is a group of open source software to get web servers up
 and running. The acronym stands for Linux, Apache, MySQL, and PHP.
 Since the server is already running Antergos, the linux
 part is taken care of.
 """
-
 
 import os
 import logging
@@ -42,7 +40,6 @@ import shutil
 from misc.run_cmd import chroot_call
 
 DEST_DIR = '/install'
-
 
 def setup():
     """ Runs lamp setup """
@@ -57,7 +54,6 @@ def setup():
     except (FileExistsError, OSError) as io_error:
         logging.error(io_error)
 
-
 def mariadb_setup():
     """ Runs MariaDB setup """
     cmd = [
@@ -71,7 +67,6 @@ def mariadb_setup():
     chroot_call(cmd)
 
     # TODO: Warn user to run mysql_secure_installation
-
 
 def apache_setup():
     """ Configure Apache web server """
@@ -121,7 +116,6 @@ def apache_setup():
 
     chroot_call(["systemctl", "enable", "httpd"])
 
-
 def php_setup():
     """ Setup PHP """
     # Comment mpm_event_module
@@ -170,7 +164,6 @@ def php_setup():
     # source = os.path.join(DEST_DIR, 'etc/httpd/conf/sites-available/localhost.conf')
     # link_name = os.path.join(DEST_DIR, 'etc/httpd/conf/sites-enabled/localhost.conf')
     # os.symlink(source, link_name)
-
 
 if __name__ == '__main__':
     setup()

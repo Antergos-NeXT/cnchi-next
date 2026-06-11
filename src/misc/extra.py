@@ -40,7 +40,6 @@ import ssl
 import dbus
 import config
 
-
 NM = 'org.freedesktop.NetworkManager'
 NM_STATE_CONNECTED_GLOBAL = 70
 
@@ -48,13 +47,11 @@ _DROPPED_PRIVILEGES = 0
 
 _CNCHI_SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "data", "locale")
 
-
 def get_locale_dir():
     """ Return the locale directory (dev path first, then system path) """
     if os.path.isdir(_CNCHI_SRC):
         return _CNCHI_SRC
     return "/usr/share/locale"
-
 
 def copytree(src_dir, dst_dir, symlinks=False, ignore=None):
     """ Copy an entire tree with files and folders """
@@ -66,14 +63,12 @@ def copytree(src_dir, dst_dir, symlinks=False, ignore=None):
         else:
             shutil.copy2(src, dst)
 
-
 def utf8(my_string, errors="strict"):
     """ Decode a string as UTF-8 if it isn't already Unicode. """
     if isinstance(my_string, str):
         return my_string
     else:
         return str(my_string, "utf-8", errors)
-
 
 def is_swap(device):
     """ Check if device is a swap device """
@@ -103,7 +98,6 @@ def set_groups_for_uid(uid):
         for line in traceback.format_exc().split('\n'):
             syslog.syslog(syslog.LOG_ERR, line)
 
-
 def get_uid_gid():
     """ Returns uid and gid from SUDO_* env vars
         and sets groups for that uid """
@@ -115,7 +109,6 @@ def get_uid_gid():
     if gid:
         gid = int(gid)
     return (uid, gid)
-
 
 def drop_all_privileges():
     """ Drop root privileges """
@@ -131,7 +124,6 @@ def drop_all_privileges():
         os.environ['LOGNAME'] = pwd.getpwuid(uid).pw_name
     _DROPPED_PRIVILEGES = None
 
-
 def drop_privileges():
     """ Drop privileges """
     global _DROPPED_PRIVILEGES
@@ -145,7 +137,6 @@ def drop_privileges():
             os.seteuid(uid)
     _DROPPED_PRIVILEGES += 1
 
-
 def regain_privileges():
     """ Regain root privileges """
     global _DROPPED_PRIVILEGES
@@ -158,7 +149,6 @@ def regain_privileges():
         os.seteuid(0)
         os.setegid(0)
         os.setgroups([])
-
 
 def drop_privileges_save():
     """ Drop the real UID/GID as well, and hide them in saved IDs. """
@@ -174,7 +164,6 @@ def drop_privileges_save():
     if uid:
         os.setresuid(uid, uid, 0)
 
-
 def regain_privileges_save():
     """ Recover our real UID/GID after calling drop_privileges_save. """
     #assert _DROPPED_PRIVILEGES is not None and _DROPPED_PRIVILEGES > 0
@@ -184,7 +173,6 @@ def regain_privileges_save():
     os.setresgid(0, 0, 0)
     os.setgroups([])
 
-
 @contextlib.contextmanager
 def raised_privileges():
     """ As regain_privileges/drop_privileges, but in context manager style. """
@@ -193,7 +181,6 @@ def raised_privileges():
         yield
     finally:
         drop_privileges()
-
 
 def raise_privileges(func):
     """ As raised_privileges, but as a function decorator. """
@@ -208,7 +195,6 @@ def raise_privileges(func):
     return helper
 
 # PRIVILEGES ENDS HERE --------------------------------------------------------
-
 
 def is_removable(device):
     """ Checks if device is removable """
@@ -255,7 +241,6 @@ def is_removable(device):
                 logging.warning(err)
     return None
 
-
 def mount_info(path):
     """ Return filesystem name, type, and ro/rw for a given mountpoint."""
     fsname = ''
@@ -269,7 +254,6 @@ def mount_info(path):
                 fstype = line[2]
                 writable = line[3].split(',')[0]
     return fsname, fstype, writable
-
 
 def udevadm_info(args):
     """ Helper function to run udevadm """
@@ -286,7 +270,6 @@ def udevadm_info(args):
         udevadm[name] = value
     return udevadm
 
-
 def partition_to_disk(partition):
     """ Convert a partition device to its disk device, if any. """
     udevadm_part = udevadm_info(['-n', partition])
@@ -300,7 +283,6 @@ def partition_to_disk(partition):
     udevadm_disk = udevadm_info(['-p', disk_syspath])
     return udevadm_disk.get('DEVNAME', partition)
 
-
 def cdrom_mount_info():
     """ Return mount information for /cdrom.
     This is the same as mount_info, except that the partition is converted to
@@ -310,7 +292,6 @@ def cdrom_mount_info():
     cdsrc, cdfs, _ = mount_info('/cdrom')
     cdsrc = partition_to_disk(cdsrc)
     return cdsrc, cdfs
-
 
 def format_size(size):
     """ Format a partition size. """
@@ -334,7 +315,6 @@ def format_size(size):
         factor = 1000 * 1000 * 1000 * 1000 * 1000
     return '%.1f %s' % (float(size) / factor, unit)
 
-
 def create_bool(text):
     """ Creates a bool from a str type """
 
@@ -344,7 +324,6 @@ def create_bool(text):
         return False
     else:
         return text
-
 
 @raise_privileges
 def dmimodel():
@@ -397,7 +376,6 @@ def dmimodel():
             kwargs['stderr'].close()
     return model
 
-
 def get_prop(obj, iface, prop):
     """ Get network interface property """
     try:
@@ -406,13 +384,11 @@ def get_prop(obj, iface, prop):
         logging.warning(err)
         return None
 
-
 def is_wireless_enabled():
     """ Networkmanager. Checks if wireless is enabled """
     bus = dbus.SystemBus()
     manager = bus.get_object(NM, '/org/freedesktop/NetworkManager')
     return get_prop(manager, NM, 'WirelessEnabled')
-
 
 def get_nm_state():
     """ Checks Networkmanager connection status """
@@ -424,7 +400,6 @@ def get_nm_state():
     except (dbus.DBusException, dbus.exceptions.DBusException) as dbus_err:
         logging.warning(dbus_err)
     return state
-
 
 def get_proxies():
     proxies = {}
@@ -486,7 +461,6 @@ def has_connection():
     # has told us there is no connection.
     return False
 
-
 def inside_hypervisor():
     """ Checks if running inside an hypervisor (VM) """
 
@@ -500,7 +474,6 @@ def inside_hypervisor():
         return True
 
     return False
-
 
 def add_connection_watch(func):
     """ Add connection watch to Networkmanager """
@@ -518,7 +491,6 @@ def add_connection_watch(func):
         # using ssh with X forwarding, and are therefore connected.  This
         # allows us to proceed with a minimum of complaint.
         func(True)
-
 
 def get_network():
     """ Get our own network ip """
@@ -549,7 +521,6 @@ def get_network():
         ipran = '.'.join(spip)
     return ipran
 
-
 def sort_list(my_list, my_locale=""):
     """ Sorts list using locale specifics """
     try:
@@ -565,14 +536,12 @@ def sort_list(my_list, my_locale=""):
 
     return sorted_list
 
-
 def gtk_refresh():
     """ Tell Gtk loop to run pending events """
-    from gi.repository import Gtk
-
-    while Gtk.events_pending():
-        Gtk.main_iteration()
-
+    from gi.repository import GLib
+    context = GLib.MainContext.default()
+    while context.iteration(False):
+        pass
 
 def remove_temp_files(tmp_dir):
     """ Remove Cnchi temporary files """
@@ -587,23 +556,22 @@ def remove_temp_files(tmp_dir):
             with raised_privileges():
                 os.remove(path)
 
-
 def set_cursor(cursor_type):
     """ Set mouse cursor """
     try:
         from gi.repository import Gdk
 
-        screen = Gdk.Screen.get_default()
-        window = Gdk.Screen.get_root_window(screen)
-
-        if window:
-            display = Gdk.Display.get_default()
-            cursor = Gdk.Cursor.new_for_display(display, cursor_type)
-            window.set_cursor(cursor)
+        display = Gdk.Display.get_default()
+        if display:
+            cursor = Gdk.Cursor.new_from_name(cursor_type)
+            seat = display.get_default_seat()
+            if seat:
+                pointer = seat.get_pointer()
+                if pointer:
+                    pointer.set_cursor(cursor)
             gtk_refresh()
     except Exception as ex:
         logging.debug(ex)
-
 
 def partition_exists(partition):
     """ Check if a partition already exists """
@@ -615,7 +583,6 @@ def partition_exists(partition):
         if partition in partitions.read():
             exists = True
     return exists
-
 
 def is_partition_extended(partition):
     """ Check if a partition is of extended type """
@@ -641,7 +608,6 @@ def is_partition_extended(partition):
 
     return False
 
-
 def get_partitions():
     """ Get all system partitions """
     partitions_list = []
@@ -654,7 +620,6 @@ def get_partitions():
                 partitions_list.append("/dev/" + info[3])
     return partitions_list
 
-
 def check_pid(pid):
     """ Check for the existence of a unix pid. """
     try:
@@ -664,11 +629,9 @@ def check_pid(pid):
     else:
         return True
 
-
 def random_generator(size=4, chars=string.ascii_lowercase + string.digits):
     """ Generates a random string. """
     return ''.join(random.choice(chars) for x in range(size))
-
 
 def select_combobox_value(combobox, value):
     """ Force combobox to select a specific value """
@@ -686,13 +649,11 @@ def select_combobox_value(combobox, value):
             combo_iter = model.iter_next(combo_iter)
     return found
 
-
 def select_first_combobox_item(combobox):
     """ Automatically select the first entry """
     tree_model = combobox.get_model()
     tree_iter = tree_model.get_iter_first()
     combobox.set_active_iter(tree_iter)
-
 
 class InstallError(Exception):
     """ Exception class called upon an installer error """

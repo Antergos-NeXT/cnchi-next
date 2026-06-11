@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """
 LEMP stack is a group of open source software to get web servers up
 and running. The acronym stands for Linux, nginx (pronounced Engine x),
@@ -34,14 +33,12 @@ MySQL, and PHP. Since the server is already running Antergos, the linux
 part is taken care of.
 """
 
-
 import os
 import logging
 
 from misc.run_cmd import chroot_call
 
 DEST_DIR = '/install'
-
 
 def setup():
     """ Main configuration function """
@@ -56,7 +53,6 @@ def setup():
     except (FileExistsError, OSError) as io_error:
         logging.error(io_error)
 
-
 def mariadb_setup():
     """ Setup MariaDB database server """
     cmd = [
@@ -70,7 +66,6 @@ def mariadb_setup():
     chroot_call(cmd)
 
     # TODO: Warn user to run mysql_secure_installation
-
 
 def nginx_setup():
     """ Setup Nginx web server """
@@ -103,7 +98,6 @@ def nginx_setup():
 
             nginx_conf.write(line)
 
-
 def php_setup():
     """ Setup /etc/php/php.ini """
     php_ini_path = os.path.join(DEST_DIR, 'etc/php/php.ini')
@@ -134,7 +128,6 @@ def php_setup():
 
     cmd = ["systemctl", "enable", "php-fpm"]
     chroot_call(cmd)
-
 
 if __name__ == '__main__':
     setup()

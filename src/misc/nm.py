@@ -30,7 +30,6 @@ from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 from gi.repository import Gtk, GObject, GLib
 
-
 NM = 'org.freedesktop.NetworkManager'
 NM_DEVICE = 'org.freedesktop.NetworkManager.Device'
 NM_DEVICE_WIFI = 'org.freedesktop.NetworkManager.Device.Wireless'
@@ -45,13 +44,11 @@ NM_STATE_DISCONNECTED = 20
 NM_STATE_CONNECTING = 40
 NM_STATE_CONNECTED_GLOBAL = 70
 
-
 # TODO: DBus exceptions.  Catch 'em all.
 
 def decode_ssid(characters):
     """ Converts ssid to UTF-8 """
     return bytearray(characters).decode('UTF-8', 'replace')
-
 
 def get_prop(obj, iface, prop):
     """ get dbus property """
@@ -62,7 +59,6 @@ def get_prop(obj, iface, prop):
             return None
         else:
             raise
-
 
 def get_vendor_and_model(udi):
     """ Gets device vendor and model """
@@ -84,7 +80,6 @@ def get_vendor_and_model(udi):
                 model = prop.split('ID_MODEL_FROM_DATABASE=')[1]
     return vendor, model
 
-
 def wireless_hardware_present():
     """ Checks if a wireless device is present """
     # NetworkManager keeps DBus objects for wireless devices around even when
@@ -100,7 +95,6 @@ def wireless_hardware_present():
         if get_prop(device_obj, NM_DEVICE, 'DeviceType') == DEVICE_TYPE_WIFI:
             return True
     return False
-
 
 class NetworkManagerModel:
     """ Network manager model """
@@ -301,7 +295,6 @@ class NetworkManagerModel:
         self.prune(myiter, devices)
         return False
 
-
 class NetworkManagerTreeView(Gtk.TreeView):
     """ Treeview that will show all Access Points """
 
@@ -324,8 +317,8 @@ class NetworkManagerTreeView(Gtk.TreeView):
         ssid_column = Gtk.TreeViewColumn('')
         cell_pixbuf = Gtk.CellRendererPixbuf()
         cell_text = Gtk.CellRendererText()
-        ssid_column.pack_start(cell_pixbuf, False)
-        ssid_column.pack_start(cell_text, True)
+        ssid_column.append(cell_pixbuf, False)
+        ssid_column.append(cell_text, True)
         ssid_column.set_cell_data_func(cell_text, self.data_func)
         ssid_column.set_cell_data_func(cell_pixbuf, self.pixbuf_func)
         self.connect('row-activated', self.row_activated)
@@ -476,7 +469,6 @@ class NetworkManagerTreeView(Gtk.TreeView):
 
 GObject.type_register(NetworkManagerTreeView)
 
-
 class NetworkManagerWidget(Gtk.Box):
     """ Widget that will contain the NetworkManagerTreeView """
     __gtype_name__ = 'NetworkManagerWidget'
@@ -501,26 +493,26 @@ class NetworkManagerWidget(Gtk.Box):
         scrolled_window = Gtk.ScrolledWindow()
         scrolled_window.set_policy(
             Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled_window.set_shadow_type(Gtk.ShadowType.IN)
-        scrolled_window.add(self.view)
-        self.pack_start(scrolled_window, True, True, 0)
+        scrolled_window.set_child(self.view)
+        scrolled_window.set_vexpand(True)
+        self.append(scrolled_window)
 
         self.hbox = Gtk.Box(spacing=6)
-        self.pack_start(self.hbox, False, True, 0)
+        self.append(self.hbox)
         self.password_label = Gtk.Label('Password:')
         self.password_entry.set_visibility(False)
         self.password_entry.connect('activate', self.connect_to_ap)
         self.password_entry.connect('changed', self.password_entry_changed)
         self.display_password = Gtk.CheckButton('Display password')
         self.display_password.connect('toggled', self.display_password_toggled)
-        self.hbox.pack_start(self.password_label, False, True, 0)
-        self.hbox.pack_start(self.password_entry, True, True, 0)
-        self.hbox.pack_start(self.display_password, False, True, 0)
+        self.hbox.append(self.password_label)
+        self.hbox.append(self.password_entry)
+        self.password_entry.set_hexpand(True)
+        self.hbox.append(self.display_password)
         self.hbox.set_sensitive(False)
 
         self.selection = self.view.get_selection()
         self.selection.connect('changed', self.changed)
-        self.show_all()
 
     def translate(self, password_label_text, display_password_text):
         """ Translate labels """
@@ -598,7 +590,6 @@ class NetworkManagerWidget(Gtk.Box):
             self.emit('pw_validated', True)
         self.emit('selection_changed')
 
-
 GObject.type_register(NetworkManagerWidget)
 
 def test_module():
@@ -606,10 +597,9 @@ def test_module():
     window = Gtk.Window()
     window.connect('destroy', Gtk.main_quit)
     window.set_size_request(300, 300)
-    window.set_border_width(12)
+# window.set_border_width(12)  # GTK4: use CSS
     nm_widget = NetworkManagerWidget()
-    window.add(nm_widget)
-    window.show_all()
+    window.set_child(nm_widget)
     Gtk.main()
 
 if __name__ == '__main__':

@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Main Cnchi Window """
 
 import os
@@ -58,31 +57,57 @@ import pages.advanced
 import pages.zfs
 
 import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk
+gi.require_version('Gtk', '4.0')
+gi.require_version('Gdk', '4.0')
+gi.require_version('GdkPixbuf', '2.0')
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib
 
-
-# When testing, no _() is available
 try:
     _("")
 except NameError as err:
     def _(message):
         return message
 
-def atk_set_image_description(widget, description):
-    """ Sets the textual description for a widget that displays image/pixmap
-        information onscreen. """
-    atk_widget = widget.get_accessible()
-    if atk_widget is not None:
-        atk_widget.set_object_description(description)
+# Step definitions: (page_key, display_name, icon_name)
+STEPS = [
+    ("welcome", "Welcome", "go-home-symbolic"),
+    ("language", "Language", "preferences-desktop-locale-symbolic"),
+    ("check", "Check", "emblem-important-symbolic"),
+    ("location", "Location", "mark-location-symbolic"),
+    ("timezone", "Timezone", None),
+    ("keymap", "Keyboard", "input-keyboard-symbolic"),
+    ("desktop", "Desktop", "video-display-symbolic"),
+    ("features", "Software", "applications-other-symbolic"),
+    ("cache", "Preparation", "network-server-symbolic"),
+    ("ask", "Install Type", "drive-harddisk-symbolic"),
+    ("automatic", "Partitions", None),
+    ("alongside", None, None),
+    ("advanced", None, None),
+    ("zfs", None, None),
+    ("user_info", "Users", "avatar-default-symbolic"),
+    ("summary", "Summary", "document-properties-symbolic"),
+    ("slides", "Install", "system-run-symbolic"),
+]
+
+PAGE_ORDER = [
+    "welcome", "language", "check", "location", "timezone",
+    "keymap", "desktop", "features", "cache", "mirrors",
+    "ask", "automatic", "alongside", "advanced", "zfs",
+    "user_info", "summary", "slides",
+]
 
 
-def atk_set_object_description(widget, description):
-    """ Sets the textual description for a widget """
-    atk_widget = widget.get_accessible()
-    if atk_widget is not None:
-        atk_widget.set_image_description(description)
-        # atk_object_set_name
+class HeaderProxy:
+    """ Proxy for page header operations in the new layout """
+    def __init__(self, subtitle_label):
+        self._label = subtitle_label
+
+    def set_subtitle(self, text):
+        self._label.set_text(text)
+        self._label.set_visible(True)
+
+    def set_show_close_button(self, visible):
+        pass
 
 
 class MainWindow(Gtk.ApplicationWindow):
@@ -91,8 +116,8 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, app, cmd_line):
         Gtk.ApplicationWindow.__init__(self, title="Cnchi", application=app)
 
-        self._main_window_width = 875
-        self._main_window_height = 550
+        self._main_window_width = 1200
+        self._main_window_height = 715
 
         logging.info("Cnchi installer version %s", info.CNCHI_VERSION)
 
@@ -100,43 +125,26 @@ class MainWindow(Gtk.ApplicationWindow):
         self.gui_dir = self.settings.get('ui')
 
         if not os.path.exists(self.gui_dir):
-            cnchi_dir = os.path.join(os.path.dirname(__file__), './')
+            cnchi_dir = os.path.join(os.path.dirname(__file__), '../')
             self.settings.set('cnchi', cnchi_dir)
-
-            gui_dir = os.path.join(os.path.dirname(__file__), 'ui/')
+            gui_dir = os.path.join(os.path.dirname(__file__), '../ui/')
             self.settings.set('ui', gui_dir)
-
-            data_dir = os.path.join(os.path.dirname(__file__), 'data/')
+            data_dir = os.path.join(os.path.dirname(__file__), '../data/')
             self.settings.set('data', data_dir)
-
             self.gui_dir = self.settings.get('ui')
 
-        # By default, always try to use local /var/cache/pacman/pkg
         xz_cache = ["/var/cache/pacman/pkg"]
-
-        # Check command line
         if cmd_line.cache and cmd_line.cache not in xz_cache:
             xz_cache.append(cmd_line.cache)
-
-        # Log cache dirs
         for xz_path in xz_cache:
-            logging.debug(
-                "Cnchi will use '%s' as a source for cached xz packages",
-                xz_path)
-
-        # Store cache dirs in config
+            logging.debug("Cnchi will use '%s' as a source for cached xz packages", xz_path)
         self.settings.set('xz_cache', xz_cache)
 
         data_dir = self.settings.get('data')
-
-        # For things we are not ready for users to test
         self.settings.set('hidden', cmd_line.hidden)
         self.settings.set('re_up', cmd_line.re_up)
-
-        # a11y
         self.settings.set('a11y', cmd_line.a11y)
 
-        # Set enabled desktops
         if self.settings.get('hidden'):
             self.settings.set('desktops', desktop_info.DESKTOPS_DEV)
         elif self.settings.get('a11y'):
@@ -149,367 +157,344 @@ class MainWindow(Gtk.ApplicationWindow):
             if my_desktop in desktop_info.DESKTOPS:
                 self.settings.set('desktop', my_desktop)
                 self.settings.set('desktop_ask', False)
-                logging.debug(
-                    "Cnchi will install the %s desktop environment",
-                    my_desktop)
 
-        self.cnchi_ui = Gtk.Builder()
+        # Load main UI
+        ui_builder = Gtk.Builder()
         path = os.path.join(self.gui_dir, "cnchi.ui")
-        self.cnchi_ui.add_from_file(path)
+        ui_builder.add_from_file(path)
+        main = ui_builder.get_object("main")
+        self.set_child(main)
 
-        main = self.cnchi_ui.get_object("main")
-        # main.set_property("halign", Gtk.Align.CENTER)
-        self.add(main)
+        # UI elements
+        self.sidebar = ui_builder.get_object("sidebar")
+        self.logo_image = ui_builder.get_object("sidebar_logo")
+        self.steps_list = ui_builder.get_object("steps_list")
+        self.main_stack = ui_builder.get_object("main_stack")
+        self.back_button = ui_builder.get_object("back_button")
+        self.next_button = ui_builder.get_object("next_button")
+        self.step_counter = ui_builder.get_object("step_counter")
+        self.version_label = ui_builder.get_object("version_label")
 
-        self.header_ui = Gtk.Builder()
-        path = os.path.join(self.gui_dir, "header.ui")
-        self.header_ui.add_from_file(path)
-        self.header = self.header_ui.get_object("header")
+        # Set logo
+        logo_path = os.path.join(data_dir, "images", "antergos", "antergos-icon.png")
+        if os.path.exists(logo_path):
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(logo_path, 220, 220, True)
+            texture = Gdk.Texture.new_for_pixbuf(pixbuf)
+            self.logo_image.set_from_paintable(texture)
+            self.logo_image.set_hexpand(True)
+            self.logo_image.set_halign(Gtk.Align.CENTER)
 
-        self.logo = self.header_ui.get_object("logo")
-        path = os.path.join(
-            data_dir, "images", "antergos", "antergos-logo-mini2.png")
-        self.logo.set_from_file(path)
+        # Set version
+        self.version_label.set_text(f"v{info.CNCHI_VERSION}")
 
-        # To honor our css
-        self.header.set_name("header")
-        self.logo.set_name("logo")
-
-        self.main_box = self.cnchi_ui.get_object("main_box")
-        # self.main_box.set_property("halign", Gtk.Align.CENTER)
-
-        ##self.main_box.set_property('width_request', 800)
-
-        self.progressbar = self.cnchi_ui.get_object("main_progressbar")
+        # Progress bar for install
+        self.progressbar = Gtk.ProgressBar()
         self.progressbar.set_name('process_progressbar')
-        # a11y
-        self.progressbar.set_can_focus(False)
+        self.progressbar.set_visible(False)
+        progress_bar_box = ui_builder.get_object("progress_bar_box")
+        progress_bar_box.append(self.progressbar)
 
-        self.forward_button = self.header_ui.get_object("forward_button")
-        self.backwards_button = self.header_ui.get_object("backwards_button")
-
-        # atk_set_image_description(self.forward_button, _("Next step"))
-        # atk_set_image_description(self.backwards_button, _("Previous step"))
-        # atk_set_object_description(self.forward_button, _("Next step"))
-        # atk_set_object_description(self.backwards_button, _("Previous step"))
-
-        self.forward_button.set_name('fwd_btn')
-        self.forward_button.set_always_show_image(True)
-
-        self.backwards_button.set_name('bk_btn')
-        self.backwards_button.set_always_show_image(True)
-
-        # a11y
-        if cmd_line.a11y:
-            self.forward_button.set_label(_("Next"))
-            self.backwards_button.set_label(_("Back"))
-
-        # Create a queue. Will be used to report pacman messages
-        # (pacman/pac.py) to the main thread (installation/process.py)
+        # Session params
         self.callback_queue = multiprocessing.JoinableQueue()
-
         if cmd_line.packagelist:
             self.settings.set('alternate_package_list', cmd_line.packagelist)
-            logging.info(
-                "Using '%s' file as package list",
-                self.settings.get('alternate_package_list'))
 
-        self.set_titlebar(self.header)
-
-        # Prepare params dict to pass common parameters to all screens
         self.params = dict()
         self.params['main_window'] = self
-        self.params['header'] = self.header
         self.params['gui_dir'] = self.gui_dir
-        self.params['forward_button'] = self.forward_button
-        self.params['backwards_button'] = self.backwards_button
+        self.params['forward_button'] = self.next_button
+        self.params['backwards_button'] = self.back_button
         self.params['callback_queue'] = self.callback_queue
         self.params['settings'] = self.settings
         self.params['main_progressbar'] = self.progressbar
-
         self.params['checks_are_optional'] = cmd_line.no_check
         self.params['no_tryit'] = cmd_line.no_tryit
         self.params['a11y'] = cmd_line.a11y
 
-        # Just load the first two screens (the other ones will be loaded later)
-        # We do this so the user has not to wait for all the screens to be
-        # loaded
+        # Header proxy for page subtitle updates
+        self._page_subtitle = ui_builder.get_object("page_subtitle")
+        self.params['header'] = HeaderProxy(self._page_subtitle)
+
+        # Page storage
         self.pages = dict()
-        self.pages["welcome"] = pages.welcome.Welcome(self.params)
+        self.page_order = []
+        self.step_widgets = []
+        self._current_page_idx = 0
+
+        # Load first pages
+        welcome_page = pages.welcome.Welcome(self.params)
+        self._add_page("welcome", welcome_page)
 
         if os.path.exists('/home/antergos/.config/openbox'):
-            # In minimal iso, load language screen now
-            self.pages["language"] = pages.language.Language(self.params)
+            lang_page = pages.language.Language(self.params)
+            self._add_page("language", lang_page)
+            self._main_window_width = 800
+            self._main_window_height = 600
 
-            # Fix bugy Gtk window size when using Openbox
-            self._main_window_width = 750
-            self._main_window_height = 450
+        # Build sidebar steps from loaded pages
+        self._build_steps()
+        self._switch_to_page(0)
 
-        self.connect('delete-event', self.on_exit_button_clicked)
-        self.connect('key-release-event', self.on_key_release)
+        # Connect signals
+        self.connect('close-request', self.on_exit_button_clicked)
+        self.next_button.connect("clicked", self.on_forward_button_clicked)
+        self.back_button.connect("clicked", self.on_backwards_button_clicked)
 
-        self.cnchi_ui.connect_signals(self)
-        self.header_ui.connect_signals(self)
+        # About button
+        about_btn = ui_builder.get_object("about_button")
+        about_btn.connect("clicked", self._on_about_clicked)
 
+        # Keyboard shortcuts
+        self._key_controller = Gtk.EventControllerKey.new()
+        self._key_controller.connect("key-released", self.on_key_release)
+        self.add_controller(self._key_controller)
+
+        # Title
         nil, major, minor = info.CNCHI_VERSION.split('.')
-        name = 'Cnchi '
-        title_string = "{0} {1}.{2}.{3}".format(name, nil, major, minor)
-        self.set_title(title_string)
-        self.header.set_title(title_string)
-        self.header.set_subtitle(_("Antergos NeXT Installer"))
-        self.header.set_show_close_button(True)
-        self.tooltip_string = "{0} {1}.{2}.{3}".format(name, nil, major, minor)
-        self.header.forall(self.header_for_all_callback, self.tooltip_string)
-
-        self.set_geometry()
+        self.set_title(f"Cnchi {nil}.{major}.{minor}")
 
         # Set window icon
-        icon_path = os.path.join(
-            data_dir,
-            "images",
-            "antergos",
-            "antergos-icon.png")
-        self.set_icon_from_file(icon_path)
+        icon_path = os.path.join(data_dir, "images", "antergos", "antergos-icon.png")
+        if os.path.exists(icon_path):
+            try:
+                self.set_icon_name("cnchi")
+            except Exception:
+                pass
 
-        # Set the first page to show
+        # Set window geometry
+        self.set_default_size(self._main_window_width, self._main_window_height)
+        self.set_resizable(True)
 
-        # If minimal iso is detected, skip the welcome page.
-        if os.path.exists('/home/antergos/.config/openbox'):
-            self.current_page = self.pages['language']
-            self.settings.set('timezone_start', True)
-        else:
-            self.current_page = self.pages['welcome']
-
-        self.main_box.add(self.current_page)
-
-        # Use our css file
+        # Apply CSS
         style_provider = Gtk.CssProvider()
-
         style_css = os.path.join(data_dir, "css", "gtk-style.css")
+        if os.path.exists(style_css):
+            with open(style_css, 'rb') as css:
+                style_provider.load_from_data(css.read())
+            display = Gdk.Display.get_default()
+            Gtk.StyleContext.add_provider_for_display(
+                display, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
+            )
 
-        with open(style_css, 'rb') as css:
-            css_data = css.read()
-
-        style_provider.load_from_data(css_data)
-
-        Gtk.StyleContext.add_provider_for_screen(
-            Gdk.Screen.get_default(), style_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_USER
-        )
-
-        # Show main window
-        self.show_all()
-
+        self.present()
         self.current_page.prepare('forwards')
 
-        # Hide backwards button
-        self.backwards_button.hide()
-
-        self.progressbar.set_fraction(0)
-        self.progressbar_step = 0
-
-        # Do not hide progress bar for minimal iso as it would break
-        # the widget alignment on language page.
-        if not os.path.exists('/home/antergos/.config/openbox'):
-            # Hide progress bar
-            self.progressbar.hide()
-
+        # Pre-load more pages
         self.pages["language"] = pages.language.Language(self.params)
         self.pages["check"] = pages.check.Check(self.params)
         self.set_focus(None)
-
         misc.gtk_refresh()
 
-    def header_for_all_callback(self, widget, _data):
-        """ Show tooltip in header """
-        if isinstance(widget, Gtk.Box):
-            widget.forall(self.header_for_all_callback, self.tooltip_string)
-        elif widget.get_style_context().has_class('title'):
-            widget.set_tooltip_text(self.tooltip_string)
+    def _build_steps(self):
+        """ Create step indicator widgets in sidebar based on loaded pages """
+        self.steps_list.remove_all()
+        self.step_widgets = []
+
+        for i, page_name in enumerate(self.page_order):
+            display_name = None
+            for step_name, step_display, _icon in STEPS:
+                if step_name == page_name:
+                    display_name = step_display
+                    break
+            if display_name is None:
+                display_name = page_name.capitalize()
+
+            row = Gtk.ListBoxRow()
+            row.set_selectable(False)
+
+            hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+            hbox.set_margin_start(16)
+            hbox.set_margin_end(16)
+            hbox.set_margin_top(8)
+            hbox.set_margin_bottom(8)
+
+            indicator = Gtk.Label(label=str(i + 1))
+            indicator.set_css_classes(["step-indicator"])
+            indicator.set_size_request(28, 28)
+            indicator.set_halign(Gtk.Align.CENTER)
+            indicator.set_valign(Gtk.Align.CENTER)
+
+            label = Gtk.Label(label=display_name)
+            label.set_halign(Gtk.Align.START)
+            label.set_hexpand(True)
+            label.set_css_classes(["step-label"])
+            label.set_xalign(0)
+
+            hbox.append(indicator)
+            hbox.append(label)
+            row.set_child(hbox)
+            self.steps_list.append(row)
+            self.step_widgets.append((indicator, label, row, page_name))
+
+    def _add_page(self, name, page_instance):
+        """ Add a page to the stack and page tracking """
+        if name in self.pages:
+            return
+        self.pages[name] = page_instance
+        self.page_order.append(name)
+        self.main_stack.add_named(page_instance, name)
+
+    def _switch_to_page(self, idx):
+        """ Switch to page at given index with animation """
+        if idx < 0 or idx >= len(self.page_order):
+            return
+
+        page_name = self.page_order[idx]
+        page = self.pages.get(page_name)
+        if page is None:
+            return
+
+        # Set transition direction
+        if idx > self._current_page_idx:
+            self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT)
+        elif idx < self._current_page_idx:
+            self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_RIGHT)
+        else:
+            self.main_stack.set_transition_type(Gtk.StackTransitionType.NONE)
+
+        self.main_stack.set_visible_child(page)
+        self._current_page_idx = idx
+        self.current_page = page
+
+        # Update step indicators
+        self._update_steps()
+
+        # Update navigation
+        self.back_button.set_visible(idx > 0)
+        total = len(self.page_order)
+        self.step_counter.set_text(f"Step {idx + 1} of {total}")
+
+        # Update next button label
+        if idx == total - 1:
+            self.next_button.set_label("Install")
+        elif page_name in ("ask",):
+            self.next_button.set_label("Next")
+        else:
+            self.next_button.set_label("Next")
+
+        # Update progress
+        if total > 1:
+            self.progressbar.set_fraction((idx + 1) / total)
+
+        page.prepare('forwards' if idx > 0 else 'initial')
+
+    def _update_steps(self):
+        """ Update step indicator visuals """
+        for i, (indicator, label, _row, _pname) in enumerate(self.step_widgets):
+            classes_ind = ["step-indicator"]
+            classes_lbl = ["step-label"]
+            if i == self._current_page_idx:
+                classes_ind.append("active")
+                classes_lbl.append("active")
+            elif i < self._current_page_idx:
+                classes_ind.append("completed")
+                # Replace number with checkmark
+                indicator.set_label("✓")
+                classes_lbl.append("completed")
+            else:
+                pass  # default dimmed style
+            indicator.set_css_classes(classes_ind)
+            label.set_css_classes(classes_lbl)
+
+    def _find_page_index(self, name):
+        """ Find index of page by name """
+        try:
+            return self.page_order.index(name)
+        except ValueError:
+            return -1
 
     def load_pages(self):
         """ Preload all installer pages """
-        self.pages["location"] = pages.location.Location(self.params)
+        if "location" not in self.pages:
+            self._add_page("location", pages.location.Location(self.params))
 
-        self.pages["timezone"] = pages.timezone.Timezone(self.params)
+        if "timezone" not in self.pages:
+            self._add_page("timezone", pages.timezone.Timezone(self.params))
 
         if self.settings.get('desktop_ask'):
-            self.pages["keymap"] = pages.keymap.Keymap(self.params)
-            self.pages["desktop"] = pages.desktop.DesktopAsk(self.params)
-            self.pages["features"] = pages.features.Features(self.params)
+            self._add_page("keymap", pages.keymap.Keymap(self.params))
+            self._add_page("desktop", pages.desktop.DesktopAsk(self.params))
+            self._add_page("features", pages.features.Features(self.params))
         else:
-            self.pages["keymap"] = pages.keymap.Keymap(
-                self.params,
-                next_page='features')
-            self.pages["features"] = pages.features.Features(
-                self.params,
-                prev_page='keymap')
+            self._add_page("keymap", pages.keymap.Keymap(self.params, next_page='features'))
+            self._add_page("features", pages.features.Features(self.params, prev_page='keymap'))
 
-        self.pages["cache"] = pages.cache.Cache(self.params)
-        self.pages["mirrors"] = pages.mirrors.Mirrors(self.params)
-
-        self.pages["installation_ask"] = pages.ask.InstallationAsk(
-            self.params)
-        self.pages["installation_automatic"] = pages.automatic.InstallationAutomatic(
-            self.params)
+        self._add_page("cache", pages.cache.Cache(self.params))
+        self._add_page("mirrors", pages.mirrors.Mirrors(self.params))
+        self._add_page("ask", pages.ask.InstallationAsk(self.params))
+        self._add_page("automatic", pages.automatic.InstallationAutomatic(self.params))
 
         if self.settings.get("enable_alongside"):
-            self.pages["installation_alongside"] = pages.alongside.InstallationAlongside(
-                self.params)
-        else:
-            self.pages["installation_alongside"] = None
+            self._add_page("alongside", pages.alongside.InstallationAlongside(self.params))
 
-        self.pages["installation_advanced"] = pages.advanced.InstallationAdvanced(
-            self.params)
-        self.pages["installation_zfs"] = pages.zfs.InstallationZFS(
-            self.params)
-        self.pages["user_info"] = pages.user_info.UserInfo(self.params)
-        self.pages["summary"] = pages.summary.Summary(self.params)
-        self.pages["slides"] = pages.slides.Slides(self.params)
+        self._add_page("advanced", pages.advanced.InstallationAdvanced(self.params))
+        self._add_page("zfs", pages.zfs.InstallationZFS(self.params))
+        self._add_page("user_info", pages.user_info.UserInfo(self.params))
+        self._add_page("summary", pages.summary.Summary(self.params))
+        self._add_page("slides", pages.slides.Slides(self.params))
+
+        # Rebuild sidebar with all steps
+        self._build_steps()
+        self._update_steps()
 
         diff = 2
         if os.path.exists('/home/antergos/.config/openbox'):
-            # In minimal (openbox) we don't have a welcome screen
             diff = 3
-
         num_pages = len(self.pages) - diff
-
         if num_pages > 0:
             self.progressbar_step = 1.0 / num_pages
 
-    def set_geometry(self):
-        """ Sets Cnchi window geometry """
-        self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_resizable(False)
+    def on_forward_button_clicked(self, _button):
+        """ Handle forward/next button """
+        self._go_forward()
 
-        (min_width, natural_width) = self.get_preferred_width()
-        (min_height, natural_height) = self.get_preferred_width()
-        logging.debug("Main window minimal size: %dx%d", min_width, min_height)
-        logging.debug("Main window natural size: %dx%d", natural_width, natural_height)
-        logging.debug("Setting main window size to %dx%d",
-                      self._main_window_width, self._main_window_height)
+    def on_backwards_button_clicked(self, _button):
+        """ Handle back button """
+        self._go_backward()
 
-        self.set_size_request(self._main_window_width,
-                              self._main_window_height)
-        self.set_default_size(self._main_window_width,
-                              self._main_window_height)
+    def _on_about_clicked(self, _button):
+        """ Show About Cnchi dialog """
+        dialog = Gtk.AlertDialog()
+        dialog.set_message(f"Cnchi v{info.CNCHI_VERSION}")
+        dialog.set_detail(
+            "Antergos NeXT Installer\n\n"
+            "GTK4 Calamares-inspired installer\n"
+            "Originally based on EndeavourOS-ISO\n\n"
+            "Copyright © 2026 Antergos NeXT")
+        dialog.set_buttons(["_Close"])
+        dialog.set_modal(True)
+        dialog.choose(self, None, lambda *a: None)
 
-        geom = Gdk.Geometry()
-        geom.min_width = self._main_window_width
-        geom.min_height = self._main_window_height
-        geom.max_width = self._main_window_width
-        geom.max_height = self._main_window_height
-        geom.base_width = self._main_window_width
-        geom.base_height = self._main_window_height
-        geom.width_inc = 0
-        geom.height_inc = 0
+    def _go_forward(self):
+        """ Move to next page """
+        idx = self._current_page_idx + 1
+        if idx >= len(self.page_order):
+            return
+        self.current_page.store_values()
+        self._switch_to_page(idx)
 
-        hints = (Gdk.WindowHints.MIN_SIZE |
-                 Gdk.WindowHints.MAX_SIZE |
-                 Gdk.WindowHints.BASE_SIZE |
-                 Gdk.WindowHints.RESIZE_INC)
-
-        self.set_geometry_hints(None, geom, hints)
-
-    def on_key_release(self, _widget, event, _data=None):
-        """ Callback called when a key is released """
-        if event.keyval == Gdk.keyval_from_name('Escape'):
-            response = self.confirm_quitting()
-            if response == Gtk.ResponseType.YES:
-                self.on_exit_button_clicked(self)
-                self.destroy()
-
-    def confirm_quitting(self):
-        """ Shows confirmation message before quitting """
-        message = Gtk.MessageDialog(
-            transient_for=self,
-            modal=True,
-            destroy_with_parent=True,
-            message_type=Gtk.MessageType.QUESTION,
-            buttons=Gtk.ButtonsType.YES_NO,
-            text=_("Do you really want to quit the installer?"))
-        response = message.run()
-        message.destroy()
-        return response
-
-    def on_exit_button_clicked(self, _widget, _data=None):
-        """ Quit Cnchi """
-        try:
-            misc.remove_temp_files(self.settings.get('temp'))
-            logging.info("Quiting installer...")
-            for proc in multiprocessing.active_children():
-                proc.terminate()
-            logging.shutdown()
-        except KeyboardInterrupt:
-            pass
-
-    def set_progressbar_step(self, add_value):
-        """ Update progress bar """
-        new_value = self.progressbar.get_fraction() + add_value
-        if new_value > 1:
-            new_value = 1
-        if new_value < 0:
-            new_value = 0
-        self.progressbar.set_fraction(new_value)
-        if new_value > 0:
-            self.progressbar.show()
-        else:
-            self.progressbar.hide()
-
-    def on_forward_button_clicked(self, _widget, _data=None):
-        """ Show next screen """
-        next_page = self.current_page.get_next_page()
-        if next_page == 'location' and next_page not in self.pages.keys():
-            self.load_pages()
-
-        if next_page is not None:
-            # self.logo.hide()
-            if next_page not in self.pages.keys():
-                self.progressbar_step = 1.0 / (len(self.pages) - 2)
-
-            stored = self.current_page.store_values()
-
-            if stored:
-                self.set_progressbar_step(self.progressbar_step)
-                self.main_box.remove(self.current_page)
-
-                self.current_page = self.pages[next_page]
-
-                if self.current_page is not None:
-                    self.current_page.prepare('forwards')
-                    self.main_box.add(self.current_page)
-                    if self.current_page.get_prev_page() is not None:
-                        # There is a previous page, show back button
-                        self.backwards_button.show()
-                        self.backwards_button.set_sensitive(True)
-                    else:
-                        # We can't go back, hide back button
-                        self.backwards_button.hide()
-                        if self.current_page == "slides":
-                            # Show logo in slides screen
-                            self.logo.show_all()
-
-    def on_backwards_button_clicked(self, _widget, _data=None):
-        """ Show previous screen """
+    def _go_backward(self):
+        """ Move to previous page """
+        idx = self._current_page_idx - 1
+        if idx < 0:
+            return
         self.current_page.go_back()
-        prev_page = self.current_page.get_prev_page()
+        self._switch_to_page(idx)
 
-        if prev_page is not None:
-            self.set_progressbar_step(-self.progressbar_step)
+    def on_key_release(self, controller, keyval, keycode, state):
+        """ Handle keyboard shortcuts """
+        if keyval == Gdk.KEY_Right or keyval == Gdk.KEY_KP_Right:
+            self._go_forward()
+        elif keyval == Gdk.KEY_Left or keyval == Gdk.KEY_KP_Left:
+            self._go_backward()
+        elif keyval == Gdk.KEY_Escape:
+            self.on_exit_button_clicked()
 
-            # If we go backwards, don't store user changes
-            # self.current_page.store_values()
+    def on_exit_button_clicked(self, *args):
+        """ Exit installer """
+        self.destroy()
 
-            self.main_box.remove(self.current_page)
-
-            self.current_page = self.pages[prev_page]
-
-            if self.current_page is not None:
-                self.current_page.prepare('backwards')
-                self.main_box.add(self.current_page)
-
-                if self.current_page.get_prev_page() is None:
-                    # We're at the first page
-                    self.backwards_button.hide()
-                    self.progressbar.hide()
-                    self.logo.show_all()
+    def set_focus(self, widget):
+        """ Set keyboard focus """
+        if widget:
+            widget.grab_focus()

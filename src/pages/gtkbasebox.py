@@ -32,9 +32,8 @@ import os
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
-
 
 class GtkBaseBox(Gtk.Box):
     """ Base class for our screens """
@@ -64,10 +63,9 @@ class GtkBaseBox(Gtk.Box):
         self.gui_file = os.path.join(self.gui_dir, "{}.ui".format(name))
         self.gui.add_from_file(self.gui_file)
 
-        # Connect UI signals
-        self.gui.connect_signals(child)
+        # GTK4: connect_signals removed; signals connected in each page's code
 
-        child.add(self.gui.get_object(name))
+        child.append(self.gui.get_object(name))
 
     def get_prev_page(self):
         """ Returns previous screen """

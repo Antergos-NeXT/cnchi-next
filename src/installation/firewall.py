@@ -27,7 +27,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Manage ufw setup """
 
 import logging
@@ -46,7 +45,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 def run(params, dest_dir="/install"):
     """ Setup ufw """

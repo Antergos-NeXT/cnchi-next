@@ -50,7 +50,7 @@ sys.path.append(os.path.join(CNCHI_PATH, "src/pages"))
 sys.path.append(os.path.join(CNCHI_PATH, "src/pages/dialogs"))
 sys.path.append(os.path.join(CNCHI_PATH, "src/parted3"))
 
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, Gtk, GObject
 
 import misc.extra as misc
@@ -76,7 +76,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class CnchiApp(Gtk.Application):
     """ Main Cnchi App class """
@@ -121,7 +120,7 @@ class CnchiApp(Gtk.Application):
 
         window = main_window.MainWindow(self, self.cmd_line)
         self.add_window(window)
-        window.show()
+        window.present()
 
         try:
             with misc.raised_privileges():
@@ -244,8 +243,7 @@ class CnchiInit():
         # Disable suspend to RAM
         self.disable_suspend()
 
-        # Init PyObject Threads
-        self.threads_init()
+        # (GTK4: threads_init no longer needed)
 
     @staticmethod
     def check_pacman_conf(path):
@@ -492,32 +490,6 @@ class CnchiInit():
 
         return parser.parse_args()
 
-    @staticmethod
-    def threads_init():
-        """
-        For applications that wish to use Python threads to interact with the GNOME platform,
-        GObject.threads_init() must be called prior to running or creating threads and starting
-        main loops (see notes below for PyGObject 3.10 and greater). Generally, this should be done
-        in the first stages of an applications main entry point or right after importing GObject.
-        For multi-threaded GUI applications Gdk.threads_init() must also be called prior to running
-        Gtk.main() or Gio/Gtk.Application.run().
-        """
-        minor = Gtk.get_minor_version()
-        micro = Gtk.get_micro_version()
-
-        if minor == 10 and micro < 2:
-            # Unfortunately these versions of PyGObject suffer a bug
-            # which require a workaround to get threading working properly.
-            # Workaround: Force GIL creation
-            import threading
-            threading.Thread(target=lambda: None).start()
-
-        # Since version 3.10.2, calling threads_init is no longer needed.
-        # See: https://wiki.gnome.org/PyGObject/Threading
-        if minor < 10 or (minor == 10 and micro < 2):
-            GObject.threads_init()
-            # Gdk.threads_init()
-
     _locale_fallback = False
 
     @staticmethod
@@ -579,7 +551,6 @@ class CnchiInit():
             lang = gettext.translation(
                 CnchiInit.APP_NAME, CnchiInit.LOCALE_DIR, ['en'], None, True)
         lang.install()
-
 
     @staticmethod
     def check_for_files():

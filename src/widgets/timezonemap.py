@@ -29,7 +29,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Custom widget to show world time zones """
 
 from datetime import datetime
@@ -39,9 +38,9 @@ import sys
 import logging
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Gdk', '3.0')
-from gi.repository import GObject, Gdk, Gtk, GdkPixbuf, GLib
+gi.require_version('Gtk', '4.0')
+gi.require_version('Gdk', '4.0')
+from gi.repository import GObject, Gdk, Gtk, GdkPixbuf, GLib, Graphene
 
 gi.require_version('PangoCairo', '1.0')
 from gi.repository import Pango, PangoCairo
@@ -52,7 +51,6 @@ except ImportError:
     import tz
 
 import xml.etree.cElementTree as elementTree
-
 
 class TimezoneMap(Gtk.Widget):
     """ Widget that allows to select user's timezone """
@@ -87,7 +85,6 @@ class TimezoneMap(Gtk.Widget):
         (9.5, 170, 0, 68, 250), (10.0, 255, 230, 213, 255), (10.5, 212, 124, 21, 250),
         (11.0, 212, 170, 0, 255), (11.5, 249, 25, 87, 253), (12.0, 255, 204, 0, 255),
         (12.75, 254, 74, 100, 248), (13.0, 255, 85, 153, 250)]
-
 
     def __init__(self):
         Gtk.Widget.__init__(self)
@@ -129,6 +126,13 @@ class TimezoneMap(Gtk.Widget):
 
         self.tzdb = tz.Database()
 
+        gesture = Gtk.GestureClick()
+        gesture.set_button(1)
+        gesture.connect("pressed", self._on_click)
+        self.add_controller(gesture)
+
+        self.set_cursor(Gdk.Cursor.new_from_name("pointer"))
+
     def load_olsen_map_timezones(self):
         """ Load olson map timezones """
         try:
@@ -141,32 +145,20 @@ class TimezoneMap(Gtk.Widget):
             logging.error(err)
             print(err)
 
-    def do_get_preferred_width(self):
-        """ Retrieves a widget’s initial minimum and natural width. """
+    def do_measure(self, orientation, for_size):
         width = self._orig_background.get_width()
-
-        # Images are bigger but we need this widget to stay small as
-        # Cnchi's window is small (so it works with low res systems)
+        height = self._orig_background.get_height()
         if width > 400:
             width = 400
-
-        return width, width
-
-    def do_get_preferred_height(self):
-        """ Retrieves a widget’s initial minimum and natural height. """
-        height = self._orig_background.get_height()
-
-        # Images are bigger but we need this widget to stay small as
-        # Cnchi's window is small (so it works with low res systems)
         if height > 200:
             height = 200
+        if orientation == Gtk.Orientation.HORIZONTAL:
+            return (width, width, -1, -1)
+        else:
+            return (height, height, -1, -1)
 
-        return height, height
-
-    def do_size_allocate(self, allocation):
-        """ The do_size_allocate is called when the actual size is known
-         and the widget is told how much space could actually be allocated """
-        self.set_allocation(allocation)
+    def do_size_allocate(self, width, height, baseline):
+        self.set_size_request(width, height)
 
         if self._background is not None:
             del self._background
@@ -174,63 +166,17 @@ class TimezoneMap(Gtk.Widget):
 
         if self.is_sensitive():
             self._background = self._orig_background.scale_simple(
-                allocation.width,
-                allocation.height,
-                GdkPixbuf.InterpType.BILINEAR)
+                width, height, GdkPixbuf.InterpType.BILINEAR)
         else:
             self._background = self._orig_background_dim.scale_simple(
-                allocation.width,
-                allocation.height,
-                GdkPixbuf.InterpType.BILINEAR)
+                width, height, GdkPixbuf.InterpType.BILINEAR)
 
         if self._color_map is not None:
             del self._color_map
             self._color_map = None
 
         self._color_map = self._orig_color_map.scale_simple(
-            allocation.width,
-            allocation.height,
-            GdkPixbuf.InterpType.BILINEAR)
-
-        # self._visible_map_pixels = self._color_map.get_pixels()
-        # self._visible_map_rowstride = self._color_map.get_rowstride()
-
-        if self.get_realized():
-            self.get_window().move_resize(
-                allocation.x,
-                allocation.y,
-                allocation.width,
-                allocation.height)
-
-    def do_realize(self):
-        """ Called when the widget should create all of its
-        windowing resources.  We will create our window here """
-        self.set_realized(True)
-        allocation = self.get_allocation()
-        attr = Gdk.WindowAttr()
-        attr.window_type = Gdk.WindowType.CHILD
-        attr.wclass = Gdk.WindowWindowClass.INPUT_OUTPUT
-        attr.width = allocation.width
-        attr.height = allocation.height
-        attr.x = allocation.x
-        attr.y = allocation.y
-        attr.visual = self.get_visual()
-        attr.event_mask = (
-            self.get_events() |
-            Gdk.EventMask.EXPOSURE_MASK |
-            Gdk.EventMask.BUTTON_PRESS_MASK)
-        wat = Gdk.WindowAttributesType
-        mask = wat.X | wat.Y | wat.VISUAL
-        window = Gdk.Window(self.get_parent_window(), attr, mask)
-        # Associate the gdk.Window with ourselves,
-        # Gtk+ needs a reference between the widget and the gdk window
-        window.set_user_data(self)
-
-        display = Gdk.Display.get_default()
-        cursor = Gdk.Cursor.new_for_display(display, Gdk.CursorType.HAND2)
-        window.set_cursor(cursor)
-
-        self.set_window(window)
+            width, height, GdkPixbuf.InterpType.BILINEAR)
 
     def draw_text_bubble(self, context, pointx, pointy):
         """ Draw bubble with information text """
@@ -292,11 +238,12 @@ class TimezoneMap(Gtk.Widget):
         PangoCairo.show_layout(context, layout)
         context.restore()
 
-    def do_draw(self, context):
-        """ Draw widget """
+    def do_snapshot(self, snapshot):
         alloc = self.get_allocation()
+        rect = Graphene.Rect()
+        rect.init(0, 0, alloc.width, alloc.height)
+        context = snapshot.append_cairo(rect)
 
-        # Paint background
         if self._background is not None:
             Gdk.cairo_set_source_pixbuf(context, self._background, 0, 0)
             context.paint()
@@ -304,7 +251,6 @@ class TimezoneMap(Gtk.Widget):
         if not self._show_offset:
             return
 
-        # Paint highlight
         offset = self._selected_offset
 
         if self.is_sensitive():
@@ -321,15 +267,10 @@ class TimezoneMap(Gtk.Widget):
             return
 
         highlight = orig_highlight.scale_simple(
-            alloc.width,
-            alloc.height,
-            GdkPixbuf.InterpType.BILINEAR)
+            alloc.width, alloc.height, GdkPixbuf.InterpType.BILINEAR)
 
         Gdk.cairo_set_source_pixbuf(context, highlight, 0, 0)
         context.paint()
-
-        del highlight
-        del orig_highlight
 
         if self._tz_location:
             longitude = self._tz_location.get_property('longitude')
@@ -338,20 +279,14 @@ class TimezoneMap(Gtk.Widget):
             point_x = self.convert_longitude_to_x(longitude, alloc.width)
             point_y = self.convert_latitude_to_y(latitude, alloc.height)
 
-            # point_x = self.clamp(math.floor(pointx), 0, alloc.width)
-            # point_y = self.clamp(math.floor(pointy), 0, alloc.height)
-
             if point_y > alloc.height:
                 point_y = alloc.height
 
-            # Draw text bubble
             self.draw_text_bubble(context, point_x, point_y)
 
-            # Draw pin
             if self._pin is not None:
                 Gdk.cairo_set_source_pixbuf(
-                    context,
-                    self._pin,
+                    context, self._pin,
                     point_x - TimezoneMap.PIN_HOT_POINT[0],
                     point_y - TimezoneMap.PIN_HOT_POINT[1])
                 context.paint()
@@ -430,21 +365,16 @@ class TimezoneMap(Gtk.Widget):
 
         return nearest_tz_location
 
-    def do_button_press_event(self, event):
-        """ The button press event virtual method """
+    def _on_click(self, gesture, n_press, x, y):
+        my_x = int(x)
+        my_y = int(y)
 
-        # Make sure it was the first button
-        if event.button == 1:
-            my_x = int(event.x)
-            my_y = int(event.y)
+        nearest_tz_location = self.get_loc_for_xy(my_x, my_y)
 
-            nearest_tz_location = self.get_loc_for_xy(my_x, my_y)
-
-            if nearest_tz_location is not None:
-                self.set_bubble_text(nearest_tz_location)
-                self.set_location(nearest_tz_location)
-                self.queue_draw()
-        return True
+        if nearest_tz_location is not None:
+            self.set_bubble_text(nearest_tz_location)
+            self.set_location(nearest_tz_location)
+            self.queue_draw()
 
     def set_timezone(self, time_zone):
         """ Set timezone """
@@ -556,13 +486,11 @@ class TimezoneMap(Gtk.Widget):
 
 GObject.type_register(TimezoneMap)
 
-
 def test_module():
     """ Test module function """
     win = Gtk.Window()
     tzmap = TimezoneMap()
-    win.add(tzmap)
-    win.show_all()
+    win.set_child(tzmap)
 
     # Test with Europe/London
     #timezone = tzmap.get_timezone_at_coords(latitude=51.3030, longitude=-0.00731)
@@ -575,8 +503,8 @@ def test_module():
 
     import signal    # enable Ctrl-C since there is no menu to quit
     signal.signal(signal.SIGINT, signal.SIG_DFL)
+    win.present()
     Gtk.main()
-
 
 if __name__ == '__main__':
     test_module()

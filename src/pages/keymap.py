@@ -35,7 +35,7 @@ import subprocess
 import misc.keyboard_names as keyboard_names
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GLib
 
 from pages.gtkbasebox import GtkBaseBox
@@ -65,7 +65,7 @@ class Keymap(GtkBaseBox):
         column = Gtk.TreeViewColumn("Layouts")
         self.keymap_treeview.append_column(column)
         cell = Gtk.CellRendererText()
-        column.pack_start(cell, False)
+        column.append(cell, False)
         column.add_attribute(cell, "text", 0)
 
         self.keymap_treeview.set_activate_on_single_click(True)
@@ -147,7 +147,6 @@ class Keymap(GtkBaseBox):
                 self.keyboard_variant = {'code': None, 'description': None}
 
         self.prepare_called = True
-        self.show_all()
 
     def populate_keymap_treeview(self):
         """ Fills keymap treeview """
@@ -309,8 +308,6 @@ class Keymap(GtkBaseBox):
         """ Pass current keyboard layout to the keyboard widget. """
         self.keyboard_widget.set_layout(self.keyboard_layout['code'])
         self.keyboard_widget.set_variant(self.keyboard_variant['code'])
-        self.keyboard_widget.show_all()
-
 
 # When testing, no _() is available
 try:

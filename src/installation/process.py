@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Format and Installation process module. """
 
 import multiprocessing
@@ -51,7 +50,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 class Process(multiprocessing.Process):
     """ Format and Installation process thread class """

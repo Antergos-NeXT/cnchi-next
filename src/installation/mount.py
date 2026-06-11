@@ -31,12 +31,10 @@
 import logging
 from misc.run_cmd import call
 
-
 def unmount(directory):
     """ Unmount """
     logging.debug("Unmounting %s", directory)
     call(["/usr/bin/umount", "-l", directory])
-
 
 def unmount_swap():
     """ Unmount all swap devices """
@@ -47,7 +45,6 @@ def unmount_swap():
         for name in filter(None, swaps):
             if "/dev/zram" not in name:
                 call(["/usr/bin/swapoff", name])
-
 
 def unmount_all_in_directory(dest_dir):
     """ Unmounts all devices that are mounted inside dest_dir """
@@ -77,7 +74,6 @@ def unmount_all_in_directory(dest_dir):
 
     # Now is the time to unmount the device that is mounted in dest_dir (if any)
     unmount(dest_dir)
-
 
 def unmount_all_in_device(device):
     """ Unmounts all partitions from device """

@@ -26,7 +26,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ Alongside installation module """
 
 # ******************* NO GPT SUPPORT, YET ***************************************
@@ -50,7 +49,6 @@ try:
 except NameError as err:
     def _(message):
         return message
-
 
 def get_partition_size_info(partition_path, human=False):
     """ Gets partition used and available space using df command """
@@ -97,7 +95,6 @@ def get_partition_size_info(partition_path, human=False):
             min_size = float(df_out[2])
 
     return min_size, part_size
-
 
 class InstallationAlongside(GtkBaseBox):
     """ Performs an automatic installation next to a previous installed OS """
@@ -177,7 +174,10 @@ class InstallationAlongside(GtkBaseBox):
             self.resize_widget = gtkwidgets.ResizeWidget(
                 part_size, min_size, max_size)
             main_box = self.gui.get_object('alongside')
-            main_box.pack_start(self.resize_widget, True, False, 5)
+            main_box.append(self.resize_widget)
+            self.resize_widget.set_vexpand(True)
+            self.resize_widget.set_margin_top(5)
+            self.resize_widget.set_margin_bottom(5)
 
         self.resize_widget.set_part_title(
             'existing', self.oses[device_to_shrink], device_to_shrink)
@@ -189,7 +189,6 @@ class InstallationAlongside(GtkBaseBox):
         self.resize_widget.set_part_icon('new', icon_file=icon_file)
 
         self.resize_widget.set_pref_size(max_size)
-        self.resize_widget.show_all()
 
     def get_distributor_icon_file(self, os_name):
         """ Gets an icon for the installed distribution """
@@ -239,7 +238,6 @@ class InstallationAlongside(GtkBaseBox):
     def prepare(self, direction):
         """ Prepare our dialog to show/hide/activate/deactivate what's necessary """
         self.translate_ui()
-        self.show_all()
         self.fill_choose_partition_combo()
 
     def fill_choose_partition_combo(self):
@@ -261,7 +259,6 @@ class InstallationAlongside(GtkBaseBox):
                     line = "{0} ({1})".format(self.oses[device], device)
                     self.choose_partition_combo.append_text(line)
             misc.select_first_combobox_item(self.choose_partition_combo)
-            self.show_all()
             if not new_device_found:
                 txt = _("Can't find any spare partition number.\n"
                         "Alongside installation can't continue.")
@@ -271,7 +268,6 @@ class InstallationAlongside(GtkBaseBox):
                 show.error(self.get_main_window(), txt)
         elif len(devices) == 1:
             self.set_resize_widget(devices[0])
-            self.show_all()
             self.choose_partition_label.hide()
             self.choose_partition_combo.hide()
         else:

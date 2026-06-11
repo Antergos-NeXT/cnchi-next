@@ -48,7 +48,6 @@ except NameError as err:
 ATTRNAME_FORMAT = '%-14s : '
 ATTR_INDENT = 17 * ' '
 
-
 def get_term_size():
     """ Gets terminal width in chars """
     if sys.stdout.isatty():
@@ -57,7 +56,6 @@ def get_term_size():
         return width
     else:
         return 80
-
 
 def format_attr(attrname, value, attrformat=None):
     """ Formats string from value """
@@ -79,7 +77,6 @@ def format_attr(attrname, value, attrformat=None):
                          break_on_hyphens=False,
                          break_long_words=False)
 
-
 def format_attr_oneperline(attrname, value):
     """ Formats string from value (one value per line) """
     if not value:
@@ -87,7 +84,6 @@ def format_attr_oneperline(attrname, value):
     my_string = ATTRNAME_FORMAT % attrname
     my_string += ('\n' + ATTR_INDENT).join(value)
     return my_string
-
 
 def display_pkginfo(pkg, level=1, style='local'):
     """
@@ -161,7 +157,6 @@ def display_pkginfo(pkg, level=1, style='local'):
             print('\n'.join(["%s %s" % (md5, filename)
                              for (filename, md5) in pkg.backup]))
     print('')
-
 
 def get_pkginfo(pkg, level=1, style='local'):
     """ Stores package info into a dictonary """

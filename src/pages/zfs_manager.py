@@ -88,7 +88,6 @@ def init_device(device_path, scheme="GPT"):
 
     settle()
 
-
 def get_pool_size(pool_name):
     """ Gets zfs pool size in GB """
     try:
@@ -114,7 +113,6 @@ def get_pool_size(pool_name):
         pool_size = 0
     return pool_size
 
-
 def get_home_size(pool_name):
     """ Get recommended /home zvol size in GB """
     pool_size = get_pool_size(pool_name)
@@ -128,7 +126,6 @@ def get_home_size(pool_name):
             root_needs = MIN_ROOT_SIZE_GB
         home_size = pool_size - root_needs
     return home_size
-
 
 def get_swap_size(pool_name):
     """ Gets recommended swap size in GB """
@@ -168,7 +165,6 @@ def get_swap_size(pool_name):
             swap_size = max_swap
     return swap_size
 
-
 def set_mountpoint(zvol, mount_point):
     """ Sets mount point of zvol and tries to mount it.
         It does it but then ZFS tries to automount it and fails
@@ -185,7 +181,6 @@ def set_mountpoint(zvol, mount_point):
         err_output = err.output.decode().strip("\n")
         # It's ok if it fails
         logging.debug(err_output)
-
 
 def clear_dest_dir():
     """ Empties /install """
@@ -208,7 +203,6 @@ def clear_dest_dir():
         except OSError as err:
             logging.warning(err)
 
-
 def load_existing_pools():
     """ Fills existing_pools dict with pool's name,
         identifier and status """
@@ -230,7 +224,6 @@ def load_existing_pools():
                 existing_pools[name] = (identifier, state)
     return existing_pools
 
-
 def destroy_pools():
     """ Try to destroy existing antergos zfs pools """
     existing_pools = load_existing_pools()
@@ -243,7 +236,6 @@ def destroy_pools():
                 destroy_cmd = ['/usr/bin/zfs', 'destroy', '-R', '-f', pool_name]
                 call(destroy_cmd, warning=False)
 
-
 def get_pool_id(pool_name, include_offline=False):
     """ Returns pool's identifier and status """
 
@@ -254,7 +246,6 @@ def get_pool_id(pool_name, include_offline=False):
         if "ONLINE" in state or include_offline:
             return identifier, state
     return None, None
-
 
 def pool_name_is_valid(name):
     """ Checks that pool name is a valid name """
@@ -273,7 +264,6 @@ def settle():
     """ Wait until in /dev initialized correct devices """
     call(["/usr/bin/udevadm", "settle"])
     call(["/usr/bin/sync"])
-
 
 def create_pool(pool_name, pool_type, device_paths, force_4k):
     """ Create zpool """
@@ -327,7 +317,6 @@ def create_pool(pool_name, pool_type, device_paths, force_4k):
 
     logging.debug("Pool %s created.", pool_name)
 
-
 def create_swap(pool_name, vol_name):
     """ mkswap on a zfs zvol """
 
@@ -371,7 +360,6 @@ def create_vol(pool_name, vol_name, swap_size=None):
 
     if vol_name == "swap":
         create_swap(pool_name, vol_name)
-
 
 def get_partition_path(device, part_num):
     """ Form partition path from device and partition number """

@@ -26,7 +26,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-
 """ VESA driver installation """
 
 try:
@@ -43,7 +42,6 @@ DEVICES = []
 
 # Give this driver less priority than the others so it is never choosen instead.
 PRIORITY = -2
-
 
 class VesaFB(Hardware):
     """ Vesa (generic) graphics driver """

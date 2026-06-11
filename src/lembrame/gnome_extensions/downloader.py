@@ -34,7 +34,6 @@ import zipfile
 
 import requests
 
-
 class GnomeExtensionsDownloader():
     """ Class used to download gnome extensions """
     extensions = False

@@ -33,7 +33,7 @@ import os
 import re
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 import parted3.fs_module as fs
@@ -73,7 +73,7 @@ class PartitionBaseDialog(Gtk.Dialog):
         self.luks_options = (False, "", "")
 
         area = self.get_content_area()
-        area.add(self.gui.get_object(gui_info['gui_object']))
+        area.append(self.gui.get_object(gui_info['gui_object']))
 
         self.add_stock_buttons()
 
@@ -92,7 +92,7 @@ class PartitionBaseDialog(Gtk.Dialog):
 
         for grp in btns:
             (btn_id, icon, lbl) = grp
-            image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.BUTTON)
+            image = Gtk.Image.new_from_icon_name(icon)
             btn = self.buttons[btn_id]
             btn.set_always_show_image(True)
             btn.set_image(image)
@@ -167,7 +167,6 @@ class PartitionBaseDialog(Gtk.Dialog):
         # erased.
         self.luks_dialog.warning_message_shown = True
 
-        self.luks_dialog.show_all()
         self.luks_dialog.prepare(self.luks_options)
 
         response = self.luks_dialog.run()
@@ -198,7 +197,7 @@ class PartitionBaseDialog(Gtk.Dialog):
         combo.remove_all()
         for fs_name in sorted(fs.NAMES):
             combo.append_text(fs_name)
-        combo.set_wrap_width(2)
+        # GTK4: set_wrap_width removed
 
         # Initialize edit partition dialog mount point combobox.
         combo = self.gui.get_object('mount_combo')

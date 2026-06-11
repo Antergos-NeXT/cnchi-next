@@ -128,8 +128,6 @@ class GeoIP():
             return self.record.location
         return None
 
-
-
 def test_module():
     """ Test module """
     geo = GeoIP()
@@ -137,7 +135,6 @@ def test_module():
     print("Country:", geo.get_country())
     print("Continent:", geo.get_continent())
     print("Location:", geo.get_location())
-
 
 if __name__ == "__main__":
     test_module()

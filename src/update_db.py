@@ -81,6 +81,5 @@ def test():
     with misc.raised_privileges():
         sync()
 
-
 if __name__ == '__main__':
     test()

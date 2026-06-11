@@ -38,10 +38,8 @@ from gi.repository import GObject, GLib
 TZ_DATA_FILE = '/usr/share/zoneinfo/zone.tab'
 ISO_3166_FILE = '/usr/share/xml/iso-codes/iso_3166.xml'
 
-
 def _seconds_since_epoch(my_datetime):
     return int(my_datetime.replace(tzinfo=None).strftime('%s'))
-
 
 class SystemTzInfo(datetime.tzinfo):
     """ Class that represents current timezone info """
@@ -142,7 +140,6 @@ class SystemTzInfo(datetime.tzinfo):
         finally:
             self._restore_tz(tzbackup)
 
-
 class Iso3166():
     """ Read Iso 3166 xml file """
 
@@ -169,7 +166,6 @@ class Iso3166():
                 name = entry.getAttribute('name')
             self.names[alpha_2_code] = name
 
-
 # Much of the Location and Database classes are a rough translation of
 # gnome-system-tools/src/time/tz.c. Thanks to Hans Petter Jansson
 # <hpj@ximian.com> for that.
@@ -184,7 +180,6 @@ def _parse_position(position, wholedigits):
     if whole >= 0.0:
         return whole + fraction / pow(10.0, len(fractionstr))
     return whole - fraction / pow(10.0, len(fractionstr))
-
 
 class Location():
     """ Class to store a location """
@@ -275,7 +270,6 @@ class Location():
     def set_property(self, prop, value):
         """ Set object property (see above) """
         setattr(self, prop, value)
-
 
 class Database():
     """ Store all ISO 3166 information """

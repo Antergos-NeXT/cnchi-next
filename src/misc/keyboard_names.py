@@ -29,7 +29,6 @@ from gi.repository import GObject
 
 import xml.etree.cElementTree as elementTree
 
-
 class Model(GObject.GObject):
     """ Represents a keyboard model """
 
@@ -42,7 +41,6 @@ class Model(GObject.GObject):
     def __repr__(self):
         """ Return model description """
         return self.description
-
 
 class Variant(GObject.GObject):
     """ Keymap variant layout """
@@ -57,7 +55,6 @@ class Variant(GObject.GObject):
     def __repr__(self):
         """ Return variant description """
         return self.description
-
 
 class Layout(GObject.GObject):
     """ Keymap layout """
@@ -82,7 +79,6 @@ class Layout(GObject.GObject):
         """ Sort variants """
         self.variants = OrderedDict(
             sorted(self.variants.items(), key=lambda t: str(t[1])))
-
 
 class KeyboardNames():
     """ Read all keyboard info (models, layouts and variants) """
@@ -240,7 +236,6 @@ class KeyboardNames():
                     return variant_name
         return None
 
-
 def test():
     """ Test module """
     base_xml_path = "/usr/share/cnchi/data/base.xml"
@@ -251,7 +246,6 @@ def test():
         print(name, layouts[name])
         for variant_name in layouts[name].variants:
             print(layouts[name], "-", layouts[name].variants[variant_name])
-
 
 if __name__ == '__main__':
     test()

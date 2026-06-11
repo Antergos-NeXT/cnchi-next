@@ -25,7 +25,7 @@ import parted
 import misc.extra as misc
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GObject
 
 # When testing, no _() is available
@@ -46,11 +46,9 @@ MAX_ROOT_SIZE_GB = MAX_ROOT_SIZE // 1024
 MIN_ROOT_SIZE = 8000
 MIN_ROOT_SIZE_GB = MIN_ROOT_SIZE // 1024
 
-
 def is_int(num):
     """ Checks if num is an integer """
     return isinstance(num, int)
-
 
 class ZFSTreeview(Gtk.TreeView):
     """ ZFS installation screen class """
