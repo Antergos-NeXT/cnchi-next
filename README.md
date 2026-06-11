@@ -6,8 +6,8 @@ Forked from the original Antergos Cnchi, patched for modern Python (3.14+), with
 
 | Branch | Status |
 |--------|--------|
-| `0.16.x` | Active — stable release |
-| `cnchi-dev` | Development — UI redesign, experimental features |
+| `0.16.x` | Active — stable GTK3 release |
+| `cnchi-dev` | Development — **GTK4 redesign**, experimental features |
 | `master` | Legacy upstream |
 
 ## What's different in this fork
@@ -17,6 +17,29 @@ Forked from the original Antergos Cnchi, patched for modern Python (3.14+), with
 - **Updated packages.xml** — all 522 packages resolve against current Arch repos, 94 dead packages replaced
 - **Rebranded** — URLs, package names, and references updated to Antergos NeXT
 - **Multi-DE** — KDE Plasma (default), GNOME, XFCE, Cinnamon, Budgie, Deepin, LXQt, MATE, Enlightenment, Openbox, i3
+
+## Cnchi-Development (GTK4 branch)
+
+The `cnchi-dev` branch is a **ground-up UI redesign** porting Cnchi from GTK3 to GTK4 with a Calamares-inspired layout.
+
+### Key differences from `0.16.x` (GTK3 stable)
+
+- **GTK4** — ported from GTK3, uses `gi.require_version('Gtk', '4.0')`, `Gtk.AlertDialog`, `Gdk.Texture`, etc.
+- **Calamares-inspired layout** — sidebar with animated step indicators, horizontal split layout
+- **Animated transitions** — `GtkStack` with `SLIDE_LEFT`/`SLIDE_RIGHT` transitions between pages
+- **Modern dark theme** — custom CSS with gradients, glow effects, pulse animations
+- **Navigation arrows** — keyboard Left/Right arrows for back/next
+- **WebKit 6.0** — `webkitgtk-6.0` replaces `webkit2gtk-4.1`
+- **Quotes by default** — welcome screen quotes no longer need `--re-up` flag
+- **About dialog** — sidebar About button with `Gtk.AlertDialog`
+
+### Dependencies (GTK4)
+
+- **gtk4**, python, python-cairo, python-gobject, python-dbus
+- python-requests, python-chardet, python-feedparser, python-idna
+- python-mako, python-geoip2, python-maxminddb, python-passlib
+- pyalpm, python-pyparted, parted, dosfstools, mtools, ntfs-3g
+- upower, gocryptfs, iso-codes, **webkitgtk-6.0**
 
 ## Usage
 
@@ -39,7 +62,7 @@ sudo -E cnchi.py
 | `-v`, `--verbose` | Show log messages to stdout  |
 | `-V`, `--version` | Show version and quit |
 | `-z`, `--hidden` | Show development options |
-| `--re-up` | Enable Class of '09 quotes on welcome screen |
+| `--re-up` | Enable Class of '09 quotes on welcome screen (enabled by default in cnchi-dev) |
 
 ## Reporting bugs
 
