@@ -28,7 +28,7 @@
 
 """ Set some Cnchi global constants """
 
-CNCHI_VERSION = "0.16.52"
+CNCHI_VERSION = "0.17.1"
 """ Cnchi version """
 
 CNCHI_WEBSITE = "https://github.com/Antergos-NeXT"
