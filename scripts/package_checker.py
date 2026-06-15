@@ -3,7 +3,7 @@
 #
 # package_checker.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Pulsar
 #
 # This file is part of Cnchi.
 #
@@ -28,7 +28,7 @@ import os
 import subprocess
 import sys
 
-XML_URL = "https://raw.githubusercontent.com/Antergos/Cnchi/master/data/packages.xml"
+XML_URL = "https://raw.githubusercontent.com/Pulsar/Cnchi/master/data/packages.xml"
 XML_FILE = "packages.xml"
 
 def get_pkg_names():

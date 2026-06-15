@@ -3,7 +3,7 @@
 #
 #  nouveau.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #

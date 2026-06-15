@@ -3,7 +3,7 @@
 #
 # timezone.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -82,7 +82,7 @@ class Timezone(GtkBaseBox):
 
         # Strip .UTF-8 from locale, icu doesn't parse it
         self.locale = os.environ['LANG'].rsplit('.', 1)[0]
-        self.map_window.set_child(self.tzmap)
+        self.map_window.append(self.tzmap)
         self.tzmap.show()
 
     def translate_ui(self):

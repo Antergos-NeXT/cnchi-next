@@ -3,7 +3,7 @@
 #
 # update_db.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -48,7 +48,7 @@ def update_mirrorlists():
     """ Make sure we have the latest mirrorlist files """
     mirrorlists = [
         "/etc/pacman.d/mirrorlist",
-        "/etc/pacman.d/antergos-next-mirrorlist"]
+        "/etc/pacman.d/antergos-mirrorlist"]
     cmd = [
         'pacman',
         '-Syy',
@@ -56,7 +56,7 @@ def update_mirrorlists():
         '--noprogressbar',
         '--quiet',
         'pacman-mirrorlist',
-        'antergos-next-mirrorlist']
+        'antergos-mirrorlist']
     with misc.raised_privileges():
         try:
             with open(os.devnull, 'w') as fnull:

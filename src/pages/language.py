@@ -3,7 +3,7 @@
 #
 #  language.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -136,7 +136,7 @@ class Language(GtkBaseBox):
         label.set_markup(txt)
 
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(50)
 
         # a11y

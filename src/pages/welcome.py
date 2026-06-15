@@ -3,7 +3,7 @@
 #
 # welcome.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -36,10 +36,7 @@ import sys
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Gdk', '4.0')
-gi.require_version('GdkPixbuf', '2.0')
-from gi.repository import GdkPixbuf
-
-from gi.repository import Gdk
+from gi.repository import Gdk, GLib
 from gi.repository import Gtk
 
 import misc.extra as misc
@@ -87,6 +84,9 @@ class Welcome(GtkBaseBox):
             btn = self.buttons[key]
             btn.set_name(key + "_btn")
 
+        self.buttons['tryit'].connect('clicked', self.on_tryit_button_clicked)
+        self.buttons['graph'].connect('clicked', self.on_graph_button_clicked)
+
         self.images = {'tryit': self.gui.get_object("tryit_image"),
                        # 'cli': self.gui.get_object("cli_image"),
                        'graph': self.gui.get_object("graph_image")}
@@ -106,13 +106,13 @@ class Welcome(GtkBaseBox):
         self.labels['installit'].set_mnemonic_widget(self.buttons['graph'])
 
         for key in self.images:
-            image = self.filenames[key]
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
-                image['path'],
-                image['width'],
-                image['height'])
-            texture = Gdk.Texture.new_for_pixbuf(pixbuf)
-            self.images[key].set_from_paintable(texture)
+            image_path = self.filenames[key]['path']
+            if os.path.exists(image_path):
+                try:
+                    texture = Gdk.Texture.new_from_filename(image_path)
+                    self.images[key].set_from_paintable(texture)
+                except GLib.GError:
+                    logging.warning("Cannot load %s", image_path)
 
         # Locale fallback warning
         self._locale_warning = None
@@ -169,7 +169,7 @@ class Welcome(GtkBaseBox):
         # Tell timezone process to start searching now
         self.settings.set('timezone_start', True)
         # Simulate a forward button click
-        self.forward_button.clicked()
+        self.forward_button.emit('clicked')
 
     def show_loading_message(self, do_show=True):
         """ Shows a message so the user knows Cnchi is loading pages

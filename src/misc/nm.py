@@ -388,7 +388,8 @@ class NetworkManagerTreeView(Gtk.TreeView):
         """ Configure wifi signal icons """
         icon_theme = Gtk.IconTheme()
         default = Gtk.IconTheme.get_default()
-        default = default.load_icon(Gtk.STOCK_MISSING_IMAGE, 22, 0)
+        fallback = default.lookup_icon("network-wireless-symbolic", 22, 0)
+        default = fallback.load_icon() if fallback else None
         icon_theme.set_custom_theme('ubuntu-mono-light')
         self.icons = []
         icon_names = [

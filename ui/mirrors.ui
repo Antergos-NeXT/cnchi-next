@@ -143,7 +143,7 @@
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
     <child>
-      <object class="GtkLabel" id="antergos_mirrors_label">
+      <object class="GtkLabel" id="pulsar_mirrors_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="halign">center</property>

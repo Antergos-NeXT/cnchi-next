@@ -3,7 +3,7 @@
 #
 # lamp.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -29,7 +29,7 @@
 """
 LAMP stack is a group of open source software to get web servers up
 and running. The acronym stands for Linux, Apache, MySQL, and PHP.
-Since the server is already running Antergos, the linux
+Since the server is already running Antergos NeXT, the linux
 part is taken care of.
 """
 

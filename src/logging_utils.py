@@ -3,7 +3,7 @@
 #
 # logging_utils.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -137,7 +137,7 @@ class ContextFilter(logging.Filter, metaclass=Singleton):
         if self.api_key and CNCHI_RELEASE_STAGE != 'development':
             parts = {
                 1: 'com', 2: 'http', 3: 'hook', 4: 'build',
-                5: 'antergos-next', 6: 'cnchi', 7: '://'
+                5: 'antergos', 6: 'cnchi', 7: '://'
             }
             build_server = '{}{}{}.{}.{}/{}?{}={}'.format(
                 parts[2], parts[7], parts[4], parts[5],

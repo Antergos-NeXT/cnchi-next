@@ -3,7 +3,7 @@
 #
 # create_table.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -58,16 +58,16 @@ class CreateTableDialog(Gtk.Dialog):
         self.gui_dir = gui_dir
         gui_file = os.path.join(
             gui_dir, 'dialogs', CreateTableDialog.UI_FILE)
-        self.gui.add_from_file(gui_file)
 
-        # Connect UI signals
+        # Connect UI signals (GTK4: call connect_signals before add_from_file)
         self.gui.connect_signals(self)
+        self.gui.add_from_file(gui_file)
 
         area = self.get_content_area()
         area.append(self.gui.get_object('create_table_vbox'))
 
-        self.add_button(Gtk.STOCK_APPLY, Gtk.ResponseType.APPLY)
-        self.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+        self.add_button(_("_Apply"), Gtk.ResponseType.APPLY)
+        self.add_button(_("_Cancel"), Gtk.ResponseType.CANCEL)
 
         self.set_title(_("Create Partition Table"))
         self.prepare()

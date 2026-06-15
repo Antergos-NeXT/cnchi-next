@@ -5,7 +5,7 @@
 #
 #  This code is based on previous work by Rémy Oudompheng <remy@archlinux.org>
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -272,14 +272,14 @@ class Pac():
         repos = OrderedDict()
         repo_order = []
         db_match = [db for db in self.handle.get_syncdbs()
-                    if db.name == 'antergos-next']
+                    if db.name == 'antergos']
         antdb = OrderedDict()
-        antdb['antergos-next'] = db_match[0]
+        antdb['antergos'] = db_match[0]
 
         one_repo_groups_names = ['cinnamon', 'mate', 'mate-extra']
         one_repo_groups = []
         for one_repo_group_name in one_repo_groups_names:
-            grp = antdb['antergos-next'].read_grp(one_repo_group_name)
+            grp = antdb['antergos'].read_grp(one_repo_group_name)
             if not grp:
                 # Group does not exist
                 grp = ['None', []]

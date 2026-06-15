@@ -3,7 +3,7 @@
 #
 # avatars.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -54,11 +54,8 @@ class Avatars(Gtk.Dialog):
         self.set_modal(True)
         self.set_decorated(False)
         self.set_title(_("Choose your avatar"))
-# self.set_border_width(3)  # GTK4: use CSS
         self.set_default_size(-1, -1)
         self.set_resizable(False)
-
-        #self.add_button(Gtk.STOCK_APPLY, Gtk.ResponseType.APPLY)
 
         self.selected_avatar = None
 
@@ -70,7 +67,6 @@ class Avatars(Gtk.Dialog):
         iconview.set_item_width(60)
         iconview.set_text_column(0)
         iconview.set_pixbuf_column(1)
-        #iconview.set_tooltip_column(2)
         iconview.set_activate_on_single_click(True)
         iconview.connect("item-activated", self.avatar_selected)
 

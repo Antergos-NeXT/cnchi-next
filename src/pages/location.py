@@ -3,7 +3,7 @@
 #
 #  location.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -67,9 +67,10 @@ class Location(GtkBaseBox):
         self.geoip_country = None
         self.selected_country = ""
 
-        self.show_all_locations = False
+        self.show_all_locations = True
 
         button = self.gui.get_object("show_all_locations_checkbutton")
+        button.set_active(True)
         button.set_name("location-checkbutton-show-all-locations")
         button.connect("toggled", self.all_locations_toggled, "")
 
@@ -119,37 +120,27 @@ class Location(GtkBaseBox):
             self.geoip_country = geoip.GeoIP().get_country()
         if self.geoip_country:
             names = self.geoip_country.names
-            #logging.debug(names)
-            model = self.listbox.observe_children()
-            for i in range(model.get_n_items()):
-                listbox_row = model.get_item(i)
-                label = listbox_row.get_child()
-                if label is not None:
-                    label = label.get_text()
+            i = 0
+            while True:
+                listbox_row = self.listbox.get_row_at_index(i)
+                if listbox_row is None:
+                    break
+                label_widget = listbox_row.get_child()
+                if label_widget is not None:
+                    label_text = label_widget.get_text()
                     for name in names.values():
-                        if name in label:
-                            self.selected_country = label
+                        if name in label_text:
+                            logging.debug("GeoIP matched '%s' in '%s'", name, label_text)
+                            self.selected_country = label_text
                             self.listbox.select_row(listbox_row)
                             return
+                i += 1
             self.select_first_listbox_item()
         else:
             self.select_first_listbox_item()
 
-    def hide_all(self):
-        """ Hide all widgets """
-        names = [
-            "location_box", "label_help", "label_choose_country", "box1",
-            "eventbox1", "eventbox2", "scrolledwindow1", "listbox_countries"]
-
-        for name in names:
-            control = self.gui.get_object(name)
-            if control is not None:
-                control.hide()
-
     def prepare(self, direction):
         """ Prepare dialog for showing """
-        self.hide_all()
-
         self.fill_listbox()
         self.select_detected_country()
         self.translate_ui()
@@ -236,7 +227,7 @@ class Location(GtkBaseBox):
             listbox_row = self.listbox.get_row_at_index(0)
             if listbox_row is None:
                 break
-            listbox_row.destroy()
+            self.listbox.remove(listbox_row)
 
         for area in areas:
             label = Gtk.Label.new()

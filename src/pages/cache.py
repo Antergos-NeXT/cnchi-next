@@ -3,7 +3,7 @@
 #
 # cache.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -76,7 +76,7 @@ class Cache(GtkBaseBox):
                  "In case you need to restart this installation\nyou won't be needing to "
                  "re-download all packages again.") + '\n\n'
         txt += _("- It <b>cannot</b> be the same device or partition where you "
-                 "are installing Antergos.") + '\n'
+                 "are installing Antergos NeXT.") + '\n'
         txt += _(
             "- If you select a <b>device</b>, its contents will be fully <b>DELETED!</b>") + '\n'
         txt += _("- If you select a <b>partition</b> its contents will be <b>preserved</b> "

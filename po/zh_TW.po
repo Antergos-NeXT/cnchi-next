@@ -137,11 +137,11 @@ msgstr ""
 
 #: cnchi/src/desktop_info.py:131
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
 "Gnome 3 是一個使用您的電腦簡單且優雅的方式。它的主要特性是有一個概覽按鈕來讓"
-"您很容易的可以進行您所有的基礎工作。GNOME 3 是 Antergos 的預設桌面環境。"
+"您很容易的可以進行您所有的基礎工作。GNOME 是 Antergos 的預設桌面環境。"
 
 #: cnchi/src/desktop_info.py:135
 msgid ""
@@ -246,11 +246,11 @@ msgid "Uncomplicated Firewall"
 msgstr "簡易的防火牆"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr "Flash插件"
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
 msgstr "Steam + 在 Linux 上玩"
 
 #: cnchi/src/features_info.py:79
@@ -306,7 +306,7 @@ msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr "Vivaldi 是一款免費、快速的網頁瀏覽器，專為高級用戶設計。"
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr "通常用於多媒體的免費軟體。"
 
 #: cnchi/src/features_info.py:96
@@ -314,7 +314,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "安裝 AMD 或 Nvidia 的專有驅動程式"
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr "為遊戲愛好者安裝 Steam 和 Playonlinux。"
 
 #: cnchi/src/features_info.py:98
@@ -441,9 +441,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2421,13 +2420,13 @@ msgstr "即時環境的區域設定沒有您的語言。目前，後備版本為
 #~ msgstr "Cnchi 將會以 '%s' 桌面環境安裝 Antergos"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Cinnamon 是 GNOME 3 的一個分支，由（且專為）Linux Mint 開發。它提供使用者 "
-#~ "GNOME 3 的現代科技與傳統桌面的完美結合。Cinnamon 是為所有人所設計的。"
+#~ "Cinnamon 是 GNOME 的一個分支，由（且專為）Linux Mint 開發。它提供使用者 "
+#~ "GNOME 的現代科技與傳統桌面的完美結合。Cinnamon 是為所有人所設計的。"
 
 #~ msgid ""
 #~ "LXDE is an extremely fast-performing and energy-saving desktop "

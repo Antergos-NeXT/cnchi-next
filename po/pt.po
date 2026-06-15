@@ -151,12 +151,12 @@ msgstr ""
 
 #: cnchi/src/desktop_info.py:131
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
-"O GNOME 3 é um modo fácil e elegante de usar o seu computador. Tem a Visão "
+"O GNOME é um modo fácil e elegante de usar o seu computador. Tem a Visão "
 "Geral de Atividades que é um modo fácil de aceder às tuas tarefas básicas. O "
-"GNOME 3 é o ambiente de trabalho padrão no Antergos."
+"GNOME é o ambiente de trabalho padrão no Antergos."
 
 #: cnchi/src/desktop_info.py:135
 msgid ""
@@ -265,12 +265,12 @@ msgid "Uncomplicated Firewall"
 msgstr "Firewall Descomplicada"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr "Plug-ins Flash"
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
-msgstr "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
+msgstr "Steam + Wine / Lutris / Heroic Games Launcher"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
@@ -331,7 +331,7 @@ msgstr ""
 "Vivaldi é um navegador rápido e gratuito projetado para usuários avançados."
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr "Software freeware normalmente usado para multimídia."
 
 #: cnchi/src/features_info.py:96
@@ -339,7 +339,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "Instala o driver gráfico proprietário da AMD ou Nvidia."
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr "Instala Steam e Playonlinux para entusiastas de jogos."
 
 #: cnchi/src/features_info.py:98
@@ -472,9 +472,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2437,15 +2436,15 @@ msgstr "As localidades do ambiente ativo não possuem seu idioma. O substituto e
 #~ msgstr "Cnchi vai instalar o Antergos com o ambiente de trabalho '%s'"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Cinnamon é um interface derivado do GNOME 3, inicialmente desenvolvido "
+#~ "Cinnamon é um interface derivado do GNOME, inicialmente desenvolvido "
 #~ "por (e para) o Linux Mint. Proporcionar um ambiente de trabalho mais "
 #~ "tradicional baseado na metáfora do desktop, como o GNOME 2 mantendo as "
-#~ "tecnicas de composição do GNOME 3."
+#~ "tecnicas de composição do GNOME."
 
 #~ msgid ""
 #~ "LXDE is an extremely fast-performing and energy-saving desktop "

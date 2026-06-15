@@ -3,7 +3,7 @@
 #
 # webview.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -30,8 +30,8 @@
 
 import gi
 gi.require_version('Gtk', '4.0')
-gi.require_version('WebKit2', '4.1')
-from gi.repository import Gtk, GLib, WebKit2
+gi.require_version('WebKit', '6.0')
+from gi.repository import Gtk, GLib, WebKit
 
 class BrowserWindow(Gtk.Window):
     """ Shows a browser window showing passed url """
@@ -46,12 +46,14 @@ class BrowserWindow(Gtk.Window):
 
         self.connect('close-request', self.on_destroy)
 
-        # https://lazka.github.io/pgi-docs/WebKit2-4.1/classes/Settings.html
-        settings = WebKit2.Settings().new()
-        self.webview = WebKit2.WebView().new_with_settings(settings)
+        settings = WebKit.Settings.new(
+            enable_javascript=True,
+            enable_webgl=False,
+        )
+        self.webview = WebKit.WebView.new_with_settings(settings)
 
         self.webview.connect('decide-policy', self.decide_policy_cb)
-        self.webview.connect('load_changed', self.load_changed_cb)
+        self.webview.connect('load-changed', self.load_changed_cb)
 
         scrolled_window.set_child(self.webview)
 
@@ -60,11 +62,12 @@ class BrowserWindow(Gtk.Window):
         self.destroy()
 
     @staticmethod
-    def decide_policy_cb(decision, _type, data):
+    def decide_policy_cb(_webview, decision, _decision_type):
         """ Allows all (security flaw, but we do not care when installing) """
+        decision.allow()
         return True
 
-    def load_changed_cb(self, webview, load_event):
+    def load_changed_cb(self, _webview, _load_event):
         pass
 
     def load_url(self, url):

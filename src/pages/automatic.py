@@ -3,7 +3,7 @@
 #
 # automatic.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -91,7 +91,7 @@ class InstallationAutomatic(GtkBaseBox):
         label.set_markup(txt)
 
         label = self.gui.get_object('info_label')
-        txt = _("Select the drive we should use to install Antergos and then "
+        txt = _("Select the drive we should use to install Antergos NeXT and then "
                 "click above to start the process.")
         label.set_markup(txt)
 
@@ -258,7 +258,7 @@ class InstallationAutomatic(GtkBaseBox):
 
     def run_install(self, packages, metalinks):
         """ Perform installation """
-        txt = _("Cnchi will install Antergos on device %s")
+        txt = _("Cnchi will install Antergos NeXT on device %s")
         logging.info(txt, self.auto_device)
 
         self.settings.set('auto_device', self.auto_device)

@@ -3,7 +3,7 @@
 #
 # alongside.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -99,7 +99,7 @@ def get_partition_size_info(partition_path, human=False):
 class InstallationAlongside(GtkBaseBox):
     """ Performs an automatic installation next to a previous installed OS """
 
-    # Leave at least 6.5GB for Antergos when shrinking
+    # Leave at least 6.5GB for Antergos NeXT when shrinking
     MIN_ROOT_SIZE = 8000
 
     def __init__(self, params, prev_page="installation_ask", next_page="user_info"):
@@ -118,7 +118,7 @@ class InstallationAlongside(GtkBaseBox):
 
     @staticmethod
     def get_new_device(device_to_shrink):
-        """ Get new device where Cnchi will install Antergos
+        """ Get new device where Cnchi will install Antergos NeXT
             returns an empty string if no device is available """
         # TODO: Fix this for mmcblk devices
         number = int(device_to_shrink[len("/dev/sdX"):])
@@ -153,11 +153,11 @@ class InstallationAlongside(GtkBaseBox):
         (min_size, part_size) = get_partition_size_info(device_to_shrink)
         max_size = part_size - (InstallationAlongside.MIN_ROOT_SIZE * 1000.0)
         if max_size < 0:
-            # Full Antergos does not fit but maybe base fits... ask user.
-            txt = _("Cnchi recommends at least 6.5GB free to install Antergos. \n\n"
+            # Full Antergos NeXT does not fit but maybe base fits... ask user.
+            txt = _("Cnchi recommends at least 6.5GB free to install Antergos NeXT. \n\n"
                     "New partition {0} resulting of shrinking {1} will not have enough\n"
                     "free space for a full installation.\n"
-                    "You can still install Antergos, but be carefull on which DE you\n"
+                    "You can still install Antergos NeXT, but be carefull on which DE you\n"
                     "choose as it might not fit in.\n\n"
                     "Install at your own risk!\n\n")
             txt = txt.format(new_device, device_to_shrink)
@@ -184,8 +184,8 @@ class InstallationAlongside(GtkBaseBox):
         icon_file = self.get_distributor_icon_file(self.oses[device_to_shrink])
         self.resize_widget.set_part_icon('existing', icon_file=icon_file)
 
-        self.resize_widget.set_part_title('new', 'New Antergos', new_device)
-        icon_file = self.get_distributor_icon_file('Antergos')
+        self.resize_widget.set_part_title('new', 'New Antergos NeXT', new_device)
+        icon_file = self.get_distributor_icon_file('Antergos NeXT')
         self.resize_widget.set_part_icon('new', icon_file=icon_file)
 
         self.resize_widget.set_pref_size(max_size)
@@ -194,11 +194,11 @@ class InstallationAlongside(GtkBaseBox):
         """ Gets an icon for the installed distribution """
         os_name = os_name.lower()
 
-        # No numix icon for Antergos, use our own.
+        # No numix icon for Antergos NeXT, use our own.
         if "antergos" in os_name:
             icons_path = os.path.join(self.settings.get('data'), "icons/48x48")
             icon_file = os.path.join(
-                icons_path, "distributor-logo-antergos-next.png")
+                icons_path, "distributor-logo-antergos.png")
             return icon_file
 
         icon_names = [
@@ -226,7 +226,7 @@ class InstallationAlongside(GtkBaseBox):
         txt = _("Choose the partition that you want to shrink:")
         self.choose_partition_label.set_markup(txt)
 
-        self.header.set_subtitle(_("Antergos Alongside Installation"))
+        self.header.set_subtitle(_("Antergos NeXT Alongside Installation"))
 
     def choose_partition_changed(self, combobox):
         """ The user has chosen a device from the combobox """
@@ -426,7 +426,7 @@ class InstallationAlongside(GtkBaseBox):
         #if self.settings.get('bootloader_install'):
         #    self.settings.set('bootloader', "grub2")
         #    self.settings.set('bootloader_device', device_path)
-        #    msg = "Antergos will install the bootloader {0} in device {1}"
+        #    msg = "Antergos NeXT will install the bootloader {0} in device {1}"
         #    msg = msg.format(self.bootloader, self.bootloader_device)
         #    logging.info(msg)
         #else:

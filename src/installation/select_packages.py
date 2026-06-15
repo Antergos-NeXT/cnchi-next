@@ -3,7 +3,7 @@
 #
 # select_packages.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -54,7 +54,7 @@ except NameError as err:
 class SelectPackages():
     """ Package list creation class """
 
-    PKGLIST_URL = 'https://raw.githubusercontent.com/Antergos/Cnchi/master/data/packages.xml'
+    PKGLIST_URL = 'https://raw.githubusercontent.com/Antergos-NeXT/Cnchi/master/data/packages.xml'
 
     def __init__(self, settings, callback_queue):
         """ Initialize package class """

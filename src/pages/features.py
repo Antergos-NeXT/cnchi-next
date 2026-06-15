@@ -3,7 +3,7 @@
 #
 #  features.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -231,7 +231,7 @@ class Features(GtkBaseBox):
             row = self.listbox.get_row_at_index(0)
             if row is None:
                 break
-            row.destroy()
+            self.listbox.remove(row)
 
         self.listbox_rows = {}
 
@@ -384,7 +384,7 @@ class Features(GtkBaseBox):
             txt1 = _("Arch User Repository - Disclaimer")
             txt2 = _("The Arch User Repository is a collection of user-submitted PKGBUILDs\n"
                      "that supplement software available from the official repositories.\n\n"
-                     "The AUR is community driven and NOT supported by Arch or Antergos.\n")
+                     "The AUR is community driven and NOT supported by Arch or Antergos NeXT.\n")
         elif feature == "ufw":
             # Ufw rules info
             txt1 = _("Uncomplicated Firewall will be installed with these rules:")
@@ -425,6 +425,66 @@ class Features(GtkBaseBox):
         else:
             self.settings.set("feature_lemp", False)
 
+    def ask_games(self):
+        """ Ask user which gaming components to install """
+        if not self.settings.get("feature_games"):
+            return
+
+        win = Gtk.Window(title=_("Gaming Components"))
+        win.set_transient_for(self.get_main_window())
+        win.set_modal(True)
+        win.set_default_size(400, 300)
+
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
+        box.set_margin_start(20)
+        box.set_margin_end(20)
+        box.set_margin_top(20)
+        box.set_margin_bottom(20)
+
+        label = Gtk.Label(label=_("Select which gaming components to install:"))
+        label.set_halign(Gtk.Align.START)
+        box.append(label)
+
+        components = [
+            ("games_steam", "Steam"),
+            ("games_wine", _("Wine (Windows compatibility layer)")),
+            ("games_lutris", "Lutris"),
+            ("games_heroic", _("Heroic Games Launcher")),
+        ]
+
+        checkboxes = {}
+        for key, label_text in components:
+            check = Gtk.CheckButton(label=label_text)
+            check.set_margin_start(20)
+            check.set_active(self.settings.get("feature_" + key))
+            box.append(check)
+            checkboxes[key] = check
+
+        button_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        button_box.set_halign(Gtk.Align.END)
+        button_box.set_margin_top(12)
+
+        cancel_btn = Gtk.Button(label=_("Cancel"))
+        ok_btn = Gtk.Button(label=_("OK"))
+        ok_btn.add_css_class("suggested-action")
+
+        button_box.append(cancel_btn)
+        button_box.append(ok_btn)
+        box.append(button_box)
+
+        win.set_child(box)
+
+        cancel_btn.connect("clicked", lambda b: win.close())
+        ok_btn.connect("clicked", lambda b: self._on_games_ok(win, checkboxes))
+
+        win.present()
+
+    def _on_games_ok(self, win, checkboxes):
+        """ Save games component selections """
+        for key, check in checkboxes.items():
+            self.settings.set("feature_" + key, check.get_active())
+        win.close()
+
     def ask_lembrame(self):
         """ Asks user for lembrame credentials """
         if self.settings.get("feature_lembrame"):
@@ -456,6 +516,7 @@ class Features(GtkBaseBox):
 
         self.store_switches()
         self.show_disclaimer_messages()
+        self.ask_games()
         self.ask_nginx()
         self.ask_lembrame()
 

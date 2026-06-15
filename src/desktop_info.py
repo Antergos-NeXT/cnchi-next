@@ -3,7 +3,7 @@
 #
 #  desktop_info.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -69,12 +69,12 @@ LIBS = {
 """ Dict: Which libraries need to be installed depending on the desktop choosed. """
 
 ALL_FEATURES = [
-    "a11y", "aur", "bluetooth", "cups", "chromium", "energy", "firefox", "firewall", "flash",
+    "a11y", "aur", "bluetooth", "cups", "chromium", "energy", "firefox", "firewall",
     "games", "graphic_drivers", "lamp", "lembrame", "lts", "office", "sshd", "visual", "vivaldi"]
 """ List: All features """
 
 EXCLUDED_FEATURES = {
-    'base': ["bluetooth", "chromium", "firefox", "firewall", "flash", "games",
+    'base': ["bluetooth", "chromium", "firefox", "firewall", "games",
              "graphic_drivers", "office", "visual", "vivaldi", "lembrame"],
     'cinnamon': ["lamp", "visual", "lembrame"],
     'deepin': ["lamp", "visual", "lembrame"],
@@ -125,9 +125,9 @@ DESCRIPTIONS = {
                   "DDE will support most Linux operating systems such as Arch Linux, "
                   "Ubuntu, Fedora, openSUSE etc."),
 
-    'gnome':    _("GNOME 3 is an easy and elegant way to use your computer. "
-                  "It features the Activities Overview which is an easy way to "
-                  "access all your basic tasks."),
+    'gnome':    _("GNOME is an easy and elegant way to use your computer. "
+                   "It features the Activities Overview which is an easy way to "
+                   "access all your basic tasks."),
 
     'kde':      _("If you are looking for a familiar working environment, KDE's "
                   "Plasma Desktop offers all the tools required for a modern desktop "

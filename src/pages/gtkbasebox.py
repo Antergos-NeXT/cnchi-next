@@ -3,7 +3,7 @@
 #
 #  gtkbasebox.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -62,8 +62,6 @@ class GtkBaseBox(Gtk.Box):
         self.gui.set_translation_domain('cnchi')
         self.gui_file = os.path.join(self.gui_dir, "{}.ui".format(name))
         self.gui.add_from_file(self.gui_file)
-
-        # GTK4: connect_signals removed; signals connected in each page's code
 
         child.append(self.gui.get_object(name))
 

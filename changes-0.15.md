@@ -4,7 +4,7 @@
 
 - Big code cleanup (PEP8, remove duplicated code, reduce complexity, remove unused code...)
 - Rankmirrors modifications.
-- Fix https://github.com/Antergos-NeXT/Cnchi/issues/907
+- Fix https://github.com/Pulsar-Linux/Cnchi/issues/907
 - Fixed download_requests (now uses the same mirror)
 - Added cache page
 - Set LTS Kernel as default in GRUB (if selected)
@@ -40,7 +40,7 @@
 - Set MIN_SIZE for the installation to 16GB (instead of 8GB)
 - Fix user_info when going back and forth
 - Set valign to center in some screens (maybe we can set it to top and make cnchi window smaller...)
-- Get Cnchi latest stable version from antergos repository database (antergos.db)
+- Get Cnchi latest stable version from pulsar repository database (pulsar.db)
 
 ## Not ready
 - Encrypt home folder using gocryptfs (untested, not enabled).

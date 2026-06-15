@@ -1,16 +1,16 @@
 [Desktop Entry]
 Categories=System;
-Comment[pl_PL]=Zainstaluj system Antergos Linux
-Comment=Zainstaluj system Antergos Linux
-Comment[sk]=Nainštaluje operačný systém na disk
+Comment[pl_PL]=Zainstaluj Antergos NeXT
+Comment=Zainstaluj Antergos NeXT
+Comment[sk]=Nainštaluje Antergos NeXT
 Exec=/usr/bin/cnchi
 GenericName[pl_PL]=Live Installer
 GenericName=Live Installer
 Icon=cnchi
 MimeType=
-Name[pl_PL]=Zainstaluj Antergos Linux
-Name=Zainstaluj Antergos Linux
-Name[sk]=Inštalovať Antergos Linux
+Name[pl_PL]=Zainstaluj Antergos NeXT
+Name=Zainstaluj Antergos NeXT
+Name[sk]=Inštalovať Antergos NeXT
 Path=
 StartupNotify=true
 Terminal=false

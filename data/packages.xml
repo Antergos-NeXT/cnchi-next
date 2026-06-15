@@ -585,11 +585,20 @@
             <pkgname>gufw</pkgname>
             <pkgname>ufw</pkgname>
         </feature>
-        <feature name="games">
+        <feature name="games_steam">
             <pkgname>steam</pkgname>
-            <pkgname>
-            wine</pkgname>
+        </feature>
+        <feature name="games_wine">
+            <pkgname>wine</pkgname>
+            <pkgname>wine-gecko</pkgname>
+            <pkgname>wine-mono</pkgname>
             <pkgname arch="x86_64">lib32-libldap</pkgname>
+        </feature>
+        <feature name="games_lutris">
+            <pkgname>lutris</pkgname>
+        </feature>
+        <feature name="games_heroic">
+            <pkgname>heroic-games-launcher</pkgname>
         </feature>
         <feature name="lamp">
             <pkgname>apache</pkgname>
@@ -660,7 +669,7 @@
             <pkgname>efibootmgr</pkgname>
             <pkgname>grub</pkgname>
             <pkgname>os-prober</pkgname>
-            <pkgname>grub2-theme-antergos-next</pkgname>
+            <pkgname>grub2-theme-antergos</pkgname>
         </bootloader>
         <bootloader name="systemd-boot">
             <pkgname>efibootmgr</pkgname>

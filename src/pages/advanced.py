@@ -3,7 +3,7 @@
 #
 # advanced.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -1100,10 +1100,8 @@ class InstallationAdvanced(GtkBaseBox):
 
         for grp in btns:
             btn_id, icon, lbl = grp
-            image = Gtk.Image.new_from_icon_name(icon)
             btn = self.gui.get_object(btn_id)
-            btn.set_always_show_image(True)
-            btn.set_image(image)
+            btn.set_icon_name(icon)
             btn.set_label(lbl)
 
     def prepare(self, direction):

@@ -3,7 +3,7 @@
 #
 # ask.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -140,7 +140,7 @@ class InstallationAsk(GtkBaseBox):
         self.enable_automatic_options(True)
 
         btn_label = _(
-            "I need help with an Antergos / Windows(tm) dual boot setup!")
+            "I need help with an Antergos NeXT / Windows(tm) dual boot setup!")
         btn = Gtk.Button.new_with_label(btn_label)
         btn.connect(
             'clicked', self.alongside_wiki_button_clicked)
@@ -272,7 +272,7 @@ class InstallationAsk(GtkBaseBox):
         """ Translates screen before showing it """
         self.header.set_subtitle(_("Installation Type"))
 
-        self.forward_button.set_always_show_image(True)
+        self.forward_button.set_icon_name("go-next")
         self.forward_button.set_sensitive(True)
 
         # description_style = '<span style="italic">{0}</span>'
@@ -285,9 +285,9 @@ class InstallationAsk(GtkBaseBox):
         # Automatic Install
         radio = self.gui.get_object("automatic_radiobutton")
         if oses_str:
-            txt = _("Replace {0} with Antergos").format(oses_str)
+            txt = _("Replace {0} with Antergos NeXT").format(oses_str)
         else:
-            txt = _("Erase disk and install Antergos")
+            txt = _("Erase disk and install Antergos NeXT")
         radio.set_label(txt)
         radio.set_name('auto_radio_btn')
 
@@ -297,7 +297,7 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("automatic_desc")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
         button = self.gui.get_object("encrypt_checkbutton")
@@ -305,7 +305,7 @@ class InstallationAsk(GtkBaseBox):
         button.set_label(txt)
         button.set_name("enc_btn")
         button.set_hexpand(False)
-        # button.set_line_wrap(True)
+        # button.set_wrap(True)
         # button.set_max_width_chars(max_width_chars)
 
         label = self.gui.get_object("encrypt_label")
@@ -315,7 +315,7 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("enc_label")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
         button = self.gui.get_object("lvm_checkbutton")
@@ -323,7 +323,7 @@ class InstallationAsk(GtkBaseBox):
         button.set_label(txt)
         button.set_name("lvm_btn")
         button.set_hexpand(False)
-        # button.set_line_wrap(True)
+        # button.set_wrap(True)
         # button.set_max_width_chars(max_width_chars)
 
         label = self.gui.get_object("lvm_label")
@@ -333,7 +333,7 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("lvm_label")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
         button = self.gui.get_object("zfs_checkbutton")
@@ -341,7 +341,7 @@ class InstallationAsk(GtkBaseBox):
         button.set_label(txt)
         button.set_name("zfs_btn")
         button.set_hexpand(False)
-        # button.set_line_wrap(True)
+        # button.set_wrap(True)
         # button.set_max_width_chars(max_width_chars)
 
         label = self.gui.get_object("zfs_label")
@@ -350,7 +350,7 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("zfs_label")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
         button = self.gui.get_object("home_checkbutton")
@@ -358,7 +358,7 @@ class InstallationAsk(GtkBaseBox):
         button.set_label(txt)
         button.set_name("home_btn")
         button.set_hexpand(False)
-        # button.set_line_wrap(True)
+        # button.set_wrap(True)
         # button.set_max_width_chars(max_width_chars)
 
         label = self.gui.get_object("home_label")
@@ -368,20 +368,20 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("home_label")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
         # Alongside Install (For now, only works with Windows)
         # if len(oses_str) > 0:
-        #     txt = _("Install Antergos alongside {0}").format(oses_str)
+        #     txt = _("Install Antergos NeXT alongside {0}").format(oses_str)
         #     radio = self.gui.get_object("alongside_radiobutton")
         #     radio.set_label(txt)
         #
         #     label = self.gui.get_object("alongside_description")
-        #     txt = _("Installs Antergos without removing {0}").format(oses_str)
+        #     txt = _("Installs Antergos NeXT without removing {0}").format(oses_str)
         #     txt = description_style.format(txt)
         #     label.set_markup(txt)
-        #     label.set_line_wrap(True)
+        #     label.set_wrap(True)
         #
         #     intro_txt = _("This computer has {0} installed.").format(oses_str)
         #     intro_txt = intro_txt + "\n" + _("What do you want to do?")
@@ -393,13 +393,13 @@ class InstallationAsk(GtkBaseBox):
         intro_label.set_text(intro_txt)
         intro_label.set_name("intro_label")
         intro_label.set_hexpand(False)
-        intro_label.set_line_wrap(True)
+        intro_label.set_wrap(True)
         intro_label.set_max_width_chars(max_width_chars)
 
         # Advanced Install
         radio = self.gui.get_object("advanced_radiobutton")
         radio.set_label(
-            _("Choose exactly where Antergos should be installed."))
+            _("Choose exactly where Antergos NeXT should be installed."))
         radio.set_name("advanced_radio_btn")
 
         label = self.gui.get_object("advanced_description")
@@ -408,7 +408,7 @@ class InstallationAsk(GtkBaseBox):
         label.set_text(txt)
         label.set_name("adv_desc_label")
         label.set_hexpand(False)
-        label.set_line_wrap(True)
+        label.set_wrap(True)
         label.set_max_width_chars(max_width_chars)
 
     def store_values(self):
@@ -435,22 +435,22 @@ class InstallationAsk(GtkBaseBox):
         if not self.settings.get('use_zfs'):
             if self.settings.get('use_luks'):
                 logging.info(
-                    "Antergos installation will be encrypted using LUKS")
+                    "Antergos NeXT installation will be encrypted using LUKS")
             if self.settings.get('use_lvm'):
-                logging.info("Antergos will be installed using LVM volumes")
+                logging.info("Antergos NeXT will be installed using LVM volumes")
                 if self.settings.get('use_home'):
                     logging.info(
-                        "Antergos will be installed using a separate /home volume.")
+                        "Antergos NeXT will be installed using a separate /home volume.")
             elif self.settings.get('use_home'):
                 logging.info(
-                    "Antergos will be installed using a separate /home partition.")
+                    "Antergos NeXT will be installed using a separate /home partition.")
         else:
-            logging.info("Antergos will be installed using ZFS")
+            logging.info("Antergos NeXT will be installed using ZFS")
             if self.settings.get('use_luks'):
-                logging.info("Antergos ZFS installation will be encrypted")
+                logging.info("Antergos NeXT ZFS installation will be encrypted")
             if self.settings.get('use_home'):
                 logging.info(
-                    "Antergos will be installed using a separate /home volume.")
+                    "Antergos NeXT will be installed using a separate /home volume.")
 
         if self.next_page == "installation_alongside":
             self.settings.set('partition_mode', 'alongside')

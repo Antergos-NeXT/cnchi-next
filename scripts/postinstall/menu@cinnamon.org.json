@@ -14,12 +14,12 @@
   },
   "menu-icon": {
     "type": "iconfilechooser",
-    "default": "/usr/share/antergos-next/antergos-menu-logo-dark-bg.png",
+    "default": "/usr/share/pulsar/pulsar-menu-logo-dark-bg.png",
     "description": "Icon",
     "tooltip": "Select an icon to show in the panel.",
     "dependency": "menu-icon-custom",
     "indent": "true",
-    "value": "/usr/share/antergos-next/antergos-menu-logo-dark-bg.png"
+    "value": "/usr/share/pulsar/pulsar-menu-logo-dark-bg.png"
   },
   "menu-label": {
     "type": "entry",

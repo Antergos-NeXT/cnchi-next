@@ -3,7 +3,7 @@
 #
 # boot_ui.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -152,6 +152,6 @@ class BootUI():
             settings.set('bootloader_device', self.bootloader_device)
 
             settings.set('bootloader', self.bootloader)
-            msg = "Antergos will install the {0} bootloader in device {1}"
+            msg = "Antergos NeXT will install the {0} bootloader in device {1}"
             msg = msg.format(self.bootloader, self.bootloader_device)
             logging.info(msg)

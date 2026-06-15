@@ -3,7 +3,7 @@
 #
 # lemp.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -29,7 +29,7 @@
 """
 LEMP stack is a group of open source software to get web servers up
 and running. The acronym stands for Linux, nginx (pronounced Engine x),
-MySQL, and PHP. Since the server is already running Antergos, the linux
+MySQL, and PHP. Since the server is already running Antergos NeXT, the linux
 part is taken care of.
 """
 

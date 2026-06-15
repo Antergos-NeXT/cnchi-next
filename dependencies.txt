@@ -1,4 +1,4 @@
-gtk3
+gtk4
 python3
 python-cairo
 python-dbus
@@ -16,12 +16,10 @@ mtools
 ntfs-3g
 ntfsprogs
 pyalpm
-webkit2gtk
+webkitgtk-6.0
 upower
 gocryptfs
 iso-codes
-clutter-gtk
-clutter-gst
 gstreamer
 python-mock
 ttf-aboriginal-sans

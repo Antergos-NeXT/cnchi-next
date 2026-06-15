@@ -3,7 +3,7 @@
 #
 # changelist.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -55,10 +55,10 @@ class ChangeListDialog(Gtk.Dialog):
         self.gui_dir = gui_dir
         gui_file = os.path.join(
             gui_dir, 'dialogs', ChangeListDialog.UI_FILE)
-        self.gui.add_from_file(gui_file)
 
-        # Connect UI signals
+        # Connect UI signals (GTK4: call connect_signals before add_from_file)
         self.gui.connect_signals(self)
+        self.gui.add_from_file(gui_file)
 
         self.translate_ui()
 
@@ -72,6 +72,5 @@ class ChangeListDialog(Gtk.Dialog):
             (btn_id, icon, lbl) = grp
             image = Gtk.Image.new_from_icon_name(icon)
             btn = self.gui.get_object(btn_id)
-            btn.set_always_show_image(True)
-            btn.set_image(image)
             btn.set_label(lbl)
+            btn.set_icon_name(icon)

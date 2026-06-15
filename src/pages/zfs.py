@@ -2,7 +2,7 @@
 #
 #  zfs.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -491,11 +491,11 @@ class InstallationZFS(GtkBaseBox):
 
     def create_boot_partition(self, device_path, part_num):
         """ Create and format BOOT or EFI partitions (512MB) in /boot or in /boot/efi """
-        wrapper.sgdisk_new(device_path, part_num, 'ANTERGOS_NEXT_BOOT', 512, '8300')
+        wrapper.sgdisk_new(device_path, part_num, 'PULSAR_BOOT', 512, '8300')
         self.devices['boot'] = zfs.get_partition_path(device_path, part_num)
         self.fs_devices[self.devices['boot']] = 'ext4'
         self.mount_devices['/boot'] = self.devices['boot']
-        fs.create_fs(self.devices['boot'], 'ext4', 'ANTERGOS_NEXT_BOOT')
+        fs.create_fs(self.devices['boot'], 'ext4', 'PULSAR_BOOT')
 
     def run_format_gpt(self, device_path):
         """ GPT harddisk schemes """
@@ -544,7 +544,7 @@ class InstallationZFS(GtkBaseBox):
             solaris_part_num = self.run_format_gpt(device_path)
             # The rest of the disk will be of solaris type
             # (2 or 3) Solaris (bf00)
-            wrapper.sgdisk_new(device_path, solaris_part_num, 'ANTERGOS_NEXT_ZFS', 0, 'BF00')
+            wrapper.sgdisk_new(device_path, solaris_part_num, 'PULSAR_ZFS', 0, 'BF00')
         else:
             # BIOS/MBR (Grub)
             # 1 Solaris (bf00)

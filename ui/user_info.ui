@@ -20,312 +20,245 @@
         <property name="halign">start</property>
         <property name="valign">start</property>
         <property name="margin_start">100</property>
-      <property name="hexpand">False</property>
+        <property name="hexpand">False</property>
         <property name="vexpand">False</property>
         <property name="halign">fill</property>
         <property name="valign">fill</property>
-        </object>
-      </child>
+      </object>
+    </child>
     <child>
-      <object class="GtkGrid" id="user_info_grid">
+      <object class="GtkBox" id="user_info_grid">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <property name="halign">center</property>
         <property name="valign">center</property>
         <property name="margin_start">10</property>
         <property name="margin_end">20</property>
         <property name="margin_bottom">10</property>
         <property name="hexpand">True</property>
-        <property name="row_spacing">6</property>
-        <property name="column_spacing">6</property>
-        <child>
-          <object class="GtkLabel" id="fullname_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Your name:</property>
-            </object>
-          </child>
-        <child>
-          <object class="GtkLabel" id="hostname_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">20</property>
-            <property name="label" translatable="yes">Your computer's name:</property>
-            </object>
-          </child>
-        <child>
-          <object class="GtkLabel" id="username_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Pick a username:</property>
-            <property name="justify">right</property>
-            </object>
-          </child>
-        <child>
-          <object class="GtkLabel" id="password_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Choose a password:</property>
-            <property name="justify">right</property>
-            </object>
-          </child>
-        <child>
-          <object class="GtkLabel" id="verified_password_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Confirm your password:</property>
-            <property name="justify">right</property>
-            </object>
-          </child>
+        <property name="spacing">6</property>
         <child>
           <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <child>
-              <placeholder/>
-            </child>
-          </object>
-          </child>
-        <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <child>
-              <placeholder/>
-            </child>
-          </object>
-          </child>
-        <child>
-          <object class="GtkBox" id="hbox3">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkEntry" id="fullname">
+              <object class="GtkLabel" id="fullname_label">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="activates_default">True</property>
-                <property name="width_chars">30</property>
-                <property name="placeholder_text">Your name</property>
-                
-                <accessibility>
-                  
-                </accessibility>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkImage" id="fullname_ok">
                 <property name="can_focus">False</property>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-          </object>
-          </child>
-        <child>
-          <object class="GtkBox" id="hostname_box">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <property name="spacing">3</property>
+                <property name="label" translatable="yes">Your name:</property>
+              </object>
+            </child>
             <child>
-              <object class="GtkBox" id="box3">
+              <object class="GtkBox" id="hbox3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkEntry" id="hostname">
+                  <object class="GtkEntry" id="fullname">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <accessibility>
-                      
-                      
-                    </accessibility>
-                  <property name="hexpand">False</property>
-                    <property name="vexpand">False</property>
-                    <property name="halign">fill</property>
-                    <property name="valign">fill</property>
-                    </object>
-                  </child>
+                    <property name="activates_default">True</property>
+                    <property name="width_chars">30</property>
+                    <property name="placeholder_text">Your name</property>
+                  </object>
+                </child>
                 <child>
-                  <object class="GtkImage" id="hostname_ok">
+                  <object class="GtkImage" id="fullname_ok">
                     <property name="can_focus">False</property>
-                  <property name="hexpand">False</property>
-                    <property name="vexpand">False</property>
-                    <property name="halign">fill</property>
-                    <property name="valign">fill</property>
-                    </object>
-                  </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">6</property>
+            <child>
+              <object class="GtkLabel" id="hostname_label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Your computer's name:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="hostname_box">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">3</property>
                 <child>
-                  <object class="GtkLabel" id="hostname_error_label">
+                  <object class="GtkBox" id="box3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a name&lt;/span&gt;&lt;/small&gt;</property>
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkEntry" id="hostname">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="width_chars">30</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="hostname_ok">
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="hostname_error_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a name&lt;/span&gt;&lt;/small&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="hostname_extra_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;The name it uses when it talks to other computers.&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">6</property>
+            <child>
+              <object class="GtkLabel" id="username_label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Pick a username:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="username_box">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkEntry" id="username">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="max_length">32</property>
+                    <property name="activates_default">True</property>
+                    <property name="width_chars">15</property>
+                    <property name="placeholder_text">Username</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="username_ok">
+                    <property name="can_focus">False</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="username_error_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a username&lt;/span&gt;&lt;/small&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
-                  <property name="hexpand">False</property>
-                    <property name="vexpand">False</property>
-                    <property name="halign">fill</property>
-                    <property name="valign">fill</property>
-                    </object>
-                  </child>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkLabel" id="hostname_extra_label">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;span size="small"&gt;The name it uses when it talks to other computers.&lt;/span&gt;</property>
-                <property name="use_markup">True</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
-          </child>
+        </child>
         <child>
-          <object class="GtkBox" id="username_box">
+          <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkEntry" id="username">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="max_length">32</property>
-                <property name="activates_default">True</property>
-                <property name="width_chars">15</property>
-                <property name="placeholder_text">Username</property>
-                
-                <accessibility>
-                  
-                </accessibility>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkImage" id="username_ok">
-                <property name="can_focus">False</property>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkLabel" id="username_error_label">
+              <object class="GtkLabel" id="password_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a username&lt;/span&gt;&lt;/small&gt;</property>
-                <property name="use_markup">True</property>
-                <property name="wrap">True</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+                <property name="label" translatable="yes">Choose a password:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="hbox1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkEntry" id="password">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="visibility">False</property>
+                    <property name="activates_default">True</property>
+                    <property name="width_chars">20</property>
+                    <property name="placeholder_text">Password</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="password_strength">
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkgreen"&gt;Strong password&lt;/span&gt;&lt;/small&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
-          </child>
+        </child>
         <child>
-          <object class="GtkBox" id="hbox1">
+          <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkEntry" id="password">
+              <object class="GtkLabel" id="verified_password_label">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="visibility">False</property>
-                <property name="activates_default">True</property>
-                <property name="width_chars">20</property>
-                <property name="placeholder_text">Password</property>
-                
-                <accessibility>
-                  
-                </accessibility>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkLabel" id="password_strength">
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkgreen"&gt;Strong password&lt;/span&gt;&lt;/small&gt;</property>
-                <property name="use_markup">True</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+                <property name="label" translatable="yes">Confirm your password:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="hbox2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkEntry" id="verified_password">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="visibility">False</property>
+                    <property name="activates_default">True</property>
+                    <property name="width_chars">20</property>
+                    <property name="placeholder_text">Confirm password</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="password_ok">
+                    <property name="can_focus">False</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="password_error_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a password&lt;/span&gt;&lt;/small&gt;</property>
+                    <property name="use_markup">True</property>
+                    <property name="wrap">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
-          </child>
-        <child>
-          <object class="GtkBox" id="hbox2">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="spacing">6</property>
-            <child>
-              <object class="GtkEntry" id="verified_password">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="visibility">False</property>
-                <property name="activates_default">True</property>
-                <property name="width_chars">20</property>
-                <property name="placeholder_text">Confirm password</property>
-                
-                <accessibility>
-                  
-                </accessibility>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkImage" id="password_ok">
-                <property name="can_focus">False</property>
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-            <child>
-              <object class="GtkLabel" id="password_error_label">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;small&gt;&lt;span color="darkred"&gt;You must enter a password&lt;/span&gt;&lt;/small&gt;</property>
-                <property name="use_markup">True</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
-          </object>
-          </child>
+        </child>
         <child>
           <object class="GtkCheckButton" id="checkbutton_show_password">
             <property name="label" translatable="yes">show password</property>
@@ -333,9 +266,8 @@
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="halign">start</property>
-            <property name="valign">start</property>
-            </object>
-          </child>
+          </object>
+        </child>
         <child>
           <object class="GtkBox" id="login_vbox">
             <property name="visible">True</property>
@@ -350,13 +282,8 @@
                 <property name="receives_default">False</property>
                 <property name="halign">start</property>
                 <property name="group">login_pass</property>
-                
-              <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+              </object>
+            </child>
             <child>
               <object class="GtkCheckButton" id="login_pass">
                 <property name="label" translatable="yes">Require my password to log in</property>
@@ -365,12 +292,8 @@
                 <property name="receives_default">False</property>
                 <property name="halign">start</property>
                 <property name="active">True</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+              </object>
+            </child>
             <child>
               <object class="GtkCheckButton" id="login_encrypt">
                 <property name="label" translatable="yes">Encrypt my home folder</property>
@@ -379,19 +302,11 @@
                 <property name="receives_default">False</property>
                 <property name="halign">start</property>
                 <property name="margin_start">20</property>
-                <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <property name="halign">fill</property>
-                <property name="valign">fill</property>
-                </object>
-              </child>
+              </object>
+            </child>
           </object>
-          </child>
-      <property name="hexpand">True</property>
-        <property name="vexpand">True</property>
-        <property name="halign">fill</property>
-        <property name="valign">fill</property>
-        </object>
-      </child>
+        </child>
+      </object>
+    </child>
   </object>
 </interface>

@@ -4,7 +4,7 @@
 #  metalink.py
 #
 #  Parts of code from pm2ml Copyright (C) 2012-2013 Xyne
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -314,7 +314,7 @@ def get_antergos_next_repo_pkgs(alpm_handle):
 
     antdb = None
     for database in alpm_handle.get_syncdbs():
-        if database.name == 'antergos-next':
+        if database.name == 'antergos':
             antdb = database
             break
 

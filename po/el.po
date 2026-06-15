@@ -156,12 +156,12 @@ msgstr ""
 
 #: cnchi/src/desktop_info.py:131
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
 "Το Gnome 3 είναι ένας εύχρηστος και κομψός τρόπος να χρησιμοποιείτε τον "
 "υπολογιστή σας. Διαθέτει την Επισκόπηση Δραστηριοτήτων για την διευκόλυνση "
-"της πρόσβασης σε όλες τις βασικές εργασίες σας. Το GNOME 3 είναι η "
+"της πρόσβασης σε όλες τις βασικές εργασίες σας. Το GNOME είναι η "
 "προκαθορισμένη επιφάνεια εργασίας στα Antergos."
 
 #: cnchi/src/desktop_info.py:135
@@ -272,12 +272,12 @@ msgid "Uncomplicated Firewall"
 msgstr "Απλός Τοίχος Προστασίας"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr "Flash plugins"
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
-msgstr "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
+msgstr "Steam + Wine / Lutris / Heroic Games Launcher"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
@@ -345,7 +345,7 @@ msgstr ""
 "για ισχυρούς χρήστες."
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr "Δωρεάν λογισμικό που χρησιμοποιείται συνήθως για πολυμέσα."
 
 #: cnchi/src/features_info.py:96
@@ -353,7 +353,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "Εγκαθιστά τον ιδιόκτητο οδηγό γραφικών AMD ή Nvidia"
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr "Εγκαθιστά το Steam και το Playonlinux για τους λάτρεις των παιχνιδιών."
 
 #: cnchi/src/features_info.py:98
@@ -488,9 +488,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2533,15 +2532,15 @@ msgstr "Οι τοπικές ρυθμίσεις του ζωντανού περι�
 #~ msgstr "Ο Cnchi θα εγκαταστήσει το Antergos με περιβάλλον %s'"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Το Cinnamon έχει προκύψει-forked από το GNOME 3 και έχει δημιουργηθεί από "
+#~ "Το Cinnamon έχει προκύψει-forked από το GNOME και έχει δημιουργηθεί από "
 #~ "(και για τις ανάγκες) του Linux Mint. Παρέχει στους χρήστες μια πιο "
 #~ "παραδοσιακή διεπαφή επιφάνειας εργασίας, συνδιάζοντας τις πιο σύγχρονες "
-#~ "τεχνικές του GNOME 3. Το Cinnamon απευθύνεται σε χρήστες όλων των "
+#~ "τεχνικές του GNOME. Το Cinnamon απευθύνεται σε χρήστες όλων των "
 #~ "επιπέδων εμπειρίας."
 
 #~ msgid ""

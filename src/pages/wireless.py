@@ -5,7 +5,7 @@
 #  Copyright (C) 2010 Canonical Ltd.
 #  Written by Evan Dandrea <evan.dandrea@canonical.com>
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by

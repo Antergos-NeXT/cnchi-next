@@ -3,7 +3,7 @@
 #
 #  postinstall.sh
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -84,10 +84,10 @@ set_dmrc() {
 }
 
 common_settings() {
-    # Set skel directory (not needed, antergos-next-desktop-settings does this)
+    # Set skel directory (not needed, pulsar-desktop-settings does this)
     #cp -R ${CN_DESTDIR}/home/${CN_USER_NAME}/.config ${CN_DESTDIR}/etc/skel
 
-    # Set .bashrc (antergos-next-desktop-settings can't set it because it's already in bash package)
+    # Set .bashrc (pulsar-desktop-settings can't set it because it's already in bash package)
     if [[ -f "${CN_DESTDIR}/etc/skel/bashrc" ]]; then
         cp ${CN_DESTDIR}/etc/skel/bashrc ${CN_DESTDIR}/etc/skel/.bashrc
         cp ${CN_DESTDIR}/etc/skel/bashrc ${CN_DESTDIR}/home/${CN_USER_NAME}/.bashrc
@@ -97,7 +97,7 @@ common_settings() {
     cp -R ${CN_DESTDIR}/etc/skel/. ${CN_DESTDIR}/root
 
     # Set antergos shell logo (used by gdm)
-    cp /usr/share/antergos-next/logo.png ${CN_DESTDIR}/usr/share/antergos-next/
+    cp /usr/share/antergos/logo.png ${CN_DESTDIR}/usr/share/antergos/
 }
 
 gnome_settings() {
@@ -129,7 +129,7 @@ cinnamon_settings() {
     set_dmrc cinnamon
 
     # Populate our wallpapers in Cinnamon Settings
-    chroot ${CN_DESTDIR} "ln -s /usr/share/antergos-next/wallpapers/ /home/${CN_USER_NAME}/.cinnamon/backgrounds/antergos" ${CN_USER_NAME}
+    chroot ${CN_DESTDIR} "ln -s /usr/share/antergos/wallpapers/ /home/${CN_USER_NAME}/.cinnamon/backgrounds/antergos" ${CN_USER_NAME}
 }
 
 xfce_settings() {
@@ -175,10 +175,10 @@ kde_settings() {
     rm -R ${CN_DESTDIR}/usr/share/kstyle/themes/qtcurve.themerc
 
     # Setup user defaults
-    #if [ -f "${CN_DESTDIR}/usr/share/antergos-kde-setup/install.sh" ]; then
-    #    chroot ${CN_DESTDIR} /usr/share/antergos-kde-setup/install.sh ${CN_USER_NAME}
-    #elif [ -f "${CN_DESTDIR}/usr/share/antergos-desktop" ]; then
-    #    chroot ${CN_DESTDIR} /usr/bin/antergos-desktop plasma ${CN_USER_NAME}
+    #if [ -f "${CN_DESTDIR}/usr/share/pulsar-kde-setup/install.sh" ]; then
+    #    chroot ${CN_DESTDIR} /usr/share/pulsar-kde-setup/install.sh ${CN_USER_NAME}
+    #elif [ -f "${CN_DESTDIR}/usr/share/pulsar-desktop" ]; then
+    #    chroot ${CN_DESTDIR} /usr/bin/pulsar-desktop plasma ${CN_USER_NAME}
     #fi
 
     cp ${CN_DESTDIR}/etc/skel/.gtkrc-2.0-kde4 ${CN_DESTDIR}/root
@@ -241,8 +241,8 @@ enlightenment_settings() {
     # http://git.enlightenment.org/core/enlightenment.git/plain/data/tools/enlightenment_remote
 
     # Setup user defaults
-    #chroot ${CN_DESTDIR} /usr/share/antergos-enlightenment-setup/install.sh ${CN_USER_NAME}
-    #chroot ${CN_DESTDIR} /usr/bin/antergos-desktop enlightenment ${CN_USER_NAME}
+    #chroot ${CN_DESTDIR} /usr/share/pulsar-enlightenment-setup/install.sh ${CN_USER_NAME}
+    #chroot ${CN_DESTDIR} /usr/bin/pulsar-desktop enlightenment ${CN_USER_NAME}
 
     # Set Keyboard layout
     E_CFG="/home/${CN_USER_NAME}/.e/e/config/standard/e.cfg"
@@ -318,13 +318,7 @@ postinstall() {
     # Set Antergos NeXT name in filesystem files
     cp /etc/arch-release "${CN_DESTDIR}/etc"
     cp /etc/os-release "${CN_DESTDIR}/etc"
-    sed -i 's|Arch|Antergos|g' "${CN_DESTDIR}/etc/issue"
-
-    # copy antergos menu icon
-    mkdir -p ${CN_DESTDIR}/usr/share/antergos-next/
-    cp -t ${CN_DESTDIR}/usr/share/antergos \
-    /usr/share/antergos-next/antergos-menu.png \
-    /usr/share/cnchi/data/images/antergos/antergos-menu-logo-dark-bg.png
+    sed -i 's|Arch|Antergos NeXT|g' "${CN_DESTDIR}/etc/issue"
 
     # Set common desktop settigns
     common_settings
@@ -345,7 +339,7 @@ postinstall() {
             echo "BROWSER=/usr/bin/${CN_BROWSER}" >> "${file}"
         fi
         echo "EDITOR=/usr/bin/nano" >> "${file}"
-        # This is inside .bashrc.aliases from the antergos-next-desktop-settings package
+        # This is inside .bashrc.aliases from the pulsar-desktop-settings package
         #echo "export QT_STYLE_OVERRIDE=gtk" >> "${file}"
         #echo "export QT_SELECT=qt5" >> "${file}"
     done

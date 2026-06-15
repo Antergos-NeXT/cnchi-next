@@ -3,7 +3,7 @@
 #
 # main_window.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -36,6 +36,7 @@ import config
 import desktop_info
 import info
 import misc.extra as misc
+
 
 import pages.welcome
 import pages.language
@@ -116,8 +117,8 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, app, cmd_line):
         Gtk.ApplicationWindow.__init__(self, title="Cnchi", application=app)
 
-        self._main_window_width = 1200
-        self._main_window_height = 715
+        self._main_window_width = 860
+        self._main_window_height = 640
 
         logging.info("Cnchi installer version %s", info.CNCHI_VERSION)
 
@@ -176,11 +177,10 @@ class MainWindow(Gtk.ApplicationWindow):
         self.version_label = ui_builder.get_object("version_label")
 
         # Set logo
-        logo_path = os.path.join(data_dir, "images", "antergos", "antergos-icon.png")
+        logo_path = os.path.join(data_dir, "images", "antergos", "antergos-logo.svg")
         if os.path.exists(logo_path):
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(logo_path, 220, 220, True)
-            texture = Gdk.Texture.new_for_pixbuf(pixbuf)
-            self.logo_image.set_from_paintable(texture)
+            self.logo_image.set_from_file(logo_path)
+            self.logo_image.set_pixel_size(220)
             self.logo_image.set_hexpand(True)
             self.logo_image.set_halign(Gtk.Align.CENTER)
 
@@ -264,7 +264,6 @@ class MainWindow(Gtk.ApplicationWindow):
         # Set window geometry
         self.set_default_size(self._main_window_width, self._main_window_height)
         self.set_resizable(True)
-
         # Apply CSS
         style_provider = Gtk.CssProvider()
         style_css = os.path.join(data_dir, "css", "gtk-style.css")
@@ -276,12 +275,15 @@ class MainWindow(Gtk.ApplicationWindow):
                 display, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
             )
 
-        self.present()
         self.current_page.prepare('forwards')
 
         # Pre-load more pages
         self.pages["language"] = pages.language.Language(self.params)
         self.pages["check"] = pages.check.Check(self.params)
+
+        # Load all remaining pages
+        self.load_pages()
+
         self.set_focus(None)
         misc.gtk_refresh()
 
@@ -498,3 +500,21 @@ class MainWindow(Gtk.ApplicationWindow):
         """ Set keyboard focus """
         if widget:
             widget.grab_focus()
+
+    def _log_page_sizes(self):
+        """ Log each page's preferred width to find overflow """
+        for name, page in self.pages.items():
+            try:
+                min_w = page.measure(Gtk.Orientation.HORIZONTAL, -1)[0]
+                nat_w = page.measure(Gtk.Orientation.HORIZONTAL, -1)[1]
+                logging.info("Page '%s' width: min=%d natural=%d", name, min_w, nat_w)
+            except Exception as e:
+                logging.warning("Page '%s' measure failed: %s", name, e)
+        # Also log the stack itself
+        try:
+            min_w = self.main_stack.measure(Gtk.Orientation.HORIZONTAL, -1)[0]
+            nat_w = self.main_stack.measure(Gtk.Orientation.HORIZONTAL, -1)[1]
+            logging.info("Stack width: min=%d natural=%d", min_w, nat_w)
+        except Exception as e:
+            logging.warning("Stack measure failed: %s", e)
+        return False

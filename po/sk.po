@@ -144,12 +144,12 @@ msgstr ""
 
 #: cnchi/src/desktop_info.py:131
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
-"GNOME 3 je jednoduchý a elegantný spôsob na používanie vášho počítača. "
+"GNOME je jednoduchý a elegantný spôsob na používanie vášho počítača. "
 "Obsahuje prehľad aktivít, ktorým môžete jednoducho pristupovať k všetkym "
-"základným úlohám. GNOME 3 je predvolené prostredie distribúcie Antergos."
+"základným úlohám. GNOME je predvolené prostredie distribúcie Antergos."
 
 #: cnchi/src/desktop_info.py:135
 msgid ""
@@ -258,12 +258,12 @@ msgid "Uncomplicated Firewall"
 msgstr "Jednoduchý Firewall"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr "Flash pluginy"
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
-msgstr "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
+msgstr "Steam + Wine / Lutris / Heroic Games Launcher"
 
 #: cnchi/src/features_info.py:79
 msgid "Graphic drivers (Proprietary)"
@@ -322,7 +322,7 @@ msgstr ""
 "používateľov."
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr "Freeware softvér bežne používaný pre multimédiá."
 
 #: cnchi/src/features_info.py:96
@@ -330,7 +330,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "Nainštaluje uzavretý grafický ovládač pre zariadenia AMD alebo Nvidia"
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr "Nainštaluje Steam a Playonlinux pre herných nadšencov."
 
 #: cnchi/src/features_info.py:98
@@ -460,9 +460,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2482,14 +2481,14 @@ msgstr "Lokálne nastavenia živého prostredia nemajú váš jazyk. Záložná 
 #~ msgstr "Cnchi nainštaluje distribúciu Antergos s pracovným prostredím „%s“"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Cinnamon je odnožou prostredia GNOME 3 a je vyvíjaný pre distribúciu "
+#~ "Cinnamon je odnožou prostredia GNOME a je vyvíjaný pre distribúciu "
 #~ "Linux Mint. Používateľom poskytuje skôr tradičné pracovné prostredie s "
-#~ "najnovšími zobrazovacími technikami prostredia GNOME 3. Cinnamon je "
+#~ "najnovšími zobrazovacími technikami prostredia GNOME. Cinnamon je "
 #~ "vhodný pre skúsených aj neskúsených používateľov."
 
 #~ msgid ""

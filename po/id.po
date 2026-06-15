@@ -137,12 +137,12 @@ msgstr ""
 
 #: cnchi/src/desktop_info.py:131
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
 "Gnome 3 adalah cara mudah dan elok untuk menggunakan komputer Anda. "
 "Menonjolkan kemampuan meninjau pelbagai aktivitas dalam cara yang mudah "
-"untuk mengakses semua tugas-tugas dasar Anda. GNOME 3 adalah desktop asali "
+"untuk mengakses semua tugas-tugas dasar Anda. GNOME adalah desktop asali "
 "pada Antergos."
 
 #: cnchi/src/desktop_info.py:135
@@ -253,11 +253,11 @@ msgid "Uncomplicated Firewall"
 msgstr "Uncomplicated Firewall"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr "Plugin flash"
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
 msgstr "Steam + Mainkan di Linux"
 
 #: cnchi/src/features_info.py:79
@@ -315,7 +315,7 @@ msgstr ""
 "tingkat lanjut."
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr "Perangkat lunak freeware biasanya digunakan untuk multimedia."
 
 #: cnchi/src/features_info.py:96
@@ -323,7 +323,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr "Menginstal driver grafis milik AMD atau Nvidia."
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr "Menginstal Steam dan Playonlinux untuk penggemar game."
 
 #: cnchi/src/features_info.py:98
@@ -453,9 +453,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2421,14 +2420,14 @@ msgstr "Lokal lingkungan hidup tidak memiliki bahasa Anda. Penggantian saat ini 
 #~ msgstr "Cnchi akan memasang Antergos dengan dekstop '%s'"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Cinnamon adalah cabang dari GNOME 3 yang dikembangkan oleh (dan untuk) "
+#~ "Cinnamon adalah cabang dari GNOME yang dikembangkan oleh (dan untuk) "
 #~ "Linux Mint. Menyediakan pengguna dengan antarmuka desktop yang lebih "
-#~ "tradisional dengan teknik paduan terbaru dari GNOME 3. Cinnamon cocok "
+#~ "tradisional dengan teknik paduan terbaru dari GNOME. Cinnamon cocok "
 #~ "bagi semua pengguna pada semua tingkat pengalaman."
 
 #~ msgid ""

@@ -2,7 +2,7 @@
 #
 #  zfs_manager.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -229,7 +229,7 @@ def destroy_pools():
     existing_pools = load_existing_pools()
 
     for pool_name in existing_pools:
-        if "antergos-next" in pool_name.lower():
+        if "antergos" in pool_name.lower():
             #pool_id, pool_state = self.existing_pools[pool_name]
             destroy_cmd = ['/usr/bin/zpool', 'destroy', '-f', pool_name]
             if not call(destroy_cmd, warning=False):

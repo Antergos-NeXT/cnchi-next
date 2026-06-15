@@ -3,7 +3,7 @@
 #
 # partition_base.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -62,11 +62,11 @@ class PartitionBaseDialog(Gtk.Dialog):
         self.gui_dir = gui_info['gui_dir']
         self.gui_path = os.path.join(
             self.gui_dir, 'dialogs', gui_info['gui_file'])
-        self.gui.add_from_file(self.gui_path)
 
-        # Connect UI signals
+        # GTK4: connect_signals must be called before add_from_file
         self.gui.connect_signals(self)
         self.gui.connect_signals(child)
+        self.gui.add_from_file(self.gui_path)
 
         self.luks_dialog = None
         # luks options is a tuple (use_luks, vol_name, password)
@@ -81,9 +81,9 @@ class PartitionBaseDialog(Gtk.Dialog):
         """ Adds apply and cancel buttons to the dialog """
         self.buttons = {}
         self.buttons['apply'] = self.add_button(
-            Gtk.STOCK_APPLY, Gtk.ResponseType.APPLY)
+            _("_Apply"), Gtk.ResponseType.APPLY)
         self.buttons['cancel'] = self.add_button(
-            Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+            _("_Cancel"), Gtk.ResponseType.CANCEL)
 
         # Assign labels and images to buttons
         btns = [
@@ -94,9 +94,8 @@ class PartitionBaseDialog(Gtk.Dialog):
             (btn_id, icon, lbl) = grp
             image = Gtk.Image.new_from_icon_name(icon)
             btn = self.buttons[btn_id]
-            btn.set_always_show_image(True)
-            btn.set_image(image)
             btn.set_label(lbl)
+            btn.set_icon_name(icon)
 
     def get_beginning_point(self):
         """ Returns where the new partition should start """

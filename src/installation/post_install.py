@@ -3,7 +3,7 @@
 #
 # post_install.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -113,7 +113,7 @@ class PostInstallation():
             except FileExistsError:
                 pass
 
-        # Store install id for later use by antergos-next-pkgstats
+        # Store install id for later use by antergos-pkgstats
         with open(os.path.join(log_dest_dir, 'install_id'), 'w') as install_record:
             install_id = self.settings.get('install_id')
             if not install_id:
@@ -208,12 +208,12 @@ class PostInstallation():
                         pacline = pacline[1:]
                         multilib_open = False
                     elif pacline == '#[testing]\n':
-                        antlines = '\n#[antergos-next-staging]\n'
+                        antlines = '\n#[antergos-staging]\n'
                         antlines += '#SigLevel = PackageRequired\n'
                         antlines += '#Server = https://github.com/Antergos-NeXT/$repo/$arch/\n\n'
                         antlines += '[antergos]\n'
                         antlines += 'SigLevel = PackageRequired\n'
-                        antlines += 'Include = /etc/pacman.d/antergos-next-mirrorlist\n\n'
+                        antlines += 'Include = /etc/pacman.d/antergos-mirrorlist\n\n'
                         pacman_file.write(antlines)
 
                     pacman_file.write(pacline)
@@ -322,7 +322,7 @@ class PostInstallation():
             if os.path.exists(pulseaudio_path):
                 audio_system = "pulse"
             with open(fluid_path, "w") as fluid_conf:
-                fluid_conf.write('# Created by Cnchi, Antergos installer\n')
+                fluid_conf.write('# Created by Cnchi, Antergos NeXT installer\n')
                 txt = 'SYNTHOPTS="-is -a {0} -m alsa_seq -r 48000"\n\n'
                 txt = txt.format(audio_system)
                 fluid_conf.write(txt)
@@ -542,7 +542,7 @@ class PostInstallation():
                 "Enabling colors and syntax highlighting in nano editor")
             with open(nanorc_path, 'a') as nanorc:
                 nanorc.write('\n')
-                nanorc.write('# Added by Cnchi (Antergos Installer)\n')
+                nanorc.write('# Added by Cnchi (Antergos NeXT Installer)\n')
                 nanorc.write('set titlecolor brightwhite,blue\n')
                 nanorc.write('set statuscolor brightwhite,green\n')
                 nanorc.write('set numbercolor cyan\n')

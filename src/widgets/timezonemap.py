@@ -6,7 +6,7 @@
 # Original author: Thomas Wood <thomas.wood@intel.com>
 # Portions from Ubiquity, Copyright (C) 2009 Canonical Ltd.
 # Written in C by Evan Dandrea <evand@ubuntu.com>
-# Python port Copyright © 2026 Antergos NeXT NeXT NeXT
+# Python port Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -148,17 +148,16 @@ class TimezoneMap(Gtk.Widget):
     def do_measure(self, orientation, for_size):
         width = self._orig_background.get_width()
         height = self._orig_background.get_height()
-        if width > 400:
-            width = 400
-        if height > 200:
-            height = 200
+        if width > 340:
+            width = 340
+        if height > 170:
+            height = 170
         if orientation == Gtk.Orientation.HORIZONTAL:
             return (width, width, -1, -1)
         else:
             return (height, height, -1, -1)
 
     def do_size_allocate(self, width, height, baseline):
-        self.set_size_request(width, height)
 
         if self._background is not None:
             del self._background

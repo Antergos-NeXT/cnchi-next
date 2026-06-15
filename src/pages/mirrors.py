@@ -3,7 +3,7 @@
 #
 # mirrors.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -92,7 +92,7 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
         self.switch.set_active(active)
         box.prepend(self.switch)
 
-        self.add(box)
+        self.set_child(box)
 
         self.set_selectable(True)
 
@@ -212,7 +212,7 @@ class MirrorListBox(Gtk.ListBox):
             box = Gtk.Box(spacing=20)
             box.set_name(url)
             row = MirrorListBoxRow(url, active, self.switch_activated, drag_cbs)
-            self.add(row)
+            self.append(row)
 
     def set_mirror_active(self, url, active):
         """ Changes the active status in our mirrors list """
@@ -329,7 +329,7 @@ class Mirrors(GtkBaseBox):
 
     MIRRORLISTS = [
         "/etc/pacman.d/mirrorlist",
-        "/etc/pacman.d/antergos-next-mirrorlist"]
+        "/etc/pacman.d/antergos-mirrorlist"]
 
     def __init__(self, params, prev_page="cache", next_page="installation_ask"):
         super().__init__(self, params, "mirrors", prev_page, next_page)
@@ -423,7 +423,7 @@ class Mirrors(GtkBaseBox):
         """ Translates screen before showing it """
         self.header.set_subtitle(_("Mirrors Selection"))
 
-        self.forward_button.set_always_show_image(True)
+        self.forward_button.set_icon_name("go-next")
         self.forward_button.set_sensitive(True)
 
         #bold_style = '<span weight="bold">{0}</span>'
@@ -448,15 +448,15 @@ class Mirrors(GtkBaseBox):
         intro_label.set_text(intro_txt)
         intro_label.set_name("intro_label")
         intro_label.set_hexpand(False)
-        intro_label.set_line_wrap(True)
+        intro_label.set_wrap(True)
 
         intro_label.set_max_width_chars(80)
 
         lbl = self.gui.get_object("arch_mirrors_label")
         lbl.set_text(_("Arch Mirrors"))
 
-        lbl = self.gui.get_object("antergos_mirrors_label")
-        lbl.set_text(_("Antergos Mirrors"))
+        lbl = self.gui.get_object("pulsar_mirrors_label")
+        lbl.set_text(_("Antergos NeXT Mirrors"))
 
     def store_values(self):
         """ Store selected values """

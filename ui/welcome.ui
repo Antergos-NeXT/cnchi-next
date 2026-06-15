@@ -5,15 +5,15 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="valign">center</property>
-        <property name="margin_start">70</property>
-        <property name="margin_end">70</property>
+        <property name="margin_start">30</property>
+        <property name="margin_end">30</property>
         <property name="orientation">vertical</property>
         <property name="spacing">15</property>
         <child>
             <object class="GtkBox" id="box_center">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="spacing">100</property>
+                <property name="spacing">40</property>
                 <property name="homogeneous">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
@@ -26,15 +26,15 @@
                             <object class="GtkImage" id="tryit_image">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_start">25</property>
-                                <property name="margin_end">25</property>
+                                <property name="margin_start">10</property>
+                                <property name="margin_end">10</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkLabel" id="tryit_welcome_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_bottom">20</property>
+                                <property name="margin_bottom">12</property>
                                 <property name="justify">center</property>
                                 <property name="wrap">True</property>
                             </object>
@@ -58,15 +58,15 @@
                             <object class="GtkImage" id="graph_image">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_start">25</property>
-                                <property name="margin_end">25</property>
+                                <property name="margin_start">10</property>
+                                <property name="margin_end">10</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkLabel" id="installit_welcome_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_bottom">20</property>
+                                <property name="margin_bottom">12</property>
                                 <property name="justify">center</property>
                                 <property name="wrap">True</property>
                             </object>

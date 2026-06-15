@@ -3,7 +3,7 @@
 #
 # grub2.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -108,7 +108,7 @@ class Grub2():
             cmdline_linux_default)
 
         pattern = re.compile(
-            "menuentry 'Antergos Linux'[\s\S]*initramfs-linux.img\n}")
+            r"menuentry 'Antergos NeXT'[\s\S]*initramfs-linux.img\n}")
 
         cfg = os.path.join(self.dest_dir, "boot/grub/grub.cfg")
         with open(cfg) as grub_file:
@@ -186,8 +186,8 @@ class Grub2():
 
         # Modify /etc/default/grub
         self.set_grub_option(
-            "GRUB_THEME", "/boot/grub/themes/Antergos-Default/theme.txt")
-        self.set_grub_option("GRUB_DISTRIBUTOR", "Antergos")
+            "GRUB_THEME", "/boot/grub/themes/Antergos-NeXT-Default/theme.txt")
+        self.set_grub_option("GRUB_DISTRIBUTOR", "Antergos NeXT")
         self.set_grub_option("GRUB_CMDLINE_LINUX_DEFAULT", cmd_linux_default)
         self.set_grub_option("GRUB_CMDLINE_LINUX", cmd_linux)
 
@@ -237,7 +237,7 @@ class Grub2():
         """ Copies 10_antergos script into /etc/grub.d/ """
         grub_d_dir = os.path.join(self.dest_dir, "etc/grub.d")
         script_dir = os.path.join(self.settings.get("cnchi"), "scripts")
-        script = "10_antergos_next"
+        script = "10_antergos"
 
         os.makedirs(grub_d_dir, mode=0o755, exist_ok=True)
 

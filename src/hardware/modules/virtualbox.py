@@ -3,7 +3,7 @@
 #
 #  virtualbox.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -61,7 +61,7 @@ class Virtualbox(Hardware):
             dest_dir, "etc/modules-load.d/virtualbox-guest.conf")
         with open(path, 'w') as modules:
             modules.write(
-                '# Virtualbox modules added by Cnchi - Antergos Installer\n')
+                '# Virtualbox modules added by Cnchi - Antergos NeXT Installer\n')
             modules.write("vboxguest\n")
             modules.write("vboxsf\n")
             modules.write("vboxvideo\n")

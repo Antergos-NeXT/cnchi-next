@@ -154,12 +154,12 @@ msgstr ""
 #: cnchi/src/desktop_info.py:131
 #, fuzzy
 msgid ""
-"GNOME 3 is an easy and elegant way to use your computer. It features the "
+"GNOME is an easy and elegant way to use your computer. It features the "
 "Activities Overview which is an easy way to access all your basic tasks."
 msgstr ""
 "Gnome 3 reprezintă o modalitate ușoară și elegantă de a folosi computerul. "
 "Include panoul de activități - Activities Overview - un mod simplu de acces "
-"al sarcinilor de bază. GNOME 3 este administratorul de ferestre și mediul de "
+"al sarcinilor de bază. GNOME este administratorul de ferestre și mediul de "
 "lucru implicit din Antergos.    "
 
 #: cnchi/src/desktop_info.py:135
@@ -274,11 +274,11 @@ msgid "Uncomplicated Firewall"
 msgstr "Uncomplicated Firewall"
 
 #: cnchi/src/features_info.py:77
-msgid "Flash plugins"
+msgid "Multimedia plugins (Adobe Flash, deprecated)"
 msgstr ""
 
 #: cnchi/src/features_info.py:78
-msgid "Steam + PlayonLinux"
+msgid "Steam + Wine / Lutris / Heroic Games Launcher"
 msgstr ""
 
 #: cnchi/src/features_info.py:79
@@ -340,7 +340,7 @@ msgid "Vivaldi is a free, fast web browser designed for power-users."
 msgstr ""
 
 #: cnchi/src/features_info.py:95
-msgid "Freeware software normally used for multimedia."
+msgid "Plugins for multimedia playback (Adobe Flash Player, deprecated)."
 msgstr ""
 
 #: cnchi/src/features_info.py:96
@@ -348,7 +348,7 @@ msgid "Installs AMD or Nvidia proprietary graphic driver."
 msgstr ""
 
 #: cnchi/src/features_info.py:97
-msgid "Installs Steam and Playonlinux for gaming enthusiasts."
+msgid "Installs Steam, Wine, Lutris and Heroic Games Launcher for gaming enthusiasts."
 msgstr ""
 
 #: cnchi/src/features_info.py:98
@@ -480,9 +480,8 @@ msgstr ""
 #: cnchi/src/features_info.py:146
 msgid ""
 "Steam is one of the most popular gaming clients that supports\n"
-"linux in technology and gaming, while PlayOnLinux\n"
-"is a very easy manager to setting up games to play\n"
-"through wine, instead of doing it manually."
+"Linux gaming natively. Wine, Lutris and Heroic Games Launcher\n"
+"make it easy to run Windows games on Linux."
 msgstr ""
 
 #: cnchi/src/features_info.py:150
@@ -2491,14 +2490,14 @@ msgstr ""
 #~ "mediu de lucru"
 
 #~ msgid ""
-#~ "Cinnamon is a fork of GNOME 3 developed by (and for) Linux Mint. It "
+#~ "Cinnamon is a fork of GNOME developed by (and for) Linux Mint. It "
 #~ "provides users a more traditional desktop interface along with the newest "
-#~ "compositing techniques of GNOME 3. Cinnamon is for users of all "
+#~ "compositing techniques of GNOME. Cinnamon is for users of all "
 #~ "experience levels. "
 #~ msgstr ""
-#~ "Cinnamon este un derivat al GNOME 3 dezvoltat de (și pentru) Linux Mint. "
+#~ "Cinnamon este un derivat al GNOME dezvoltat de (și pentru) Linux Mint. "
 #~ "Oferă utilizatorilor o interfață de lucru mai tradițională, împreună cu "
-#~ "cele mai noi tehnologii de compunere și animare a ferestrelor din GNOME 3."
+#~ "cele mai noi tehnologii de compunere și animare a ferestrelor din GNOME."
 
 #~ msgid ""
 #~ "LXDE is an extremely fast-performing and energy-saving desktop "

@@ -3,7 +3,7 @@
 #
 #  desktop.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -226,7 +226,7 @@ class DesktopAsk(GtkBaseBox):
         """ Store desktop """
         self.settings.set('desktop', self.desktop_choice.lower())
         logging.info(
-            "Cnchi will install Antergos with the '%s' desktop",
+            "Cnchi will install Antergos NeXT with the '%s' desktop",
             self.desktop_choice.lower())
         return True
 

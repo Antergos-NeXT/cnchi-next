@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 #
 #  Copyright (c) 2012 Canonical Ltd.
-#  Copyright (c) 2026 Antergos NeXT NeXT NeXT
+#  Copyright (c) 2026 Antergos NeXT
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -145,9 +145,12 @@ def regain_privileges():
     _DROPPED_PRIVILEGES -= 1
     if _DROPPED_PRIVILEGES == 0:
         if os.geteuid() != 0:
-            os.seteuid(0)
-            os.setegid(0)
-            os.setgroups([])
+            try:
+                os.seteuid(0)
+                os.setegid(0)
+                os.setgroups([])
+            except PermissionError:
+                logging.warning("Cannot regain root privileges.")
 
 def drop_privileges_save():
     """ Drop the real UID/GID as well, and hide them in saved IDs. """
@@ -589,8 +592,8 @@ def is_partition_extended(partition):
     if "/dev/mapper" in partition:
         return False
 
-    # In automatic LVM volume is called AntergosNeXTVG
-    if "/dev/AntergosNeXTVG" in partition:
+    # In automatic LVM volume is called AntergosVG
+    if "/dev/AntergosVG" in partition:
         return False
 
     if "/dev/" in partition:

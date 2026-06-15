@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="400" height="130">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Orbitron';
+        src: url('Orbitron.woff2') format('woff2');
+      }
+    </style>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8bc4ff"/>
+      <stop offset="50%" stop-color="#4a9eff"/>
+      <stop offset="100%" stop-color="#1a4a8a"/>
+    </linearGradient>
+    <linearGradient id="sub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#7bb8ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="200" y="65" font-family="Orbitron, 'Segoe UI', Arial, sans-serif" font-size="36" font-weight="900" fill="url(#glow)" text-anchor="middle" letter-spacing="8" filter="url(#textGlow)">ANTERGOS</text>
+  <text x="200" y="105" font-family="Orbitron, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="900" fill="url(#sub)" text-anchor="middle" letter-spacing="14" opacity="0.9">NEXT</text>
+</svg>

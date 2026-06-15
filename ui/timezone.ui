@@ -7,9 +7,17 @@
         <property name="hexpand">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">12</property>
+        <property name="margin_start">20</property>
+        <property name="margin_end">20</property>
         <child>
-                    <placeholder/>
-                </child>
+            <object class="GtkBox" id="timezone_map_window">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="orientation">vertical</property>
+            </object>
+        </child>
             <child>
             <object class="GtkBox" id="box1">
                 <property name="visible">True</property>
@@ -18,7 +26,7 @@
                     <object class="GtkLabel" id="label_zone">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_start">100</property>
+                        <property name="margin_start">5</property>
                         <property name="margin_end">5</property>
                         <property name="label" translatable="yes">Zone:</property>
                     <property name="hexpand">False</property>
@@ -45,7 +53,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_start">5</property>
-                        <property name="margin_end">100</property>
+                        <property name="margin_end">5</property>
                         
                     <property name="hexpand">False</property>
                         <property name="vexpand">False</property>
@@ -57,7 +65,7 @@
                     <object class="GtkLabel" id="label_region">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_start">50</property>
+                        <property name="margin_start">5</property>
                         <property name="margin_end">5</property>
                         <property name="label" translatable="yes">Region:</property>
                     <property name="hexpand">False</property>

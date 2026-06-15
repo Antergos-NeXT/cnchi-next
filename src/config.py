@@ -3,7 +3,7 @@
 #
 #  pacman_conf.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -80,9 +80,12 @@ class Settings():
             'feature_cups': False,
             'feature_firefox': False,
             'feature_firewall': False,
-            'feature_flash': False,
             'feature_fonts': False,
             'feature_games': False,
+            'feature_games_steam': True,
+            'feature_games_wine': True,
+            'feature_games_lutris': True,
+            'feature_games_heroic': True,
             'feature_lamp': False,
             'feature_lemp': False,
             'feature_lts': False,
@@ -92,7 +95,7 @@ class Settings():
             'feature_lembrame': False,
             'fullname': '',
             'GRUB_CMDLINE_LINUX': '',
-            'hostname': 'antergos-next',
+            'hostname': 'antergos',
             'install_id': '',
             'is_vbox': False,
             'keyboard_layout': '',
@@ -126,7 +129,7 @@ class Settings():
             'timezone_done': False,
             'timezone_start': False,
             'temp': '/var/tmp/cnchi',
-            'ui': '/usr/share/cnchi/ui/',
+            'ui': cnchi + 'ui/',
             'use_home': False,
             'use_luks': False,
             'use_luks_in_root': False,

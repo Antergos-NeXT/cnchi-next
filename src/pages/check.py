@@ -3,7 +3,7 @@
 #
 #  check.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -26,7 +26,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-""" Check screen (detects if Antergos prerequisites are meet) """
+""" Check screen (detects if Antergos NeXT prerequisites are meet) """
 
 import logging
 import os
@@ -107,7 +107,7 @@ class Check(GtkBaseBox):
         txt = "(*) <i>{0}</i>".format(txt)
         self.label_space.set_markup(txt)
         self.label_space.set_hexpand(False)
-        self.label_space.set_line_wrap(True)
+        self.label_space.set_wrap(True)
         self.label_space.set_max_width_chars(80)
 
         self.prepare_power_source = self.gui.get_object("prepare_power_source")
@@ -129,7 +129,7 @@ class Check(GtkBaseBox):
         txt = '<span weight="bold" size="large">{0}</span>'.format(txt)
         self.prepare_best_results.set_markup(txt)
         self.prepare_best_results.set_hexpand(False)
-        self.prepare_best_results.set_line_wrap(True)
+        self.prepare_best_results.set_wrap(True)
         self.prepare_best_results.set_max_width_chars(80)
 
     def on_timer(self):
@@ -291,8 +291,8 @@ class CheckProcess(multiprocessing.Process):
     def get_cnchi_version_in_repo():
         """ Checks cnchi version in the Antergos repository """
         mirrors = [
-            ("info.antergos.repo", "/antergos-next/x86_64/antergos-next.db"),
-            ("net.leaseweb.de.mirror", "/antergos/antergos-next/x86_64/antergos-next.db")]
+            ("info.antergos.repo", "/antergos/x86_64/antergos.db"),
+            ("net.leaseweb.de.mirror (antergos)", "/antergos/x86_64/antergos.db")]
 
         for fdqn, path in mirrors:
             fdqn = '.'.join(fdqn.split('.')[::-1])

@@ -3,7 +3,7 @@
 #
 #  cnchi.py
 #
-#  Copyright © 2026 Antergos NeXT NeXT NeXT
+#  Copyright © 2026 Antergos NeXT
 #
 #  This file is part of Cnchi.
 #
@@ -51,7 +51,47 @@ sys.path.append(os.path.join(CNCHI_PATH, "src/pages/dialogs"))
 sys.path.append(os.path.join(CNCHI_PATH, "src/parted3"))
 
 gi.require_version('Gtk', '4.0')
-from gi.repository import Gio, Gtk, GObject
+from gi.repository import Gio, Gtk, GObject, GLib
+
+import xml.etree.ElementTree as _ET
+
+# GTK4 removed Builder.connect_signals; re-add it via XML signal parsing
+_GTK_BUILDER_SIGNAL_HANDLERS = {}
+_GTK_BUILDER_SIGNAL_QUEUE = {}
+
+def _builder_connect_signals(self, handler):
+    _GTK_BUILDER_SIGNAL_HANDLERS.setdefault(id(self), [])
+    _GTK_BUILDER_SIGNAL_HANDLERS[id(self)].append(handler)
+
+Gtk.Builder.connect_signals = _builder_connect_signals
+
+_original_add_from_file = Gtk.Builder.add_from_file
+
+def _patched_add_from_file(self, path):
+    result = _original_add_from_file(self, path)
+    handlers = _GTK_BUILDER_SIGNAL_HANDLERS.get(id(self), [])
+    if handlers:
+        try:
+            tree = _ET.parse(path)
+            for obj in tree.getroot().iter('object'):
+                obj_id = obj.get('id')
+                widget = self.get_object(obj_id) if obj_id else None
+                if widget is None:
+                    continue
+                for sig in obj.iter('signal'):
+                    sig_name = sig.get('name')
+                    handler_name = sig.get('handler')
+                    if sig_name and handler_name:
+                        for h in handlers:
+                            meth = getattr(h, handler_name, None)
+                            if meth:
+                                widget.connect(sig_name, meth)
+                                break
+        except Exception:
+            pass
+    return result
+
+Gtk.Builder.add_from_file = _patched_add_from_file
 
 import misc.extra as misc
 from misc.run_cmd import call
@@ -94,6 +134,8 @@ class CnchiApp(Gtk.Application):
         """ Override the 'activate' signal of GLib.Application.
             Shows the default first window of the application (like a new document).
             This corresponds to the application being launched by the desktop environment. """
+        # Spoof program name so gdk-pixbuf disables bwrap sandbox (fails as root)
+        GLib.set_prgname('gdk-pixbuf-thumbnailer')
         try:
             import main_window
         except ImportError as err:
@@ -414,7 +456,7 @@ class CnchiInit():
         """ Hostname contains the ISO version """
         from socket import gethostname
         hostname = gethostname()
-        # antergos-next-year.month-iso
+        # antergos-year.month-iso
         prefix = "ant-"
         suffix = "-min"
         if hostname.startswith(prefix) or hostname.endswith(suffix):
@@ -614,9 +656,9 @@ class CnchiInit():
             keys = ['sleep-inactive-ac-type', 'sleep-inactive-battery-type']
             value = 'nothing'
             for key in keys:
-                self.gsettings_set('antergos-next', schema, key, value)
+                self.gsettings_set('antergos', schema, key, value)
         except KeyError:
-            logging.warning('User "antergos" does not exist')
+            logging.warning('User "antergos" does not exist'))
 
     @staticmethod
     def gsettings_set(user, schema, key, value):
@@ -632,6 +674,13 @@ class CnchiInit():
 
 def main():
     """ Main function. Initializes Cnchi and creates it as a GTK App """
+    # Use fork for multiprocessing (forkserver fails when running as root/setuid)
+    import multiprocessing as _mp
+    try:
+        _mp.set_start_method('fork')
+    except RuntimeError:
+        pass  # already set
+
     # Init cnchi
     cnchi_init = CnchiInit()
     # Create Gtk Application

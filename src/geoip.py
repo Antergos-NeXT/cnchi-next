@@ -3,7 +3,7 @@
 #
 #  geoip.py
 #
-# Copyright © 2026 Antergos NeXT NeXT NeXT
+# Copyright © 2026 Antergos NeXT
 #
 # This file is part of Cnchi.
 #
@@ -26,115 +26,64 @@
 # You should have received a copy of the GNU General Public License
 # along with Cnchi; If not, see <http://www.gnu.org/licenses/>.
 
-""" GeoIP Location module
-    Needs python-geoip2 python-maxminddb geoip2-database """
+""" GeoIP Location module using ip-api.com (free, no API key needed) """
 
-import json
 import logging
-import os
-import time
 import requests
-
-import maxminddb
-import geoip2.database
 import misc.extra as misc
 
-class GeoIP():
-    """ Store GeoIP information """
+class CountryInfo:
+    """ Simple country info object matching geoip2's country shape """
+    def __init__(self, name, iso_code):
+        self.iso_code = iso_code
+        self.names = {"en": name}
 
-    REPO_CITY_DATABASE = '/usr/share/GeoIP/GeoLite2-City.mmdb'
-    LOCAL_CITY_DATABASE = '/usr/share/cnchi/data/GeoLite2-City.mmdb'
+class GeoIP():
+    """ Fetch geographic location via ip-api.com """
 
     def __init__(self):
-        self.record = None
-        self._maybe_wait_for_network()
-        self._load_data_and_ip()
+        self._country = None
+        if misc.has_connection():
+            self._fetch()
 
-    @staticmethod
-    def _maybe_wait_for_network():
-        # Wait until there is an Internet connection available
-        if not misc.has_connection():
-            logging.warning(
-                "Can't get network status. Cnchi will try again in a moment")
-            while not misc.has_connection():
-                time.sleep(4)  # Wait 4 seconds and try again
-
-        logging.debug("A working network connection has been detected.")
-
-    def _load_data_and_ip(self):
-        """ Gets public IP and loads GeoIP2 database """
-        db_path = GeoIP.REPO_CITY_DATABASE
-        if not os.path.exists(db_path):
-            db_path = GeoIP.LOCAL_CITY_DATABASE
-
-        if os.path.exists(db_path):
-            myip = self._get_external_ip_address()
-            logging.debug("Your external IP address is: %s", myip)
-            if myip:
-                self._load_database(db_path, myip)
-                if self.record:
-                    logging.debug("GeoIP database loaded (%s)", db_path)
+    def _fetch(self):
+        """ Fetch location data from ip-api.com """
+        try:
+            resp = requests.get("http://ip-api.com/json/", timeout=10)
+            data = resp.json()
+            if data.get('status') == 'success':
+                self._country = CountryInfo(
+                    data.get('country', ''),
+                    data.get('countryCode', ''))
+                logging.debug("GeoIP: %s (%s)",
+                    data.get('country'), data.get('countryCode'))
             else:
-                logging.error("Cannot get your external IP address!")
-        else:
-            logging.error("Cannot find Cities GeoIP database")
-
-    @staticmethod
-    def _get_external_ip_address():
-        """ Get external IP Address """
-        server = "=yek_ssecca?kcehc/moc.kcatspi.ipa"
-        key = "a75b99fb88ab4808060b8241931a012c"
-        try:
-            server = "http://" + server[::-1] + key[::-1]
-            json_text = requests.get(server).text
-            data = json.loads(json_text)
-            return data['ip']
-        except (KeyError, requests.ConnectionError, json.decoder.JSONDecodeError) as err:
-            logging.warning("Error getting external IP from %s: %s", server, err)
-
-    def _load_database(self, db_path, myip):
-        """ Loads cities database """
-        try:
-            reader = geoip2.database.Reader(db_path)
-            self.record = reader.city(myip)
-        except maxminddb.errors.InvalidDatabaseError as err:
-            logging.error(err)
+                logging.warning("GeoIP: ip-api.com error: %s",
+                    data.get('message', 'unknown'))
+        except Exception as e:
+            logging.warning("GeoIP: request failed: %s", e)
 
     def get_city(self):
-        """ Returns city information
-            'city': {'geoname_id', 'names'} """
-        if self.record:
-            return self.record.city
         return None
 
     def get_country(self):
-        """ Returns country information
-            'country': {'geoname_id', 'is_in_european_union', 'iso_code', 'names'} """
-        if self.record:
-            return self.record.country
-        return None
+        return self._country
 
     def get_continent(self):
-        """ Returns continent information
-            'continent': {'code', 'geoname_id', 'names'} """
-        if self.record:
-            return self.record.continent
         return None
 
     def get_location(self):
-        """ Returns location information
-            'location': {'accuracy_radius', 'latitude', 'longitude', 'time_zone'} """
-        if self.record:
-            return self.record.location
         return None
 
 def test_module():
     """ Test module """
     geo = GeoIP()
-    print("City:", geo.get_city())
-    print("Country:", geo.get_country())
-    print("Continent:", geo.get_continent())
-    print("Location:", geo.get_location())
+    country = geo.get_country()
+    if country:
+        print("Country:", country.names.get('en', ''))
+        print("ISO Code:", country.iso_code)
+    else:
+        print("No location data")
 
 if __name__ == "__main__":
     test_module()
