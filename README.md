@@ -18,7 +18,7 @@
 
 ## Reporting issues
 
-Open an issue at [github.com/Antergos-NeXT/Cnchi](https://github.com/Antergos-NeXT/Cnchi/issues) with:
+Open an issue at [github.com/Antergos-NeXT/cnchi-next](https://github.com/Antergos-NeXT/cnchi-next/issues) with:
 
 - Cnchi version
 - Desktop environment
@@ -26,4 +26,4 @@ Open an issue at [github.com/Antergos-NeXT/Cnchi](https://github.com/Antergos-Ne
 
 ## Packaging
 
-Packaged via [antergos-pkgs](https://github.com/Antergos-NeXT/antergos-pkgs).
+Packaged via [antergos-packages](https://github.com/Antergos-NeXT/antergos-packages).
