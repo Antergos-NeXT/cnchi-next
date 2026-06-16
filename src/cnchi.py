@@ -658,7 +658,7 @@ class CnchiInit():
             for key in keys:
                 self.gsettings_set('antergos', schema, key, value)
         except KeyError:
-            logging.warning('User "antergos" does not exist'))
+            logging.warning('User "antergos" does not exist')
 
     @staticmethod
     def gsettings_set(user, schema, key, value):
