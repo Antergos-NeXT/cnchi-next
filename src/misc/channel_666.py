@@ -170,6 +170,7 @@ def was_active():
     return _WAS_ACTIVE
 
 def play_reward():
+    _stop_audio()
     audio = "/usr/share/cnchi-memes/still-alive.opus"
     if not os.path.exists(audio):
         return
