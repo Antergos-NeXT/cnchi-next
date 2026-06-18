@@ -237,6 +237,14 @@ class Welcome(GtkBaseBox):
                 quotes.get_random_quote()))
         self.labels['quote'].set_visible(True)
 
+        # CHANNEL 666 hint
+        hint = self.gui.get_object("channel_666_hint") or self.gui.get_object("quote_label")
+        if hint == self.gui.get_object("quote_label"):
+            subtle = Gtk.Label(
+                label='<span foreground="#2a2a2a" size="x-small">channel ___</span>',
+                use_markup=True, visible=True)
+            self.gui.get_object('welcome').append(subtle)
+
         self._konami_idx = 0
         self._key_controller = Gtk.EventControllerKey.new()
         self._key_controller.connect("key-pressed", self._on_key_press)

@@ -38,11 +38,10 @@ import tarfile
 
 try:
     import libnacl
+    import libnacl.utils
+    HAS_LIBNACL = True
 except ImportError:
-    logging.error('Please install python-libnacl package')
-    exit()
-
-import libnacl.utils
+    HAS_LIBNACL = False
 
 from lembrame.config import LembrameConfig
 from lembrame.gnome_extensions.downloader import GnomeExtensionsDownloader
@@ -56,6 +55,8 @@ def _(msg):
 
 def get_key_decryption_file(pass_hash, salt):
     """ Gets key for decryption """
+    if not HAS_LIBNACL:
+        raise ImportError('python-libnacl is required for lembrame')
     for _index in range(2, 2 ** 17):
         pass_hash = libnacl.crypto_hash_sha512(salt + pass_hash)
     return libnacl.crypto_hash_sha256(salt + pass_hash)
@@ -76,6 +77,8 @@ class Lembrame:
     LEN_PROT_BOX = 72
 
     def __init__(self, settings):
+        if not HAS_LIBNACL:
+            raise ImportError('python-libnacl is required for lembrame')
         self.settings = settings
         self.config = LembrameConfig(settings.get('temp'))
         self.credentials = self.settings.get('lembrame_credentials')

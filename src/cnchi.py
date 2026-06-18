@@ -659,6 +659,8 @@ class CnchiInit():
                 self.gsettings_set('antergos', schema, key, value)
         except KeyError:
             logging.warning('User "antergos" does not exist')
+        except Exception as ex:
+            logging.warning("Could not disable suspend: %s", str(ex))
 
     @staticmethod
     def gsettings_set(user, schema, key, value):

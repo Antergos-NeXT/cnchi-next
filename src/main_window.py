@@ -491,6 +491,20 @@ class MainWindow(Gtk.ApplicationWindow):
             self._go_backward()
         elif keyval == Gdk.KEY_Escape:
             self.on_exit_button_clicked()
+        # CHANNEL 666 secret: type 6 three times to activate
+        elif keyval in (Gdk.KEY_6, Gdk.KEY_KP_6):
+            self._666_count = getattr(self, '_666_count', 0) + 1
+            if self._666_count >= 3:
+                self._666_count = 0
+                from misc.channel_666 import activate as _666
+                _666(self)
+        # Deactivate with 000
+        elif keyval in (Gdk.KEY_0, Gdk.KEY_KP_0):
+            self._000_count = getattr(self, '_000_count', 0) + 1
+            if self._000_count >= 3:
+                self._000_count = 0
+                from misc.channel_666 import deactivate as _666off
+                _666off(self)
 
     def on_exit_button_clicked(self, *args):
         """ Exit installer """
