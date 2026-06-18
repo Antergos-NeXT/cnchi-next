@@ -299,6 +299,14 @@ class Slides(GtkBaseBox):
 
         self.stop_slideshow = True
 
+        # CHANNEL 666 survivor reward
+        try:
+            from misc.channel_666 import was_active, play_reward
+            if was_active():
+                play_reward()
+        except Exception:
+            pass
+
         try:
             self.check_bootloader()
         except FileNotFoundError:

@@ -10,6 +10,7 @@ gi.require_version('GLib', '2.0')
 from gi.repository import Gtk, Gdk, GLib
 
 _ACTIVE = False
+_WAS_ACTIVE = False
 _MPV_PROC = None
 _GLITCH_TIMER = None
 _WINDOW = None
@@ -116,10 +117,11 @@ def _stop_audio():
         _MPV_PROC = None
 
 def activate(window):
-    global _ACTIVE, _GLITCH_TIMER, _WINDOW, _ORIG_TITLE, _CSS_PROVIDER, _GLITCH_COUNT
+    global _ACTIVE, _WAS_ACTIVE, _GLITCH_TIMER, _WINDOW, _ORIG_TITLE, _CSS_PROVIDER, _GLITCH_COUNT
     if _ACTIVE:
         return
     _ACTIVE = True
+    _WAS_ACTIVE = True
     _GLITCH_COUNT = 0
     _WINDOW = window
     _ORIG_TITLE = window.get_title()
@@ -147,11 +149,11 @@ def deactivate(_window=None):
         GLib.source_remove(_GLITCH_TIMER)
         _GLITCH_TIMER = None
 
+    _stop_audio()
+
     if _WINDOW:
         _WINDOW.set_opacity(1.0)
         _WINDOW.set_title("Cnchi")
-
-    _stop_audio()
 
     if _CSS_PROVIDER:
         try:
@@ -163,6 +165,22 @@ def deactivate(_window=None):
 
     _WINDOW = None
     logging.info("CHANNEL 666 DEACTIVATED")
+
+def was_active():
+    return _WAS_ACTIVE
+
+def play_reward():
+    audio = "/usr/share/cnchi-memes/still-alive.opus"
+    if not os.path.exists(audio):
+        return
+    try:
+        subprocess.Popen(
+            ["mpv", "--no-video", "--volume=80", audio],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
+    except FileNotFoundError:
+        pass
 
 def is_active():
     return _ACTIVE
