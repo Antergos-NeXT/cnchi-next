@@ -308,6 +308,20 @@ class Slides(GtkBaseBox):
             pass
 
         try:
+            from misc.channel_666 import was_active
+            if was_active():
+                show.warning(
+                    None,
+                    "you survived.\n\n"
+                    "the android has been silenced.\n"
+                    "the red is gone.\n\n"
+                    "thank you for playing.\n"
+                    "if you need to talk: 1-800-273-8255"
+                )
+        except Exception:
+            pass
+
+        try:
             self.check_bootloader()
         except FileNotFoundError:
             # FIXME: Installation process finishes before we can read these values ?¿
