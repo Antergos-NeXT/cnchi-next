@@ -329,7 +329,7 @@ class Mirrors(GtkBaseBox):
 
     MIRRORLISTS = [
         "/etc/pacman.d/mirrorlist",
-        "/etc/pacman.d/antergos-mirrorlist"]
+        "/etc/pacman.d/antergos-next-mirrorlist"]
 
     def __init__(self, params, prev_page="cache", next_page="installation_ask"):
         super().__init__(self, params, "mirrors", prev_page, next_page)

@@ -213,7 +213,7 @@ class PostInstallation():
                         antlines += '#Server = https://github.com/Antergos-NeXT/$repo/$arch/\n\n'
                         antlines += '[antergos]\n'
                         antlines += 'SigLevel = PackageRequired\n'
-                        antlines += 'Include = /etc/pacman.d/antergos-mirrorlist\n\n'
+                        antlines += 'Include = /etc/pacman.d/antergos-next-mirrorlist\n\n'
                         pacman_file.write(antlines)
 
                     pacman_file.write(pacline)

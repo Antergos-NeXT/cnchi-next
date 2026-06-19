@@ -60,17 +60,20 @@ class RankMirrors(multiprocessing.Process):
     MIRROR_OK_RSS = 'Alert Details: Successful response received'
 
     MIRROR_STATUS = {
-        'arch': 'http://www.archlinux.org/mirrors/status/json/'}
+        'arch': 'http://www.archlinux.org/mirrors/status/json/',
+        'antergos': ''}
 
     MIRRORLIST = {
-        'antergos': '/etc/pacman.d/antergos-mirrorlist',
+        'antergos': '/etc/pacman.d/antergos-next-mirrorlist',
         'arch': '/etc/pacman.d/mirrorlist'}
 
     MIRRORLIST_URL = {
-        'arch': "https://www.archlinux.org/mirrorlist/all/"}
+        'arch': "https://www.archlinux.org/mirrorlist/all/",
+        'antergos': ''}
 
     DB_SUBPATHS = {
-        'arch': 'core/os/x86_64/{0}-{1}-x86_64.pkg.tar.xz'}
+        'arch': 'core/os/x86_64/{0}-{1}-x86_64.pkg.tar.xz',
+        'antergos': ''}
 
     def __init__(self, fraction_pipe, results):
         """ Initialize process class
@@ -111,9 +114,12 @@ class RankMirrors(multiprocessing.Process):
                     'Failed to retrieve mirror status information: %s', err)
 
         # Load status data (RSS) for antergos mirrors
-        if not self.data['antergos']:
-            self.data['antergos'] = feedparser.parse(
-                RankMirrors.MIRROR_STATUS['antergos'])
+        if not self.data['antergos'] and RankMirrors.MIRROR_STATUS['antergos']:
+            try:
+                self.data['antergos'] = feedparser.parse(
+                    RankMirrors.MIRROR_STATUS['antergos'])
+            except Exception as err:
+                logging.warning('Failed to retrieve antergos mirror status: %s', err)
 
         mirrors = {'arch': [], 'antergos': []}
 
@@ -126,14 +132,18 @@ class RankMirrors(multiprocessing.Process):
             logging.warning('Failed to parse retrieved mirror data: %s', err)
 
         mirror_urls = []
-        for mirror in self.data['antergos']['entries']:
-            title = mirror['title']
-            if "is UP" in title:
-                # In RSS, all mirrors are in http:// format, we prefer https://
-                mirror['url'] = mirror['link'].replace('http://', 'https://')
-                if mirror['url'] not in mirror_urls:
-                    mirrors['antergos'].append(mirror)
-                    mirror_urls.append(mirror['url'])
+        try:
+            for mirror in self.data['antergos']['entries']:
+                title = mirror['title']
+                if "is UP" in title:
+                    # In RSS, all mirrors are in http:// format, we prefer https://
+                    mirror['url'] = mirror['link'].replace('http://', 'https://')
+                    if mirror['url'] not in mirror_urls:
+                        mirrors['antergos'].append(mirror)
+                        mirror_urls.append(mirror['url'])
+        except (KeyError, TypeError):
+            # No antergos mirror status available; use static mirrorlist
+            pass
 
         return mirrors
 
@@ -385,6 +395,8 @@ class RankMirrors(multiprocessing.Process):
         """ Download mirror lists from archlinux and github """
         for repo in RankMirrors.REPOSITORIES:
             url = RankMirrors.MIRRORLIST_URL[repo]
+            if not url:
+                continue
             req = urllib.request.Request(url=url)
             try:
                 with urllib.request.urlopen(req, None, 5) as my_file:

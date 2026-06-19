@@ -109,7 +109,7 @@ class StylizedFrame(Gtk.Widget):
 
     def paint_background(self, context):
         """ Draw widget background """
-        context.set_source_rgb(*gtk_to_cairo_color('#fbfbfb'))
+        context.set_source_rgb(*gtk_to_cairo_color('#353a40'))
         alloc = self.get_allocation()
         draw_round_rect(context, self.radius,
                         self.width / 2, self.width / 2,
@@ -122,7 +122,7 @@ class StylizedFrame(Gtk.Widget):
         # Background
         self.paint_background(context)
         # Edge
-        context.set_source_rgb(*gtk_to_cairo_color('#c7c7c6'))
+        context.set_source_rgb(*gtk_to_cairo_color('#4a4f56'))
         context.set_line_width(self.width)
         context.stroke()
         if self.get_child():

@@ -149,6 +149,12 @@ class UserInfo(GtkBaseBox):
 
         self.overlay = self.gui.get_object('user_info_overlay')
 
+        # Connect entry changed signals to validation
+        for key, element in self.widgets.items():
+            entry = element.get('entry')
+            if entry:
+                entry.connect("changed", self.info_loop)
+
     def set_avatar(self, avatar):
         """ Sets avatar image """
         icon_path = os.path.join(self.avatars_path, avatar + '.png')
@@ -226,7 +232,7 @@ class UserInfo(GtkBaseBox):
             'username': _("You must enter a username"),
             'password': _("You must enter a password")}
 
-        small_dark_red = '<small><span color="darkred">{0}</span></small>'
+        small_dark_red = '<small><span color="#ff6b6b">{0}</span></small>'
 
         for name, txt in labels.items():
             txt = small_dark_red.format(txt)
@@ -366,7 +372,7 @@ class UserInfo(GtkBaseBox):
             txt = _("Too few or too many characters")
         else:
             txt = _("Unknown error")
-        tmpl = "<small><span color='darkred'>{0}</span></small>"
+        tmpl = "<small><span color='#ff6b6b'>{0}</span></small>"
         return tmpl.format(txt)
 
     def validate_all(self):

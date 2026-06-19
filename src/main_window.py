@@ -264,6 +264,11 @@ class MainWindow(Gtk.ApplicationWindow):
         # Set window geometry
         self.set_default_size(self._main_window_width, self._main_window_height)
         self.set_resizable(True)
+        # Prefer dark theme variant
+        settings = Gtk.Settings.get_default()
+        if settings:
+            settings.set_property("gtk-application-prefer-dark-theme", True)
+
         # Apply CSS
         style_provider = Gtk.CssProvider()
         style_css = os.path.join(data_dir, "css", "gtk-style.css")
@@ -272,7 +277,7 @@ class MainWindow(Gtk.ApplicationWindow):
                 style_provider.load_from_data(css.read())
             display = Gdk.Display.get_default()
             Gtk.StyleContext.add_provider_for_display(
-                display, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
+                display, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             )
 
         self.current_page.prepare('forwards')

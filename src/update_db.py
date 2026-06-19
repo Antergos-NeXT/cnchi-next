@@ -48,7 +48,7 @@ def update_mirrorlists():
     """ Make sure we have the latest mirrorlist files """
     mirrorlists = [
         "/etc/pacman.d/mirrorlist",
-        "/etc/pacman.d/antergos-mirrorlist"]
+        "/etc/pacman.d/antergos-next-mirrorlist"]
     cmd = [
         'pacman',
         '-Syy',
@@ -56,7 +56,7 @@ def update_mirrorlists():
         '--noprogressbar',
         '--quiet',
         'pacman-mirrorlist',
-        'antergos-mirrorlist']
+        'antergos-next-mirrorlist']
     with misc.raised_privileges():
         try:
             with open(os.devnull, 'w') as fnull:

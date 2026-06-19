@@ -213,8 +213,153 @@ window {
 #desktop label,
 #check label,
 #features label,
-#keymap label {
+#keymap label,
+#user_info label,
+#summary label,
+#mirrors label,
+#ask label,
+#automatic label,
+#advanced label,
+#timezone label,
+#cache label,
+#slides label,
+#wireless label {
     color: #ffffff;
+}
+
+/* Entry (text input) styling */
+entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    padding: 6px 10px;
+    caret-color: #7d7dfb;
+}
+
+entry:focus {
+    border-color: #7d7dfb;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+entry:disabled {
+    opacity: 0.5;
+}
+
+/* Combo box styling */
+combobox {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+combobox button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 6px 10px;
+}
+
+combobox button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+combobox popover {
+    background-color: #2a2e32;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+combobox popover list {
+    background-color: #2a2e32;
+}
+
+combobox popover row {
+    color: #ffffff;
+}
+
+combobox popover row:hover {
+    background-color: rgba(125, 125, 251, 0.3);
+}
+
+/* Check button and radio button styling */
+checkbutton,
+radiobutton {
+    color: #ffffff;
+}
+
+checkbutton label,
+radiobutton label {
+    color: #ffffff;
+}
+
+checkbutton check,
+radiobutton radio {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 16px;
+    min-height: 16px;
+}
+
+checkbutton check:checked {
+    background-color: #7d7dfb;
+    border-color: #7d7dfb;
+}
+
+/* Spin button styling */
+spinbutton {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+spinbutton entry {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+/* Tree view (partition table) styling */
+treeview {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+treeview header button {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+}
+
+treeview header button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+treeview:hover row {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+treeview row:selected {
+    background-color: rgba(125, 125, 251, 0.3);
+}
+
+/* Scrolled window content */
+scrolledwindow viewport {
+    background-color: transparent;
+}
+
+/* Frame styling */
+frame {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+}
+
+/* Separator */
+separator {
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 1px;
 }
 
 /* =========== SCROLLED WINDOWS =========== */

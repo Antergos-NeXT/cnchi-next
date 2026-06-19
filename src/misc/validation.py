@@ -142,19 +142,19 @@ def human_password_strength(password):
         color = ''
     elif length < 6:
         hint = _('Password is too short')
-        color = 'darkred'
+        color = '#ff6b6b'
     elif strength < 0.5:
         hint = _('Weak password')
-        color = 'darkred'
+        color = '#ff6b6b'
     elif strength < 0.75:
         hint = _('Fair password')
-        color = 'darkorange'
+        color = '#ffa94d'
     elif strength < 0.9:
         hint = _('Good password')
-        color = 'darkgreen'
+        color = '#69db7c'
     else:
         hint = _('Strong password')
-        color = 'darkgreen'
+        color = '#69db7c'
     return hint, color
 
 
@@ -177,7 +177,7 @@ def check_password(password, verified_password, allow_empty=False):
         complete = False
         password['image'].hide()
         if passw and (len(vpassw) / float(len(passw)) > 0.8):
-            red_fmt = '<small><span foreground="darkred"><b>{0}</b></span></small>'
+            red_fmt = '<small><span foreground="#ff6b6b"><b>{0}</b></span></small>'
             txt = red_fmt.format(_("Passwords do not match"))
             password['label'].set_markup(txt)
             password['label'].show()

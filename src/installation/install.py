@@ -464,7 +464,7 @@ class Installation():
             contents = pacman_conf.readlines()
         with open('/etc/pacman.conf', 'w') as new_pacman_conf:
             for line in contents:
-                if 'antergos-mirrorlist' in line:
+                if 'antergos-next-mirrorlist' in line:
                     line = 'Server = https://github.com/Antergos-NeXT/$repo/$arch'
                 new_pacman_conf.write(line)
 
