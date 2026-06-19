@@ -264,6 +264,7 @@ class MainWindow(Gtk.ApplicationWindow):
         # Set window geometry
         self.set_default_size(self._main_window_width, self._main_window_height)
         self.set_resizable(True)
+        self.maximize()
         # Prefer dark theme variant
         settings = Gtk.Settings.get_default()
         if settings:
