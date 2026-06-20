@@ -88,6 +88,8 @@ class Summary(GtkBaseBox):
             "timezone": _("Timezone"),
             "keyboard": _("Keyboard"),
             "de": _("Desktop Environment"),
+            "user": _("User"),
+            "hostname": _("Hostname"),
             "features": _("Features"),
             "partitions": _("Partitions")}
 
@@ -123,6 +125,19 @@ class Summary(GtkBaseBox):
         desktop = self.settings.get('desktop')
         desktop_name = desktop_info.NAMES[desktop]
         statebox.set_property("label", desktop_name)
+
+        # User account
+        statebox = self.gui.get_object("user_statebox")
+        fullname = self.settings.get('user_fullname')
+        username = self.settings.get('user_name')
+        if fullname and fullname != username:
+            txt = _("{0} ({1})").format(fullname, username)
+        else:
+            txt = username
+        statebox.set_property("label", txt)
+
+        statebox = self.gui.get_object("hostname_statebox")
+        statebox.set_property("label", self.settings.get('hostname'))
 
         # Features
         statebox = self.gui.get_object("features_statebox")
