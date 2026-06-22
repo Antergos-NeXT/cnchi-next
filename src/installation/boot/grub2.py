@@ -36,13 +36,10 @@ import re
 import threading
 import time
 
-try:
-    import parted3.fs_module as fs
-    from installation import special_dirs
-    from misc.run_cmd import call, chroot_call
-    from misc.extra import random_generator
-except ImportError:
-    pass
+import parted3.fs_module as fs
+from installation import special_dirs
+from misc.run_cmd import call, chroot_call
+from misc.extra import random_generator
 
 # When testing, no _() is available
 try:

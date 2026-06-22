@@ -28,8 +28,6 @@
 
 """ Alongside installation module """
 
-# ******************* NO GPT SUPPORT, YET ***************************************
-
 import os
 import logging
 import subprocess
@@ -37,6 +35,11 @@ import tempfile
 
 import show_message as show
 import bootinfo
+
+import parted3.fs_module as fs
+
+from misc.run_cmd import call
+from installation import install
 
 from pages.gtkbasebox import GtkBaseBox
 
@@ -49,6 +52,8 @@ try:
 except NameError as err:
     def _(message):
         return message
+
+DEST_DIR = "/install"
 
 def get_partition_size_info(partition_path, human=False):
     """ Gets partition used and available space using df command """
@@ -117,24 +122,53 @@ class InstallationAlongside(GtkBaseBox):
         self.resize_widget = None
 
     @staticmethod
+    def get_disk_from_partition(partition_path):
+        """ Resolve the parent disk device from a partition path """
+        cmd = ["lsblk", "-n", "-o", "PKNAME", partition_path]
+        try:
+            pkname = subprocess.check_output(cmd).decode().strip()
+            if pkname:
+                return "/dev/" + pkname
+        except subprocess.CalledProcessError:
+            pass
+        # Fallback: strip trailing digits
+        dev = partition_path.rstrip("0123456789")
+        if dev.endswith("p"):
+            dev = dev[:-1]
+        return dev
+
+    @staticmethod
+    def get_partition_number(partition_path):
+        """ Get partition number from a device path """
+        cmd = ["lsblk", "-n", "-o", "MINOR", partition_path]
+        try:
+            minor = subprocess.check_output(cmd).decode().strip()
+            # The partition number is usually (minor - 1) for the main disk
+            # More reliably, read from /sys
+            real_path = os.path.realpath(partition_path)
+            partname = os.path.basename(real_path)
+            # Strip non-digit prefix to get number
+            num = partname
+            while num and not num[0].isdigit():
+                num = num[1:]
+            if num:
+                return int(num)
+        except (subprocess.CalledProcessError, ValueError):
+            pass
+        return 1
+
+    @staticmethod
     def get_new_device(device_to_shrink):
-        """ Get new device where Cnchi will install Antergos NeXT
-            returns an empty string if no device is available """
-        # TODO: Fix this for mmcblk devices
-        number = int(device_to_shrink[len("/dev/sdX"):])
-        disk = device_to_shrink[:len("/dev/sdX")]
-
-        new_number = number + 1
-        new_device = disk + str(new_number)
-
+        """ Get next available partition device on the same disk """
+        disk = InstallationAlongside.get_disk_from_partition(device_to_shrink)
+        part_num = InstallationAlongside.get_partition_number(device_to_shrink)
+        # Check if the original path uses 'p' before number (nvme/mmcblk)
+        sep = "p" if "p{0}".format(part_num) in device_to_shrink else ""
+        new_number = part_num + 1
+        new_device = "{0}{1}{2}".format(disk, sep, new_number)
         while misc.partition_exists(new_device):
             new_number += 1
-            new_device = '{0}{1}'.format(disk, new_number)
-
-        if new_number > 4:
-            # No primary partitions left
-            new_device = None
-
+            new_device = "{0}{1}{2}".format(disk, sep, new_number)
         return new_device
 
     def set_resize_widget(self, device_to_shrink):
@@ -288,153 +322,249 @@ class InstallationAlongside(GtkBaseBox):
             'existing')
         new_os, new_device = self.resize_widget.get_part_title_and_subtitle('new')
 
-        print("existing", existing_os, existing_device)
-        print("new", new_os, new_device)
+        logging.debug("existing: %s %s", existing_os, existing_device)
+        logging.debug("new: %s %s", new_os, new_device)
 
-        # partition_path = row[COL_DEVICE]
-        # otherOS = row[COL_DETECTED_OS]
-        # fs_type = row[COL_FILESYSTEM]
+        partition_path = existing_device
+        new_size_mb = self.resize_widget.get_new_part_size()
+        disk_path = self.get_disk_from_partition(partition_path)
+        part_num = self.get_partition_number(partition_path)
+        fs_type = fs.get_type(partition_path)
 
-        ## TODO: Fix this for mmcblk devices
-        #device_path = row[COL_DEVICE][:len("/dev/sdX")]
+        if not fs_type:
+            txt = _("Cannot detect filesystem type on {0}").format(partition_path)
+            logging.error(txt)
+            show.error(self.get_main_window(), txt)
+            return
 
-        #new_size = self.new_size
+        is_uefi = os.path.exists("/sys/firmware/efi")
 
-        ## First, shrink filesystem
-        #res = fs.resize(partition_path, fs_type, new_size)
-        #if res:
-        #    txt = "Filesystem on {0} shrunk.".format(partition_path)
-        #    logging.debug(txt)
-        #    txt = "Will recreate partition now on device {0} partition {1}"
-        #    txt = txt.format(device_path, partition_path)
-        #    logging.debug(txt)
-        #    # Destroy original partition and create a new resized one
-        #    res = pm.split_partition(device_path, partition_path, new_size)
-        #else:
-        #    txt = "Can't shrink {0}({1}) filesystem".format(otherOS, fs_type)
-        #    logging.error(txt)
-        #    show.error(self.get_main_window(), txt)
-        #    return
+        # Detect GPT
+        is_gpt = False
+        cmd = ["parted", "-s", disk_path, "print"]
+        try:
+            output = subprocess.check_output(cmd).decode()
+            if "gpt" in output.split("\n")[0].lower():
+                is_gpt = True
+        except subprocess.CalledProcessError:
+            pass
 
-        ## res is either False or a parted.Geometry for the new free space
-        #if res is None:
-        #    txt = "Can't shrink {0}({1}) partition".format(otherOS, fs_type)
-        #    logging.error(txt)
-        #    show.error(self.get_main_window(), txt)
-        #    txt = "*** FILESYSTEM IN UNSAFE STATE ***"
-        #    txt = txt + "\n"
-        #    txt = txt + "Filesystem shrink succeeded but partition shrink failed."
-        #    logging.error(txt)
-        #    return
+        # Get partition start position (in MiB)
+        part_start = 1
+        try:
+            cmd = ["parted", "-s", disk_path, "unit", "MiB", "print"]
+            output = subprocess.check_output(cmd).decode()
+            for line in output.split("\n"):
+                if line.strip().startswith(str(part_num)):
+                    cols = line.split()
+                    if len(cols) >= 2:
+                        part_start = float(cols[1].rstrip("MiB"))
+                        break
+        except (subprocess.CalledProcessError, ValueError):
+            pass
 
-        #txt = "Partition {0} shrink complete".format(partition_path)
-        #logging.debug(txt)
+        # Step 1: Shrink the filesystem
+        logging.debug("Shrinking filesystem %s on %s to %d MiB", fs_type, partition_path, new_size_mb)
+        self.events.add('info', _("Shrinking filesystem on {0}...").format(partition_path))
+        if not fs.resize(partition_path, fs_type, new_size_mb):
+            txt = _("Could not shrink filesystem on {0}").format(partition_path)
+            logging.error(txt)
+            show.error(self.get_main_window(), txt)
+            return
 
-        #devices = pm.get_devices()
-        #disk = devices[device_path][0]
-        #mount_devices = {}
-        #fs_devices = {}
+        # Step 2: Shrink the partition
+        new_end = part_start + new_size_mb
+        logging.debug("Shrinking partition %s to %d MiB (end at %d)", partition_path, new_size_mb, new_end)
+        self.events.add('info', _("Resizing partition..."))
+        cmd = ["parted", "-s", "-a", "min", disk_path, "unit", "MiB", "resizepart",
+               str(part_num), str(new_end)]
+        try:
+            subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+        except subprocess.CalledProcessError as err:
+            txt = _("Could not shrink partition: {0}").format(err.output.decode())
+            logging.error(txt)
+            show.error(self.get_main_window(), txt)
+            return
 
-        #mem_total = subprocess.check_output(["grep", "MemTotal", "/proc/meminfo"]).decode()
-        #mem_total = int(mem_total.split()[1])
-        #mem = mem_total / 1024
+        subprocess.check_output(["udevadm", "settle"])
 
-        ## If geometry gives us at least 7.5GB (InstallationAlongside.MIN_ROOT_SIZE + 1GB)
-        ## we'll create ROOT and SWAP
-        #no_swap = False
-        #if res.getLength('MB') < InstallationAlongside.MIN_ROOT_SIZE + 1:
-        #    if mem < 2048:
-        #        # Less than 2GB RAM and no swap? No way.
-        #        logging.error("Cannot create new swap partition. Not enough free space")
-        #        txt = _("Cannot create new swap partition. Not enough free space")
-        #        show.error(self.get_main_window(), txt)
-        #        return
-        #    else:
-        #        no_swap = True
+        # Step 3: Calculate swap size
+        mem_total = subprocess.check_output(["grep", "MemTotal", "/proc/meminfo"]).decode()
+        mem_total = int(mem_total.split()[1])
+        mem = mem_total / 1024
 
-        #if no_swap:
-        #    npart = pm.create_partition(device_path, 0, res)
-        #    if npart is None:
-        #        logging.error("Cannot create new partition.")
-        #        txt = _("Cannot create new partition.")
-        #        show.error(self.get_main_window(), txt)
-        #        return
-        #    pm.finalize_changes(disk)
-        #    mount_devices["/"] = npart.path
-        #    fs_devices[npart.path] = "ext4"
-        #    fs.create_fs(npart.path, 'ext4', label='ROOT')
-        #else:
-        #    # We know for a fact we have at least
-        #    # InstallationAlongside.MIN_ROOT_SIZE + 1GB of space,
-        #    # and at least InstallationAlongside.MIN_ROOT_SIZE of those must go to ROOT.
+        if mem < 2048:
+            swap_part_size = 2 * mem
+        elif 2048 <= mem < 8192:
+            swap_part_size = mem
+        elif 8192 <= mem < 65536:
+            swap_part_size = mem / 2
+        else:
+            swap_part_size = 4096
 
-        #    # Suggested sizes from Anaconda installer
-        #    if mem < 2048:
-        #        swap_part_size = 2 * mem
-        #    elif 2048 <= mem < 8192:
-        #        swap_part_size = mem
-        #    elif 8192 <= mem < 65536:
-        #        swap_part_size = mem / 2
-        #    else:
-        #        swap_part_size = 4096
+        swap_part_size = int(swap_part_size)
 
-        #    # Max swap size is 10% of all available disk size
-        #    max_swap = res.getLength('MB') * 0.1
-        #    if swap_part_size > max_swap:
-        #        swap_part_size = max_swap
+        # Get total disk size to calculate remaining free space
+        disk_end = 0
+        try:
+            cmd = ["parted", "-s", disk_path, "unit", "MiB", "print"]
+            output = subprocess.check_output(cmd).decode()
+            for line in output.split("\n"):
+                if "Disk /" in line and "MiB" in line:
+                    disk_end = float(line.split()[-1].rstrip("MiB"))
+                    break
+        except (subprocess.CalledProcessError, ValueError):
+            disk_end = 0
 
-        #    # Create swap partition
-        #    units = 1000000
-        #    sec_size = disk.device.sectorSize
-        #    new_length = int(swap_part_size * units / sec_size)
-        #    new_end_sector = res.start + new_length
-        #    my_geometry = pm.geom_builder(disk, res.start, new_end_sector, swap_part_size)
-        #    logging.debug("create_partition %s", my_geometry)
-        #    swappart = pm.create_partition(disk, 0, my_geometry)
-        #    if swappart is None:
-        #        logging.error("Cannot create new swap partition.")
-        #        txt = _("Cannot create new swap partition.")
-        #        show.error(self.get_main_window(), txt)
-        #        return
+        free_space_mb = disk_end - new_end
 
-        #    # Create new partition for /
-        #    new_size_in_mb = res.getLength('MB') - swap_part_size
-        #    start_sector = new_end_sector + 1
-        #    my_geometry = pm.geom_builder(disk, start_sector, res.end, new_size_in_mb)
-        #    logging.debug("create_partition %s", my_geometry)
-        #    npart = pm.create_partition(disk, 0, my_geometry)
-        #    if npart is None:
-        #        logging.error("Cannot create new partition.")
-        #        txt = _("Cannot create new partition.")
-        #        show.error(self.get_main_window(), txt)
-        #        return
+        if free_space_mb < InstallationAlongside.MIN_ROOT_SIZE:
+            txt = _("Not enough free space for Antergos NeXT installation (need {0} MiB)").format(
+                InstallationAlongside.MIN_ROOT_SIZE)
+            logging.error(txt)
+            show.error(self.get_main_window(), txt)
+            return
 
-        #    pm.finalize_changes(disk)
+        no_swap = False
+        if free_space_mb < InstallationAlongside.MIN_ROOT_SIZE + swap_part_size:
+            if mem < 2048:
+                txt = _("Cannot create new swap partition. Not enough free space.")
+                logging.error(txt)
+                show.error(self.get_main_window(), txt)
+                return
+            no_swap = True
 
-        #    # Mount points
-        #    mount_devices["swap"] = swappart.path
-        #    fs_devices[swappart.path] = "swap"
-        #    fs.create_fs(swappart.path, 'swap', 'SWAP')
+        mount_devices = {}
+        fs_devices = {}
 
-        #    mount_devices["/"] = npart.path
-        #    fs_devices[npart.path] = "ext4"
-        #    fs.create_fs(npart.path, 'ext4', 'ROOT')
+        current_start = new_end
 
-        ## TODO: User should be able to choose if installing a bootloader or not (and which one)
-        #self.settings.set('bootloader_install', True)
+        def parted_create(disk_path, fs_label, fs_type, start, end, is_gpt, part_num):
+            """ Create a partition with parted, handling MBR vs GPT """
+            if is_gpt:
+                cmd = ["parted", "-s", "-a", "min", disk_path, "unit", "MiB",
+                       "mkpart", fs_label, fs_type, str(start), str(end)]
+            else:
+                ptype = "logical" if part_num >= 4 else "primary"
+                cmd = ["parted", "-s", "-a", "min", disk_path, "unit", "MiB",
+                       "mkpart", ptype, fs_type, str(start), str(end)]
+            return cmd
 
-        #if self.settings.get('bootloader_install'):
-        #    self.settings.set('bootloader', "grub2")
-        #    self.settings.set('bootloader_device', device_path)
-        #    msg = "Antergos NeXT will install the bootloader {0} in device {1}"
-        #    msg = msg.format(self.bootloader, self.bootloader_device)
-        #    logging.info(msg)
-        #else:
-        #    logging.info("Cnchi will not install any bootloader")
+        if no_swap:
+            root_end = current_start + free_space_mb
+            cmd = parted_create(disk_path, "AntergosRoot", "ext4",
+                                current_start, root_end, is_gpt, part_num)
+            try:
+                subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+            except subprocess.CalledProcessError as err:
+                txt = _("Could not create root partition: {0}").format(err.output.decode())
+                logging.error(txt)
+                show.error(self.get_main_window(), txt)
+                return
+            subprocess.check_output(["udevadm", "settle"])
+            root_device = self.get_new_device(partition_path)
+            failed, msg = fs.create_fs(root_device, 'ext4', 'AntergosRoot')
+            if failed:
+                logging.error("Could not create filesystem on %s: %s", root_device, msg)
+            mount_devices["/"] = root_device
+            fs_devices[root_device] = "ext4"
+        else:
+            swap_end = current_start + swap_part_size
+            cmd = parted_create(disk_path, "AntergosSwap", "linux-swap",
+                                current_start, swap_end, is_gpt, part_num)
+            try:
+                subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+            except subprocess.CalledProcessError as err:
+                txt = _("Could not create swap partition: {0}").format(err.output.decode())
+                logging.error(txt)
+                show.error(self.get_main_window(), txt)
+                return
+            subprocess.check_output(["udevadm", "settle"])
+            swap_device = self.get_new_device(partition_path)
+            failed, msg = fs.create_fs(swap_device, 'swap', 'AntergosSwap')
+            if failed:
+                logging.error("Could not create swap on %s: %s", swap_device, msg)
+            mount_devices["swap"] = swap_device
+            fs_devices[swap_device] = "swap"
 
-        #self.install = installation_process.InstallationProcess(
-        #    self.settings,
-        #    self.callback_queue,
-        #    mount_devices,
-        #    fs_devices)
-        #self.install.run()
+            current_start = swap_end
+            root_end = current_start + (free_space_mb - swap_part_size)
+            cmd = parted_create(disk_path, "AntergosRoot", "ext4",
+                                current_start, root_end, is_gpt, part_num)
+            try:
+                subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+            except subprocess.CalledProcessError as err:
+                txt = _("Could not create root partition: {0}").format(err.output.decode())
+                logging.error(txt)
+                show.error(self.get_main_window(), txt)
+                return
+            subprocess.check_output(["udevadm", "settle"])
+            root_device = self.get_new_device(partition_path)
+            failed, msg = fs.create_fs(root_device, 'ext4', 'AntergosRoot')
+            if failed:
+                logging.error("Could not create filesystem on %s: %s", root_device, msg)
+            mount_devices["/"] = root_device
+            fs_devices[root_device] = "ext4"
+
+        # Step 4: Set bootloader
+        self.settings.set('bootloader_install', True)
+        self.settings.set('bootloader', "grub2")
+        self.settings.set('bootloader_device', disk_path)
+
+        if is_gpt and is_uefi:
+            esp_device = None
+            try:
+                cmd = ["parted", "-s", disk_path, "print"]
+                output = subprocess.check_output(cmd).decode()
+                lines = output.split("\n")
+                in_table = False
+                for line in lines:
+                    if line.startswith("Number"):
+                        in_table = True
+                        continue
+                    if in_table and line.strip():
+                        cols = line.split()
+                        if len(cols) >= 7:
+                            flags = cols[-1].lower() if len(cols) > 6 else ""
+                            if "esp" in flags:
+                                part_no = cols[0]
+                                esp_device = "{0}{1}".format(
+                                    disk_path, part_no
+                                ) if not disk_path[-1].isdigit() else "{0}p{1}".format(
+                                    disk_path, part_no)
+                                break
+            except subprocess.CalledProcessError:
+                pass
+
+            if not esp_device:
+                for esp_candidate in [
+                    "{0}1".format(disk_path),
+                    "{0}p1".format(disk_path)
+                ]:
+                    if os.path.exists(esp_candidate):
+                        info = fs.get_info(esp_candidate)
+                        if info and info.get("TYPE") == "vfat":
+                            esp_device = esp_candidate
+                            break
+
+            if esp_device:
+                mount_devices["/boot/efi"] = esp_device
+                fs_devices[esp_device] = "vfat"
+
+        msg = "Antergos NeXT will install the bootloader {0} in device {1}"
+        msg = msg.format(self.settings.get('bootloader'), disk_path)
+        logging.info(msg)
+
+        # Step 5: Start installation
+        ssd = {disk_path: fs.is_ssd(disk_path)}
+
+        self.installation = install.Installation(
+            self.settings,
+            self.callback_queue,
+            None,
+            None,
+            mount_devices,
+            fs_devices,
+            ssd)
+
+        self.installation.run()

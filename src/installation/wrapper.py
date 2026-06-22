@@ -47,7 +47,7 @@ def wipefs(device, fatal=True):
     cmd = ["wipefs", "-a", device]
     call(cmd, msg=err_msg, fatal=fatal)
 
-def run_dd(input_device, output_device, bytes_block=512, count=2048, seek=0):
+def run_dd(input_device, output_device, bytes_block=512, count=2048, seek=0, fatal=True):
     """ Helper function to call dd
         Copy a file, converting and formatting according to the operands."""
     cmd = [
@@ -61,7 +61,13 @@ def run_dd(input_device, output_device, bytes_block=512, count=2048, seek=0):
     try:
         subprocess.check_output(cmd, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as err:
-        logging.warning("Command %s failed: %s", err.cmd, err.output)
+        msg = "Command %s failed: %s" % (err.cmd, err.output)
+        if fatal:
+            logging.error(msg)
+            from misc.extra import InstallError
+            raise InstallError(msg)
+        else:
+            logging.warning(msg)
 
 def partprobe():
     """ Runs partprobe """

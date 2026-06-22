@@ -71,7 +71,7 @@ def setup(luks_device, luks_name, luks_options):
     # Wipe LUKS header (just in case we're installing on a pre LUKS setup)
     # For 512 bit key length the header is 2MiB
     # If in doubt, just be generous and overwrite the first 10MiB or so
-    wrapper.run_dd("/dev/zero", luks_device, bytes_block=512, count=20480)
+    wrapper.run_dd("/dev/zero", luks_device, bytes_block=512, count=20480, fatal=False)
 
     err_msg = "Can't format and open the LUKS device {0}".format(luks_device)
 

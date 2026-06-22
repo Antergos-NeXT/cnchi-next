@@ -35,6 +35,19 @@ import parted3.fs_module as fs
 
 from misc.run_cmd import chroot_call
 
+def get_microcode_initrd():
+    """Detect CPU vendor and return the appropriate microcode initrd path."""
+    try:
+        with open("/proc/cpuinfo") as f:
+            cpuinfo = f.read()
+        if "GenuineIntel" in cpuinfo:
+            return "/intel-ucode.img"
+        elif "AuthenticAMD" in cpuinfo:
+            return "/amd-ucode.img"
+    except OSError:
+        pass
+    return "/intel-ucode.img"
+
 class SystemdBoot():
     """ Class to perform boot loader installation """
 
@@ -98,17 +111,19 @@ class SystemdBoot():
             zfs_pool_name = self.settings.get("zfs_pool_name")
             options += ' zfs={0}'.format(zfs_pool_name)
 
+        microcode = get_microcode_initrd()
+
         conf['default'] = []
         conf['default'].append("title\tAntergos NeXT\n")
         conf['default'].append("linux\t/vmlinuz-linux\n")
-        conf['default'].append("initrd\t/intel-ucode.img\n")
+        conf['default'].append("initrd\t{0}\n".format(microcode))
         conf['default'].append("initrd\t/initramfs-linux.img\n")
         conf['default'].append("options\t{0}\n\n".format(options))
 
         conf['fallback'] = []
         conf['fallback'].append("title\tAntergos NeXT (fallback)\n")
         conf['fallback'].append("linux\t/vmlinuz-linux\n")
-        conf['fallback'].append("initrd\t/intel-ucode.img\n")
+        conf['fallback'].append("initrd\t{0}\n".format(microcode))
         conf['fallback'].append("initrd\t/initramfs-linux-fallback.img\n")
         conf['fallback'].append("options\t{0}\n\n".format(options))
 
@@ -116,14 +131,14 @@ class SystemdBoot():
             conf['lts'] = []
             conf['lts'].append("title\tAntergos NeXT LTS\n")
             conf['lts'].append("linux\t/vmlinuz-linux-lts\n")
-            conf['lts'].append("initrd\t/intel-ucode.img\n")
+            conf['lts'].append("initrd\t{0}\n".format(microcode))
             conf['lts'].append("initrd\t/initramfs-linux-lts.img\n")
             conf['lts'].append("options\t{0}\n\n".format(options))
 
             conf['lts_fallback'] = []
             conf['lts_fallback'].append("title\tAntergos NeXT LTS (fallback)\n")
             conf['lts_fallback'].append("linux\t/vmlinuz-linux-lts\n")
-            conf['lts_fallback'].append("initrd\t/intel-ucode.img\n")
+            conf['lts_fallback'].append("initrd\t{0}\n".format(microcode))
             conf['lts_fallback'].append(
                 "initrd\t/initramfs-linux-lts-fallback.img\n")
             conf['lts_fallback'].append("options\t{0}\n\n".format(options))
@@ -157,7 +172,7 @@ class SystemdBoot():
         # Install bootloader
         logging.debug("Installing systemd-boot bootloader...")
         cmd = ['bootctl', '--path=/boot', 'install']
-        if chroot_call(cmd, self.dest_dir, 300) is False:
+        if chroot_call(cmd, self.dest_dir, timeout=300) is False:
             self.settings.set('bootloader_installation_successful', False)
         else:
             self.settings.set('bootloader_installation_successful', True)

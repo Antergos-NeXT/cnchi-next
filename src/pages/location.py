@@ -35,7 +35,7 @@ import sys
 import locale
 import re
 
-import xml.etree.cElementTree as elementTree
+import xml.etree.ElementTree as elementTree
 
 import gi
 gi.require_version('Gtk', '4.0')

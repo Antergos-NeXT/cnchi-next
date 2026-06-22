@@ -50,7 +50,7 @@ try:
 except ImportError:
     import tz
 
-import xml.etree.cElementTree as elementTree
+import xml.etree.ElementTree as elementTree
 
 class TimezoneMap(Gtk.Widget):
     """ Widget that allows to select user's timezone """

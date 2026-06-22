@@ -28,6 +28,7 @@ import glob
 import logging
 import os
 import shutil
+import subprocess
 import sys
 
 from mako.template import Template
@@ -204,7 +205,7 @@ class Installation():
                 elif mount_part == swap_partition:
                     logging.debug("Activating swap in %s", mount_part)
                     cmd = ['swapon', swap_partition]
-                    call(cmd)
+                    call(cmd, timeout=30)
 
     @misc.raise_privileges
     def run(self):
@@ -235,9 +236,11 @@ class Installation():
         # (so as to be able to resume install), database lock file will still
         # be in place. We must delete it or this new installation will fail
         db_lock = os.path.join(DEST_DIR, "var/lib/pacman/db.lck")
-        if os.path.exists(db_lock):
+        try:
             os.remove(db_lock)
             logging.debug("%s deleted", db_lock)
+        except FileNotFoundError:
+            pass
 
         # Create some needed folders
         folders = [
@@ -251,13 +254,14 @@ class Installation():
         # If kernel images exists in /boot they are most likely from a failed
         # install attempt and need to be removed otherwise pyalpm will raise a
         # fatal exception later on.
+        boot_path = os.path.join(DEST_DIR, "boot")
         kernel_imgs = (
-            "/install/boot/vmlinuz-linux",
-            "/install/boot/vmlinuz-linux-lts",
-            "/install/boot/initramfs-linux.img",
-            "/install/boot/initramfs-linux-fallback.img",
-            "/install/boot/initramfs-linux-lts.img",
-            "/install/boot/initramfs-linux-lts-fallback.img")
+            os.path.join(boot_path, "vmlinuz-linux"),
+            os.path.join(boot_path, "vmlinuz-linux-lts"),
+            os.path.join(boot_path, "initramfs-linux.img"),
+            os.path.join(boot_path, "initramfs-linux-fallback.img"),
+            os.path.join(boot_path, "initramfs-linux-lts.img"),
+            os.path.join(boot_path, "initramfs-linux-lts-fallback.img"))
 
         for img in kernel_imgs:
             if os.path.exists(img):
@@ -267,12 +271,14 @@ class Installation():
         # most likely either from another linux installation or from a failed
         # install attempt and need to be removed otherwise pyalpm will refuse
         # to install those packages (like above)
-        if os.path.exists('/install/boot/intel-ucode.img'):
+        intel_ucode_path = os.path.join(boot_path, "intel-ucode.img")
+        if os.path.exists(intel_ucode_path):
             logging.debug("Removing previous intel-ucode.img file found in /boot")
-            os.remove('/install/boot/intel-ucode.img')
-        if os.path.exists('/install/boot/grub/themes/Antergos-NeXT-Default'):
+            os.remove(intel_ucode_path)
+        grub_theme_path = os.path.join(boot_path, "grub/themes/Antergos-NeXT-Default")
+        if os.path.exists(grub_theme_path):
             logging.debug("Removing previous Antergos-NeXT-Default grub2 theme found in /boot")
-            shutil.rmtree('/install/boot/grub/themes/Antergos-NeXT-Default')
+            shutil.rmtree(grub_theme_path)
 
         logging.debug("Preparing pacman...")
         self.prepare_pacman()
@@ -434,12 +440,10 @@ class Installation():
                dest_path, "archlinux", "antergos"]
         call(cmd)
 
-        # path = os.path.join(DEST_DIR, "root/.gnupg/dirmngr_ldapservers.conf")
-        # Run dirmngr
+        # Run dirmngr (required for pacman-key to work)
+        # NOTE: dirmngr is a daemon, run it in background so we don't hang
         # https://bbs.archlinux.org/viewtopic.php?id=190380
-        with open(os.devnull, 'r') as dev_null:
-            cmd = ["dirmngr"]
-            call(cmd, stdin=dev_null)
+        subprocess.Popen(["dirmngr"], stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         # Refresh and update the signature keys
         # cmd = ["pacman-key", "--refresh-keys", "--gpgdir", dest_path]
@@ -460,9 +464,10 @@ class Installation():
     @staticmethod
     def use_build_server_repo():
         """ Setup pacman.conf to use build server repository """
-        with open('/etc/pacman.conf', 'r') as pacman_conf:
+        path = os.path.join(DEST_DIR, "etc/pacman.conf")
+        with open(path, 'r') as pacman_conf:
             contents = pacman_conf.readlines()
-        with open('/etc/pacman.conf', 'w') as new_pacman_conf:
+        with open(path, 'w') as new_pacman_conf:
             for line in contents:
                 if 'antergos-next-mirrorlist' in line:
                     line = 'Server = https://github.com/Antergos-NeXT/$repo/$arch'

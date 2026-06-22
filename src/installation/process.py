@@ -178,9 +178,9 @@ class Process(multiprocessing.Process):
                 process_error.cmd,
                 process_error.output)
             self.events.add_fatal(txt)
+            return
         except (misc.InstallError, pyalpm.error,
-                KeyboardInterrupt, TypeError,
-                AttributeError, OSError, IOError) as install_error:
+                TypeError, AttributeError, OSError, IOError) as install_error:
             logging.error(install_error)
             exc_type, exc_value, exc_traceback = sys.exc_info()
             trace = traceback.format_exception(
@@ -188,3 +188,4 @@ class Process(multiprocessing.Process):
             for line in trace:
                 logging.error(line.rstrip())
             self.events.add_fatal(install_error)
+            return

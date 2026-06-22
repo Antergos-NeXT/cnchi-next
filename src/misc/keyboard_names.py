@@ -27,7 +27,7 @@ from collections import OrderedDict
 
 from gi.repository import GObject
 
-import xml.etree.cElementTree as elementTree
+import xml.etree.ElementTree as elementTree
 
 class Model(GObject.GObject):
     """ Represents a keyboard model """

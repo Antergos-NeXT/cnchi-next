@@ -30,7 +30,7 @@ import subprocess
 import requests
 from requests.exceptions import RequestException
 
-import xml.etree.cElementTree as elementTree
+import xml.etree.ElementTree as elementTree
 
 import desktop_info
 
@@ -184,7 +184,7 @@ class SelectPackages():
         url = SelectPackages.PKGLIST_URL
         logging.debug("Getting url %s...", url)
         try:
-            req = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+            req = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=30)
             self.xml_root = elementTree.fromstring(req.content)
         except RequestException as url_error:
             msg = "Can't retrieve remote package list: {}".format(

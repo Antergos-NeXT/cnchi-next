@@ -110,8 +110,6 @@ class PostInstallation():
                 shutil.copy(src, dst)
             except FileNotFoundError as err:
                 logging.warning("Can't copy %s log to %s: %s", src, dst, str(err))
-            except FileExistsError:
-                pass
 
         # Store install id for later use by antergos-pkgstats
         with open(os.path.join(log_dest_dir, 'install_id'), 'w') as install_record:
@@ -146,8 +144,6 @@ class PostInstallation():
                 except FileNotFoundError:
                     logging.warning(
                         "Can't copy network configuration files, file %s not found", source_network)
-                except FileExistsError:
-                    pass
 
     def set_scheduler(self):
         """ Copies udev rule for SSDs """
@@ -164,8 +160,6 @@ class PostInstallation():
             logging.warning(
                 "Cannot copy udev rule for SSDs, file %s not found.",
                 rule_src)
-        except FileExistsError:
-            pass
 
     @staticmethod
     def change_user_password(user, new_password):
@@ -185,8 +179,6 @@ class PostInstallation():
             shutil.copy2("/etc/adjtime", os.path.join(DEST_DIR, "etc/"))
         except FileNotFoundError:
             logging.warning("File /etc/adjtime not found!")
-        except FileExistsError:
-            pass
 
     @staticmethod
     def update_pacman_conf():
@@ -365,8 +357,6 @@ class PostInstallation():
                     logging.debug("%s copied.", src)
             except FileNotFoundError:
                 logging.error("File %s not found in live media", src)
-            except FileExistsError:
-                pass
             except shutil.Error as err:
                 logging.error(err)
   
@@ -381,7 +371,7 @@ class PostInstallation():
                     zfs_version = file_name.split("-")[1]
                     logging.info(
                         "Installed zfs module's version: %s", zfs_version)
-                except KeyError:
+                except IndexError:
                     logging.warning("Can't get zfs version from %s", file_name)
         return zfs_version
 
@@ -444,8 +434,7 @@ class PostInstallation():
     def add_sudoer(username):
         """ Adds user to sudoers """
         sudoers_dir = os.path.join(DEST_DIR, "etc/sudoers.d")
-        if not os.path.exists(sudoers_dir):
-            os.mkdir(sudoers_dir, 0o710)
+        os.makedirs(sudoers_dir, mode=0o710, exist_ok=True)
         sudoers_path = os.path.join(sudoers_dir, "10-installer")
         try:
             with open(sudoers_path, "w") as sudoers:
@@ -462,7 +451,7 @@ class PostInstallation():
         username = self.settings.get('user_name')
         fullname = self.settings.get('user_fullname')
         password = self.settings.get('user_password')
-        hostname = self.settings.get('hostname')
+        hostname = self.settings.get('hostname') or "antergos"
 
         # Adds user to the sudoers list
         self.add_sudoer(username)
@@ -524,8 +513,6 @@ class PostInstallation():
                     shutil.copy(avatar, dst)
                 except FileNotFoundError:
                     logging.warning("Can't copy %s avatar image to %s", avatar, dst)
-                except FileExistsError:
-                    pass
 
         # Encrypt user's home directory if requested
         if self.settings.get('encrypt_home'):
@@ -665,8 +652,6 @@ class PostInstallation():
             logging.error(
                 "Can't copy mirrorlist file. File %s not found",
                 mirrorlist_src_path)
-        except FileExistsError:
-            logging.warning("File %s already exists.", mirrorlist_dst_path)
 
         # Add Antergos repo to /etc/pacman.conf
         self.update_pacman_conf()
@@ -770,7 +755,7 @@ class PostInstallation():
         # We have to kill gpg-agent because if it stays around we can't
         # reliably unmount the target partition.
         logging.debug("Stopping gpg agent...")
-        chroot_call(['killall', '-9', 'gpg-agent'])
+        chroot_call(['killall', '-15', 'gpg-agent'])
 
         # FIXME: Temporary workaround for spl and zfs packages
         if self.method == "zfs":

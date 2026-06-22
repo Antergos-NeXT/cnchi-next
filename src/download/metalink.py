@@ -41,7 +41,7 @@ import argparse
 from collections import deque
 
 from xml.dom.minidom import getDOMImplementation
-import xml.etree.cElementTree as elementTree
+import xml.etree.ElementTree as elementTree
 
 import pyalpm
 

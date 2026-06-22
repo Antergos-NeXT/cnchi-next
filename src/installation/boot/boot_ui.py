@@ -111,13 +111,13 @@ class BootUI():
             if not misc.select_combobox_value(self.bootloader_entry, self.bootloader):
                 # Automatically select first entry
                 self.bootloader_entry.set_active(0)
-            self.bootloader_entry.show()
+            self.bootloader_entry.set_visible(True)
         else:
-            self.bootloader_entry.hide()
+            self.bootloader_entry.set_visible(False)
             widget_ids = ["bootloader_label", "bootloader_device_label"]
             for widget_id in widget_ids:
                 widget = self.page_ui.get_object(widget_id)
-                widget.hide()
+                widget.set_visible(False)
 
     def bootloader_device_check_toggled(self, status):
         """ Enable / disable bootloader installation """
