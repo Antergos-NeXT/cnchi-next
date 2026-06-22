@@ -37,12 +37,6 @@ import gi
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gdk, GObject
 
-try:
-    gi.require_foreign("cairo")
-except ImportError:
-    print("No pycairo integration")
-
-import cairo
 from pages.gtkbasebox import GtkBaseBox
 from rank_mirrors import RankMirrors
 
@@ -61,8 +55,6 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
     """ Represents a mirror """
     def __init__(self, url, active, switch_cb, drag_cbs):
         super(Gtk.ListBoxRow, self).__init__()
-        #self.data = data
-        # self.add(Gtk.Label(data))
 
         self.data = url
 
@@ -71,18 +63,15 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
         self.handle = Gtk.Image.new_from_icon_name("open-menu-symbolic")
         box.append(self.handle)
 
-        # Add mirror url label
         self.label = Gtk.Label.new()
         self.label.set_halign(Gtk.Align.START)
         self.label.set_justify(Gtk.Justification.LEFT)
         self.label.set_name(url)
-        # Only show site address
         url_parts = url.split('/')
         text_url = url_parts[0] + "//" + url_parts[2]
         self.label.set_text(text_url)
         box.append(self.label)
 
-        # Add mirror switch
         self.switch = Gtk.Switch.new()
         self.switch.set_name("switch_" + url)
         self.switch.set_property('margin_top', 2)
@@ -93,21 +82,30 @@ class MirrorListBoxRow(Gtk.ListBoxRow):
         box.prepend(self.switch)
 
         self.set_child(box)
-
         self.set_selectable(True)
 
-        # TODO GTK4: reimplement drag-and-drop with Gtk.DragSource/Gtk.DropTarget
-        # Source (old GTK3 API removed)
-        # self.handle.drag_source_set(
-        #     Gdk.ModifierType.BUTTON1_MASK, [], Gdk.DragAction.MOVE)
-        # self.handle.drag_source_add_text_targets()
-        # self.handle.connect("drag-begin", drag_cbs['drag-begin'])
-        # self.handle.connect("drag-data-get", drag_cbs['drag-data-get'])
+        drag_source = Gtk.DragSource.new()
+        drag_source.set_actions(Gdk.DragAction.MOVE)
+        drag_source.connect("prepare", self.on_drag_prepare)
+        drag_source.connect("drag-begin", drag_cbs['drag-begin'])
+        self.handle.add_controller(drag_source)
 
-        # Destination (GTK3 API removed)
-        # self.drag_dest_set(Gtk.DestDefaults.ALL, [], Gdk.DragAction.MOVE)
-        # self.drag_dest_add_text_targets()
-        # self.connect("drag-data-received", drag_cbs['drag-data-received'])
+        drop_target = Gtk.DropTarget.new(type=GObject.TYPE_STRING, actions=Gdk.DragAction.MOVE)
+        drop_target.connect("drop", drag_cbs['drop'])
+        self.add_controller(drop_target)
+
+    def on_drag_prepare(self, source, _x, _y):
+        val = GObject.Value()
+        val.init(GObject.TYPE_STRING)
+        row = self
+        listbox = row.get_parent()
+        while listbox and not isinstance(listbox, Gtk.ListBox):
+            listbox = listbox.get_parent()
+        listbox_str = str(listbox) if listbox else ""
+        row_index = row.get_index()
+        data = "{0}|{1}".format(listbox_str, row_index)
+        val.set_string(data)
+        return Gdk.ContentProvider.new_for_value(val)
 
     def is_active(self):
         """ Returns if the mirror is active """
@@ -204,8 +202,7 @@ class MirrorListBox(Gtk.ListBox):
 
         drag_cbs = {
             'drag-begin': self.drag_begin,
-            'drag-data-get': self.drag_data_get,
-            'drag-data-received': self.drag_data_received
+            'drop': self.on_drop
         }
 
         for (url, active) in self.mirrors:
@@ -236,48 +233,30 @@ class MirrorListBox(Gtk.ListBox):
             self.set_mirror_active(row.data, switch.get_active())
             self.emit("switch-activated")
 
-    def drag_begin(self, widget, drag_context):
+    def drag_begin(self, source, drag):
         """ User starts a drag """
-        row = widget.get_ancestor(Gtk.ListBoxRow)
-        alloc = row.get_allocation()
-        surface = cairo.ImageSurface(
-            cairo.FORMAT_ARGB32, alloc.width, alloc.height)
-        ctx = cairo.Context(surface)
+        row = source.get_widget().get_ancestor(Gtk.ListBoxRow)
+        if row:
+            drag_icon = Gtk.DragIcon.get_for_drag(drag)
+            drag_icon.set_child(row)
 
-        row.get_style_context().add_class("drag-icon")
-        row.draw(ctx)
-        row.get_style_context().remove_class("drag-icon")
-
-        pos_x, pos_y = widget.translate_coordinates(row, 0, 0)
-
-        surface.set_device_offset(-pos_x, -pos_y)
-        Gtk.drag_set_icon_surface(drag_context, surface)
-
-        hand_cursor = Gdk.Cursor.new_from_name("pointer")
-        self.get_window().set_cursor(hand_cursor)
-
-    def drag_data_get(self, widget, _drag_context, selection_data, _info, _time):
-        """ When drag data is requested by the destination """
-        row = widget.get_ancestor(Gtk.ListBoxRow)
-        listbox_str = str(self)
-        row_index = row.get_index()
-        data = "{0}|{1}".format(listbox_str, row_index)
-        selection_data.set_text(data, len(data))
-        self.get_window().set_cursor(None)
-
-    def drag_data_received(
-        self, widget, _drag_context, _pos_x, _pos_y, selection_data, _info, _time):
-        """ When drag data is received by the destination """
-        data = selection_data.get_text()
+    def on_drop(self, drop_target, value, x, y):
+        """ Drop target received data """
+        data = value.get_string()
         try:
             listbox_str = data.split('|')[0]
             if listbox_str == str(self):
                 old_index = int(data.split('|')[1])
-                new_index = widget.get_index()
+                target_row = drop_target.get_widget().get_ancestor(Gtk.ListBoxRow)
+                if not target_row:
+                    return False
+                new_index = target_row.get_index()
                 self.mirrors.insert(new_index, self.mirrors.pop(old_index))
                 self.fillme()
-        except (KeyError, ValueError) as err:
+                return True
+        except (KeyError, ValueError, AttributeError) as err:
             logging.warning(err)
+        return False
 
     @staticmethod
     def trim_mirror_url(server_line):

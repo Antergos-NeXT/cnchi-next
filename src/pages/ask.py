@@ -166,9 +166,10 @@ class InstallationAsk(GtkBaseBox):
 
         enable_alongside = False
 
-        # FIXME: Alongside does not work in UEFI systems
         if os.path.exists("/sys/firmware/efi"):
-            msg = "The 'alongside' installation mode does not work in UEFI systems"
+            msg = ("The 'alongside' installation mode only works on BIOS/MBR systems. "
+                   "UEFI/GPT support is not yet implemented in Cnchi's alongside module. "
+                   "For dual-boot on UEFI systems, use the 'advanced' partition mode.")
             logging.debug(msg)
             enable_alongside = False
         else:

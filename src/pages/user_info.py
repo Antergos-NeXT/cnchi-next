@@ -265,9 +265,8 @@ class UserInfo(GtkBaseBox):
         if self.settings.get('use_luks'):
             self.login['encrypt'].hide()
 
-        # TODO: Setup installed system so it mounts encrypted home folder on boot
-        # FIXME: We need to deactivate the encrypt widget as it is not finished
-        self.login['encrypt'].hide()
+        self.login['encrypt'].set_active(False)
+        self.login['encrypt'].set_sensitive(not self.settings.get('use_luks'))
 
     def store_values(self):
         """ Store all user values in self.settings """
@@ -279,14 +278,17 @@ class UserInfo(GtkBaseBox):
         self.settings.set('user_password', self.widgets['password']['entry'].get_text())
         self.settings.set('require_password', self.require_password)
 
-        # FIXME: Allow home encryption
-        self.settings.set('encrypt_home', False)
+        self.settings.set('encrypt_home', self.encrypt_home)
         if self.encrypt_home:
             message = _(
                 "Are you sure you want to encrypt your home directory?")
             res = show.question(self.get_main_window(), message)
             if res == Gtk.ResponseType.YES:
                 self.settings.set('encrypt_home', True)
+            else:
+                self.settings.set('encrypt_home', False)
+                self.login['encrypt'].set_active(False)
+                self.encrypt_home = False
 
         # Store user's avatar
         self.settings.set('user_avatar', self.selected_avatar_path)

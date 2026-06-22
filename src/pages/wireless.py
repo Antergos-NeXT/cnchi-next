@@ -95,15 +95,12 @@ class Wireless(GtkBaseBox):
 
     def wireless_toggled(self, _unused):
         """ Enables / disables wireless """
-        print("wireless_toggled")
-
         if self.use_wireless.get_active():
             self.nmwidget.hbox.set_sensitive(True)
             if not self.have_selection:
                 self.nmwidget.select_usable_row()
             self.state_changed(None, self.state)
         else:
-            # TODO: hide and stop spinner
             self.nmwidget.hbox.set_sensitive(False)
 
     #def plugin_on_back_clicked(self):
@@ -131,25 +128,14 @@ class Wireless(GtkBaseBox):
 
     def state_changed(self, _unused, state):
         """ State has changed """
-        print("state_changed")
         self.state = state
         if not self.use_wireless.get_active():
             return
-        if state != nm.NM_STATE_CONNECTING:
-            # TODO: Hide and stop spinner
-            pass
-        else:
-            pass
-            # TODO: Show and start spinner
-            # self.spinner.show()
-            # self.spinner.start()
-
         self.selection_changed(None)
 
-    def pw_validated(self, _unused, _validated):
+    def pw_validated(self, _unused, validated):
         """ Validate password """
-        # TODO: Check that password is validated
-        pass
+        self.next_normal = validated
 
     def prepare(self, direction):
         """ Prepare page for showing """
